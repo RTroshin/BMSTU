@@ -4,14 +4,11 @@
 import copy, random
 
 print()
-print('Вас приветствует программа "English training"!')
+print('Вас приветствует программа "English Training"!')
 EasyEnglishWords = ['food', 'bike', 'apple', 'do', 'mean']
 EasyRussianWords = ['еда', 'велосипед', 'яблоко', 'делать', 'иметь в виду']
 EasyEnglishWordsTraining = []
 EasyRussianWordsTraining = []
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',\
-            'j', 'k', 'm', 'n', 'l', 'o', 'p', 'q', 'r',\
-            's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 while True:
     print('Меню\n')
@@ -184,7 +181,7 @@ while True:
                 print('\nТренировка "Конструктор слов"\n')
                 trueAmount = 0
                 while True:
-                    constructionWord = []
+                    word = []
                     trueTranslate = random.randint(0,\
                                     len(RussianWordsTraining) - 1)
                     if RussianWordsTraining[trueTranslate] == 'None':
@@ -193,15 +190,15 @@ while True:
                                             len(RussianWordsTraining) - 1)
                     print('Соберите перевод слова из букв: ',\
                           RussianWordsTraining[trueTranslate])
-                    word = EnglishWordsTraining[trueTranslate]
                     print()
-                    for i in range(len(alphabet)):
-                        for j in range(len(word)):
-                            if alphabet[i] == word[j]:
-                                constructionWord.append(alphabet[i])
-                    random.shuffle(constructionWord)
-                    for i in constructionWord:
-                        print(i, end = ' ')
+                    for letter in EnglishWordsTraining[trueTranslate]:
+                        word.append(letter)
+                    random.shuffle(word)
+                    if word == list(EnglishWordsTraining[trueTranslate]):
+                        while word == list(EnglishWordsTraining[trueTranslate]):
+                            random.shuffle(word)
+                    for letter in word:
+                        print(letter, end = ' ')
                     print()
 
                     userAnswer = input('\nВаш ответ: ')
