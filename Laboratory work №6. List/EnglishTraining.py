@@ -55,7 +55,7 @@
 import copy, random
 
 print()
-print('Вас приветствует программа "English Training"!')
+print('Вас приветствует программа "English training"!')
 EasyEnglishWords = ['food', 'bike', 'apple', 'do', 'mean']
 EasyRussianWords = ['еда', 'велосипед', 'яблоко', 'делать', 'иметь в виду']
 EasyEnglishWordsTraining = []
@@ -82,13 +82,18 @@ while True:
             print('Ваш список слов пуст!\n')
         else:
             number = 1
-            print('─' * 43)
-            print('|  №  |      Слово      |     Перевод     |')
-            print('─' * 43)
+            print('┌', '─' * 5, '┬', '─' * 17, '┬', '─' * 17, '┐', sep = '')
+            print('│  №  │      Слово      │     Перевод     │')
+            print('├', '─' * 5, '┼', '─' * 17, '┼', '─' * 17, '┤', sep = '')
             for i in range(len(EasyEnglishWords)):
-                print('|{:^5d}| {:<15} | {:<15} |'\
-.format(number, EasyEnglishWords[i], EasyRussianWords[i]))
-                print('─' * 43)
+                print('│{:^5d}│ {:<15} │ {:<15} │'\
+                      .format(number, EasyEnglishWords[i], EasyRussianWords[i]))
+                if number != len(EasyEnglishWords):
+                    print('├', '─' * 5, '┼', '─' * 17, '┼', '─' * 17, '┤',\
+                    sep = '')
+                else:
+                    print('└', '─' * 5, '┴', '─' * 17, '┴', '─' * 17, '┘',\
+                    sep = '')
                 number += 1
 
     # Добавить слова для тренировки
