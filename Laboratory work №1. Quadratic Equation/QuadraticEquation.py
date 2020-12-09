@@ -25,6 +25,6 @@ else:
 			sqD =sqrt(D)
 			x1 = (-b + sqD) / 2 * a
 			x2 = (-b - sqD) / 2 * a
-			print('{}{}{:.2f}{}{:.2f}{}'.format('\nКорень x1 и x2:', '\nx1 = ', x1, '  x2 = ', x2, '\n'))
+			print('\nКорень x1 и x2:\nx1 = {:.2f}  x2 = {:.2f}\n'.format(x1, x2))
 	else:
 		print('\nКорни мнимые\n')
