@@ -14,13 +14,13 @@ if a == 0:
 			print('\nКорней нет\n')
 	else:
 		x = -c / b
-		print('{}{:.2f}{}'.format('\nКорень x: ', x, '\n'))
+		print('\nКорень x: {:.2f}\n'.format(x))
 else:
 	D = b * b - 4 * a * c
 	if D >= 0:
 		if D == 0:
 			x = (-b + sqrt(D)) / 2 * a
-			print('{}{:.2f}{}'.format('\nДва равных корня:\nx1,2 = ', x, '\n'))
+			print('\nДва равных корня:\nx1,2 = {:.2f}\n'.format(x))
 		else:
 			sqD =sqrt(D)
 			x1 = (-b + sqD) / 2 * a
