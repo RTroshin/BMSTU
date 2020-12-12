@@ -1,4 +1,5 @@
-# Условие задачи:
+# Laboratory work №4. Function Table
+# Условие задания:
 # z1 = x^3 - 6,5x^2 - 31,3x + 2,32
 # z2 = x^3 - sin(Pix)
 # z3 = z1^2 - z2^2
