@@ -1,14 +1,3 @@
-def travelBudget(currentMiles, maxMiles, minCostTravel, currentGallonsSize, gallonsSize, data):
-    dataBack = []
-    if currentMiles <= maxMiles / 2 and currentMiles <= data[0]:
-        minCostTravel += round((data[1] + 200), 2)
-        currentGallonsSize = gallonsSize
-        dataBack.append(minCostTravel)
-        dataBack.append(currentGallonsSize)
-        print('dataBack = ', dataBack)
-        return dataBack
-
-
 # Название города отправления и пункта назначения
 
 
@@ -52,8 +41,8 @@ amountPatrolStation2 = 3
 # Первое число - расстояние от города отправления до бензоколонки
 
 # distanceFromCityToPatrolStation = int(input('Введите расстояние от города отправления до бензоколонки: '))
-distance1 = [102.0, 220.0, 256.3, 275.0, 277.6, 381.8]
-distance2 = [125.4, 297.9, 345.2]
+distance1 = [102.0, 220.0, 256.3, 275.0, 277.6, 381.8, 475.6]
+distance2 = [125.4, 297.9, 345.2, 516.3]
 
 
 # Второе число - цена (в центах) одного галлона бензина на бензоколонке
@@ -91,18 +80,23 @@ costPatrol2 *= 100 # Переводим доллары в центы
 
 currentGallonsSize = gallonsSize2
 
-maxMiles = gallonsSize2 * spendGallon2 # Максимальное количество миль, которое может пройти автомобиль на полном баке
+maxAutoMiles = autoMiles = gallonsSize2 * spendGallon2 # Максимальное количество миль, которое может пройти автомобиль на полном баке
 
-currentMiles = maxMiles
+currentMiles = 0
 minCostTravel = costPatrol2 # Минимальная стоимость поездки начинается с первоначально введенной стоимости
 
 
-for i in range(amountPatrolStation2 - 1):
+for i in range(amountPatrolStation2):
     data = []
+
+    print('_' * 59)
+    print()
+    print('ДАННЫЕ №', i)
+
     print('\nВведите расстояние от города отправления до бензоколонки: ')
 
     # while True:
-    #     if distance2[i] > maxMiles:
+    #     if distance2[i] > autoMiles:
     #         print('Бензоколонка слишком далеко! Автомобиль не доедет!\nВведите расстояние поменьше')
     #         print('\nВведите расстояние от города отправления до бензоколонки: ')
     #     else:
@@ -115,33 +109,45 @@ for i in range(amountPatrolStation2 - 1):
     #         print('\nВведите расстояние от пункта отправления до бензоколонки: ')
     #     else:
     #         break
-    
+
     data.append(distance2[i])
 
     print('Введите цену (в центах одного галлона бензина): ')
     data.append(cost2[i])
-    print('data = ', data)    
-    dataBack = []
-    dataBack = travelBudget(currentMiles, maxMiles, minCostTravel, currentGallonsSize, gallonsSize2, data)
-    print('dataBack = ', dataBack)
-    print('currentMiles = ', currentMiles)
+    print('data = ', data)
+
+    # Проверка
+
+    print()
+    print('minCostTravel = ', minCostTravel)
+    print('currentGallonsSize = ', currentGallonsSize)
+    print()
+
+    if i == 0:
+        autoMiles -= distance2[i]
+    else:
+        autoMiles -= (distance2[i] - distance2[i - 1])
+    currentGallonsSize = (autoMiles / spendGallon2)
+
+    currentLengthWay2 = lengthWay2 - distance2[i]
+    currentMiles = distance2[i + 1] - distance2[i]
+
+    print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
+    print('autoMiles and currentMiles  ', autoMiles, currentMiles)
+    if autoMiles <= maxAutoMiles / 2 and autoMiles <= currentMiles:
+        minCostTravel += round((gallonsSize2 - currentGallonsSize) * cost2[i] + 200, 2)
+        currentGallonsSize = gallonsSize2
+
+    # Проверка
+
+    print('currentLengthWay2 = ', currentLengthWay2, ' осталось проехать')
+    print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
+    print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
     print('minCostTravel = ', minCostTravel)
     print('currentGallonsSize = ', currentGallonsSize)
 
-    currentMiles -= distance2[i]
-    lengthWay2 -= distance2[i]
-    currentGallonsSize = (maxMiles / spendGallon2)
-    # minCostTravel += dataBack[1]
+print('_' * 59)
 
-    i += 1
-
-
-
-
-print()
-print('MaxMiles = ', maxMiles)
-print('lengthWay= ', lengthWay2)
-print(data)
 print()
 print('Набор данных #1')
 # print('Минимальная стоимость = $27.31')
