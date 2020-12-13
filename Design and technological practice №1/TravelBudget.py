@@ -20,7 +20,7 @@ gallonsSize2 = 15.7
 # Второе число - число миль, которое может проехать автомобиль, используя один галлон бензина
 
 # spendGallon = float(input('Введите число миль, которое может проехать автомобиль: '))
-spendGallon1 = 27.9
+spendGallon1 = 27.4
 spendGallon2 = 22.1
 
 
@@ -48,7 +48,7 @@ distance2 = [125.4, 297.9, 345.2, 516.3]
 # Второе число - цена (в центах) одного галлона бензина на бензоколонке
 
 # costPatrolForOneGallon = int(input('Введите цену (в центах одного галлона бензина): '))
-cost1 = []
+cost1 = [99.9, 132.9, 147.9, 102.9, 112.9, 100.9]
 cost2 = [125.9, 112.9, 99.9]
 
 
@@ -69,25 +69,33 @@ print('Введите число миль, которое может проех�
 print('Введите стоимость бензина: ')
 print('Введите число бензоколонок (не более 51): ')
 
-print(lengthWay2)
-print(gallonsSize2, spendGallon2, costPatrol2, amountPatrolStation2)
-print(distance2, cost2)
+print(lengthWay1)
+print(gallonsSize1, spendGallon1, costPatrol1, amountPatrolStation1)
+print(distance1, cost1)
+
+# print(lengthWay2)
+# print(gallonsSize2, spendGallon2, costPatrol2, amountPatrolStation2)
+# print(distance2, cost2)
 
 # НЕОБЯЗАТЕЛЬНО
-costPatrol2 *= 100 # Переводим доллары в центы
+# costPatrol1 *= 100 # Переводим доллары в центы
+# НЕОБЯЗАТЕЛЬНО
+# costPatrol2 *= 100 # Переводим доллары в центы
 
 # Сколько всего миль может проехать автомобиль с учётом вместимости своего бака
 
+# currentGallonsSize = gallonsSize1
+# maxAutoMiles = autoMiles = gallonsSize1 * spendGallon1 # Максимальное количество миль, которое может пройти автомобиль на полном баке
 currentGallonsSize = gallonsSize2
-
 maxAutoMiles = autoMiles = gallonsSize2 * spendGallon2 # Максимальное количество миль, которое может пройти автомобиль на полном баке
 
 currentMiles = 0
+# minCostTravel = costPatrol1 # Минимальная стоимость поездки начинается с первоначально введенной стоимости
 minCostTravel = costPatrol2 # Минимальная стоимость поездки начинается с первоначально введенной стоимости
 
 
+# for i in range(amountPatrolStation1):
 for i in range(amountPatrolStation2):
-    data = []
 
     print('_' * 59)
     print()
@@ -110,11 +118,7 @@ for i in range(amountPatrolStation2):
     #     else:
     #         break
 
-    data.append(distance2[i])
-
     print('Введите цену (в центах одного галлона бензина): ')
-    data.append(cost2[i])
-    print('data = ', data)
 
     # Проверка
 
@@ -124,22 +128,31 @@ for i in range(amountPatrolStation2):
     print()
 
     if i == 0:
+        # autoMiles -= distance1[i]
         autoMiles -= distance2[i]
     else:
+        # autoMiles -= (distance1[i] - distance1[i - 1])
+    # currentGallonsSize = (autoMiles / spendGallon1)
         autoMiles -= (distance2[i] - distance2[i - 1])
     currentGallonsSize = (autoMiles / spendGallon2)
 
+    # currentLengthWay1 = lengthWay1 - distance1[i]
+    # currentMiles = distance1[i + 1] - distance1[i]
     currentLengthWay2 = lengthWay2 - distance2[i]
     currentMiles = distance2[i + 1] - distance2[i]
 
     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
     print('autoMiles and currentMiles  ', autoMiles, currentMiles)
     if autoMiles <= maxAutoMiles / 2 and autoMiles <= currentMiles:
-        minCostTravel += round((gallonsSize2 - currentGallonsSize) * cost2[i] + 200, 2)
+        # minCostTravel += ((gallonsSize1 - currentGallonsSize) * cost1[i] + 200) / 100
+        # currentGallonsSize = gallonsSize1
+        minCostTravel += ((gallonsSize2 - currentGallonsSize) * cost2[i] + 200) / 100
         currentGallonsSize = gallonsSize2
+        autoMiles = maxAutoMiles
 
     # Проверка
 
+    # print('currentLengthWay1 = ', currentLengthWay1, ' осталось проехать')
     print('currentLengthWay2 = ', currentLengthWay2, ' осталось проехать')
     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
@@ -151,4 +164,4 @@ print('_' * 59)
 print()
 print('Набор данных #1')
 # print('Минимальная стоимость = $27.31')
-print('Минимальная стоимость = $', round((minCostTravel / 100), 2))
+print('Минимальная стоимость = $', minCostTravel)
