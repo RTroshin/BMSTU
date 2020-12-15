@@ -7,25 +7,10 @@ def сostTravel(gallonsSize, currentGallonsSize, cost):
 # Название города отправления и пункта назначения
 
 
-
-
-# Первое число - расстояние от города отправления до бензоколонки
-
-# distanceFromCityToPatrolStation = int(input('Введите расстояние от города отправления до бензоколонки: '))
-distance1 = [102.0, 220.0, 256.3, 275.0, 277.6, 381.8, 475.6] # + ФИНАЛЬНОЕ РАССТОЯНИЕ КАК ПОСЛЕДНЯЯ ТОЧКА
-distance2 = [125.4, 297.9, 345.2, 516.3]
-
-
-# Второе число - цена (в центах) одного галлона бензина на бензоколонке
-
-# costPatrolForOneGallon = int(input('Введите цену (в центах одного галлона бензина): '))
-cost1 = [99.9, 132.9, 147.9, 102.9, 112.9, 100.9]
-cost2 = [125.9, 112.9, 99.9]
-
-
 # Общая стоимость поездки
 
 # overallCost = costPatrol
+
 
 # Конец данных (можно ввести любое отрицательное число или только -1?)
 
@@ -54,32 +39,50 @@ print('Введите число бензоколонок (не более 51): 
 amountPatrolStation1 = 6
 amountPatrolStation2 = 3
 
+# distanceFromCityToPatrolStation = int(input('Введите расстояние от города отправления до бензоколонки: '))
+distance1 = [102.0, 220.0, 256.3, 275.0, 277.6, 381.8, 475.6] # + Финальное расстояние как последняя точка
+distance2 = [125.4, 297.9, 345.2, 516.3]
 
-print(lengthWay1)
-print(gallonsSize1, spendGallon1, costPatrol1, amountPatrolStation1)
-print(distance1, cost1)
-# print(lengthWay2)
-# print(gallonsSize2, spendGallon2, costPatrol2, amountPatrolStation2)
-# print(distance2, cost2)
+# costPatrolForOneGallon = int(input('Введите цену (в центах одного галлона бензина): '))
+cost1 = [99.9, 132.9, 147.9, 102.9, 112.9, 100.9]
+cost2 = [125.9, 112.9, 99.9]
 
+# Данные № 1
+
+lengthWay = lengthWay1
+gallonsSize = gallonsSize1
+spendGallon = spendGallon1
+costPatrol = costPatrol1
+amountPatrolStation = amountPatrolStation1
+distance = distance1
+cost = cost1
+
+# Данные № 2
+
+# lengthWay = lengthWay2
+# gallonsSize = gallonsSize2
+# spendGallon = spendGallon2
+# costPatrol = costPatrol2
+# amountPatrolStation = amountPatrolStation2
+# distance = distance2
+# cost = cost2
+
+
+print(lengthWay)
+print(gallonsSize, spendGallon, costPatrol, amountPatrolStation)
+print(distance, cost)
 
 # Сколько всего миль может проехать автомобиль с учётом вместимости своего бака
 
-currentGallonsSize = gallonsSize1
-maxAutoMiles = autoMiles = gallonsSize1 * spendGallon1 # Максимальное количество миль, которое может пройти автомобиль на полном баке
+currentGallonsSize = gallonsSize
+maxAutoMiles = autoMiles = gallonsSize * spendGallon # Максимальное количество миль, которое может пройти автомобиль на полном баке
 print('Максимальное количество миль, которое может пройти автомобиль maxAutoMiles = ', maxAutoMiles)
-# currentGallonsSize = gallonsSize2
-# maxAutoMiles = autoMiles = gallonsSize2 * spendGallon2
-# print('Максимальное количество миль, которое может пройти автомобиль maxAutoMiles = ', maxAutoMiles)
 
 currentMiles = 0
-minCostTravel = costPatrol1 # Минимальная стоимость поездки начинается с первоначально введенной стоимости
-# minCostTravel = costPatrol2
+minCostTravel = costPatrol # Минимальная стоимость поездки начинается с первоначально введенной стоимости
 
 
-for i in range(amountPatrolStation1):
-# for i in range(amountPatrolStation2):
-
+for i in range(amountPatrolStation):
     print('_' * 59)
     print()
     print('ДАННЫЕ №', i)
@@ -87,15 +90,15 @@ for i in range(amountPatrolStation1):
     print('\nВведите расстояние от города отправления до бензоколонки: ')
 
     # while True:
-    #     if distance2[i] > autoMiles:
+    #     if distance[i] > autoMiles:
     #         print('Бензоколонка слишком далеко! Автомобиль не доедет!\nВведите расстояние поменьше')
     #         print('\nВведите расстояние от города отправления до бензоколонки: ')
     #     else:
-    #         data.append(distance2[i])
+    #         data.append(distance[i])
     #         break
 
     # while True:
-    #     if distance2[i] > lengthWay2:
+    #     if distance[i] > lengthWay:
     #         print('Бензоколонка за пукнтом назначения!\nВведите расстояние поменьше')
     #         print('\nВведите расстояние от пункта отправления до бензоколонки: ')
     #     else:
@@ -111,32 +114,25 @@ for i in range(amountPatrolStation1):
     print()
 
     if i == 0:
-        autoMiles -= distance1[i]
+        autoMiles -= distance[i]
         # autoMiles -= distance2[i]
     else:
-        autoMiles -= (distance1[i] - distance1[i - 1])
-    currentGallonsSize = (autoMiles / spendGallon1)
-        # autoMiles -= (distance2[i] - distance2[i - 1])
-    # currentGallonsSize = (autoMiles / spendGallon2)
+        autoMiles -= (distance[i] - distance[i - 1])
+    currentGallonsSize = (autoMiles / spendGallon)
 
-    currentLengthWay1 = lengthWay1 - distance1[i]
-    currentMiles = distance1[i + 1] - distance1[i]
-    # currentLengthWay2 = lengthWay2 - distance2[i]
-    # currentMiles = distance2[i + 1] - distance2[i]
+    currentLengthWay = lengthWay - distance[i]
+    currentMiles = distance[i + 1] - distance[i]
 
     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
     print('autoMiles and currentMiles  ', autoMiles, currentMiles)
     if autoMiles <= maxAutoMiles / 2 or autoMiles <= currentMiles:
-        minCostTravel += сostTravel(gallonsSize1, currentGallonsSize, cost1[i])
-        currentGallonsSize = gallonsSize1
-        # minCostTravel += сostTravel(gallonsSize2, currentGallonsSize, cost2[i])
-        # currentGallonsSize = gallonsSize2
+        minCostTravel += сostTravel(gallonsSize, currentGallonsSize, cost[i])
+        currentGallonsSize = gallonsSize
         autoMiles = maxAutoMiles
 
     # Проверка
 
-    print('currentLengthWay1 = ', currentLengthWay1, ' осталось проехать')
-    # print('currentLengthWay2 = ', currentLengthWay2, ' осталось проехать')
+    print('currentLengthWay = ', currentLengthWay, ' осталось проехать')
     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
     print('minCostTravel = ', minCostTravel)
