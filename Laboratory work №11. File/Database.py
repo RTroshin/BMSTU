@@ -72,57 +72,57 @@ while True:
     # Вывод всей БД
 
     elif userChoice == '3':
-        checkFile = os.path.exists(filename)
-        if not checkFile:
-            print('Файла не существует!')
-        else:
+        if checkFile(filename):
             f = open(filename, 'rb')
+            print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
                 while f != '\n':
                     book = p.load(f)
-                    print(book['book'], book['author'], book['name'], book['year'])
+                    print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+                    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+                    .format(book['book'], book['author'], book['name'], book['year']))
             except EOFError:
                 book = {}
+            print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
             f.close()
 
     # Поиск записей по одному полю
 
     elif userChoice == '4':
-        checkFile = os.path.exists(filename)
-        if not checkFile:
-            print('Файла не существует!')
-        else:
+        if checkFile(filename):
             f = open(filename, 'rb')
             field = input('Введите поле, которое необходимо найти: ')
             print()
             find = False
+            print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
                 while f != '\n':
                     book = p.load(f)
                     for value in book.values():
                         if value.lower() == field.lower():
-                            print(book['book'], book['author'], book['name'], book['year'])
+                            print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+                            print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+                            .format(book['book'], book['author'], book['name'], book['year']))
                             find = True
                             break
             except EOFError:
                 book = {}
             if not find:
                 print('\nПоля не найдены')
+            print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
             f.close()
 
     # Поиск записей по двум полям
 
     elif userChoice == '5':
-        checkFile = os.path.exists(filename)
-        if not checkFile:
-            print('Файла не существует!')
-        else:
+        if checkFile(filename):
             f = open(filename, 'rb')
             # field1, field2 = map(str, input('Введите два поля, которые необходимо найти: ').split())
             print('Введите два поля, которые необходимо найти')
             field1 = input('Введите первое поле: ')
             field2 = input('Введите второе поле: ')
             find = False
+            print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
                 while f != '\n':
                     book = p.load(f)
@@ -130,14 +130,16 @@ while True:
                         if value.lower() == field1.lower():
                             for value in book.values():
                                 if value.lower() == field2.lower():
-                                    print()
-                                    print(book['book'], book['author'], book['name'], book['year'])
+                                    print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+                                    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+                                    .format(book['book'], book['author'], book['name'], book['year']))
                                     find = True
                                     break
             except EOFError:
                 book = {}
             if not find:
                 print('\nПоля не найдены')
+            print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
             f.close()
 
     # Выход из программы
