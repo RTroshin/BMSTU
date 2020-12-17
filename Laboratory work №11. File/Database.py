@@ -13,8 +13,10 @@
 #
 
 import pickle as p
+import os.path
 
-filename = "C:\Laboratory Work №11\Database.txt"
+
+filename = 'Documents\Laboratory Work №11\Database.txt'
 ch = 1
 books = {'book': '1', 'author' : 'Tolkien',  'name': 'Lord of the ring', 'year': '1950'}
 
@@ -27,6 +29,7 @@ while True:
     print('5. Поиск записей по двум полям')
     print('\nДля выхода из программы наберите "Выход"\n')
     userChoice = input('Выберите пункт меню: ')
+    print()
 
     # Создание БД
 
@@ -43,7 +46,6 @@ while True:
         while uC.lower() != 'нет':
             # books['book'], books['author'], books['name'], books['year'] =\
             # input('Введите номер книги, автора, наименование, год выпуска: ').split()
-            print()
             books['book'] = input('Введите номер книги: ')
             books['author'] = input('Введите автора: ')
             books['name'] = input('Введите наименование: ')
@@ -60,62 +62,73 @@ while True:
     # Вывод всей БД
 
     elif userChoice == '3':
-        f = open(filename, 'rb')
-        print()
-        try:
-            while f != '\n':
-                books = p.load(f)
-                print(books['book'], books['author'], books['name'], books['year'])
-        except EOFError:
-            books = {}
-        f.close()
+        checkFile = os.path.exists(filename)
+        if not checkFile:
+            print('Файла не существует!')
+        else:
+            f = open(filename, 'rb')
+            try:
+                while f != '\n':
+                    books = p.load(f)
+                    print(books['book'], books['author'], books['name'], books['year'])
+            except EOFError:
+                books = {}
+            f.close()
 
     # Поиск записей по одному полю
 
     elif userChoice == '4':
-        field = input('Введите поле, которое необходимо найти: ')
-        print()
-        f = open(filename, 'rb')
-        find = False
-        try:
-            while f != '\n':
-                books = p.load(f)
-                for value in books.values():
-                    if value.lower() == field.lower():
-                        print(books['book'], books['author'], books['name'], books['year'])
-                        find = True
-                        break
-        except EOFError:
-            books = {}
-        if not find:
-            print('\nПоля не найдены')
-        f.close()
+        checkFile = os.path.exists(filename)
+        if not checkFile:
+            print('Файла не существует!')
+        else:
+            f = open(filename, 'rb')
+            field = input('Введите поле, которое необходимо найти: ')
+            print()
+            find = False
+            try:
+                while f != '\n':
+                    books = p.load(f)
+                    for value in books.values():
+                        if value.lower() == field.lower():
+                            print(books['book'], books['author'], books['name'], books['year'])
+                            find = True
+                            break
+            except EOFError:
+                books = {}
+            if not find:
+                print('\nПоля не найдены')
+            f.close()
 
     # Поиск записей по двум полям
 
     elif userChoice == '5':
-        # field1, field2 = map(str, input('Введите два поля, которые необходимо найти: ').split())
-        print('Введите два поля, которые необходимо найти')
-        field1 = input('Введите первое поле: ')
-        field2 = input('Введите второе поле: ')
-        f = open(filename, 'rb')
-        find = False
-        try:
-            while f != '\n':
-                books = p.load(f)
-                for value in books.values():
-                    if value.lower() == field1.lower():
-                        for value in books.values():
-                            if value.lower() == field2.lower():
-                                print()
-                                print(books['book'], books['author'], books['name'], books['year'])
-                                find = True
-                                break
-        except EOFError:
-            books = {}
-        if not find:
-            print('\nПоля не найдены')
-        f.close()
+        checkFile = os.path.exists(filename)
+        if not checkFile:
+            print('Файла не существует!')
+        else:
+            f = open(filename, 'rb')
+            # field1, field2 = map(str, input('Введите два поля, которые необходимо найти: ').split())
+            print('Введите два поля, которые необходимо найти')
+            field1 = input('Введите первое поле: ')
+            field2 = input('Введите второе поле: ')
+            find = False
+            try:
+                while f != '\n':
+                    books = p.load(f)
+                    for value in books.values():
+                        if value.lower() == field1.lower():
+                            for value in books.values():
+                                if value.lower() == field2.lower():
+                                    print()
+                                    print(books['book'], books['author'], books['name'], books['year'])
+                                    find = True
+                                    break
+            except EOFError:
+                books = {}
+            if not find:
+                print('\nПоля не найдены')
+            f.close()
 
     # Выход из программы
 
