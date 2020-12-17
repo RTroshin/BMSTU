@@ -16,9 +16,19 @@ import pickle as p
 import os.path
 
 
+# Проверка на существование файла
+
+def checkFile(fn):
+    check = os.path.exists(fn)
+    if not check:
+        print('Файла не существует!')
+    else:
+        return True
+
+
 filename = 'Documents\Laboratory Work №11\Database.txt'
 ch = 1
-books = {'book': '1', 'author' : 'Tolkien',  'name': 'Lord of the ring', 'year': '1950'}
+book = {'book': '1', 'author' : 'Tolkien',  'name': 'Lord of the ring', 'year': '1950'}
 
 while True:
     print('\nМеню\n')
@@ -44,15 +54,15 @@ while True:
         f = open(filename, 'ab')
         uC = 'да'
         while uC.lower() != 'нет':
-            # books['book'], books['author'], books['name'], books['year'] =\
+            # book['book'], book['author'], book['name'], book['year'] =\
             # input('Введите номер книги, автора, наименование, год выпуска: ').split()
-            books['book'] = input('Введите номер книги: ')
-            books['author'] = input('Введите автора: ')
-            books['name'] = input('Введите наименование: ')
-            books['year'] = input('Введите год выпуска: ')
+            book['book'] = input('Введите номер книги: ')
+            book['author'] = input('Введите автора: ')
+            book['name'] = input('Введите наименование: ')
+            book['year'] = input('Введите год выпуска: ')
             print()
             print('Ввести ещё одну книгу?')
-            p.dump(books, f)
+            p.dump(book, f)
             while True:
                 uC = input('(Да/Нет): ')
                 if uC.lower() == 'да' or uC.lower() == 'нет':
@@ -69,10 +79,10 @@ while True:
             f = open(filename, 'rb')
             try:
                 while f != '\n':
-                    books = p.load(f)
-                    print(books['book'], books['author'], books['name'], books['year'])
+                    book = p.load(f)
+                    print(book['book'], book['author'], book['name'], book['year'])
             except EOFError:
-                books = {}
+                book = {}
             f.close()
 
     # Поиск записей по одному полю
@@ -88,14 +98,14 @@ while True:
             find = False
             try:
                 while f != '\n':
-                    books = p.load(f)
-                    for value in books.values():
+                    book = p.load(f)
+                    for value in book.values():
                         if value.lower() == field.lower():
-                            print(books['book'], books['author'], books['name'], books['year'])
+                            print(book['book'], book['author'], book['name'], book['year'])
                             find = True
                             break
             except EOFError:
-                books = {}
+                book = {}
             if not find:
                 print('\nПоля не найдены')
             f.close()
@@ -115,17 +125,17 @@ while True:
             find = False
             try:
                 while f != '\n':
-                    books = p.load(f)
-                    for value in books.values():
+                    book = p.load(f)
+                    for value in book.values():
                         if value.lower() == field1.lower():
-                            for value in books.values():
+                            for value in book.values():
                                 if value.lower() == field2.lower():
                                     print()
-                                    print(books['book'], books['author'], books['name'], books['year'])
+                                    print(book['book'], book['author'], book['name'], book['year'])
                                     find = True
                                     break
             except EOFError:
-                books = {}
+                book = {}
             if not find:
                 print('\nПоля не найдены')
             f.close()
