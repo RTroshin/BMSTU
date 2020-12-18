@@ -76,7 +76,7 @@ while True:
             f = open(filename, 'rb')
             print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
-                while f != '\n':
+                while f != '\0':
                     book = p.load(f)
                     print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
                     print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
@@ -96,7 +96,7 @@ while True:
             find = False
             print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
-                while f != '\n':
+                while f != '\0':
                     book = p.load(f)
                     for value in book.values():
                         if value.lower() == field.lower():
@@ -124,7 +124,7 @@ while True:
             find = False
             print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
             try:
-                while f != '\n':
+                while f != '\0':
                     book = p.load(f)
                     for value in book.values():
                         if value.lower() == field1.lower():
