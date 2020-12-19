@@ -88,23 +88,23 @@ cost3 = [99.9, 132.9, 147.9, 102.9, 112.9, 100.9, 99.9, 132.9, 147.9, 102.9, 112
 
 # Данные № 1
 
-lengthWay = lengthWay1
-gallonsSize = gallonsSize1
-spendGallon = spendGallon1
-costPatrol = costPatrol1
-amountPatrolStation = amountPatrolStation1
-distance = distance1
-cost = cost1
+# lengthWay = lengthWay1
+# gallonsSize = gallonsSize1
+# spendGallon = spendGallon1
+# costPatrol = costPatrol1
+# amountPatrolStation = amountPatrolStation1
+# distance = distance1
+# cost = cost1
 
 # Данные № 2
 
-# lengthWay = lengthWay2
-# gallonsSize = gallonsSize2
-# spendGallon = spendGallon2
-# costPatrol = costPatrol2
-# amountPatrolStation = amountPatrolStation2
-# distance = distance2
-# cost = cost2
+lengthWay = lengthWay2
+gallonsSize = gallonsSize2
+spendGallon = spendGallon2
+costPatrol = costPatrol2
+amountPatrolStation = amountPatrolStation2
+distance = distance2
+cost = cost2
 
 # Данные № 3
 
@@ -134,6 +134,10 @@ minCostTravel = costPatrol # Минимальная стоимость поез�
 minCostList = []
 currentCostTravel = []
 
+# print('\nНачало динамического программирования\n')
+# C = []
+# C = [0] * (amountPatrolStation + 1)
+
 
 # print('\nНачало динамического программирования\n')
 # C = []
@@ -143,16 +147,6 @@ currentCostTravel = []
 # for i in range(amountPatrolStation + 1):
 # 	C[i] = min(C[i - 1], C[i - 2]) + distance[i]
 # print('Ответ: ', C[amountPatrolStation])
-
-
-print('\nНачало динамического программирования\n')
-C = []
-C = [0] * (amountPatrolStation + 1)
-
-
-print(distance)
-print(cost)
-print()
 
 
 # ЗАМЕНИЛ НА FOR!
@@ -169,7 +163,27 @@ print()
 # print('autoMiles = ', autoMiles)
 
 
-print()
+# minCostList.append(0.0) # Цена бензина в пункте назначения (там автомобиль не заправляется)
+
+# print('minCostList = ', minCostList)
+# count = 0
+# for i in range(amountPatrolStation + 1):
+#     # N1 = C[i - count]
+#     # M1 = C[i - count - 1]    
+#     # N = C[i - 1]
+#     # M = C[i - 2]
+#     # print(N1, M1)
+#     # print(N, M)
+#     C[i] = min(C[i - count], C[i - count - 1]) + minCostList[i]
+#     # C[i] = min(C[i - 1], C[i - 2]) + distance[i]
+#     if count < n - 2:
+#         count += 1
+
+
+# print()
+# print('Набор данных #1')
+# print('Минимальная стоимость = $', C[amountPatrolStation] + costPatrol)
+
 
 CostList = []
 autoMiles = maxAutoMiles
