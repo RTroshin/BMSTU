@@ -1,20 +1,35 @@
 # Вычисление минимальной стоимости поездки ИСПРАВИТЬ КОММЕНТАРИЙ
 
-# def сostTravel(gallonsSize, currentGallonsSize, cost):
+# def сostComputation(gallonsSize, currentGallonsSize, cost):
 #     return round(((gallonsSize - currentGallonsSize) * cost + 200)) / 100
 
 def maxSteps(amountPatrolStation, maxAutoMiles, distance):
-    step = 0
+    step = 1
     for n in range(amountPatrolStation + 1):
         if maxAutoMiles >= distance[n]:
             step += 1
     return step
 
+def Kuznechik(steps, temp):
+    C = [0] * (steps)
+    print(C)
+    count = 0
+    for i in range(steps - 1):
+        C[i] = min(C[i - count], C[i - count - 1]) + temp[i]
+        if count < steps - 1:
+            count += 1
+    return C[i]
 
 # def minStep(minCostList, steps):
 #     for i in range(len(steps)):
 #         minCost = min(minCostList - i, )
 #     return minCost
+
+# def methodPerebora(distance, step, amountPatrolStation, maxAutoMiles, gallonsSize, currentGallonsSize, cost):
+#     for n in range(step, amountPatrolStation + 1):
+#         if maxAutoMiles >= distance[n]:
+#             costList.append(сostComputation(gallonsSize, currentGallonsSize, cost))
+#         if lengthWay
 
 
 # Название города отправления и пункта назначения
@@ -120,8 +135,6 @@ minCostList = []
 currentCostTravel = []
 
 
-# РАБОТАЕТ. ИЩЕТ МИНИМАЛЬНЫЙ ПУТЬ (ПЕРЕСКАКИВАЯ ЧЕРЕЗ 1 ИЛИ 2 ТОЧКИ)
-
 # print('\nНачало динамического программирования\n')
 # C = []
 # C = [0] * (amountPatrolStation + 1)
@@ -130,8 +143,6 @@ currentCostTravel = []
 # for i in range(amountPatrolStation + 1):
 # 	C[i] = min(C[i - 1], C[i - 2]) + distance[i]
 # print('Ответ: ', C[amountPatrolStation])
-
-
 
 
 print('\nНачало динамического программирования\n')
