@@ -20,18 +20,13 @@ def Kuznechik(steps, temp):
             count += 1
     return C[i]
 
-# def minStep(minCostList, steps):
-#     for i in range(len(steps)):
-#         minCost = min(minCostList - i, )
-#     return minCost
-
 # def methodPerebora(distance, step, amountPatrolStation, maxAutoMiles, gallonsSize, currentGallonsSize, cost):
 #     for n in range(step, amountPatrolStation + 1):
 #         if maxAutoMiles >= distance[n]:
 #             costList.append(сostComputation(gallonsSize, currentGallonsSize, cost))
 #         if lengthWay
 
-
+    
 # Название города отправления и пункта назначения
 
 
@@ -185,74 +180,46 @@ currentCostTravel = []
 # print('Минимальная стоимость = $', C[amountPatrolStation] + costPatrol)
 
 
-CostList = []
-autoMiles = maxAutoMiles
-for i in range(amountPatrolStation + 1):
-    if distance[i] < maxAutoMiles:
-        if i == 0:
-            autoMiles -= distance[i]
+costList = []
+costStep = []
+
+print('steps = ', maxSteps(amountPatrolStation, maxAutoMiles, distance))
+steps = maxSteps(amountPatrolStation, maxAutoMiles, distance)
+
+
+print(distance)
+print(cost)
+for s in range(steps):
+    costStep = []
+    autoMiles = maxAutoMiles
+    for i in range(s, amountPatrolStation + 1):
+        if s == 0:
+            d = 0
         else:
-            autoMiles -= (distance[i] - distance[i - 1])
-        currentGallonsSize = (autoMiles / spendGallon)
-        minCostList.append(round(((gallonsSize - currentGallonsSize) * cost[i] + 200)) / 100)
-print('minCostList = ', minCostList)
+            d = distance[s - 1]
+        if distance[i] < maxAutoMiles + d:
+            if i == 0:
+                autoMiles -= distance[i]
+            else:
+                autoMiles -= (distance[i] - distance[i - 1])
+            currentGallonsSize = (autoMiles / spendGallon)
+            costStep.append(round(((gallonsSize - currentGallonsSize) * cost[i] + 200)) / 100)
+    costList.append(costStep)
+print('costList = ', costList)
 print('autoMiles = ', autoMiles)
 
-
-# НУЖНО ЛИ?
-print('steps = ', maxSteps(amountPatrolStation, maxAutoMiles, distance))
-n = maxSteps(amountPatrolStation, maxAutoMiles, distance)
-
-
-minCostList.append(0.0) # Цена бензина в пункте назначения (там автомобиль не заправляется)
-
-print('minCostList = ', minCostList)
-count = 0
-for i in range(amountPatrolStation + 1):
-    # N1 = C[i - count]
-    # M1 = C[i - count - 1]    
-    # N = C[i - 1]
-    # M = C[i - 2]
-    # print(N1, M1)
-    # print(N, M)
-    C[i] = min(C[i - count], C[i - count - 1]) + minCostList[i]
-    # C[i] = min(C[i - 1], C[i - 2]) + distance[i]
-    if count < n - 2:
-        count += 1
-
-
-
 print()
-print('Набор данных #1')
-print('Минимальная стоимость = $', C[amountPatrolStation] + costPatrol)
 
-
-# count = 0
-# for i in range(amountPatrolStation + 1):
-#     # N1 = C[i - count]
-#     # M1 = C[i - count - 1]    
-#     # N = C[i - 1]
-#     # M = C[i - 2]
-#     # print(N1, M1)
-#     # print(N, M)
-#     C[i] = min(C[i - count], C[i - count - 1]) + distance[i]
-#     # C[i] = min(C[i - 1], C[i - 2]) + distance[i]
-#     if count < n - 1:
-#         count += 1
-
-# print('Ответ: ', C[amountPatrolStation])
-
-
+temp = [0] * steps
+for s in range(steps):
+    for i in range(len(costList[s])):
+        temp[s + i] = costList[s][i]
+    print(temp)
+    result = Kuznechik(steps, temp)
+    print(result)
 # #     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
 # #     print('currentLengthWay = ', currentLengthWay, ' осталось проехать')
 # #     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
 # #     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
 # #     print('currentGallonsSize = ', currentGallonsSize)
 # #     print()
-
-
-# minCostTravel = round(min(currentCostTravel), 2)
-
-# print()
-# print('Набор данных #1')
-# print('Минимальная стоимость = $', minCostTravel)
