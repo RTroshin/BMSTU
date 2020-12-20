@@ -1,4 +1,4 @@
-# Вычисление минимальной стоимости поездки ИСПРАВИТЬ КОММЕНТАРИЙ
+# Вычисление минимальной стоимости поездки
 
 # def сostComputation(gallonsSize, currentGallonsSize, cost):
 #     return round(((gallonsSize - currentGallonsSize) * cost + 200)) / 100
@@ -10,7 +10,7 @@ def maxSteps(amountPatrolStation, maxAutoMiles, distance):
             step += 1
     return step
 
-def Kuznechik(steps, temp):
+def kuznechik(steps, temp):
     C = [0] * (steps)
     print(C)
     count = 0
@@ -19,12 +19,6 @@ def Kuznechik(steps, temp):
         if count < steps - 1:
             count += 1
     return C[i]
-
-# def methodPerebora(distance, step, amountPatrolStation, maxAutoMiles, gallonsSize, currentGallonsSize, cost):
-#     for n in range(step, amountPatrolStation + 1):
-#         if maxAutoMiles >= distance[n]:
-#             costList.append(сostComputation(gallonsSize, currentGallonsSize, cost))
-#         if lengthWay
 
     
 # Название города отправления и пункта назначения
@@ -217,9 +211,10 @@ for s in range(steps):
     print(temp)
     result = Kuznechik(steps, temp)
     print(result)
-# #     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
-# #     print('currentLengthWay = ', currentLengthWay, ' осталось проехать')
-# #     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
-# #     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
-# #     print('currentGallonsSize = ', currentGallonsSize)
-# #     print()
+
+#     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
+#     print('currentLengthWay = ', currentLengthWay, ' осталось проехать')
+#     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
+#     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
+#     print('currentGallonsSize = ', currentGallonsSize)
+#     print()
