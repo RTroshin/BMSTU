@@ -123,6 +123,7 @@ minCostTravel = costPatrol # Минимальная стоимость поез�
 minCostList = []
 currentCostTravel = []
 
+
 # print('\nНачало динамического программирования\n')
 # C = []
 # C = [0] * (amountPatrolStation + 1)
@@ -138,7 +139,7 @@ currentCostTravel = []
 # print('Ответ: ', C[amountPatrolStation])
 
 
-# ЗАМЕНИЛ НА FOR!
+# Заменил на for!
 # i = 0
 # while distance[i] < maxAutoMiles:
 #     if i == 0:
@@ -209,12 +210,10 @@ for s in range(steps):
     for i in range(len(costList[s])):
         temp[s + i] = costList[s][i]
     print(temp)
-    result = Kuznechik(steps, temp)
+    result = kuznechik(steps, temp)
     print(result)
 
-#     print('autoMiles and maxAutoMiles / 2  ', autoMiles, maxAutoMiles / 2)
 #     print('currentLengthWay = ', currentLengthWay, ' осталось проехать')
 #     print('currentMiles = ', currentMiles, ' ехать до следующей заправки')
 #     print('autoMiles = ', autoMiles, ' автомобиль может ещё проехать')
 #     print('currentGallonsSize = ', currentGallonsSize)
-#     print()
