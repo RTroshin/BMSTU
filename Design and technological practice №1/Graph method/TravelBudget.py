@@ -1,19 +1,19 @@
 from collections import deque
 
 
-def revealShortestPath(G, start, finish, S):   # S - словарь кратчайших расстояний до всех вершин графа, возвращаемый из функции dejkstra()
+def displayShortestPath(G, start, finish, S):
     # v = finish # Здесь можно поставить 0
     # queue = deque([finish])
     Q = deque()
     v = finish
-    Q.append(v)                             # Добавляем в очередь последнюю вершину.
-    while v is not start:                   # Пока текущая вершина не является стартовой,
-        for u in G[v]:                      # вычисляем для каждой из её соседей,
-            if S[v] == S[u] + G[v][u]:      # совпадает ли сумма (кратч.расст. соседки + величина
-                Q.appendleft(u)             # ребра) с кратч.расст. текущей вершины. Если да, то
-                v = u                       # соседка принадлежит одному из кратч.путей.
-                break                       # Все кратч.пути искать не нужно, поэтому выходим из цикла
-    return Q                                # и продолжаем операции уже с соседней вершиной
+    Q.append(v)
+    while v is not start:
+        for u in G[v]:
+            if S[v] == S[u] + G[v][u]:
+                Q.appendleft(u)
+                v = u
+                break
+    return Q
 
 def dijkstra(G, start):
     Q = deque()
@@ -41,7 +41,7 @@ def main():
     while start not in G:
         finish = int(input('Вершина в графе отсутствует\n' +
                        'Введите конечную вершину: '))
-    shortestPath = revealShortestPath(G, start, finish, shortestDistance)
+    shortestPath = displayShortestPath(G, start, finish, shortestDistance)
     return shortestPath
 
 def readGraph():
