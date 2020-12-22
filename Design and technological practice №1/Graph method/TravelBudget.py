@@ -2,17 +2,14 @@ from collections import deque
 
 
 def main():
-    G = readGraph()
+    graph = readGraph()
     start = 0
-    shortestDistance = dijkstra(G, start)
-    finish = int(input('Введите конечную вершину: '))
-    while start not in G:
-        finish = int(input('Вершина в графе отсутствует\n' +
-                       'Введите конечную вершину: '))
-    shortestPath = displayShortestPath(G, start, finish, shortestDistance)
+    finish = len(graph) - 1
+    shortestDistance = dijkstra(graph, start, finish)
+    shortestPath = displayShortestPath(graph, start, finish, shortestDistance)
     return shortestPath
 
-def dijkstra(G, start):
+def dijkstra(graph, start, finish):
     Q = deque()
     S = {}
     S[start] = 0
@@ -27,6 +24,7 @@ def dijkstra(G, start):
     return Q
 
 def readGraph():
+    # M = int(input()) # Количество рёбер, далее - "A, d, вес"
     graph = {}
 
     # fuelTank = 11.9
@@ -48,6 +46,9 @@ def readGraph():
     # wayLength = 800.0
 
     maxAutoMiles = currentAutoMiles = fuelTank * fuelConsumption # Столько миль автомобиль может проехать с полным баком
+    # G = {0: {1: wayAndCost}}
+    # G = {0: {2: wayAndCost}}
+    # G = {0: {3: wayAndCost}}
 
     startWeight = startCost
     finishWeight = 0
