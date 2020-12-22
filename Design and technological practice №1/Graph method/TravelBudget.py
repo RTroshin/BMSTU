@@ -2,8 +2,6 @@ from collections import deque
 
 
 def displayShortestPath(G, start, finish, S):
-    # v = finish # Здесь можно поставить 0
-    # queue = deque([finish])
     Q = deque()
     v = finish
     Q.append(v)
@@ -32,10 +30,6 @@ def dijkstra(G, start):
 def main():
     G = readGraph()
     start = 0
-    # start = int(input('Введите начальную вершину: '))
-    # while start not in G:
-    #     start = int(input('Вершина в графе отсутствует\n' +
-    #                   'Введите начальную вершину: ')) 
     shortestDistance = dijkstra(G, start)
     finish = int(input('Введите конечную вершину: '))
     while start not in G:
@@ -45,7 +39,6 @@ def main():
     return shortestPath
 
 def readGraph():
-    # M = int(input()) # Количество рёбер, далее - "A, d, вес"
     graph = {}
 
     # fuelTank = 11.9
@@ -98,7 +91,6 @@ def readGraph():
                 currentFuelTank = currentAutoMiles / fuelConsumption
                 weight = round(((fuelTank - currentFuelTank) * cost[j] + 200)) / 100
                 addEdge(graph, i, j, weight)
-
     addEdge(graph, j + 1, amountStations + 1, finishWeight)
     print('graph = ', graph)
     print()
