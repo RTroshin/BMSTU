@@ -1,17 +1,16 @@
 from collections import deque
 
 
-def displayShortestPath(G, start, finish, S):
-    Q = deque()
-    v = finish
-    Q.append(v)
-    while v is not start:
-        for u in G[v]:
-            if S[v] == S[u] + G[v][u]:
-                Q.appendleft(u)
-                v = u
-                break
-    return Q
+def main():
+    G = readGraph()
+    start = 0
+    shortestDistance = dijkstra(G, start)
+    finish = int(input('Введите конечную вершину: '))
+    while start not in G:
+        finish = int(input('Вершина в графе отсутствует\n' +
+                       'Введите конечную вершину: '))
+    shortestPath = displayShortestPath(G, start, finish, shortestDistance)
+    return shortestPath
 
 def dijkstra(G, start):
     Q = deque()
@@ -26,17 +25,6 @@ def dijkstra(G, start):
                 Q.append(u)
         print('S = ', S)
     return Q
-
-def main():
-    G = readGraph()
-    start = 0
-    shortestDistance = dijkstra(G, start)
-    finish = int(input('Введите конечную вершину: '))
-    while start not in G:
-        finish = int(input('Вершина в графе отсутствует\n' +
-                       'Введите конечную вершину: '))
-    shortestPath = displayShortestPath(G, start, finish, shortestDistance)
-    return shortestPath
 
 def readGraph():
     graph = {}
@@ -60,9 +48,6 @@ def readGraph():
     # wayLength = 800.0
 
     maxAutoMiles = currentAutoMiles = fuelTank * fuelConsumption # Столько миль автомобиль может проехать с полным баком
-    # G = {0: {1: wayAndCost}}
-    # G = {0: {2: wayAndCost}}
-    # G = {0: {3: wayAndCost}}
 
     startWeight = startCost
     finishWeight = 0
@@ -102,6 +87,17 @@ def addEdge(graph, a, b, weight):
     else:
         graph[a][b] = weight
 
+def displayShortestPath(G, start, finish, S):
+    Q = deque()
+    v = finish
+    Q.append(v)
+    while v is not start:
+        for u in G[v]:
+            if S[v] == S[u] + G[v][u]:
+                Q.appendleft(u)
+                v = u
+                break
+    return Q
 
 if __name__ == "__main__":
     main()
