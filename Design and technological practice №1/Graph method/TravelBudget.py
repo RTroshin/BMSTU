@@ -9,19 +9,20 @@ def main():
     shortestPath = displayShortestPath(graph, start, finish, shortestDistance)
     return shortestPath
 
-def dijkstra(G, start, finish):
-    Q = deque()
+def dijkstra(graph, start, finish):
+    queue = deque()
     S = {}
     S[start] = 0
-    Q.append(start)
-    while Q:
-        v = Q.popleft()
-        for u in G[v]:
-            if u not in S or S[v] + G[v][u] < S[u]:
-                S[u] = S[v] + G[v][u]
-                Q.append(u)
-        print('S = ', S)
-    return Q
+    queue.append(start)
+    v = start
+    while v is not finish:
+        v = queue.popleft()
+        for u in graph[v]:
+            if u not in S or S[v] + graph[v][u] < S[u]:
+                S[u] = S[v] + graph[v][u]
+                queue.append(u)
+    print(S)
+    return S
 
 def readGraph():
     # M = int(input()) # Количество рёбер, далее - "A, d, вес"
