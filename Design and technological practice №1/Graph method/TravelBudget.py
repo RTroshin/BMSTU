@@ -82,15 +82,18 @@ def readGraph():
 
     # distance = [0.0, 102.0, 220.0, 256.3, 275.0, 277.6, 381.8, 475.6]
     # cost = [1498, 99.9, 132.9, 147.9, 102.9, 112.9, 100.9, 0.0]
-    distance = [0.0, 125.4, 297.9, 345.2, 516.3]
-    cost = [20.87, 125.9, 112.9, 99.9, 0.0]
+    distance = [0, 125.4, 297.9, 345.2, 516.3]
+    cost = [2087, 125.9, 112.9, 99.9, 0.0]
     # distance = [0.0, 102.0, 220.0, 256.3, 275.0, 277.6, 381.8, 475.6, 501.8, 554.4, 605.7, 675.1, 708.8, 800.0]
     # cost = [1498, 99.9, 132.9, 147.9, 102.9, 112.9, 100.9, 99.9, 132.9, 147.9, 102.9, 112.9, 100.9, 0.0]
 
     for i in range(amountStations + 2):
         currentAutoMiles = maxAutoMiles # Условие №2. На каждой бензоколонке водитель всегда заполняет бензобак полностью.
         for j in range(i + 1, amountStations + 2):
+            # dist, cost = map(int, input().split())
+            # distance.append(dist)
             if distance[j] < maxAutoMiles + distance[i]:
+                # currentAutoMiles -= (dist - distance[j - 1])
                 currentAutoMiles -= (distance[j] - distance[j - 1])
                 currentFuelTank = currentAutoMiles / fuelConsumption
                 if j != amountStations + 1:
