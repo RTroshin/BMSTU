@@ -20,19 +20,34 @@ def main():
 
     return shortestPath
 
+# def dijkstra(graph, start, finish):
+#     queue = deque()
+#     queue.append(start)
+#     S = {}
+#     S[start] = 0
+#     v = start
+#     while v is not finish:
+#         v = queue.popleft()
+#         for u in graph[v]:
+#             if u not in S or S[v] + graph[v][u] < S[u]:
+#                 S[u] = S[v] + graph[v][u]
+#                 queue.append(u)
+#     return S
+
 def dijkstra(graph, start):
     queue = deque()
     S = {}
     S[start] = 0
     queue.append(start)
-    v = start
-    while v is not finish:
+    while queue:
         v = queue.popleft()
+        if v == len(graph):
+            continue
         for u in graph[v]:
             if u not in S or S[v] + graph[v][u] < S[u]:
                 S[u] = S[v] + graph[v][u]
                 queue.append(u)
-    print(S)
+    print('S = ',  S)
     return S
 
 def readGraph():
