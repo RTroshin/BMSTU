@@ -9,7 +9,7 @@ def main():
     shortestPath = displayShortestPath(graph, start, finish, shortestDistance)
     return shortestPath
 
-def dijkstra(graph, start, finish):
+def dijkstra(G, start, finish):
     Q = deque()
     S = {}
     S[start] = 0
