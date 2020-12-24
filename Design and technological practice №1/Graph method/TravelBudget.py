@@ -80,17 +80,38 @@ def addEdge(graph, a, b, weight):
     else:
         graph[a][b] = weight
 
-def displayShortestPath(G, start, finish, S):
-    Q = deque()
+# def displayShortestPath(graph, start, finish, S):
+#     queue = deque()
+#     v = finish
+#     queue.append(finish)
+#     while v is not start:
+#         for u in range(len(S) - 1 , 0, -1):
+#             print('S[u] = ', S[u])
+#             print('graph[v][u]) = ', graph[v][u])
+#             print(S[v], '==', S[u] + graph[v][u])
+#             if S[v] == S[u] + graph[v][u]:
+#                 queue.appendleft(v)
+#         v -= 1
+#     print(queue)
+#     print(S)
+#     return queue
+
+def displayShortestPath(graph, start, finish, S):
+    queue = deque()
     v = finish
-    Q.append(v)
+    queue.append(finish)
     while v is not start:
-        for u in G[v]:
-            if S[v] == S[u] + G[v][u]:
-                Q.appendleft(u)
-                v = u
-                break
-    return Q
+        for u in graph[v]:
+            # print('S[u] = ', S[u])
+            # print('graph[v][u]) = ', graph[v][u])
+            # print(S[v], '==', S[u] + graph[v][u])
+            if S[v] == S[u] + graph[v][u]:
+                queue.appendleft(v)
+        v -= 1
+    print(queue)
+    print(S)
+    return queue
+
 
 if __name__ == "__main__":
     main()
