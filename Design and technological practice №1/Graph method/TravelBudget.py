@@ -127,18 +127,26 @@ def addEdge(graph, a, b, weight):
 
 def displayShortestPath(graph, start, finish, S):
     queue = deque()
-    v = finish
-    queue.append(finish)
-    while v is not start:
-        for u in graph[v]:
+    visited = {start: None}
+
+    v = start
+    queue.append(start)
+    
+    while queue:
+        v = queue.popleft()
+        if v == finish:
+            break
+
+        U = graph[v]
+        for u in U:
             # print('S[u] = ', S[u])
             # print('graph[v][u]) = ', graph[v][u])
             # print(S[v], '==', S[u] + graph[v][u])
-            if S[v] == S[u] + graph[v][u]:
-                queue.appendleft(v)
-        v -= 1
+            if u not in visited:
+                queue.appendleft(u)
+                visited[u] = v
     print(queue)
-    print(S)
+    print(visited)
     return queue
 
 
