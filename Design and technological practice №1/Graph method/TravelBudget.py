@@ -3,13 +3,24 @@ from collections import deque
 
 def main():
     graph = readGraph()
+    print(graph)
     start = 0
     finish = len(graph) - 1
-    shortestDistance = dijkstra(graph, start, finish)
+    shortestDistance = dijkstra(graph, start)
     shortestPath = displayShortestPath(graph, start, finish, shortestDistance)
+
+    goal = finish
+    visited = displayShortestPath(graph, start, finish, shortestDistance)
+
+    v = goal
+    print(f'\npath from {goal} ro {start}: \n {goal} ', end = '')
+    while v != start:
+        v = visited[v]
+        print(f'---> {v} ', end = '')
+
     return shortestPath
 
-def dijkstra(graph, start, finish):
+def dijkstra(graph, start):
     queue = deque()
     S = {}
     S[start] = 0
