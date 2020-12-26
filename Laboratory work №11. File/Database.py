@@ -38,7 +38,8 @@ def main():
         if userChoice.lower() == 'выход':
             exit()
 
-while True:
+# Меню программы
+def menu():
     print('\nМеню\n')
     print('1. Создание БД')
     print('2. Добавление записи в БД')
@@ -48,13 +49,14 @@ while True:
     print('\nДля выхода из программы наберите "Выход"\n')
     userChoice = input('Выберите пункт меню: ')
     print()
+    return userChoice
 
-    # Создание БД
-
-    if userChoice == '1':
-        f = open(filename, 'wb')
-        print('\nБаза данных создана')
-        f.close()
+# Создание БД
+def createDatabase(filename):
+    # Добавить исключение!
+    f = open(filename, 'wb')
+    print('\nБаза данных создана')
+    f.close()
 
     # Добавление записи в БД
 
