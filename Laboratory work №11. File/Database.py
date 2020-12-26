@@ -77,22 +77,22 @@ def addBook(filename, book):
                 break
     f.close()
 
-    # Вывод всей БД
-
-    elif userChoice == '3':
-        if checkFile(filename):
-            f = open(filename, 'rb')
-            print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
-            try:
-                while f != '\0':
-                    book = p.load(f)
-                    print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-                    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-                    .format(book['book'], book['author'], book['name'], book['year']))
-            except EOFError:
-                book = {}
-            print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-            f.close()
+# Вывод всей БД
+def printDatabase(filename, book):
+    if checkFile(filename):
+    # Добавить исключение!
+        f = open(filename, 'rb')
+        print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
+        try:
+            while f != '\0':
+                book = p.load(f)
+                print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+                print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+                .format(book['book'], book['author'], book['name'], book['year']))
+        except EOFError:
+            book = {}
+        print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
+        f.close()
 
     # Поиск записей по одному полю
 
