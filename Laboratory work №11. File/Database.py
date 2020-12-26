@@ -16,19 +16,27 @@ import pickle as p
 import os.path
 
 
-# Проверка на существование файла
+# Главная функция
+def main():
+    filename = 'Documents\Laboratory Work №11\Database.txt'
+    book = {'book': 'number', 'author' : 'authorName',  'name': 'bookName', 'year': 'number'}
 
-def checkFile(fn):
-    check = os.path.exists(fn)
-    if not check:
-        print('Файла не существует!')
-    else:
-        return True
+    while True:
+        userChoice = menu()
+        if userChoice == '1':
+            createDatabase(filename)
+        elif userChoice == '2':
+            addBook(filename, book)
+        elif userChoice == '3':
+            printDatabase(filename, book)
+        elif userChoice == '4':
+            searchOneField(filename, book)       
+        elif userChoice == '5':
+            searchTwoFields(filename, book)
 
-
-filename = 'Documents\Laboratory Work №11\Database.txt'
-ch = 1
-book = {'book': '1', 'author' : 'Tolkien',  'name': 'Lord of the ring', 'year': '1950'}
+        # Выход из программы
+        if userChoice.lower() == 'выход':
+            exit()
 
 while True:
     print('\nМеню\n')
@@ -142,7 +150,6 @@ while True:
             print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
             f.close()
 
-    # Выход из программы
 
-    if userChoice.lower() == 'выход':
-        exit()
+if __name__ == "__main__":
+    main()
