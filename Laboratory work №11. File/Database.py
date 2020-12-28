@@ -149,6 +149,14 @@ def searchTwoFields(filename, book):
         print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
         f.close()
 
+# Проверка на существование файла
+def checkFile(filename):
+    check = os.path.exists(filename)
+    if not check:
+        print('Файла не существует!')
+    else:
+        return True
+
 
 if __name__ == "__main__":
     main()
