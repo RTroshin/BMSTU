@@ -101,27 +101,29 @@ def printDatabase(filename, book):
 def searchOneField(filename, book):
     if checkFile(filename):
         # Добавить исключение!
-        f = open(filename, 'rb')
-        field = input('Введите поле, которое необходимо найти: ')
-        print()
-        find = False
-        print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
-        try:
-            while f != '\0':
-                book = p.load(f)
-                for value in book.values():
-                    if value.lower() == field.lower():
-                        print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-                        print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-                        .format(book['book'], book['author'], book['name'], book['year']))
-                        find = True
-                        break
-        except EOFError:
-            book = {}
-        if not find:
-            print('\nПоля не найдены')
-        print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-        f.close()
+        with open(filename, 'rb') as f:
+            book = p.load(f)
+            field = input('Введите поле, которое необходимо найти: ')
+            print()
+            search = False
+            print('┌', '─' * 4, '┬', '─' * 21, '┬',\
+                '─' * 41, '┬', '─' * 6, '┐', sep = '')
+            print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
+                .format('№', 'Автор', 'Название книги', 'Год'))
+            for value in book.values():
+                if value.lower() == field.lower():
+                    print('├', '─' * 4, '┼', '─' * 21,\
+                            '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+                    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+                    .format(book['book'], book['author'],\
+                            book['name'], book['year']))
+                    search = True
+                    break
+            if not search:
+                print('\nПоля не найдены')
+            print('└', '─' * 4, '┴', '─' * 21,\
+                '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
+        # f.close()
 
 # Поиск записей по двум полям
 def searchTwoFields(filename, book):
