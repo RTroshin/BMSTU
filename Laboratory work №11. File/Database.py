@@ -18,8 +18,9 @@ import os.path
 
 # Главная функция
 def main():
-    filename = 'Documents\Laboratory Work №11\Database.txt'
-    book = {'book': 'number', 'author' : 'authorName',  'name': 'bookName', 'year': 'number'}
+    filename = 'C:/Users/Engine/Desktop/Database.txt'
+    book = {'book': 'numberBook', 'author' : 'authorName',\
+            'name': 'bookName', 'year': 'numberYear'}
 
     while True:
         userChoice = menu()
@@ -81,18 +82,20 @@ def addBook(filename, book):
 def printDatabase(filename, book):
     if checkFile(filename):
         # Добавить исключение!
-        f = open(filename, 'rb')
-        print('┌', '─' * 4, '┬', '─' * 21, '┬', '─' * 41, '┬', '─' * 6, '┐', sep = '')
-        try:
-            while f != '\0':
-                book = p.load(f)
-                print('├', '─' * 4, '┼', '─' * 21, '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-                print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-                .format(book['book'], book['author'], book['name'], book['year']))
-        except EOFError:
-            book = {}
-        print('└', '─' * 4, '┴', '─' * 21, '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-        f.close()
+        with open(filename, 'rb') as f:
+            book = p.load(f)
+            print('┌', '─' * 4, '┬', '─' * 21, '┬',\
+                '─' * 41, '┬', '─' * 6, '┐', sep = '')
+            print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
+                .format('№', 'Автор', 'Название книги', 'Год'))
+            print('├', '─' * 4, '┼', '─' * 21,\
+                    '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+            print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+            .format(book['book'], book['author'],\
+                    book['name'], book['year']))
+            print('└', '─' * 4, '┴', '─' * 21, '┴',\
+                '─' * 41, '┴', '─' * 6, '┘', sep = '')
+        # f.close()
 
 # Поиск записей по одному полю
 def searchOneField(filename, book):
