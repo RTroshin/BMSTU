@@ -95,7 +95,6 @@ def printDatabase(filename, book):
                     book['name'], book['year']))
             print('└', '─' * 4, '┴', '─' * 21, '┴',\
                 '─' * 41, '┴', '─' * 6, '┘', sep = '')
-        # f.close()
 
 # Поиск записей по одному полю
 def searchOneField(filename, book):
@@ -123,7 +122,6 @@ def searchOneField(filename, book):
                 print('\nПоля не найдены')
             print('└', '─' * 4, '┴', '─' * 21,\
                 '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-        # f.close()
 
 # Поиск записей по двум полям
 def searchTwoFields(filename, book):
@@ -154,7 +152,6 @@ def searchTwoFields(filename, book):
                 print('\nПоля не найдены')
             print('└', '─' * 4, '┴', '─' * 21,\
                 '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-        # f.close()
 
 # Проверка на существование файла
 def checkFile(filename):
