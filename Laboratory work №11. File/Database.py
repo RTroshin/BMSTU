@@ -12,6 +12,16 @@
 # Для работы с текущей записью используется словарь.
 #
 
+# Исключения
+# 1. AttributeError
+# 2. EOFError
+# 3. ImportError
+# 4. IndexError
+# 5. pickle.UnpicklingError
+# 6. pickle.PicklingError
+# 7. pickle.PickleError
+# 8. OSError: [Errno 28] No space left on device
+
 import pickle as p
 import os.path
 
@@ -21,7 +31,6 @@ def main():
     filename = 'C:/Users/Engine/Desktop/Database.txt'
     book = {'book': 'numberBook', 'author' : 'authorName',\
             'name': 'bookName', 'year': 'numberYear'}
-
     while True:
         userChoice = menu()
         if userChoice == '1':
@@ -41,7 +50,7 @@ def main():
 
 # Меню программы
 def menu():
-    print('\nМеню\n')
+    print('\nМеню')
     print('1. Создание БД')
     print('2. Добавление записи в БД')
     print('3. Вывод всей БД')
