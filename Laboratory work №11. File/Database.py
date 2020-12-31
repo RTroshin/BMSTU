@@ -141,6 +141,23 @@ def searchOneField(filename, book):
             print('└', '─' * 4, '┴', '─' * 21,\
                 '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
 
+# 4. Поиск записей по одному полю
+# def searchOneField(filename, book):
+#     book = readFile(filename)
+#     if book:
+#         field = input('Введите поле, которое необходимо найти: ')
+#         print()
+#         search = False
+#         printHeader()
+#         for value in book.values():
+#             if value.lower() == field.lower():
+#                 printList(book)
+#                 search = True
+#                 # break
+#         if not search:
+#             print('\nПоля не найдены')
+#         printFooter()
+
 # Поиск записей по двум полям
 def searchTwoFields(filename, book):
     if checkFile(filename):
