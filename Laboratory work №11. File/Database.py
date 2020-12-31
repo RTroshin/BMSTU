@@ -67,24 +67,26 @@ def createDatabase(filename):
     with open(filename, 'wb') as wf:
         print('База данных создана')
 
-# Добавление записи в БД
+# 2. Добавление записи в БД
 def addBook(filename, book):
-    # Добавить исключение!
-    f = open(filename, 'ab')
-    uC = 'да'
-    while uC.lower() != 'нет':
-        book['book'] = input('Введите номер книги: ')
-        book['author'] = input('Введите автора: ')
-        book['name'] = input('Введите наименование: ')
-        book['year'] = input('Введите год выпуска: ')
-        print()
-        print('Ввести ещё одну книгу?')
-        p.dump(book, f)
-        while True:
-            uC = input('(Да/Нет): ')
-            if uC.lower() == 'да' or uC.lower() == 'нет':
-                break
-    f.close()
+    # Добавить исключение на открытие файла!
+    # Добавить исключение на перезапись уже открытого файла!
+    with open(filename, 'ab') as af:
+        uC = 'да'
+        while uC.lower() != 'нет':
+            book['book'] = input('Введите номер книги: ')
+            book['author'] = input('Введите автора: ')
+            book['name'] = input('Введите наименование: ')
+            book['year'] = input('Введите год выпуска: ')
+            print()
+            print('Ввести ещё одну книгу?')
+            # Добавить исключение на открытие файла!
+            # Добавить исключение на перезапись уже открытого файла!
+            p.dump(book, af)
+            while True:
+                uC = input('(Да/Нет): ')
+                if uC.lower() == 'да' or uC.lower() == 'нет':
+                    break
 
 # Вывод всей БД
 def printDatabase(filename, book):
