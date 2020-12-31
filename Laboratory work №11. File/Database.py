@@ -106,6 +106,14 @@ def printDatabase(filename, book):
             print('└', '─' * 4, '┴', '─' * 21, '┴',\
                 '─' * 41, '┴', '─' * 6, '┘', sep = '')
 
+# 3. Вывод всей БД
+# def printDatabase(filename, book):
+#     book = readFile(filename)
+#     if book:
+#         printHeader()
+#         printList(book)
+#         printFooter()
+
 # Поиск записей по одному полю
 def searchOneField(filename, book):
     if checkFile(filename):
