@@ -61,12 +61,11 @@ def menu():
     print()
     return userChoice
 
-# Создание БД
+# 1. Создание БД
 def createDatabase(filename):
-    # Добавить исключение!
-    f = open(filename, 'wb')
-    print('\nБаза данных создана')
-    f.close()
+    # Добавить исключение на открытие файла!
+    with open(filename, 'wb') as wf:
+        print('База данных создана')
 
 # Добавление записи в БД
 def addBook(filename, book):
