@@ -188,6 +188,26 @@ def searchTwoFields(filename, book):
             print('└', '─' * 4, '┴', '─' * 21,\
                 '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
 
+# 5. Поиск записей по двум полям
+# def searchTwoFields(filename, book):
+#     book = readFile(filename)
+#     if book:
+#         print('Введите два поля, которые необходимо найти')
+#         field1 = input('Введите первое поле: ')
+#         field2 = input('Введите второе поле: ')
+#         search = False
+#         printHeader()
+#         for value in book.values():
+#             if value.lower() == field1.lower():
+#                 for value in book.values():
+#                     if value.lower() == field2.lower():
+#                         printList(book)
+#                         search = True
+#                         # break
+#         if not search:
+#             print('\nПоля не найдены')
+#         printFooter()
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
