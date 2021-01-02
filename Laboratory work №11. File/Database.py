@@ -214,6 +214,12 @@ def searchTwoFields(filename, book):
 #         book = ExceptionsHunter(wf)
 #     return book
 
+# Добавление данных в файл
+def rewriteFile(filename):
+    with open(filename, 'ab') as af:
+        book = ExceptionsHunter(af)
+    return book
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
