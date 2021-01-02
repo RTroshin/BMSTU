@@ -208,6 +208,12 @@ def searchTwoFields(filename, book):
 #             print('\nПоля не найдены')
 #         printFooter()
 
+# Запись/перезапись данных в файле
+# def writeFile(filename):
+#     with open(filename, 'wb') as wf:
+#         book = ExceptionsHunter(wf)
+#     return book
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
