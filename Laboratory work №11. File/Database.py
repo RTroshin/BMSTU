@@ -231,6 +231,13 @@ def searchTwoFields(filename, book):
 #     else:
 #         print('Файла не существует!')
 
+# Вывод списка книг на экран
+def printHeader():
+    print('┌', '─' * 4, '┬', '─' * 21, '┬',\
+            '─' * 41, '┬', '─' * 6, '┐', sep = '')
+    print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
+        .format('№', 'Автор', 'Название книги', 'Год'))
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
