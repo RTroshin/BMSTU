@@ -245,6 +245,10 @@ def printList(book):
     .format(book['book'], book['author'],\
             book['name'], book['year']))
 
+def printFooter():
+    print('└', '─' * 4, '┴', '─' * 21, '┴',\
+            '─' * 41, '┴', '─' * 6, '┘', sep = '')
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
