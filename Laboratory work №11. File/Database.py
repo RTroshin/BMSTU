@@ -238,6 +238,13 @@ def printHeader():
     print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
         .format('№', 'Автор', 'Название книги', 'Год'))
 
+def printList(book):
+    print('├', '─' * 4, '┼', '─' * 21,\
+            '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
+    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
+    .format(book['book'], book['author'],\
+            book['name'], book['year']))
+
 # Проверка на существование файла
 def checkFile(filename):
     check = os.path.exists(filename)
