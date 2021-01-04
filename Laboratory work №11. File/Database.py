@@ -250,12 +250,12 @@ def printFooter():
             '─' * 41, '┴', '─' * 6, '┘', sep = '')
 
 # Проверка на существование файла
-def checkFile(filename):
-    check = os.path.exists(filename)
-    if not check:
-        print('Файла не существует!')
-    else:
-        return True
+# def checkFile(filename):
+#     check = os.path.exists(filename)
+#     if not check:
+#         print('Файла не существует!')
+#     else:
+#         return True
 
 
 if __name__ == "__main__":
