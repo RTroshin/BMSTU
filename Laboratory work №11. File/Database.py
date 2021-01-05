@@ -96,49 +96,22 @@ def printDatabase(filename, book):
         printList(book)
         printFooter()
 
-# Поиск записей по одному полю
-def searchOneField(filename, book):
-    if checkFile(filename):
-        # Добавить исключение!
-        with open(filename, 'rb') as f:
-            book = p.load(f)
-            field = input('Введите поле, которое необходимо найти: ')
-            print()
-            search = False
-            print('┌', '─' * 4, '┬', '─' * 21, '┬',\
-                '─' * 41, '┬', '─' * 6, '┐', sep = '')
-            print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
-                .format('№', 'Автор', 'Название книги', 'Год'))
-            for value in book.values():
-                if value.lower() == field.lower():
-                    print('├', '─' * 4, '┼', '─' * 21,\
-                            '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-                    print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-                    .format(book['book'], book['author'],\
-                            book['name'], book['year']))
-                    search = True
-                    break
-            if not search:
-                print('\nПоля не найдены')
-            print('└', '─' * 4, '┴', '─' * 21,\
-                '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-
 # 4. Поиск записей по одному полю
-# def searchOneField(filename, book):
-#     book = readFile(filename)
-#     if book:
-#         field = input('Введите поле, которое необходимо найти: ')
-#         print()
-#         search = False
-#         printHeader()
-#         for value in book.values():
-#             if value.lower() == field.lower():
-#                 printList(book)
-#                 search = True
-#                 # break
-#         if not search:
-#             print('\nПоля не найдены')
-#         printFooter()
+def searchOneField(filename, book):
+    book = readFile(filename)
+    if book:
+        field = input('Введите поле, которое необходимо найти: ')
+        print()
+        search = False
+        printHeader()
+        for value in book.values():
+            if value.lower() == field.lower():
+                printList(book)
+                search = True
+                # break
+        if not search:
+            print('\nПоля не найдены')
+        printFooter()
 
 # Поиск записей по двум полям
 def searchTwoFields(filename, book):
