@@ -249,6 +249,26 @@ def printFooter():
     print('└', '─' * 4, '┴', '─' * 21, '┴',\
             '─' * 41, '┴', '─' * 6, '┘', sep = '')
 
+# # Поиск исключений
+# def ExceptionsHunter(f):
+#     try:
+#         while f != '\0':
+#             check = p.load(f)
+#             print(check)
+#         return check
+#     except EOFError:
+#         print('Файл пустой!')
+#         return False
+#     except p.UnpicklingError:
+#         print('UnpicklingError!')
+#         return False
+#     except p.PicklingError:
+#         print('PicklingError!')
+#         return False
+#     except p.PickleError:
+#         print('PickleError!')
+#         return False
+
 # Проверка на существование файла
 # def checkFile(filename):
 #     check = os.path.exists(filename)
