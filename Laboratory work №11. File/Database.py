@@ -113,55 +113,25 @@ def searchOneField(filename, book):
             print('\nПоля не найдены')
         printFooter()
 
-# Поиск записей по двум полям
-def searchTwoFields(filename, book):
-    if checkFile(filename):
-        # Добавить исключение!
-        with open(filename, 'rb') as f:
-            book = p.load(f)
-            print('Введите два поля, которые необходимо найти')
-            field1 = input('Введите первое поле: ')
-            field2 = input('Введите второе поле: ')
-            search = False
-            print('┌', '─' * 4, '┬', '─' * 21, '┬',\
-                '─' * 41, '┬', '─' * 6, '┐', sep = '')
-            print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
-                .format('№', 'Автор', 'Название книги', 'Год'))
-            for value in book.values():
-                if value.lower() == field1.lower():
-                    for value in book.values():
-                        if value.lower() == field2.lower():
-                            print('├', '─' * 4, '┼', '─' * 21,\
-                                    '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-                            print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-                            .format(book['book'], book['author'],\
-                                    book['name'], book['year']))
-                            search = True
-                            break
-            if not search:
-                print('\nПоля не найдены')
-            print('└', '─' * 4, '┴', '─' * 21,\
-                '┴', '─' * 41, '┴', '─' * 6, '┘', sep = '')
-
 # 5. Поиск записей по двум полям
-# def searchTwoFields(filename, book):
-#     book = readFile(filename)
-#     if book:
-#         print('Введите два поля, которые необходимо найти')
-#         field1 = input('Введите первое поле: ')
-#         field2 = input('Введите второе поле: ')
-#         search = False
-#         printHeader()
-#         for value in book.values():
-#             if value.lower() == field1.lower():
-#                 for value in book.values():
-#                     if value.lower() == field2.lower():
-#                         printList(book)
-#                         search = True
-#                         # break
-#         if not search:
-#             print('\nПоля не найдены')
-#         printFooter()
+def searchTwoFields(filename, book):
+    book = readFile(filename)
+    if book:
+        print('Введите два поля, которые необходимо найти')
+        field1 = input('Введите первое поле: ')
+        field2 = input('Введите второе поле: ')
+        search = False
+        printHeader()
+        for value in book.values():
+            if value.lower() == field1.lower():
+                for value in book.values():
+                    if value.lower() == field2.lower():
+                        printList(book)
+                        search = True
+                        # break
+        if not search:
+            print('\nПоля не найдены')
+        printFooter()
 
 # Запись/перезапись данных в файле
 # def writeFile(filename):
