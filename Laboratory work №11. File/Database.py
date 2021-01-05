@@ -20,7 +20,7 @@
 # 5. pickle.UnpicklingError
 # 6. pickle.PicklingError
 # 7. pickle.PickleError
-# 8. OSError: [Errno 28] No space left on device
+# 8. OSError
 
 import pickle as p
 import os.path
@@ -88,31 +88,13 @@ def addBook(filename, book):
                 if uC.lower() == 'да' or uC.lower() == 'нет':
                     break
 
-# Вывод всей БД
-def printDatabase(filename, book):
-    if checkFile(filename):
-        # Добавить исключение!
-        with open(filename, 'rb') as f:
-            book = p.load(f)
-            print('┌', '─' * 4, '┬', '─' * 21, '┬',\
-                '─' * 41, '┬', '─' * 6, '┐', sep = '')
-            print('│ {:^3}│ {:^20}│ {:^40}│ {:^5}│'\
-                .format('№', 'Автор', 'Название книги', 'Год'))
-            print('├', '─' * 4, '┼', '─' * 21,\
-                    '┼', '─' * 41, '┼', '─' * 6, '┤', sep = '')
-            print('│ {:^3}│ {:20}│ {:40}│ {:5}│'\
-            .format(book['book'], book['author'],\
-                    book['name'], book['year']))
-            print('└', '─' * 4, '┴', '─' * 21, '┴',\
-                '─' * 41, '┴', '─' * 6, '┘', sep = '')
-
 # 3. Вывод всей БД
-# def printDatabase(filename, book):
-#     book = readFile(filename)
-#     if book:
-#         printHeader()
-#         printList(book)
-#         printFooter()
+def printDatabase(filename, book):
+    book = readFile(filename)
+    if book:
+        printHeader()
+        printList(book)
+        printFooter()
 
 # Поиск записей по одному полю
 def searchOneField(filename, book):
@@ -221,15 +203,15 @@ def searchTwoFields(filename, book):
 #     return book
 
 # Чтение данных из файла
-# def readFile(filename):
-#     check = os.path.exists(filename)
-#     if check:
-#         with open(filename, 'rb') as rf:
-#             book = ExceptionsHunter(rf)
-#             print(book)
-#         return book
-#     else:
-#         print('Файла не существует!')
+def readFile(filename):
+    check = os.path.exists(filename)
+    if check:
+        with open(filename, 'rb') as rf:
+            book = ExceptionsHunter(rf)
+            print(book)
+        return book
+    else:
+        print('Файла не существует!')
 
 # Вывод списка книг на экран
 def printHeader():
@@ -270,12 +252,12 @@ def printFooter():
 #         return False
 
 # Проверка на существование файла
-# def checkFile(filename):
-#     check = os.path.exists(filename)
-#     if not check:
-#         print('Файла не существует!')
-#     else:
-#         return True
+def checkFile(filename):
+    check = os.path.exists(filename)
+    if not check:
+        print('Файла не существует!')
+    else:
+        return True
 
 
 if __name__ == "__main__":
