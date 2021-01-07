@@ -134,16 +134,16 @@ def searchTwoFields(filename, book):
         printFooter()
 
 # Запись/перезапись данных в файле
-# def writeFile(filename):
-#     with open(filename, 'wb') as wf:
-#         book = ExceptionsHunter(wf)
-#     return book
+def writeFile(filename):
+    with open(filename, 'wb') as wf:
+        book = ExceptionsHunter(wf)
+    return book
 
 # Добавление данных в файл
-# def rewriteFile(filename):
-#     with open(filename, 'ab') as af:
-#         book = ExceptionsHunter(af)
-#     return book
+def rewriteFile(filename):
+    with open(filename, 'ab') as af:
+        book = ExceptionsHunter(af)
+    return book
 
 # Чтение данных из файла
 def readFile(filename):
