@@ -194,14 +194,6 @@ def ExceptionsHunter(f):
         print('PickleError!')
         return False
 
-# Проверка на существование файла
-def checkFile(filename):
-    check = os.path.exists(filename)
-    if not check:
-        print('Файла не существует!')
-    else:
-        return True
-
 
 if __name__ == "__main__":
     main()
