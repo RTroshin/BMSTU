@@ -29,7 +29,7 @@ import os.path
 # Главная функция
 def main():
     filename = 'C:/Users/Engine/Desktop/Database.txt'
-    book = {'book': 'numberBook', 'author' : 'authorName',\
+    book = {'book': 'bookNumber', 'author' : 'authorName',\
             'name': 'bookName', 'year': 'numberYear'}
     while True:
         userChoice = menu()
@@ -38,11 +38,13 @@ def main():
         elif userChoice == '2':
             addBook(filename, book)
         elif userChoice == '3':
-            printDatabase(filename, book)
+            printDatabase(filename)
         elif userChoice == '4':
-            searchOneField(filename, book)       
+            searchOneField(filename)
         elif userChoice == '5':
-            searchTwoFields(filename, book)
+            searchTwoFields(filename)
+        else:
+            print('Такого пункта нет в меню!')
 
         # Выход из программы
         if userChoice.lower() == 'выход':
