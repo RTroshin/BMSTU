@@ -100,18 +100,19 @@ def printDatabase(filename):
         printFooter()
 
 # 4. Поиск записей по одному полю
-def searchOneField(filename, book):
-    book = readFile(filename)
-    if book:
+def searchOneField(filename):
+    books = readFile(filename)
+    if books:
         field = input('Введите поле, которое необходимо найти: ')
         print()
         search = False
         printHeader()
-        for value in book.values():
-            if value.lower() == field.lower():
-                printList(book)
-                search = True
-                # break
+        for book in books:
+            for value in book.values():
+                if value.lower() == field.lower():
+                    printList(book)
+                    search = True
+                    break
         if not search:
             print('\nПоля не найдены')
         printFooter()
