@@ -118,21 +118,22 @@ def searchOneField(filename):
         printFooter()
 
 # 5. Поиск записей по двум полям
-def searchTwoFields(filename, book):
-    book = readFile(filename)
-    if book:
+def searchTwoFields(filename):
+    books = readFile(filename)
+    if books:
         print('Введите два поля, которые необходимо найти')
         field1 = input('Введите первое поле: ')
         field2 = input('Введите второе поле: ')
         search = False
         printHeader()
-        for value in book.values():
-            if value.lower() == field1.lower():
-                for value in book.values():
-                    if value.lower() == field2.lower():
-                        printList(book)
-                        search = True
-                        # break
+        for book in books:
+            for value in book.values():
+                if value.lower() == field1.lower():
+                    for value in book.values():
+                        if value.lower() == field2.lower():
+                            printList(book)
+                            search = True
+                            break
         if not search:
             print('\nПоля не найдены')
         printFooter()
