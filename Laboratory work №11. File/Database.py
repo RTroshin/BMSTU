@@ -91,11 +91,12 @@ def addBook(filename, book):
                     break
 
 # 3. Вывод всей БД
-def printDatabase(filename, book):
-    book = readFile(filename)
-    if book:
+def printDatabase(filename):
+    books = readFile(filename)
+    if books:
         printHeader()
-        printList(book)
+        for book in books:
+            printList(book)
         printFooter()
 
 # 4. Поиск записей по одному полю
