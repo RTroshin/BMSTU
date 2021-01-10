@@ -183,23 +183,23 @@ def printFooter():
 
 # Поиск исключений
 def ExceptionsHunter(f):
+    bookList = []
     try:
-        while f != '\0':
-            check = p.load(f)
-            print(check)
-        return check
+        # while f != '\0':
+        while True:
+            book = p.load(f)
+            bookList.append(book)
     except EOFError:
-        print('Файл пустой!')
-        return False
+        return bookList
     except p.UnpicklingError:
         print('UnpicklingError!')
-        return False
+        return bookList
     except p.PicklingError:
         print('PicklingError!')
-        return False
+        return bookList
     except p.PickleError:
         print('PickleError!')
-        return False
+        return bookList
 
 
 if __name__ == "__main__":
