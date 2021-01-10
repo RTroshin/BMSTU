@@ -43,12 +43,12 @@ def main():
             searchOneField(filename)
         elif userChoice == '5':
             searchTwoFields(filename)
-        else:
-            print('Такого пункта нет в меню!')
 
         # Выход из программы
-        if userChoice.lower() == 'выход':
+        elif userChoice.lower() == 'выход':
             exit()
+        else:
+            print('Такого пункта нет в меню!')
 
 # Меню программы
 def menu():
