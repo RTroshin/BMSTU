@@ -155,9 +155,11 @@ def readFile(filename):
     check = os.path.exists(filename)
     if check:
         with open(filename, 'rb') as rf:
-            book = ExceptionsHunter(rf)
-            print(book)
-        return book
+            books = ExceptionsHunter(rf)
+            if not books:
+                print('Файл пустой!')
+            else:
+                return books
     else:
         print('Файла не существует!')
 
