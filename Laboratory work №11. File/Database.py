@@ -21,6 +21,7 @@
 # 6. pickle.PicklingError
 # 7. pickle.PickleError
 # 8. OSError
+# 
 
 import pickle as p
 import os.path
@@ -135,12 +136,6 @@ def searchTwoFields(filename):
         if not search:
             print('\nПоля не найдены')
         printFooter()
-
-# Запись/перезапись данных в файле
-def writeFile(filename):
-    with open(filename, 'wb') as wf:
-        book = ExceptionsHunter(wf)
-    return book
 
 # Добавление данных в файл
 def rewriteFile(filename):
