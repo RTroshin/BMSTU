@@ -137,12 +137,6 @@ def searchTwoFields(filename):
             print('\nПоля не найдены')
         printFooter()
 
-# Добавление данных в файл
-def rewriteFile(filename):
-    with open(filename, 'ab') as af:
-        book = ExceptionsHunter(af)
-    return book
-
 # Чтение данных из файла
 def readFile(filename):
     check = os.path.exists(filename)
