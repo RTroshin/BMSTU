@@ -143,7 +143,9 @@ def readFile(filename):
     if check:
         with open(filename, 'rb') as rf:
             books = ExceptionsHunter(rf)
-            if not books:
+            if books is None:
+                print('Ошибка данных!')
+            elif not books:
                 print('Файл пустой!')
             else:
                 return books
