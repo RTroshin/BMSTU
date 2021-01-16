@@ -179,15 +179,15 @@ def ExceptionsHunter(f):
             bookList.append(book)
         except EOFError:
             return bookList
-    # except p.UnpicklingError:
-    #     print('UnpicklingError!')
-    #     return bookList
-    # except p.PicklingError:
-    #     print('PicklingError!')
-    #     return bookList
-    # except p.PickleError:
-    #     print('PickleError!')
-    #     return bookList
+        except p.UnpicklingError:
+            print('UnpicklingError!')
+            return None
+        except p.PicklingError:
+            print('PicklingError!')
+            return None
+        except p.PickleError:
+            print('PickleError!')
+            return None
 
 
 if __name__ == "__main__":
