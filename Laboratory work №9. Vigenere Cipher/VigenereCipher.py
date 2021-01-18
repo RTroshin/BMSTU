@@ -47,9 +47,15 @@ def menu():
 
 def encryptVigenere(plaintext, key):
     result = ''
+    i = 0
+    lenKey = len(key) - 1
     for letter in plaintext:
-        encodedSymbol = ord('A') + (ord(letter) - ord('A') + ord(key) - ord('A') + 1) % 26
-        result += chr(encodedSymbol)
+        result += chr(ord('A') + (ord(letter) - ord('A')\
+                  + ord(key[i]) - ord('A') + 1) % 26)
+        if i == lenKey:
+            i = 0
+        else:
+            i += 1
     return result
 
 # def decryptVigenere(plaintext, key):
