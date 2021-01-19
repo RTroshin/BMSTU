@@ -7,7 +7,8 @@
 #
 
 # По-умолчанию
-plaintext = 'PYTHON' 
+plaintext = 'PYTHON'
+plaintextDecrypt = 'HNTTGC'
 key = 'SPAM'
 
 def main():
@@ -24,7 +25,7 @@ def main():
         if userChoice == '3':
             print(encryptVigenere(plaintext, key))
         elif userChoice == '4':
-            print(decryptVigenere(plaintext, key))
+            print(decryptVigenere(plaintextDecrypt, key))
 
         # Выход из программы
         elif userChoice.lower() == 'выход':
@@ -50,8 +51,7 @@ def encryptVigenere(plaintext, key):
     i = 0
     lenKey = len(key) - 1
     for letter in plaintext:
-        result += chr(ord('A') + (ord(letter) - ord('A')\
-                  + ord(key[i]) - ord('A') + 1) % 26)
+        result += chr(ord('A') + (ord(letter) - ord('A') + ord(key[i]) - ord('A')) % 26)
         if i == lenKey:
             i = 0
         else:
