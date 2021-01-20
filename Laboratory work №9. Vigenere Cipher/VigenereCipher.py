@@ -58,11 +58,17 @@ def encryptVigenere(plaintext, key):
             i += 1
     return result
 
-# def decryptVigenere(plaintext, key):
-#     result = ''
-#     for letter in plaintext:
-#         result += 
-#     return result
+def decryptVigenere(plaintext, key):
+    result = ''
+    i = 0
+    lenKey = len(key) - 1
+    for letter in plaintext:
+        result += chr(ord('A') + (ord(letter) - ord('A') + 26 - ord(key[i]) - ord('A')) % 26)
+        if i == lenKey:
+            i = 0
+        else:
+            i += 1
+    return result
 
 
 if __name__ == "__main__":
