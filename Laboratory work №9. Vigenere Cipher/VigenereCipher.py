@@ -7,9 +7,12 @@
 #
 
 # По-умолчанию
-plaintext = 'PYTHON'
-plaintextDecrypt = 'HNTTGC'
-key = 'SPAM'
+# plaintext = 'PYTHON'
+plaintext = 'howcanigettothelibrary?'
+# plaintextDecrypt = 'HNTTGC'
+plaintextCiphered = 'swxtaegrmukokfptjsrrpj?'
+# key = 'SPAM'
+key = 'library'
 
 def main():
     while True:
@@ -25,7 +28,7 @@ def main():
         if userChoice == '3':
             print(encryptVigenere(plaintext, key))
         elif userChoice == '4':
-            print(decryptVigenere(plaintextDecrypt, key))
+            print(decryptVigenere(plaintextCiphered, key))
 
         # Выход из программы
         elif userChoice.lower() == 'выход':
