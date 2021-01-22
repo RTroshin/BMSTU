@@ -69,12 +69,18 @@ def decryptVigenere(plaintext, key):
     result = ''
     i = 0
     lenKey = len(key) - 1
+    # for letter in plaintext:
+    #     result += chr(ord('A') + (ord(letter) - ord('A') + 26\
+    #               - ord(key[i]) - ord('A')) % 26)
+    #     i = 0 if i == lenKey else i + 1
     for letter in plaintext:
-        result += chr(ord('A') + (ord(letter) - ord('A') + 26 - ord(key[i]) - ord('A')) % 26)
-        if i == lenKey:
-            i = 0
-        else:
-            i += 1
+        result += chr(ord('a') + (ord(letter) - ord('a') + 26\
+                  - ord(key[i]) - ord('a')) % 26)
+        i = 0 if i == lenKey else i + 1
+        # if i == lenKey:
+        #     i = 0
+        # else:
+        #     i += 1
     return result
 
 
