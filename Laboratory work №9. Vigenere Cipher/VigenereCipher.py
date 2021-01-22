@@ -9,7 +9,7 @@
 # По-умолчанию
 # plaintext = 'PYTHON'
 plaintext = 'howcanigettothelibrary?'
-# plaintextDecrypt = 'HNTTGC'
+# plaintextCiphered = 'HNTTGC'
 plaintextCiphered = 'swxtaegrmukokfptjsrrpj?'
 # key = 'SPAM'
 key = 'library'
@@ -20,11 +20,9 @@ def main():
         # Добавить проверку для ключа, все ли буквы ключа являются символами алфавита
         # Функция isalpha
         # if userChoice == '1':
-        #     plaintext = input("Введите строку: ")
-            # plaintext = 'PYTHON'       
+        #     plaintext = input("Введите строку: ").lower()      
         # elif userChoice == '2':
-            # key = input("Введите ключевое слово: ")
-            # key = 'SPAM' 
+            # key = input("Введите ключевое слово: ").lower()
         if userChoice == '3':
             print(encryptVigenere(plaintext, key))
         elif userChoice == '4':
