@@ -6,27 +6,34 @@
 # 4. Расшифрование строки.
 #
 
-# По-умолчанию
-# plaintext = 'PYTHON'
-plaintext = 'howcanigettothelibrary?'
-# plaintextCiphered = 'HNTTGC'
-plaintextCiphered = 'swxtaegrmukokfptjsrrpj?'
-# key = 'SPAM'
-key = 'library'
-
 def main():
+
+    # Настройки по-умолчанию
+    plaintext = 'how can i get to the library?'
+    # plaintext = 'swx tae g rmu ko kfp tjsrrpj?'
+    key = 'library'
+
     while True:
         userChoice = menu()
-        # Добавить проверку для ключа, все ли буквы ключа являются символами алфавита
-        # Функция isalpha
-        # if userChoice == '1':
-        #     plaintext = input("Введите строку: ").lower()      
-        # elif userChoice == '2':
-            # key = input("Введите ключевое слово: ").lower()
-        if userChoice == '3':
-            print(encryptVigenere(plaintext, key))
+        if userChoice == '1':
+            plaintext = input("Введите строку: ").lower()      
+        elif userChoice == '2':
+            while True:
+                check = True
+                key = input("Введите ключевое слово: ").lower()
+                for k in key:
+                    if not k.isalpha():
+                        check = False
+                if not check:
+                    print('Ключевое слово должно ' +\
+                          'состоять из букв алфавита!')
+                else:
+                    break
+
+        elif userChoice == '3':
+            print('Результат: ', encryptVigenere(plaintext, key))
         elif userChoice == '4':
-            print(decryptVigenere(plaintextCiphered, key))
+            print('Результат: ', decryptVigenere(plaintext, key))
 
         # Выход из программы
         elif userChoice.lower() == 'выход':
