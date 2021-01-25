@@ -6,12 +6,17 @@
 # 4. Расшифрование строки.
 #
 
+#TO DO Вставить букву ё
+
+# Главная функция
 def main():
 
     # Настройки по-умолчанию
     plaintext = 'how can i get to the library?'
     # plaintext = 'swx tae g rmu ko kfp tjsrrpj?'
     key = 'library'
+    latinAlphabet = True
+    cyrillicAlphabet = False
 
     while True:
         userChoice = menu()
