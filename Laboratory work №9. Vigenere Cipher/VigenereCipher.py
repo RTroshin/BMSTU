@@ -36,9 +36,23 @@ def main():
                     break
 
         elif userChoice == '3':
-            print('Результат: ', encryptVigenere(plaintext, key))
+            print('Результат: ', encryptVigenere(plaintext, key, latinAlphabet, cyrillicAlphabet))
         elif userChoice == '4':
-            print('Результат: ', decryptVigenere(plaintext, key))
+            print('Результат: ', decryptVigenere(plaintext, key, latinAlphabet, cyrillicAlphabet))
+        elif userChoice == '5':
+            while True:
+                alphabetChoice = input('Выберите используемый алфавит'
+                                     + '\n1. Латиница\n2. Кириллица\nВыбор: ')
+                if alphabetChoice == '1':
+                    latinAlphabet = True
+                    cyrillicAlphabet = False
+                    break
+                elif alphabetChoice == '2':
+                    cyrillicAlphabet = True
+                    latinAlphabet = False
+                    break
+                else:
+                    print('Такого пункта нет в меню!')            
 
         # Выход из программы
         elif userChoice.lower() == 'выход':
