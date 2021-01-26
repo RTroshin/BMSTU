@@ -74,14 +74,18 @@ def menu():
     return userChoice
 
 # 3. Шифрование строки, используя шифр Виженера
-def encryptVigenere(plaintext, key):
+def encryptVigenere(plaintext, key, latinAlphabet, cyrillicAlphabet):
     result = ''
     i = 0
     lenKey = len(key) - 1
     for letter in plaintext:
         if letter.isalpha():
-            result += chr(ord('a') + (ord(letter) - ord('a')\
-                    + ord(key[i]) - ord('a')) % 26)
+            if latinAlphabet:
+                result += chr(ord('a') + (ord(letter) - ord('a')\
+                        + ord(key[i]) - ord('a')) % 26)
+            elif cyrillicAlphabet:
+                result += chr(ord('а') + (ord(letter) - ord('а')\
+                        + ord(key[i]) - ord('а')) % 33)
             i = 0 if i == lenKey else i + 1
         else:
             result += letter
