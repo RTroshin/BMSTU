@@ -92,14 +92,18 @@ def encryptVigenere(plaintext, key, latinAlphabet, cyrillicAlphabet):
     return result
 
 # 4. Расшифровывание строки
-def decryptVigenere(plaintext, key):
+def decryptVigenere(plaintext, key, latinAlphabet, cyrillicAlphabet):
     result = ''
     i = 0
     lenKey = len(key) - 1
     for letter in plaintext:
         if letter.isalpha():
-            result += chr(ord('a') + ((ord(letter) - ord('a')) + 26\
-                    - (ord(key[i]) - ord('a'))) % 26)
+            if latinAlphabet:
+                result += chr(ord('а') + ((ord(letter) - ord('а')) + 26\
+                        - (ord(key[i]) - ord('а'))) % 26)
+            elif cyrillicAlphabet:
+                result += chr(ord('а') + ((ord(letter) - ord('а')) + 33\
+                        - (ord(key[i]) - ord('а'))) % 33)
             i = 0 if i == lenKey else i + 1
         else:
             result += letter
