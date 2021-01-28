@@ -1,4 +1,4 @@
-# Laboratory work №4. Function Table
+# Программа "Function table"
 # Условие задания:
 # z1 = x^3 - 6,5x^2 - 31,3x + 2,32
 # z2 = x^3 - sin(Pix)
