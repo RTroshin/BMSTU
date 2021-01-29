@@ -3,15 +3,14 @@
 
 def main():
     cyrillicAlphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    # LatinAlphabetLat = 'abcdifghijklmnopqrstuvwxyz'
     # message = input('Введите строку: ').lower()
     # key = int(input('Введите ключ: '))
     message = 'чу, я слышу пушек гром'
     key = 3
 
     print('Зашифрованное сообщение:', encryptCaesar(cyrillicAlphabet, message, key))
-
     result = encryptCaesar(cyrillicAlphabet, message, key)
-
     print('Расшифрованное сообщение:', decryptCaesar(cyrillicAlphabet, result, key))
 
 def encryptCaesar(alphabet, message, key):
