@@ -9,31 +9,52 @@ def main():
     message = 'чу, я слышу пушек гром'
     key = 3
 
-    print('Зашифрованное сообщение:', encryptCaesar(cyrillicAlphabet, message, key))
-    result = encryptCaesar(cyrillicAlphabet, message, key)
-    print('Расшифрованное сообщение:', decryptCaesar(cyrillicAlphabet, result, key))
+    while True:
+        print('Введите Ш чтобы зашифровать сообщение, Р чтобы расшифровать и В чтобы выйти')
+        menu = input('>>> ').lower()
+        if menu == 'в':
+            break
+        elif not (menu == 'ш' or menu == 'р'):
+            continue
+        output = ''
+        message = input('Введите строку: ').lower()
+        key = int(input('Введите ключ: '))
+        if menu == 'р':
+            key *= -1
+        for letter in message:
+            if letter in cyrillicAlphabet:
+                t = cyrillicAlphabet.find(letter)
+                new_key = (t + key) % len(cyrillicAlphabet)
+                output += cyrillicAlphabet[new_key]
+            else:
+                output += letter
+        print('Результат: ' + output)
 
-def encryptCaesar(alphabet, message, key):
-    encrypted = ''
-    for letter in message:
-        if letter in alphabet:
-            t = alphabet.find(letter)
-            newKey = (t + key) % len(alphabet)
-            encrypted += alphabet[newKey]
-        else:
-            encrypted += letter
-    return encrypted
+    # print('Зашифрованное сообщение:', encryptCaesar(alphabet, message, key))
+    # result = encryptCaesar(alphabet, message, key)
+    # print('Расшифрованное сообщение:', decryptCaesar(alphabet, result, key))
 
-def decryptCaesar(alphabet, message, key):
-    decrypted = ''
-    for letter in message:
-        if letter in alphabet:
-            t = alphabet.find(letter)
-            newKey = (t - key) % len(alphabet)
-            decrypted += alphabet[newKey]
-        else:
-            decrypted += letter
-    return decrypted
+# def encryptCaesar(alphabet, message, key):
+#     encrypted = ''
+#     for letter in message:
+#         if letter in alphabet:
+#             t = alphabet.find(letter)
+#             newKey = (t + key) % len(alphabet)
+#             encrypted += alphabet[newKey]
+#         else:
+#             encrypted += letter
+#     return encrypted
+
+# def decryptCaesar(alphabet, message, key):
+#     decrypted = ''
+#     for letter in message:
+#         if letter in alphabet:
+#             t = alphabet.find(letter)
+#             newKey = (t - key) % len(alphabet)
+#             decrypted += alphabet[newKey]
+#         else:
+#             decrypted += letter
+#     return decrypted
 
 
 if __name__ == "__main__":
