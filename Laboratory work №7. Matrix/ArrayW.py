@@ -82,19 +82,16 @@ while True:
     # замена этого значения произведением элементов
     # с нечётными порядковыми номерами
 
-    Wmax = W[0]
-    maxi = 0
+    Wmax = max(W)
+    maxi = W.index(Wmax)
     multOdd = 1
     for i in range(len(W)):
-        if Wmax < W[i]:
-            Wmax = W[i]
-            maxi = i
         if not (i % 2):
             multOdd *= W[i]
-    print('\nНаибольшее значение массива (Wmax): ', Wmax, '\n\
-    Порядковый номер (maxi) данного значения: ', maxi)
+    print('\nНаибольшее значение массива (Wmax): {:.4f}\n\
+Порядковый номер (maxi) данного значения: {}'.format(Wmax, maxi + 1))
     print('Произведение элементов \
-    с нечётными порядковыми номерами = {:.4f}'.format(multOdd))
+с нечётными порядковыми номерами = {:.4f}'.format(multOdd))
     print()
 
     W[maxi] = multOdd
@@ -102,3 +99,4 @@ while True:
     for n in W:
         print('{:.4f}'.format(n), end = ' ')
     print()
+    print('─' * 79)
