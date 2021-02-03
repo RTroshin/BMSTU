@@ -18,7 +18,6 @@ while True:
     W = []
     f = []
     x = []
-
     while True:
         M = int(input('Введите размер M для массива f (M <= 35): '))
         if M > 35:
@@ -56,7 +55,6 @@ while True:
     print()
 
     # Вычисление суммы ∑cos^2(xk)
-
     sumx = 0
     for k in x:
         sumx += cos(k)**2
@@ -64,9 +62,7 @@ while True:
     print()
 
     # Формирование массива W
-
     W.append(0.5)
-
     for n in range(len(f)):
         if f[n] == 0:
             W.append(W[n - 1])
@@ -81,7 +77,6 @@ while True:
     # Поиск максимального значения в массивеW и
     # замена этого значения произведением элементов
     # с нечётными порядковыми номерами
-
     Wmax = max(W)
     maxi = W.index(Wmax)
     multOdd = 1
