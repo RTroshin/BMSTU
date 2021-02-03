@@ -25,7 +25,6 @@ for i in range(N):
 # Вычисление произведений элементов в каждой строке
 # Поиск максимального произведения
 print('Исходная матрица:\n')
-
 maxi = mini = 0
 maxMult = 0
 for i in range(N):
@@ -39,9 +38,7 @@ for i in range(N):
         maxi = i
     print('    # ∏(row) = ', rowMult)
     print()
-
 print('* ∏(row) - произведение положительных элементов в строке\n')
-
 print('Максимальное произведение = ', maxMult,\
       '\nНомер строки = ', maxi + 1, end = '\n')
 
@@ -55,14 +52,12 @@ for i in range(N):
     if minMult > rowMult:
         minMult = rowMult
         mini = i
-
 print('Минимальное произведение = ', minMult,\
       '\nНомер строки = ', mini + 1, end = '\n')
 print()
 
 # Преобразование матрицы
 print('Преобразованная матрица:\n')
-
 for j in range(M):
     Z[maxi][j] = Z[9][j]
 
