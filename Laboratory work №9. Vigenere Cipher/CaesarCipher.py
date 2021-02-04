@@ -4,8 +4,6 @@
 def main():
     cyrillicAlphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
     latinAlphabetLat = 'abcdifghijklmnopqrstuvwxyz'
-    message = 'чу, я слышу пушек гром'
-    key = 3
 
     while True:
         print('Введите Ш чтобы зашифровать сообщение, Р чтобы расшифровать и В чтобы выйти')
@@ -15,15 +13,18 @@ def main():
         elif not (menu == 'ш' or menu == 'р'):
             continue
         output = ''
-        message = input('Введите строку: ').lower()
-        key = int(input('Введите ключ: '))
+        # message = input('Введите строку: ').lower()
+        # key = int(input('Введите ключ: '))
+        # message = 'чу, я слышу пушек гром'
+        message = 'ъц, в фоюыц тцызн ёусп'
+        key = 3
         if menu == 'р':
             key *= -1
         for letter in message:
             if letter in cyrillicAlphabet:
                 t = cyrillicAlphabet.find(letter)
-                new_key = (t + key) % len(cyrillicAlphabet)
-                output += cyrillicAlphabet[new_key]
+                newKey = (t + key) % len(cyrillicAlphabet)
+                output += cyrillicAlphabet[newKey]
             else:
                 output += letter
         print('Результат: ' + output)
