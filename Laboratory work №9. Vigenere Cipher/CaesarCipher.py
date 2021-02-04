@@ -25,6 +25,10 @@ def main():
                 t = cyrillicAlphabet.find(letter)
                 newKey = (t + key) % len(cyrillicAlphabet)
                 output += cyrillicAlphabet[newKey]
+            # if letter in latinAlphabetLat:
+            #     t = latinAlphabetLat.find(letter)
+            #     newKey = (t + key) % len(latinAlphabetLat)
+            #     output += latinAlphabetLat[newKey]
             else:
                 output += letter
         print('Результат: ' + output)
