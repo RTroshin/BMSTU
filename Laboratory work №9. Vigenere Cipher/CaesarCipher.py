@@ -3,9 +3,7 @@
 
 def main():
     cyrillicAlphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-    # LatinAlphabetLat = 'abcdifghijklmnopqrstuvwxyz'
-    # message = input('Введите строку: ').lower()
-    # key = int(input('Введите ключ: '))
+    latinAlphabetLat = 'abcdifghijklmnopqrstuvwxyz'
     message = 'чу, я слышу пушек гром'
     key = 3
 
