@@ -29,14 +29,25 @@
 
 from math import exp, sin, cos
 
+# def function(x):
+#     f = (-2) * exp(x) * sin(x)
+#     return f
+
+# def primFunction(x):
+#     F = exp(x) * (cos(x) - sin(x))
+#     return F
+
+# Подынтегральная функция
 def function(x):
-    f = (-2) * exp(x) * sin(x)
+    f = x
     return f
 
+# Первообразная (примитивная функция)
 def primFunction(x):
-    F = exp(x) * (cos(x) - sin(x))
+    F = (x**2)/2
     return F
 
+# Точное значение интеграла
 def exValueIntegral(a, b):
     z0 = primFunction(b) - primFunction(a)
     return z0
