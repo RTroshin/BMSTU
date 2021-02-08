@@ -90,22 +90,26 @@ def output(values):
     print()
 
 values = []
+end = 0
 while True:
-    end = 0
-    while True:
-        print()
-        if end == 2:
-            break
+    print()
+    if end == 2:
+        break
 
-        if end == 0:
-            a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-            .split())
-            N = N1 = int(input('Введите количество подынтервалов N1: '))
-            values.append(N1)
-        else:
-            N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-            values.append(N2)
-
+    if end == 0:
+        # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
+        # .split())
+        a = 0
+        b = 10
+        # N = N1 = int(input('Введите количество подынтервалов N1: '))
+        # values.append(N1)
+        N = N1 = 10
+        values.append(N1)
+    else:
+        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
+        # values.append(N2)
+        N = N2 = 100
+        values.append(N2)
 
         # Метод левых прямоугольников
 
