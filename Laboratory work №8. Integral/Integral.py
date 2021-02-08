@@ -37,79 +37,28 @@ from math import exp, sin, cos
 #     F = exp(x) * (cos(x) - sin(x))
 #     return F
 
-# Подынтегральная функция
-def function(x):
-    f = x
-    return f
-
-# Первообразная (примитивная функция)
-def primFunction(x):
-    F = (x**2)/2
-    return F
-
-# Точное значение интеграла
-def exValueIntegral(a, b):
-    z0 = primFunction(b) - primFunction(a)
-    return z0
-
-def leftRectRule(a, b, N):
-    z = 0
-    dx = (b - a) / N
-    x = a + dx / 2
-    for i in range(N):
-        if z > 10**5:
+def main():
+    values = []
+    end = 0
+    while True:
+        print()
+        if end == 2:
             break
-        z += function(x)
-        x += dx
-    return z * dx
 
-def SimpsonRule(a, b, N):
-    dx = (b - a) / N
-    dx2 = dx / 2
-    x = a + dx
-    z = (function(a) + function(b)) / 2 + 2 * function(x - dx2)
-    for i in range(1, N):
-        if z > 10**5:
-            break
-        z += function(x) + 2 * function(x - dx2)
-        x += dx
-    return z * dx / 3
-
-def output(values):
-    print('Таблица точных значений z')
-    print('┌', '─' * 29, '┬', '─' * 13, '┬', '─' * 13, '┐', sep = '')
-    print('│       Название метода       │   N1 = {0:^3d}  │   N2 = {1:^3d}  │'\
-    .format(values[0], values[3]))
-    print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
-    print('│ Метод левых прямоугольников │ {:11.3f} │ {:11.3f} │'\
-    .format(values[1], values[4]))
-    print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
-    print('│ Метод Симпсона              │ {:11.3f} │ {:11.3f} │'\
-    .format(values[2], values[5]))
-    print('└', '─' * 29, '┴', '─' * 13, '┴', '─' * 13, '┘', sep = '')
-    print()
-
-values = []
-end = 0
-while True:
-    print()
-    if end == 2:
-        break
-
-    if end == 0:
-        # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-        # .split())
-        a = 0
-        b = 10
-        # N = N1 = int(input('Введите количество подынтервалов N1: '))
-        # values.append(N1)
-        N = N1 = 10
-        values.append(N1)
-    else:
-        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-        # values.append(N2)
-        N = N2 = 100
-        values.append(N2)
+        if end == 0:
+            # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
+            # .split())
+            a = 0
+            b = 10
+            # N = N1 = int(input('Введите количество подынтервалов N1: '))
+            # values.append(N1)
+            N = N1 = 10
+            values.append(N1)
+        else:
+            # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
+            # values.append(N2)
+            N = N2 = 100
+            values.append(N2)
 
         # Метод левых прямоугольников
 
@@ -174,3 +123,59 @@ while True:
     #     print('Приближённое значение интеграла z = {:.5f}'.format(z1))
     #     print()
         print('─' * 59)
+
+# Подынтегральная функция
+def function(x):
+    f = x
+    return f
+
+# Первообразная (примитивная функция)
+def primFunction(x):
+    F = (x**2)/2
+    return F
+
+# Точное значение интеграла
+def exValueIntegral(a, b):
+    z0 = primFunction(b) - primFunction(a)
+    return z0
+
+def leftRectRule(a, b, N):
+    z = 0
+    dx = (b - a) / N
+    x = a + dx / 2
+    for i in range(N):
+        if z > 10**5:
+            break
+        z += function(x)
+        x += dx
+    return z * dx
+
+def SimpsonRule(a, b, N):
+    dx = (b - a) / N
+    dx2 = dx / 2
+    x = a + dx
+    z = (function(a) + function(b)) / 2 + 2 * function(x - dx2)
+    for i in range(1, N):
+        if z > 10**5:
+            break
+        z += function(x) + 2 * function(x - dx2)
+        x += dx
+    return z * dx / 3
+
+def output(values):
+    print('Таблица точных значений z')
+    print('┌', '─' * 29, '┬', '─' * 13, '┬', '─' * 13, '┐', sep = '')
+    print('│       Название метода       │   N1 = {0:^3d}  │   N2 = {1:^3d}  │'\
+    .format(values[0], values[3]))
+    print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
+    print('│ Метод левых прямоугольников │ {:11.3f} │ {:11.3f} │'\
+    .format(values[1], values[4]))
+    print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
+    print('│ Метод Симпсона              │ {:11.3f} │ {:11.3f} │'\
+    .format(values[2], values[5]))
+    print('└', '─' * 29, '┴', '─' * 13, '┴', '─' * 13, '┘', sep = '')
+    print()
+
+
+if __name__ == "__main__":
+    main()
