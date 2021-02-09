@@ -54,13 +54,13 @@ def main():
     print('\nМетод левых прямоугольников при N = ', N)
     z1 = leftRectRule(a, b, N)
 
-    # Проверка на переполнение
-    if z1LRR < 10**5 or z2LRR < 10**5 or\
-       z1SR < 10**5 or z2SR < 10**5:
-        printValues(values)
-    else:
-        print('Переполнение!\n\
-В результате вычислений получились слишком большие значения!')
+#     # Проверка на переполнение
+#     if z1LRR < 10**5 or z2LRR < 10**5 or\
+#        z1SR < 10**5 or z2SR < 10**5:
+#         printValues(values)
+#     else:
+#         print('Переполнение!\n\
+# В результате вычислений получились слишком большие значения!')
 
     values.append(z1)
     print('Приближённое значение интеграла z = {:.5f}'.format(z1))
@@ -75,9 +75,6 @@ def main():
     print('\nМетод Симпсона (метод парабол) при N = ', N)
     z2 = SimpsonRule(a, b, N)    
 
-    if z2 > 10**5: # Проверка на переполнение
-        break
-
     values.append(z2)
     print('Приближённое значение интеграла z = {:.5f}'.format(z2))
     z20 = exValueIntegral(a, b)
@@ -87,36 +84,51 @@ def main():
 
     end += 1
 
-if z1 < 10**5 and z2 < 10**5:
-    output(values)
-else:
-    print('Переполнение!')
+# if z1 < 10**5 and z2 < 10**5:
+#     output(values)
+# else:
+#     print('Переполнение!')
+#     # Подсчет необходимого количества подынтервалов N
+#     # для менее точного метода (метода левых прямоугольников)
 
-    # Подсчет необходимого количества подынтервалов N
-    # для менее точного метода (метода левых прямоугольников)
+#     N = 1
+#     z = leftRectRule(a, b, N)
+#     while abs(z - z0) > eps:
+#         N *= 2
+#         z = leftRectRule(a, b, N)
+#         # print(abs(k - m))
+#     print(N)
 
-    #     eps = 10**(-5)
-    #     z1 = 0
-    #     N = 1
-    #     dx = (b - a) / N
-    #     x = a + dx / 2
-    #     while abs(z10 - z1) > eps:
-    #         z1 += function(x)
-    #         if z1 > z10:
-    #             z1 = 0
-    #             N *= 2
-    #             dx = (b - a) / N
-    #             x = a + dx / 2
-    #         x += dx
-    #         # print(abs(z10 - z1))
-    #     print('Минимальное количество подынтервалов N \
-    # для точного вычисления интеграла\nметодом левых прямоугольников:')
-    #     print('N = {:d} при точности ε = {:.5g}'. format(N, eps))
+    # z1 = 0
+    # N = 1
+    # dx = (b - a) / N
+    # x = a + dx / 2
+    # while abs(z0 - z1) > eps:
+    #     z1 += function(x)
+    #     if z1 > z0:
+    #         z1 = 0
+    #         N *= 2
+    #         dx = (b - a) / N
+    #         x = a + dx / 2
+    #     x += dx
+    #     # print(abs(z0 - z1))
+    print('Минимальное количество подынтервалов N \
+для точного вычисления интеграла\nметодом левых прямоугольников:')
+    print('N = {:d} при точности ε = {:.5g}'. format(N, eps))
+    print('\nТочное значение интеграла z0 = {:.5f}'.format(z0))
 
-    #     z1 = leftRectRule(a, b, N)
-    #     print('Приближённое значение интеграла z = {:.5f}'.format(z1))
-    #     print()
+    # print('При точности = ',e,' значение интеграла равно ', end ='')
+    # print( '{:10.7f}'.format(k),' и достигнуто на ', n , 'отрезках')
+
+    print('\nПогрешности метода левых прямоугольников')
     print('─' * 59)
+    printObservationalError(z1LRR, z0, N1)
+    printObservationalError(z2LRR, z0, N2)
+
+    print('Погрешности метода Симпсона')
+    print('─' * 59)
+    printObservationalError(z1SR, z0, N1)
+    printObservationalError(z2SR, z0, N2)
 
 # Подынтегральная функция
 def function(x):
