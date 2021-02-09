@@ -33,66 +33,67 @@ from math import exp, sin, cos
 def main():
     values = []
     end = 0
-    while True:
-        print()
-        if end == 2:
-            break
 
-        if end == 0:
-            # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-            # .split())
-            a = 0
-            b = 10
-            # N = N1 = int(input('Введите количество подынтервалов N1: '))
-            # values.append(N1)
-            N = N1 = 10
-            values.append(N1)
-        else:
-            # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-            # values.append(N2)
-            N = N2 = 100
-            values.append(N2)
-
-        # Метод левых прямоугольников
-
-        print('\nМетод левых прямоугольников при N = ', N)
-        z1 = leftRectRule(a, b, N)
-
-        if z1 > 10**5: # Проверка на переполнение
-            break
-
-        values.append(z1)
-        print('Приближённое значение интеграла z = {:.5f}'.format(z1))
-        z10 = exValueIntegral(a, b)
-        print('Точное значение интеграла z0 = {:.5f}\n'.format(z10))
-        print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z10 - z1)))
-        print('Относительная ошибка δX = {:.5g}\n'.format(abs((z10 - z1) /z10)))
-
-
-        # Метод Симпсона (метод парабол)
-
-        print('\nМетод Симпсона (метод парабол) при N = ', N)
-        z2 = SimpsonRule(a, b, N)    
-
-        if z2 > 10**5: # Проверка на переполнение
-            break
-
-        values.append(z2)
-        print('Приближённое значение интеграла z = {:.5f}'.format(z2))
-        z20 = exValueIntegral(a, b)
-        print('Точное значение интеграла z0 = {:.5f}\n'.format(z20))
-        print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z20 - z2)))
-        print('Относительная ошибка δX = {:.5g}'.format(abs((z20 - z2) /z20)))
-
-        end += 1
-
-    if z1 < 10**5 and z2 < 10**5:
-        output(values)
+    if end == 0:
+        # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
+        # .split())
+        a = 0
+        b = 10
+        # N = N1 = int(input('Введите количество подынтервалов N1: '))
+        # values.append(N1)
+        N = N1 = 10
+        values.append(N1)
     else:
-        print('Переполнение!')
+        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
+        # values.append(N2)
+        N = N2 = 100
+        values.append(N2)
 
-        # Подсчет необходимого количества подынтервалов N
-        # для менее точного метода (метода левых прямоугольников)
+    # Метод левых прямоугольников
+
+    print('\nМетод левых прямоугольников при N = ', N)
+    z1 = leftRectRule(a, b, N)
+
+    # Проверка на переполнение
+    if z1LRR < 10**5 or z2LRR < 10**5 or\
+       z1SR < 10**5 or z2SR < 10**5:
+        printValues(values)
+    else:
+        print('Переполнение!\n\
+В результате вычислений получились слишком большие значения!')
+
+    values.append(z1)
+    print('Приближённое значение интеграла z = {:.5f}'.format(z1))
+    z10 = exValueIntegral(a, b)
+    print('Точное значение интеграла z0 = {:.5f}\n'.format(z10))
+    print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z10 - z1)))
+    print('Относительная ошибка δX = {:.5g}\n'.format(abs((z10 - z1) /z10)))
+
+
+    # Метод Симпсона (метод парабол)
+
+    print('\nМетод Симпсона (метод парабол) при N = ', N)
+    z2 = SimpsonRule(a, b, N)    
+
+    if z2 > 10**5: # Проверка на переполнение
+        break
+
+    values.append(z2)
+    print('Приближённое значение интеграла z = {:.5f}'.format(z2))
+    z20 = exValueIntegral(a, b)
+    print('Точное значение интеграла z0 = {:.5f}\n'.format(z20))
+    print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z20 - z2)))
+    print('Относительная ошибка δX = {:.5g}'.format(abs((z20 - z2) /z20)))
+
+    end += 1
+
+if z1 < 10**5 and z2 < 10**5:
+    output(values)
+else:
+    print('Переполнение!')
+
+    # Подсчет необходимого количества подынтервалов N
+    # для менее точного метода (метода левых прямоугольников)
 
     #     eps = 10**(-5)
     #     z1 = 0
@@ -115,7 +116,7 @@ def main():
     #     z1 = leftRectRule(a, b, N)
     #     print('Приближённое значение интеграла z = {:.5f}'.format(z1))
     #     print()
-        print('─' * 59)
+    print('─' * 59)
 
 # Подынтегральная функция
 def function(x):
