@@ -29,13 +29,6 @@
 
 from math import exp, sin, cos
 
-# def function(x):
-#     f = (-2) * exp(x) * sin(x)
-#     return f
-
-# def primFunction(x):
-#     F = exp(x) * (cos(x) - sin(x))
-#     return F
 
 def main():
     values = []
