@@ -110,6 +110,16 @@ def main():
     printObservationalError(z2SR, z0, N2)
 
 # Подынтегральная функция
+# def function(x):
+#     f = (-2) * exp(x) * sin(x)
+#     return f
+
+# Первообразная (примитивная функция)
+# def primFunction(x):
+#     F = exp(x) * (cos(x) - sin(x))
+#     return F
+
+# Подынтегральная функция
 def function(x):
     f = x
     return f
