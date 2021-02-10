@@ -134,6 +134,7 @@ def exValueIntegral(a, b):
     z0 = primFunction(b) - primFunction(a)
     return z0
 
+# Метод левых прямоугольников
 def leftRectRule(a, b, N):
     z = 0
     dx = (b - a) / N
@@ -145,6 +146,7 @@ def leftRectRule(a, b, N):
         x += dx
     return z * dx
 
+# Метод Симпсона (метод парабол)
 def SimpsonRule(a, b, N):
     dx = (b - a) / N
     dx2 = dx / 2
@@ -157,18 +159,26 @@ def SimpsonRule(a, b, N):
         x += dx
     return z * dx / 3
 
-def output(values):
+# Вывод таблицы значений на экран
+def printValues(values):
     print('Таблица точных значений z')
     print('┌', '─' * 29, '┬', '─' * 13, '┬', '─' * 13, '┐', sep = '')
-    print('│       Название метода       │   N1 = {0:^3d}  │   N2 = {1:^3d}  │'\
-    .format(values[0], values[3]))
+    print('│       Название метода       │   N1 = {:^3d}'.format(values[0]) +
+          '  │   N2 = {:^3d}  │'.format(values[1]))
     print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
     print('│ Метод левых прямоугольников │ {:11.3f} │ {:11.3f} │'\
-    .format(values[1], values[4]))
+            .format(values[2], values[4]))
     print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
     print('│ Метод Симпсона              │ {:11.3f} │ {:11.3f} │'\
-    .format(values[2], values[5]))
+            .format(values[3], values[5]))
     print('└', '─' * 29, '┴', '─' * 13, '┴', '─' * 13, '┘', sep = '')
+    print()
+
+# Вывод значений погрешностей на экран
+def printObservationalError(z, z0, N):
+    print('Приближённое значение интеграла z = {:.5f}'.format(z))
+    print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z0 - z)))
+    print('Относительная ошибка δX = {:.5g}'.format(abs((z0 - z) /z0)))
     print()
 
 
