@@ -32,72 +32,51 @@ from math import exp, sin, cos
 
 def main():
     values = []
-    end = 0
+    # СДЕЛАТЬ ФУНКЦИЮ ВВОДА!
+    # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
+    # .split())
+    # eps = float(input('Введите значение точности для вычисления: '))
+    # N = N1 = int(input('Введите количество подынтервалов N1: '))
+    # values.append(N1)
+    # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
+    # values.append(N2)
+    a = 0
+    b = 10
+    eps = 0.001
+    N1 = 10
+    N2 = 100
+    values.append(N1)
+    values.append(N2)
 
-    if end == 0:
-        # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-        # .split())
-        a = 0
-        b = 10
-        # N = N1 = int(input('Введите количество подынтервалов N1: '))
-        # values.append(N1)
-        N = N1 = 10
-        values.append(N1)
+    z1LRR = leftRectRule(a, b, N1)
+    z2LRR = leftRectRule(a, b, N2)
+    values.append(z1LRR)
+    values.append(z2LRR)
+    z1SR = SimpsonRule(a, b, N1)
+    z2SR = SimpsonRule(a, b, N2)
+    values.append(z1SR)
+    values.append(z2SR)
+
+    z0 = exValueIntegral(a, b)
+
+    # Проверка на переполнение
+    if z1LRR < 10**5 or z2LRR < 10**5 or\
+       z1SR < 10**5 or z2SR < 10**5:
+        printValues(values)
     else:
-        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-        # values.append(N2)
-        N = N2 = 100
-        values.append(N2)
+        print('Переполнение!\n\
+В результате вычислений получились слишком большие значения!')
 
-    # Метод левых прямоугольников
+    # Подсчет необходимого количества подынтервалов N
+    # для менее точного метода (метода левых прямоугольников)
 
-    print('\nМетод левых прямоугольников при N = ', N)
-    z1 = leftRectRule(a, b, N)
-
-#     # Проверка на переполнение
-#     if z1LRR < 10**5 or z2LRR < 10**5 or\
-#        z1SR < 10**5 or z2SR < 10**5:
-#         printValues(values)
-#     else:
-#         print('Переполнение!\n\
-# В результате вычислений получились слишком большие значения!')
-
-    values.append(z1)
-    print('Приближённое значение интеграла z = {:.5f}'.format(z1))
-    z10 = exValueIntegral(a, b)
-    print('Точное значение интеграла z0 = {:.5f}\n'.format(z10))
-    print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z10 - z1)))
-    print('Относительная ошибка δX = {:.5g}\n'.format(abs((z10 - z1) /z10)))
-
-
-    # Метод Симпсона (метод парабол)
-
-    print('\nМетод Симпсона (метод парабол) при N = ', N)
-    z2 = SimpsonRule(a, b, N)    
-
-    values.append(z2)
-    print('Приближённое значение интеграла z = {:.5f}'.format(z2))
-    z20 = exValueIntegral(a, b)
-    print('Точное значение интеграла z0 = {:.5f}\n'.format(z20))
-    print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z20 - z2)))
-    print('Относительная ошибка δX = {:.5g}'.format(abs((z20 - z2) /z20)))
-
-    end += 1
-
-# if z1 < 10**5 and z2 < 10**5:
-#     output(values)
-# else:
-#     print('Переполнение!')
-#     # Подсчет необходимого количества подынтервалов N
-#     # для менее точного метода (метода левых прямоугольников)
-
-#     N = 1
-#     z = leftRectRule(a, b, N)
-#     while abs(z - z0) > eps:
-#         N *= 2
-#         z = leftRectRule(a, b, N)
-#         # print(abs(k - m))
-#     print(N)
+    N = 1
+    z = leftRectRule(a, b, N)
+    while abs(z - z0) > eps:
+        N *= 2
+        z = leftRectRule(a, b, N)
+        # print(abs(k - m))
+    print(N)
 
     # z1 = 0
     # N = 1
