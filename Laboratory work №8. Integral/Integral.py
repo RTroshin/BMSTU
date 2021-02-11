@@ -27,45 +27,52 @@
 #   f1(x)= x*log1p(x) - x
 #
 
-from math import exp, sin, cos
-
+from math import exp, log1p, sin, cos
 
 def main():
-    values = []
-    # СДЕЛАТЬ ФУНКЦИЮ ВВОДА!
-    # a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-    # .split())
-    # eps = float(input('Введите значение точности для вычисления: '))
-    # N = N1 = int(input('Введите количество подынтервалов N1: '))
-    # values.append(N1)
-    # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-    # values.append(N2)
-    a = 0
-    b = 10
-    eps = 0.001
-    N1 = 10
-    N2 = 100
-    values.append(N1)
-    values.append(N2)
+    while True:
+        values = []
+        # СДЕЛАТЬ ФУНКЦИЮ ВВОДА!
+        a, b = map(int, input('Введите пределы интегрирования a и b: ')\
+        .split())
+        # eps = float(input('Введите значение точности для вычисления: '))
+        # N = N1 = int(input('Введите количество подынтервалов N1: '))
+        # values.append(N1)
+        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
+        # values.append(N2)
+        # a = -8
+        # b = 7
+        eps = 0.001
+        N1 = 10
+        N2 = 100
+        values.append(N1)
+        values.append(N2)
 
-    z1LRR = leftRectRule(a, b, N1)
-    z2LRR = leftRectRule(a, b, N2)
-    values.append(z1LRR)
-    values.append(z2LRR)
-    z1SR = SimpsonRule(a, b, N1)
-    z2SR = SimpsonRule(a, b, N2)
-    values.append(z1SR)
-    values.append(z2SR)
+        z1LRR = leftRectRule(a, b, N1)
+        z2LRR = leftRectRule(a, b, N2)
+        values.append(z1LRR)
+        values.append(z2LRR)
+        z1SR = SimpsonRule(a, b, N1)
+        z2SR = SimpsonRule(a, b, N2)
+        values.append(z1SR)
+        values.append(z2SR)
+        z0 = exValueIntegral(a, b)
 
-    z0 = exValueIntegral(a, b)
-
-    # Проверка на переполнение
-    if z1LRR < 10**5 or z2LRR < 10**5 or\
-       z1SR < 10**5 or z2SR < 10**5:
-        printValues(values)
-    else:
-        print('Переполнение!\n\
+        # Проверка на переполнение
+        if z1LRR > 10**5 or z2LRR > 10**5 or\
+            z1SR > 10**5 or z2SR > 10**5:
+            print('Переполнение!\n\
 В результате вычислений получились слишком большие значения!')
+            print('Введите другие значения')
+
+        # Проверка на правильность заданных пределов интегрирования
+        elif z0 < 0:
+            print('Функция не может быть задана в данном диапазоне!\n\
+Введите другие пределы интегрирования a и b')
+        else:
+            break
+
+    printValues(values)
 
     # Подсчет необходимого количества подынтервалов N
     # для менее точного метода (метода левых прямоугольников)
