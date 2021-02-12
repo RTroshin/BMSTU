@@ -77,34 +77,50 @@ def main():
     # Подсчет необходимого количества подынтервалов N
     # для менее точного метода (метода левых прямоугольников)
 
-    N = 1
-    z = leftRectRule(a, b, N)
-    while abs(z - z0) > eps:
-        N *= 2
-        z = leftRectRule(a, b, N)
-        # print(abs(k - m))
-    print(N)
+    # N = 1
+    # z = leftRectRule(a, b, N)
+    # while abs(z0 - z) > eps:
+    #     N *= 2
+    #     z = leftRectRule(a, b, N)
+    #     print(abs(z0 - z))
 
-    # z1 = 0
+    # z = 0
     # N = 1
     # dx = (b - a) / N
     # x = a + dx / 2
-    # while abs(z0 - z1) > eps:
-    #     z1 += function(x)
-    #     if z1 > z0:
-    #         z1 = 0
+    # while abs(z0 - z) > eps:
+    #     z += function(x)
+    #     if z > z0:
+    #         z = 0
     #         N *= 2
     #         dx = (b - a) / N
     #         x = a + dx / 2
     #     x += dx
-    #     # print(abs(z0 - z1))
-    print('Минимальное количество подынтервалов N \
-для точного вычисления интеграла\nметодом левых прямоугольников:')
-    print('N = {:d} при точности ε = {:.5g}'. format(N, eps))
-    print('\nТочное значение интеграла z0 = {:.5f}'.format(z0))
+    #     print('abs(z0 - z) = ', abs(z0 - z))
+    #     print('N = ', N)
 
-    # print('При точности = ',e,' значение интеграла равно ', end ='')
-    # print( '{:10.7f}'.format(k),' и достигнуто на ', n , 'отрезках')
+    z = 0
+    N = 1
+    dx = (b - a) / N
+    x = a + dx / 2
+    while abs(z0 - z) < eps:
+        z += function(x)
+        print('z =', z)
+        N *= 2
+        dx = (b - a) / N
+        x = a + dx / 2
+        # x += dx
+        print('abs(z1 - z) = ', abs(z0 - z))
+        print('N = ', N)
+    z *= dx
+
+    print('Точное значение интеграла равно z0 = {:.5f}'.format(z0))
+    print('\nВычисление приближенного значения для менее\n\
+точного метода (метода левых прямоугольников)')
+    print('─' * 59)
+    print('При точности ε = {:.5g}'.format(eps) + ' значение интеграла равно \
+z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' отрезках')
+    print()
 
     print('\nПогрешности метода левых прямоугольников')
     print('─' * 59)
