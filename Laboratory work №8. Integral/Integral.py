@@ -126,7 +126,7 @@ z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' 
     print('─' * 59)
     printObservationalError(z1LRR, z0, N1)
     printObservationalError(z2LRR, z0, N2)
-
+    print()
     print('Погрешности метода Симпсона')
     print('─' * 59)
     printObservationalError(z1SR, z0, N1)
@@ -144,13 +144,21 @@ z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' 
 
 # Подынтегральная функция
 def function(x):
-    f = x
-    return f
+    return x
 
 # Первообразная (примитивная функция)
 def primFunction(x):
-    F = (x**2)/2
-    return F
+    return (x**2)/2
+
+# Подынтегральная функция
+# def function(x):
+#     f = x
+#     return f
+
+# Первообразная (примитивная функция)
+# def primFunction(x):
+#     F = (x**2)/2
+#     return F
 
 # Точное значение интеграла
 def exValueIntegral(a, b):
