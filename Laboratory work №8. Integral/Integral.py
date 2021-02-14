@@ -181,27 +181,29 @@ def leftRectRule(a, b, N):
 def SimpsonRule(a, b, N):
     dx = (b - a) / N
     dx2 = dx / 2
+    z = (function(a) + function(b)) / 2 + 2 * function(b - dx2)
+    # z = function(a) + function(b) + 4 * function(a + dx2)
     x = a + dx
-    z = (function(a) + function(b)) / 2 + 2 * function(x - dx2)
     for i in range(1, N):
         if z > 10**5:
             break
         z += function(x) + 2 * function(x - dx2)
+        # z += 2 * function(a + (2 * i) * dx2) + 4 * function(a + (2 * i + 1) * dx2)
         x += dx
     return z * dx / 3
 
 # Вывод таблицы значений на экран
 def printValues(values):
-    print('Таблица точных значений z')
+    print('Таблица приближённых значений z')
     print('┌', '─' * 29, '┬', '─' * 13, '┬', '─' * 13, '┐', sep = '')
     print('│       Название метода       │   N1 = {:^3d}'.format(values[0]) +
           '  │   N2 = {:^3d}  │'.format(values[1]))
     print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
     print('│ Метод левых прямоугольников │ {:11.3f} │ {:11.3f} │'\
-            .format(values[2], values[4]))
+            .format(values[2], values[3]))
     print('├', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
     print('│ Метод Симпсона              │ {:11.3f} │ {:11.3f} │'\
-            .format(values[3], values[5]))
+            .format(values[4], values[5]))
     print('└', '─' * 29, '┴', '─' * 13, '┴', '─' * 13, '┘', sep = '')
     print()
 
