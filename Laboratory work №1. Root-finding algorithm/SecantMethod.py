@@ -21,28 +21,28 @@
 # 7. Результаты вывести в виде таблицы
 #
 # 1. Метод хорд
-# 2. brentq
+# 2. Метод Брента (brentq)
 #
 
 from scipy.optimize import brentq
-from math import e, exp, log, log1p, sin, cos, tan #, cot
+from math import e, pi, exp, log, log1p, sin, cos, tan
 
 
 def main():
     values = inputValues()
     values = {'a': 'value', 'b': 'value', 'h': 'value', 'eps': 'value', 'N': 'value'}
-    values['a'] = 1
-    values['b'] = 5
-    values['h'] = 1
-    values['eps'] = 0.0005
-    values['N'] = 10
+    # values['a'] = 1
+    # values['b'] = 5
+    # values['h'] = 1
+    # values['eps'] = 0.0005
+    # values['N'] = 10
 
     answersSecant = []
     answersBrents = []
     a = values['a']
     b = a + values['h']
     while b <= values['b']:
-        answersSecant.append(secantMethod(function, a, b, values))
+        # answersSecant.append(secantMethod(function, a, b, values))
         answersBrents.append(BrentsMethod(function, a, b, values))
         a += values['h']
         b += values['h']
