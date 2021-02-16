@@ -42,29 +42,19 @@ def main():
     a = values['a']
     b = a + values['h']
     while b <= values['b']:
-        # answersSecant.append(secantMethod(function, a, b, values))
+        answersSecant.append(secantMethod(function, a, b, values))
+        a += values['h']
+        b += values['h']
+    a = values['a']
+    b = a + values['h']
+    while b <= values['b']:
         answersBrents.append(BrentsMethod(function, a, b, values))
         a += values['h']
         b += values['h']
-    # printValues(answersSecant, answersBrents)
-
-
-    # x = 5
-    # a = 1
-    # b = 2
-    # function(x)
-    # function1(x)
-    # try:
-    #     x0 = (a + b) / 2
-    #     xn = function(x0)
-    #     xn1 = xn - function(xn) / function1(xn)
-    #     while abs(xn1 - xn) > pow(10, -5):
-    #         xn = xn1
-    #         xn1 = xn - function(xn) / function1(xn)
-    #     print(xn1)
-    #     return xn1
-    # except ValueError:
-    #     print("Value not invalidate")
+    # print(answersSecant)
+    # print(answersBrents)
+    printValues(answersSecant)
+    printValues(answersBrents)
 
 def inputValues():
     values = {'a': 'value', 'b': 'value', 'h': 'value', 'eps': 'value', 'N': 'value'}
@@ -76,7 +66,6 @@ def inputValues():
         except ValueError:
             print('Некорректный ввод!\nПопробуйте ещё раз')
 
-    # НЕ РАБОТАЕТ!
     # if values['b'] > values['a']:
     #     values['a'], values['b'] = values['b'], values['a']
     # print(values)
