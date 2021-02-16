@@ -70,7 +70,7 @@ def inputValues():
     #     values['a'], values['b'] = values['b'], values['a']
     # print(values)
 
-    maxStep = int((abs(values['a']) + abs(values['b'])) / 2)
+    maxStep = abs(values['a']) + abs(values['b'])
 
     while True:
         try:
@@ -86,11 +86,6 @@ def inputValues():
             break
         except ValueError:
             print('Некорректный ввод!\nПопробуйте ещё раз!\n')
-#         # Проверка на правильность заданных пределов интегрирования №1
-#         if z1LRR is None or z2LRR is None or\
-#              z1SR is None or z2SR is None:
-#             print('Функция не может быть задана в данном диапазоне!\n\
-# Введите другие пределы интегрирования a и b')
 
 #         # Проверка на правильность заданных пределов интегрирования №2
 #         elif z1LRR < 0 or z2LRR < 0 or\
