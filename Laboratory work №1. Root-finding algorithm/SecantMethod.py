@@ -119,7 +119,22 @@ def function(x):
 #     return x**9999
 
 # def function(x):
-#     return x**2
+#     return x * x
+
+# def secantMethod(function, a, b, values):
+#     answer = {'x': 'value', 'y': 'value', 'errno': 'value'}
+#     x = a
+#     xPrevious = a + 2 * values['eps']
+#     errno = i = 0
+#     while abs(x - xPrevious) >= values['eps'] and i <= values['N']:
+#         x, xPrevious = x - function(x) / (function(x) - function(xPrevious)) * (x - xPrevious), x
+#         i += 1
+#     y = function(x)
+#     print('Значение функции в найденном корне (метод Хорд):\nf({:.5g}) = {:.5g}'.format(x, y), sep='', end='\n\n')
+#     answer['x'] = x
+#     answer['y'] = y
+#     answer['errno'] = errno
+#     return answer
 
 def BrentsMethod(function, a, b, values):
     answer = {'x': 'value', 'y': 'value', 'errno': 'value'}
