@@ -136,6 +136,38 @@ def function(x):
 #     answer['errno'] = errno
 #     return answer
 
+def secantMethod(function, a, b, values):
+    answer = {'method': 'Secant', '': 'value', 'x': 'value', 'y': 'value', 'a': 'value', 'b': 'value', 'errno': 'value'}
+    answer['a'] = a
+    answer['b'] = b
+    errno = i = 0
+    while abs(b - a) >= values['eps']:
+        if function(a) * function(b) >= 0:
+            # print('f(a) и f(b) должны иметь противоположные знаки')
+            # errno = '1'
+            errno = 1
+            break
+        elif i >= values['N']:
+            # print('Превышено максимальное количество итераций ', values['N'], sep='')
+            errno = 2
+            break
+        elif abs(function(a)) > 10**9 or abs(function(a)) > 10**9:
+            # print('Результат функции превышает допустимое значение')
+            errno = 3
+            break
+        else:
+            a = b - (b - a) * function(b) / (function(b) - function(a)) # НЕМНОГО ПЕРЕДЕЛАТЬ В СООТВЕТСТВИИ С ВИКИПЕДИЕЙ!
+            x = b = a - (a - b) * function(a) / (function(a) - function(b))
+            i += 1
+    if not errno:
+        y = function(x)
+        # print('Корень = ', x, sep='')
+        # print('Значение функции в найденном корне (метод Хорд):\nf({:.5f}) = {:.5g}'.format(x, y), sep='', end='\n\n')
+        answer['x'] = x
+        answer['y'] = y
+    answer['errno'] = errno
+    return answer
+
 def BrentsMethod(function, a, b, values):
     answer = {'x': 'value', 'y': 'value', 'errno': 'value'}
     try:
