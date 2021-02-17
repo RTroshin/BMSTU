@@ -169,26 +169,28 @@ def secantMethod(function, a, b, values):
     return answer
 
 def BrentsMethod(function, a, b, values):
-    answer = {'x': 'value', 'y': 'value', 'errno': 'value'}
+    answer = {'method': 'Brent', '': 'value', 'x': 'value', 'y': 'value', 'a': 'value', 'b': 'value', 'errno': 'value'}
+    answer['a'] = a
+    answer['b'] = b
     try:
         # r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
         # root = brentq(function, values['a'], values['b'], xtol=values['eps'], rtol=values['eps'], maxiter=values['N'])
         x = brentq(function, a, b, xtol=values['eps'], rtol=values['eps'], maxiter=values['N'])
-        print('Корень = ', x, sep='')
         y = function(x)
         answer['x'] = x
         answer['y'] = y
-        print('Значение функции в найденном корне:\nf({:.5f}) = {:.5f}'.format(x, y), sep='', end='\n\n')
+        # print('Корень = ', x, sep='')
+        # print('Значение функции в найденном корне (метод Брента):\nf({:.5f}) = {:.5g}'.format(x, y), sep='', end='\n\n')
     except ValueError:
-        print('f(a) и f(b) должны иметь противоположные знаки')
+        # print('f(a) и f(b) должны иметь противоположные знаки')
         # errno = '1'
         errno = 1
     except RuntimeError:
-        print('Превышено максимальное количество итераций ', values['N'], sep='')
-        errno = '2'
+        # print('Превышено максимальное количество итераций ', values['N'], sep='')
+        errno = 2
     except OverflowError:
-        print('Результат функции превышает допустимое значение')
-        errno = '3'
+        # print('Результат функции превышает допустимое значение')
+        errno = 3
     else:
         errno = 0
     answer['errno'] = errno
