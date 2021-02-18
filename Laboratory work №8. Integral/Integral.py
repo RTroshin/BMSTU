@@ -209,9 +209,9 @@ def printValues(values):
 
 # Вывод значений погрешностей на экран
 def printObservationalError(z, z0, N):
-    print('Приближённое значение интеграла z = {:.5f}'.format(z))
+    print('При N = {:d}'.format(N))
     print('Aбсолютная ошибка ΔX = {:.5g}'.format(abs(z0 - z)))
-    print('Относительная ошибка δX = {:.5g}'.format(abs((z0 - z) /z0)))
+    print('Относительная ошибка δX = {:.5g}'.format(abs((z0 - z) / z0)))
     print()
 
 
