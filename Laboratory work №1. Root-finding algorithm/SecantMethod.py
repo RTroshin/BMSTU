@@ -197,16 +197,29 @@ def BrentsMethod(function, a, b, values):
     return answer
 
 # Вывод таблицы значений на экран
-# def printValues(answersSecant, answersBrents):
-#     if 
-#         print('Метод хорд')
-#     else:
-#         print('Метод Бранта')
-#     print('┌', '─' * 9, '┬', '─' * 29, '┬', '─' * 13, '┬', '─' * 13, '┐', sep = '')
-#     print('│ № Корня │    Отрезок       │   Значение корня (x)  │   Значение функции (y) в точке корня  │   Код ошибки  │')
-#     print('├', '─' * 9, '┼', '─' * 29, '┼', '─' * 13, '┼', '─' * 13, '┤', sep = '')
-#     print('│ № Корня │ Метод левых прямоугольников │ {:11.3f} │ {:11.3f} │'.format(0, 1))
-#     print('└', '─' * 9, '─' * 29, '┴', '─' * 13, '┴', '─' * 13, '┘', sep = '', end='\n')
+def printValues(answers):
+    print(answers)
+    if answers[0]['method'] == 'Secant':
+        print('\nМетод хорд')
+    elif answers[0]['method'] == 'Brent':
+        print('\nМетод Бранта')
+    print('┌', '─' * 9, '┬', '─' * 12, '┬', '─' * 22, '┬', '─' * 22, '┬', '─' * 12, '┐', sep = '')
+    print('│ № корня │ Промежуток │  Значение корня (x)  │ Значение функции (y) │ Код ошибки │')
+    print('├', '─' * 9, '┼', '─' * 12, '┼', '─' * 22, '┼', '─' * 22, '┼', '─' * 12, '┤', sep = '', end='\n')
+    lenAnswers = len(answers)
+    for i in range(len(answers)):
+        if answers[i]['errno'] == 1:
+            pass
+        # answer = {'method': 'Secant', '': 'value', 'x': 'value', 'y': 'value', 'a': 'value', 'b': 'value', 'errno': 'value'}
+        elif not answers[i]['x'] == 'value' or not answers[i]['y'] == 'value':
+            print('│   {:^3d}   │  [{:3},{:3}] │ {:20.8g} │ {:20.8g} │ {:^10d} │'\
+            .format(i + 1, answers[i]['a'], answers[i]['b'], answers[i]['x'], answers[i]['y'], answers[i]['errno']))
+        elif i < lenAnswers - 1 and answers[i]['errno'] == 1:
+            print('├', '─' * 9, '┼', '─' * 12, '┼', '─' * 22, '┼', '─' * 22, '┼', '─' * 12, '┤', sep = '', end='\n')
+        else:
+            print('│   {:^3d}   │  [{:3},{:3}] │ Не удалось уточнить корень │                │ {:^10d} │'\
+            .format(i + 1, answers[i]['a'], answers[i]['b'], answers[i]['errno']))
+    print('└', '─' * 9, '┴', '─' * 12, '┴', '─' * 22, '┴', '─' * 22, '┴', '─' * 12, '┘', sep = '', end='\n')
 
 
 if __name__ == "__main__":
