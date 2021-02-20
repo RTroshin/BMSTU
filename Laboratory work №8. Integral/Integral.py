@@ -8,23 +8,72 @@
 
 # Функции, которые также должны работать в программе
 
-#   f(x) = sin(x)*sin(x)
-#   f1(x)= (1/2)*x - (1/4)*sin(2*x)
+#   f(x) = sin(x) * sin(x)
+#   f1(x)= (1 / 2) * x - (1 / 4) * sin(2 * x)
 
 #   f(x) = x
-#   f1(x)= (x**2)/2
+#   f1(x)= (x**2) / 2
 
-#   f(x) = sin(3*x)*cos(2*x)
-#   f1(x)= -(cos(5*x)/10 - (cos(x)/2
+#   f(x) = sin(3 * x) * cos(2 * x)
+#   f1(x)= -(cos(5 * x) / 10 - (cos(x) / 2
 
 #   f(x) = e**x * sin(x)
-#   f1(x)= e**x * (sin(x)-cos(x))/2
+#   f1(x)= e**x * (sin(x) - cos(x)) / 2
 
-#   f(x) = 1/(1+x**2)
-#   f1(x)= 1/2*log1p(x**2/(1+x**2))
+#   f(x) = 1 / (1 + x**2)
+#   f1(x)= 1 / 2 * log1p(x**2 / (1 + x**2))
 
 #   f(x) = log1p(x)
-#   f1(x)= x*log1p(x) - x
+#   f1(x)= x * log1p(x) - x
+
+
+# Функция №1
+# def function(x):
+#     return sin(x) * sin(x)
+
+# def primFunction(x):
+#     return (1 / 2) * x - (1 / 4)*sin(2 * x)
+
+# Функция №2
+# def function(x):
+#     return x
+
+# def primFunction(x):
+#     return (x**2) / 2
+
+# Функция №3
+# def function(x):
+#     return sin(3 * x) * cos(2 * x)
+
+# def primFunction(x):
+#     return -(cos(5 * x) / 10) - cos(x) / 2
+
+# Функция №4
+# def function(x):
+#     return e**x * sin(x)
+
+# def primFunction(x):
+#     return e**x * (sin(x) - cos(x)) / 2
+
+# Функция №5
+# def function(x):
+#     return 1 / (1 + x**2)
+
+# def primFunction(x):
+#     return 1 / 2 * log1p(x**2 / (1 + x**2))
+
+# Функция №6
+# def function(x):
+#     try:
+#         return log1p(x)
+#     except ValueError:
+#         return None
+
+# def primFunction(x):
+#     try:
+#         return x * log1p(x) - x
+#     except ValueError:
+#         return None
 #
 
 from math import exp, log1p, sin, cos
