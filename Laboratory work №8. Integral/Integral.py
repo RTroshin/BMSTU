@@ -76,12 +76,13 @@
 #         return None
 #
 
-from math import exp, log1p, sin, cos
+from math import e, exp, log1p, sin, cos
 
 def main():
     while True:
         values = []
         # СДЕЛАТЬ ФУНКЦИЮ ВВОДА!
+        print()
         a, b = map(int, input('Введите пределы интегрирования a и b: ')\
         .split())
         # eps = float(input('Введите значение точности для вычисления: '))
@@ -94,18 +95,18 @@ def main():
         eps = 0.001
         N1 = 10
         N2 = 100
-        values.append(N1)
-        values.append(N2)
 
         z1LRR = leftRectRule(a, b, N1)
         z2LRR = leftRectRule(a, b, N2)
-        values.append(z1LRR)
-        values.append(z2LRR)
         z1SR = SimpsonRule(a, b, N1)
         z2SR = SimpsonRule(a, b, N2)
-        values.append(z1SR)
-        values.append(z2SR)
         z0 = exValueIntegral(a, b)
+
+        # Проверка на правильность заданных пределов интегрирования №1
+        if z1LRR is None or z2LRR is None or\
+             z1SR is None or z2SR is None:
+            print('Функция не может быть задана в данном диапазоне!\n\
+Введите другие пределы интегрирования a и b')
 
         # Проверка на переполнение
         if z1LRR > 10**5 or z2LRR > 10**5 or\
