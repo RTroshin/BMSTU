@@ -191,37 +191,20 @@ z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' 
     printObservationalError(z2SR, z0, N2)
 
 # Подынтегральная функция
-# def function(x):
-#     f = (-2) * exp(x) * sin(x)
-#     return f
-
-# Первообразная (примитивная функция)
-# def primFunction(x):
-#     F = exp(x) * (cos(x) - sin(x))
-#     return F
-
-# Подынтегральная функция
 def function(x):
-    return x
+    return (-2) * exp(x) * sin(x)
 
 # Первообразная (примитивная функция)
 def primFunction(x):
-    return (x**2)/2
-
-# Подынтегральная функция
-# def function(x):
-#     f = x
-#     return f
-
-# Первообразная (примитивная функция)
-# def primFunction(x):
-#     F = (x**2)/2
-#     return F
+    return exp(x) * (cos(x) - sin(x))
 
 # Точное значение интеграла
 def exValueIntegral(a, b):
-    z0 = primFunction(b) - primFunction(a)
-    return z0
+    try:
+        z0 = primFunction(b) - primFunction(a)
+        return z0
+    except TypeError:
+        return None
 
 # Метод левых прямоугольников
 def leftRectRule(a, b, N):
