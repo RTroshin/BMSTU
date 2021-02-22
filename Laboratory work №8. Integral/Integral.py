@@ -223,18 +223,21 @@ def leftRectRule(a, b, N):
 
 # Метод Симпсона (метод парабол)
 def SimpsonRule(a, b, N):
-    dx = (b - a) / N
-    dx2 = dx / 2
-    z = (function(a) + function(b)) / 2 + 2 * function(b - dx2)
-    # z = function(a) + function(b) + 4 * function(a + dx2)
-    x = a + dx
-    for i in range(1, N):
-        if z > 10**5:
-            break
-        z += function(x) + 2 * function(x - dx2)
-        # z += 2 * function(a + (2 * i) * dx2) + 4 * function(a + (2 * i + 1) * dx2)
-        x += dx
-    return z * dx / 3
+    try:
+        dx = (b - a) / N
+        dx2 = dx / 2
+        z = (function(a) + function(b)) / 2 + 2 * function(b - dx2)
+        # z = function(a) + function(b) + 4 * function(a + dx2)
+        x = a + dx
+        for i in range(1, N):
+            if z > 10**5:
+                break
+            z += function(x) + 2 * function(x - dx2)
+            # z += 2 * function(a + (2 * i) * dx2) + 4 * function(a + (2 * i + 1) * dx2)
+            x += dx
+        return z * dx / 3
+    except TypeError:
+        return None
 
 # Вывод таблицы значений на экран
 def printValues(values):
