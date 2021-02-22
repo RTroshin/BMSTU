@@ -80,19 +80,23 @@ from math import e, exp, log1p, sin, cos
 
 def main():
     while True:
+        print()
         values = []
         # СДЕЛАТЬ ФУНКЦИЮ ВВОДА!
-        print()
-        a, b = map(int, input('Введите пределы интегрирования a и b: ')\
-        .split())
-        # eps = float(input('Введите значение точности для вычисления: '))
-        # N = N1 = int(input('Введите количество подынтервалов N1: '))
-        # values.append(N1)
-        # N = N2 = int(input('\nВведите количество подынтервалов N2: '))
-        # values.append(N2)
-        # a = -8
-        # b = 7
-        eps = 0.001
+        while True:
+            try:
+                a, b = map(int,\
+                    input('Введите пределы интегрирования a и b: ').split())
+                # eps = float(input\
+                # ('Введите значение точности для вычисления: '))
+                # N1 = int(input\
+                # ('Введите количество подынтервалов N1: '))
+                # N2 = int(input\
+                # ('\nВведите количество подынтервалов N2: '))
+                break
+            except ValueError:
+                print('Некорректный ввод!\nПопробуйте ещё раз!')
+        eps = 0.0001
         N1 = 10
         N2 = 100
 
