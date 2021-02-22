@@ -208,15 +208,18 @@ def exValueIntegral(a, b):
 
 # Метод левых прямоугольников
 def leftRectRule(a, b, N):
-    z = 0
-    dx = (b - a) / N
-    x = a + dx / 2
-    for i in range(N):
-        if z > 10**5:
-            break
-        z += function(x)
-        x += dx
-    return z * dx
+    try:
+        z = 0
+        dx = (b - a) / N
+        x = a + dx / 2
+        for i in range(N):
+            if z > 10**5:
+                break
+            z += function(x)
+            x += dx
+        return z * dx
+    except TypeError:
+        return None
 
 # Метод Симпсона (метод парабол)
 def SimpsonRule(a, b, N):
