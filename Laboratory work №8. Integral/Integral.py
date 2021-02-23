@@ -127,7 +127,6 @@ def main():
 
         else:
             break
-
     values.append(N1)
     values.append(N2)
     values.append(z1LRR)
@@ -139,49 +138,29 @@ def main():
     # Подсчет необходимого количества подынтервалов N
     # для менее точного метода (метода левых прямоугольников)
 
-    # N = 1
-    # z = leftRectRule(a, b, N)
-    # while abs(z0 - z) > eps:
-    #     N *= 2
-    #     z = leftRectRule(a, b, N)
-    #     print(abs(z0 - z))
-
-    # z = 0
-    # N = 1
-    # dx = (b - a) / N
-    # x = a + dx / 2
-    # while abs(z0 - z) > eps:
-    #     z += function(x)
-    #     if z > z0:
-    #         z = 0
-    #         N *= 2
-    #         dx = (b - a) / N
-    #         x = a + dx / 2
-    #     x += dx
-    #     print('abs(z0 - z) = ', abs(z0 - z))
-    #     print('N = ', N)
-
-    z = 0
+    Sum = 0
+    z = 1
+    previous = 0
     N = 1
     dx = (b - a) / N
     x = a + dx / 2
-    while abs(z0 - z) < eps:
+    while abs(z - previous) > eps:
+        previous = z
         z += function(x)
-        print('z =', z)
+        Sum += z
         N *= 2
         dx = (b - a) / N
         x = a + dx / 2
-        # x += dx
-        print('abs(z1 - z) = ', abs(z0 - z))
-        print('N = ', N)
-    z *= dx
+    # z *= dx
+    print('dx = ', Sum * dx)
+    print('dx = ', z * dx)
 
     print('Точное значение интеграла равно z0 = {:.5f}'.format(z0))
     print('\nВычисление приближенного значения для менее\n\
 точного метода (метода левых прямоугольников)')
     print('─' * 59)
     print('При точности ε = {:.5g}'.format(eps) + ' значение интеграла равно \
-z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' отрезках')
+z = {:.5f}'.format(Sum) + '\nи достигнуто на N = {:d}'.format(N) + ' отрезках')
     print()
 
     print('\nПогрешности метода левых прямоугольников')
