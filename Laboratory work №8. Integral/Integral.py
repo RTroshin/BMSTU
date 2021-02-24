@@ -138,7 +138,6 @@ def main():
     # Подсчет необходимого количества подынтервалов N
     # для менее точного метода (метода левых прямоугольников)
 
-    Sum = 0
     z = 1
     previous = 0
     N = 1
@@ -146,21 +145,20 @@ def main():
     x = a + dx / 2
     while abs(z - previous) > eps:
         previous = z
-        z += function(x)
-        Sum += z
+        for i in range(N):
+            z += function(x)
+            x += dx
+        z *= dx 
         N *= 2
         dx = (b - a) / N
         x = a + dx / 2
-    # z *= dx
-    print('dx = ', Sum * dx)
-    print('dx = ', z * dx)
 
     print('Точное значение интеграла равно z0 = {:.5f}'.format(z0))
     print('\nВычисление приближенного значения для менее\n\
 точного метода (метода левых прямоугольников)')
     print('─' * 59)
     print('При точности ε = {:.5g}'.format(eps) + ' значение интеграла равно \
-z = {:.5f}'.format(Sum) + '\nи достигнуто на N = {:d}'.format(N) + ' отрезках')
+z = {:.5f}'.format(z) + '\nи достигнуто на N = {:d}'.format(N) + ' отрезках')
     print()
 
     print('\nПогрешности метода левых прямоугольников')
