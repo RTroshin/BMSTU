@@ -96,7 +96,7 @@ def main():
                 break
             except ValueError:
                 print('Некорректный ввод!\nПопробуйте ещё раз!')
-        eps = 0.0001
+        eps = 0.001
         N1 = 10
         N2 = 100
 
