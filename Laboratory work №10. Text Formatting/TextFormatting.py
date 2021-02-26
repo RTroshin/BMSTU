@@ -47,8 +47,15 @@ from math import e, pi, sqrt
 
 # Главная функция
 def main():
-    while True:
-        userChoice = menu()
+
+    longest_line_len = 0
+
+    text = ['Текст']
+
+    for line in text:
+        line_len = len(line)
+        if longest_line_len < line_len:
+            longest_line_len = line_len
 
 # Меню программы
 def menu():
