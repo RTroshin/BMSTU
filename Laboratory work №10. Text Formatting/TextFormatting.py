@@ -59,6 +59,77 @@ def main():
 
     print(*text, sep = '\n')
 
+    while True:
+        userChoice = menu()
+        if userChoice == '1':
+            for line in text:
+                print(line.ljust(longest_line_len)) 
+        elif userChoice == '2':
+            for line in text:
+                print(line.rjust(longest_line_len))
+        elif userChoice == '3':
+            for line in text:
+                line_len = len(line)
+                words = line.split()
+                words_len = len(words)
+                if words_len < 2 or line_len == longest_line_len:
+                    print(line)
+                else:
+                    space_width = (longest_line_len - line_len + words_len) // (
+                            words_len - 1)
+                    print(*words[:-1], sep = ' ' * space_width, end = '')
+                    print(
+                        words[-1].rjust(
+                            longest_line_len - line_len +
+                            len(words[-1]) + words_len - 1 -
+                            space_width * (words_len - 2)
+                        )
+                    )
+        elif userChoice == '4':
+            word = input('Введите слово для удаления: ')
+            deleteWord = ''
+
+            # for string in text:
+            #     # if string.find(word):
+            #     string = string.replace(word.strip(), deleteWord.strip())
+            
+            lenText = len(text) - 1
+            for i in range(lenText):
+                text[i] = text[i].replace(word +  ' ', deleteWord) # НЕМНОГО УЛУЧШИЛ!
+
+            # text = [string.replace(word.strip(), deleteWord.strip()) for string in text] ИСПОЛЬЗОВАТЬ! ЭТО ГЕНЕРАТОР!
+
+            for string in text: # ЗАМЕНИТЬ ФУНКЦИЕЙ!
+                print(string)
+            # [print(string) for string in text] НОВЫЙ СПОСОБ ВЫВОДА!
+
+        elif userChoice == '5':
+            word = input('Введите слово для замены: ')
+            newWord = input('Введите слово, на которое хотите заменить: ')
+
+            # for string in text:
+            #     string.replace(word.strip(), newWord.strip())
+
+            lenText = len(text) - 1
+            for i in range(lenText):
+                text[i] = text[i].replace(word, newWord) # НЕМНОГО УЛУЧШИЛ!
+
+            # text = [string.replace(word.strip(), newWord.strip()) for string in text] ИСПОЛЬЗОВАТЬ! ЭТО ГЕНЕРАТОР!
+
+            for string in text: # ЗАМЕНИТЬ ФУНКЦИЕЙ!
+                print(string)
+            # [print(string) for string in text] НОВЫЙ СПОСОБ ВЫВОДА!
+
+        # elif userChoice == '6':
+
+        # elif userChoice == '7':
+
+        # Выход из программы
+        elif userChoice.lower() == 'выход':
+            exit()
+        else:
+            print('Такого пункта нет в меню!')
+
 # Меню программы
 def menu():
     print('\nМеню')
