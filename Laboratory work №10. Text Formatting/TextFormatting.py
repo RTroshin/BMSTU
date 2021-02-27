@@ -57,6 +57,8 @@ def main():
         if longest_line_len < line_len:
             longest_line_len = line_len
 
+    print(*text, sep = '\n')
+
 # Меню программы
 def menu():
     print('\nМеню')
