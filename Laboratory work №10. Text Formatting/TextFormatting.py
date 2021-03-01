@@ -63,21 +63,25 @@ def main():
             '— Ну, согласно теории игр, нельзя никому говорить,',
             'когда у тебя день рождения...']
 
-    for line in text:
-        line_len = len(line)
-        if longest_line_len < line_len:
-            longest_line_len = line_len
+    # Поиск самой длинной строки
+    for string in text:
+        lenString = len(string)
+        if longestLenString < lenString:
+            longestLenString = lenString
 
-    print(*text, sep = '\n')
+    for string in text:
+        print(string)
+    # [print(string) for string in text]
 
     while True:
         userChoice = menu()
+
         if userChoice == '1':
-            for line in text:
-                print(line.ljust(longest_line_len)) 
+            for string in text:
+                print(string.ljust(longestLenString))
         elif userChoice == '2':
-            for line in text:
-                print(line.rjust(longest_line_len))
+            for string in text:
+                print(string.rjust(longestLenString))
         elif userChoice == '3':
             for line in text:
                 line_len = len(line)
