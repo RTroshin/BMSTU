@@ -83,23 +83,16 @@ def main():
             for string in text:
                 print(string.rjust(longestLenString))
         elif userChoice == '3':
-            for line in text:
-                line_len = len(line)
-                words = line.split()
-                words_len = len(words)
-                if words_len < 2 or line_len == longest_line_len:
-                    print(line)
+            for string in text:
+                lenString = len(string)
+                words = string.split()
+                wordsLen = len(words)
+                if wordsLen < 2 or lenString == longestLenString:
+                    print(string)
                 else:
-                    space_width = (longest_line_len - line_len + words_len) // (
-                            words_len - 1)
-                    print(*words[:-1], sep = ' ' * space_width, end = '')
-                    print(
-                        words[-1].rjust(
-                            longest_line_len - line_len +
-                            len(words[-1]) + words_len - 1 -
-                            space_width * (words_len - 2)
-                        )
-                    )
+                    spaceWidth = (longestLenString - lenString + wordsLen) // (wordsLen - 1)
+                    print(*words[:-1], sep = ' ' * spaceWidth, end = '')
+                    print(words[-1].rjust(longestLenString - lenString + len(words[-1]) + wordsLen - 1 - spaceWidth * (wordsLen - 2)))
         elif userChoice == '4':
             word = input('Введите слово для удаления: ')
             deleteWord = ''
