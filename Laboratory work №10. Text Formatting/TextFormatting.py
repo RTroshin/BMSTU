@@ -195,6 +195,11 @@ def main():
             if incorrect_expressions:
                 import sys
 
+                print("\033[91mНайдены некорректные выражения:",
+                    *incorrect_expressions,
+                    sep="\n", file=sys.stderr)
+                print('\033[0m')
+
 # Меню программы
 def menu():
     print('\nМеню')
