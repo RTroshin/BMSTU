@@ -200,6 +200,43 @@ def main():
                     sep="\n", file=sys.stderr)
                 print('\033[0m')
 
+        elif userChoice == '7':
+            max_words_count = 0
+            max_sentence = []
+            sentence_words_count = 0
+            sentence = []
+            for index in range(len(text)):
+                line = text[index]
+                for word in line.split():
+                    word = word.strip()
+                    word_letters = {}
+                    for letter in word:
+                        if not letter.isalpha():
+                            continue
+                        if letter in word_letters:
+                            word_letters[letter] += 1
+                        else:
+                            word_letters[letter] = 1
+                    all_letters_twice = bool(word_letters)
+                    for letter in word_letters:
+                        if word_letters[letter] < 2:
+                            all_letters_twice = False
+                            break
+                    if all_letters_twice:
+                        sentence_words_count += 1
+                    sentence.append(word)
+                    if word[-1] in [".", "!", "?"]:
+                        if sentence_words_count > max_words_count:
+                            max_words_count = sentence_words_count
+                            max_sentence = sentence
+                        sentence = []
+                        sentence_words_count = 0
+            if max_words_count == 0:
+                print("Нет таких предложений")
+            else:
+                print("Искомое предложение:")
+                print(" ".join(max_sentence))
+
 # Меню программы
 def menu():
     print('\nМеню')
