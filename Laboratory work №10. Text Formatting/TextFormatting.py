@@ -237,6 +237,17 @@ def main():
                 print("Искомое предложение:")
                 print(" ".join(max_sentence))
 
+        elif userChoice == '8':
+            maxLenWords = 0
+            # maxString = 
+            for string in text:
+                words = string.split()
+                lenWords = len(words)
+                if maxLenWords < lenWords:
+                    maxLenWords = lenWords
+                    maxString = words
+            print('maxString = ', maxString)
+
 # Меню программы
 def menu():
     print('\nМеню')
