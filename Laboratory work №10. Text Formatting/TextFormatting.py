@@ -248,6 +248,15 @@ def main():
                     maxString = words
             print('maxString = ', maxString)
 
+            lenWords = []
+            for word in maxString:
+                lenWords = len(word.split())
+                if shortestLenWord > lenWords:
+                    shortestLenWord = lenWords
+                    shortestWord = word
+            shortestWord = min(maxString)
+            print('shortestWord = ', shortestWord)
+
 # Меню программы
 def menu():
     print('\nМеню')
