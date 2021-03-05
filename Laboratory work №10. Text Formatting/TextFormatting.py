@@ -257,6 +257,10 @@ def main():
             shortestWord = min(maxString)
             print('shortestWord = ', shortestWord)
 
+            deleteWord = ''
+            maxString = [word.replace(shortestWord, deleteWord) for word in maxString]
+            [print(string) for string in text]
+
 # Меню программы
 def menu():
     print('\nМеню')
