@@ -261,6 +261,12 @@ def main():
             maxString = [word.replace(shortestWord, deleteWord) for word in maxString]
             [print(string) for string in text]
 
+        # Выход из программы
+        elif userChoice.lower() == 'выход':
+            exit()
+        else:
+            print('Такого пункта нет в меню!')
+
 # Меню программы
 def menu():
     print('\nМеню')
