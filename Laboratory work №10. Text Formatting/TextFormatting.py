@@ -337,6 +337,20 @@ def exec_op(op_type, first_arg, second_arg=""):
         return float(first_arg) * float(second_arg)
     return int(first_arg) * int(second_arg)
 
+def exec_expr(expression, stage=0):
+    """
+    Вычисление арифметического выражения
+    :param expression: Выражение, значение которого требуется вычислить
+    :param stage: Этап вычислений
+    :return: Вычисленное значение в виде строки
+    """
+
+    if not expression:
+        raise ValueError(expression)
+
+    # Удаление пробелов. Замена двойных минусов
+    expression = expression.strip().replace(' ', '').replace('--', '+')
+
 
 if __name__ == "__main__":
     main()
