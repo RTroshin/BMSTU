@@ -297,6 +297,46 @@ def is_number(string):
     except ValueError:
         return False
 
+def exec_op(op_type, first_arg, second_arg=""):
+    """
+    Вычисление значения операции.
+    :param op_type: Тип операции, строка как в исходном выражении.
+    Поддерживаются: + - * ** % // / √
+    :param first_arg: Первый аргумент
+    :param second_arg: Второй аргумент (необязателен, например, в корне)
+    :return: Вычисленное значение в виде int или float
+    """
+    if op_type == "√":
+        return sqrt(float(first_arg))
+    if op_type == "/":
+        return float(first_arg) / float(second_arg)
+    use_float = False
+    if "." in first_arg or "." in second_arg:
+        use_float = True
+    if op_type == "+":
+        if use_float:
+            return float(first_arg) + float(second_arg)
+        return int(first_arg) + int(second_arg)
+    if op_type == "-":
+        if use_float:
+            return float(first_arg) - float(second_arg)
+        return int(first_arg) - int(second_arg)
+    if op_type == "//":
+        if use_float:
+            return float(first_arg) // float(second_arg)
+        return int(first_arg) // int(second_arg)
+    if op_type == "%":
+        if use_float:
+            return float(first_arg) % float(second_arg)
+        return int(first_arg) % int(second_arg)
+    if op_type == "**":
+        if use_float:
+            return float(first_arg) ** float(second_arg)
+        return int(first_arg) ** int(second_arg)
+    if use_float:
+        return float(first_arg) * float(second_arg)
+    return int(first_arg) * int(second_arg)
+
 
 if __name__ == "__main__":
     main()
