@@ -351,6 +351,26 @@ def exec_expr(expression, stage=0):
     # Удаление пробелов. Замена двойных минусов
     expression = expression.strip().replace(' ', '').replace('--', '+')
 
+    # Вычисление выражений в скобках
+    if expression.find("(") != -1:
+        bracket_expr = []
+        level = 0
+        left_round_bracket = -1
+        right_round_bracket = -1
+        expr_len = len(expression)
+        for index in range(expr_len):
+            sym = expression[index]
+            if sym == "(":
+                level += 1
+                if level == 1:
+                    left_round_bracket = index
+            elif sym == ")":
+                if level == 1:
+                    right_round_bracket = index
+                if -1 < left_round_bracket < right_round_bracket < expr_len:
+                    bracket_expr.append(expression[left_round_bracket + 1: right_round_bracket])
+                level -= 1
+
 
 if __name__ == "__main__":
     main()
