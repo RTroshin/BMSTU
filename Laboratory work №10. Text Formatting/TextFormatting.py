@@ -431,5 +431,14 @@ def exec_expr(expression, stage=0):
             result = str(exec_op(part[0], result, part[1] if is_number(part[1]) else exec_expr(part[1].replace("POW", "**"))))
         return result
 
+    # Этап 5. Считаем степени. Поведение как в Python, 2 ** 5 ** 3 = 2 ** 125
+    elif expression.find("**") != -1:
+        parts = expression.split("**")[::-1]
+        result = parts[0]
+        for i in range(1, len(parts)):
+            result = str(
+                exec_op("**", parts[i] if is_number(parts[i]) else exec_expr(parts[i]), result if is_number(result) else exec_expr(result)))
+        return result
+
 if __name__ == "__main__":
     main()
