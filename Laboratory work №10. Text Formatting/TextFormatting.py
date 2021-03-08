@@ -399,5 +399,37 @@ def exec_expr(expression, stage=0):
             result = str(exec_op(part[0], result, part[1] if is_number(part[1]) else exec_expr(part[1], stage = 1)))
         return result
 
+    # Этап 4. "Расчленяем" слагаемые на множители, считаем их отдельно, затем умножаем
+    elif expression.count("*") % 2 or expression.find("/") != -1 or expression.find("%") != -1:
+        parts = []
+        first_part_sym = 0
+        last_sym = "*"
+        expression = expression.replace("**", "POW")
+        for index in range(len(expression)):
+            if expression[index] == "%":
+                parts.append([last_sym, expression[first_part_sym:index]])
+                first_part_sym = index + 1
+                last_sym = expression[index]
+            elif expression[index] == "*":
+                if expression[first_part_sym:index]:
+                    parts.append([last_sym, expression[first_part_sym:index]])
+                    first_part_sym = index + 1
+                    last_sym = expression[index]
+            elif expression[index] == "/":
+                if expression[index - 1] != expression[index] and expression[index + 1] != expression[index]:
+                    parts.append([last_sym, expression[first_part_sym:index]])
+                    first_part_sym = index + 1
+                    last_sym = expression[index]
+                else:
+                    if expression[index - 1] == expression[index]:
+                        parts.append([last_sym, expression[first_part_sym:index - 1]])
+                        first_part_sym = index + 1
+                        last_sym = "//"
+        parts.append([last_sym, expression[first_part_sym:]])
+        result = "1"
+        for part in parts:
+            result = str(exec_op(part[0], result, part[1] if is_number(part[1]) else exec_expr(part[1].replace("POW", "**"))))
+        return result
+
 if __name__ == "__main__":
     main()
