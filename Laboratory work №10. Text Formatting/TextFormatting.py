@@ -382,6 +382,22 @@ def exec_expr(expression, stage=0):
     elif expression.find(")") != -1:
         raise ValueError(expression)
 
+    # "Расчленяем" выражение на слагаемые, считаем их отдельно, затем складываем
+    elif stage == 0 and (expression.find("+") != -1 or expression.find("-", 1) != -1):
+        parts = []
+        first_part_sym = 0
+        last_sym = "+"
+        for index in range(len(expression)):
+            if expression[index] in ["+", "-"] and (index == 0 or expression[index - 1].isdigit()):
+                if expression[first_part_sym:index]:
+                    parts.append([last_sym, expression[first_part_sym:index]])
+                    first_part_sym = index + 1
+                    last_sym = expression[index]
+        parts.append([last_sym, expression[first_part_sym:]])
+        result = "0"
+        for part in parts:
+            result = str(exec_op(part[0], result, part[1] if is_number(part[1]) else exec_expr(part[1], stage = 1)))
+        return result
 
 if __name__ == "__main__":
     main()
