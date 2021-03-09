@@ -440,5 +440,14 @@ def exec_expr(expression, stage=0):
                 exec_op("**", parts[i] if is_number(parts[i]) else exec_expr(parts[i]), result if is_number(result) else exec_expr(result)))
         return result
 
+    # Этап 6. Считаем корни
+    elif not is_number(expression):
+        expression = expression.replace("+", "")
+        if not is_number(expression):
+            return str(exec_op("√", exec_expr(expression[1:])))
+
+    return expression
+
+
 if __name__ == "__main__":
     main()
