@@ -227,30 +227,6 @@ def main():
             text = [string.replace(shortestWord + ' ', deleteWord) if string == maxString else string for string in text]
             [print(string) for string in text]
 
-        elif userChoice == '8':
-            maxLenWords = 0
-            # maxString = 
-            for string in text:
-                words = string.split()
-                lenWords = len(words)
-                if maxLenWords < lenWords:
-                    maxLenWords = lenWords
-                    maxString = words
-            print('maxString = ', maxString)
-
-            lenWords = []
-            for word in maxString:
-                lenWords = len(word.split())
-                if shortestLenWord > lenWords:
-                    shortestLenWord = lenWords
-                    shortestWord = word
-            shortestWord = min(maxString)
-            print('shortestWord = ', shortestWord)
-
-            deleteWord = ''
-            maxString = [word.replace(shortestWord, deleteWord) for word in maxString]
-            [print(string) for string in text]
-
         # Выход из программы
         elif userChoice.lower() == 'выход':
             exit()
