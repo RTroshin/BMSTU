@@ -242,9 +242,7 @@ def menu():
     print('4. Удаление заданного слова')
     print('5. Замена одного слова другим во всём тексте')
     print('6. Вычисление арифметического выражения')
-    print('7. Найти предложение, в котором максимальное количество слов, '
-        + 'в которых каждая буква входит не менее двух раз')
-    print('8. Удалить самое короткое слово в самом длинном по числу слов предложении')
+    print('7. Удалить самое короткое слово в самом длинном по числу слов предложении')
     print('\nДля выхода из программы наберите "Выход"\n')
     userChoice = input('Выберите пункт меню: ')
     print()
@@ -262,6 +260,7 @@ def is_number(string):
         return True
     except ValueError:
         return False
+
 
 def exec_op(op_type, first_arg, second_arg=""):
     """
@@ -302,6 +301,7 @@ def exec_op(op_type, first_arg, second_arg=""):
     if use_float:
         return float(first_arg) * float(second_arg)
     return int(first_arg) * int(second_arg)
+
 
 def exec_expr(expression, stage=0):
     """
