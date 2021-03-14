@@ -16,15 +16,12 @@
 # 8. Удалить самое короткое слово в самом длинном по числу слов предложении.
 #
 
-from math import e, pi, sqrt
-
+from math import e, pi
 
 variables = {"e": e, "pi": pi}
 
-
 # Главная функция
 def main():
-
     longestLenString = 0
     text = ['...для меня теория игр оказалась весьма полезна, 5-2+1',
             '— добавил я,',
@@ -45,9 +42,7 @@ def main():
         if longestLenString < lenString:
             longestLenString = lenString
 
-    for string in text:
-        print(string)
-    # [print(string) for string in text]
+    [print(string) for string in text]
 
     while True:
         userChoice = menu()
@@ -55,9 +50,11 @@ def main():
         if userChoice == '1':
             for string in text:
                 print(string.ljust(longestLenString))
+
         elif userChoice == '2':
             for string in text:
                 print(string.rjust(longestLenString))
+
         elif userChoice == '3':
             for string in text:
                 lenString = len(string)
