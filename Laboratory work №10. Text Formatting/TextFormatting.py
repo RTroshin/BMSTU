@@ -87,13 +87,13 @@ def main():
             
             lenText = len(text) - 1
             for i in range(lenText):
-                text[i] = text[i].replace(word +  ' ', deleteWord) # НЕМНОГО УЛУЧШИЛ!
+                text[i] = text[i].replace(word +  ' ', deleteWord)
 
-            # text = [string.replace(word.strip(), deleteWord.strip()) for string in text] ИСПОЛЬЗОВАТЬ! ЭТО ГЕНЕРАТОР!
+            # text = [string.replace(word.strip(), deleteWord.strip()) for string in text]
 
-            for string in text: # ЗАМЕНИТЬ ФУНКЦИЕЙ!
+            for string in text:
                 print(string)
-            # [print(string) for string in text] НОВЫЙ СПОСОБ ВЫВОДА!
+            # [print(string) for string in text]
 
         elif userChoice == '5':
             word = input('Введите слово для замены: ')
@@ -104,13 +104,13 @@ def main():
 
             lenText = len(text) - 1
             for i in range(lenText):
-                text[i] = text[i].replace(word, newWord) # НЕМНОГО УЛУЧШИЛ!
+                text[i] = text[i].replace(word, newWord)
 
-            # text = [string.replace(word.strip(), newWord.strip()) for string in text] ИСПОЛЬЗОВАТЬ! ЭТО ГЕНЕРАТОР!
+            # text = [string.replace(word.strip(), newWord.strip()) for string in text]
 
-            for string in text: # ЗАМЕНИТЬ ФУНКЦИЕЙ!
+            for string in text:
                 print(string)
-            # [print(string) for string in text] НОВЫЙ СПОСОБ ВЫВОДА!
+            # [print(string) for string in text]
 
         elif userChoice == '6':
             incorrect_expressions = []
