@@ -62,13 +62,21 @@ def main():
             for string in text:
                 lenString = len(string)
                 words = string.split()
-                wordsLen = len(words)
-                if wordsLen < 2 or lenString == longestLenString:
+                lenWords = len(words)
+                if lenWords < 2 or lenString == longestLenString:
                     print(string)
                 else:
-                    spaceWidth = (longestLenString - lenString + wordsLen) // (wordsLen - 1)
-                    print(*words[:-1], sep = ' ' * spaceWidth, end = '')
-                    print(words[-1].rjust(longestLenString - lenString + len(words[-1]) + wordsLen - 1 - spaceWidth * (wordsLen - 2)))
+                    # Вычисление необходимого количества пробелов для выравнивания по ширине
+                    spaces = (longestLenString - lenString + lenWords) // lenWords
+
+                    # Заполнение пробелами для выравнивания по ширине
+                    currentLength = 0
+                    for i in range(lenWords):
+                        if i != lenWords - 1:
+                            print(words[i] + ' ' * spaces, end = '')
+                            currentLength += len(words[i]) + 1 * spaces
+                        else:
+                            print(words[i].rjust(longestLenString - currentLength))
         elif userChoice == '4':
             word = input('Введите слово для удаления: ')
             deleteWord = ''
