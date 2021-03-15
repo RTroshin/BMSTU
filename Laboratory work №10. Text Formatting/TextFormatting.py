@@ -85,21 +85,13 @@ def main():
             [print(string) for string in text]
 
         elif userChoice == '5':
-            word = input('Введите слово для замены: ')
+            word = input('Введите слово, которое хотите заменить: ')
             newWord = input('Введите слово, на которое хотите заменить: ')
-
-            # for string in text:
-            #     string.replace(word.strip(), newWord.strip())
 
             lenText = len(text) - 1
             for i in range(lenText):
                 text[i] = text[i].replace(word, newWord)
-
-            # text = [string.replace(word.strip(), newWord.strip()) for string in text]
-
-            for string in text:
-                print(string)
-            # [print(string) for string in text]
+            [print(string) for string in text]
 
         elif userChoice == '6':
             incorrect_expressions = []
