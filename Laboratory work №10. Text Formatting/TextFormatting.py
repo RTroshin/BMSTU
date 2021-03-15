@@ -74,17 +74,15 @@ def main():
                             currentLength += len(words[i]) + 1 * spaces
                         else:
                             print(words[i].rjust(longestLenString - currentLength))
-        elif userChoice == '4':
-            word = input('Введите слово для удаления: ')
-            deleteWord = ''
 
-            # for string in text:
-            #     # if string.find(word):
-            #     string = string.replace(word.strip(), deleteWord.strip())
+        elif userChoice == '4':
+            word = input('Введите слово, которое хотите удалить: ')
+            deleteWord = ''
             
             lenText = len(text) - 1
             for i in range(lenText):
                 text[i] = text[i].replace(word +  ' ', deleteWord)
+            [print(string) for string in text]
 
             # text = [string.replace(word.strip(), deleteWord.strip()) for string in text]
 
