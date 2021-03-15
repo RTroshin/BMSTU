@@ -84,12 +84,6 @@ def main():
                 text[i] = text[i].replace(word +  ' ', deleteWord)
             [print(string) for string in text]
 
-            # text = [string.replace(word.strip(), deleteWord.strip()) for string in text]
-
-            for string in text:
-                print(string)
-            # [print(string) for string in text]
-
         elif userChoice == '5':
             word = input('Введите слово для замены: ')
             newWord = input('Введите слово, на которое хотите заменить: ')
