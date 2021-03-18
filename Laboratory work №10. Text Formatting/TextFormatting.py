@@ -16,9 +16,14 @@
 # 8. Удалить самое короткое слово в самом длинном по числу слов предложении.
 #
 
-from math import e, pi
+from string import *
 
-variables = {"e": e, "pi": pi}
+
+pointing = ['', '.', ',', '!', '?', '—']
+operations = ['+', '-', '*', '/', '(', ')']
+number = '01234567890'
+abc_eng = 'abcdefghijklmnopqrstuvwxyz'
+abc_rus = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 # Главная функция
 def main():
