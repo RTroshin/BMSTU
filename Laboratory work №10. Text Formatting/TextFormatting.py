@@ -88,7 +88,7 @@ def main():
             
             lenText = len(text) - 1
             for i in range(lenText):
-                text[i] = text[i].replace(word +  ' ', deleteWord)
+                text[i] = text[i].replace(' ' + word, deleteWord)
             [print(string) for string in text]
 
         elif userChoice == '5':
@@ -101,76 +101,105 @@ def main():
             [print(string) for string in text]
 
         elif userChoice == '6':
-            incorrect_expressions = []
-            _text = []
-            for line in text:
-                line = line.replace("= ", "=").replace(" =", "=")
-                eq_index = line.find("=")
-                while eq_index != -1:
-                    if eq_index == 0:
-                        continue
-                    elif eq_index == len(line) - 1:
+            mathInText = False
+            lenText = len(text)
+            for i in range(lenText):
+                math = ''
+                isMath = False
+                for j in operations:
+                    if j in text[i]:
+                        lenText_i = len(text[i])
+                        for k in range(lenText_i):
+                            if text[i][k] in number or text[i][k] in operations:
+                                try:
+                                    if text[i][k + 1] != ' ' and text[i][k+1].lower() not in abc_eng and text[i][k+1].lower() not in abc_rus and text[i][k+1].lower() not in pointing:
+                                        isMath = True
+                                        math += text[i][k]
+                                except IndexError:
+                                    math += text[i][k]
                         break
-                    try:
-                        to_left = line[:eq_index].strip().split()
-                        to_right = line[eq_index + 1:].strip().split()
-                        if not to_left or not to_right:
-                            left_hand_side = ""
-                            right_hand_side = ""
-                        else:
-                            left_hand_side = to_left[-1]
-                            right_hand_side = to_right[0]
-                        declaration = [left_hand_side, right_hand_side]
-                        declaration_s = "{}={}".format(*declaration)
-                        line = line.replace(
-                            declaration_s, "")
-                        variables[declaration[0]] = float(declaration[1])
-                        if variables[declaration[0]].is_integer():
-                            variables[declaration[0]] = int(declaration[1])
-                    except ValueError:
-                        incorrect_expressions.append(declaration_s)
-                    eq_index = line.find("=")
-                _text.append(line)
 
-            for line in _text:
-                expressions = []
-                expr_started = False
-                expr = ""
-                prev_sym = None
-                for v in variables:
-                    line = line.replace(v, str(variables[v]))
-                for sym in line:
-                    if sym.isdigit() or \
-                            sym in ["*", "+", "-", "/", "(", "%", "√"] or \
-                            expr_started and sym in [" ", ".", ")"] and \
-                            prev_sym not in [" ", "."]:
-                        if expr_started:
-                            expr += sym
-                        else:
-                            expr = sym
-                            expr_started = True
-                    elif expr_started:
-                        expressions.append(expr.strip())
-                        expr_started = False
-                    prev_sym = sym
-                if expr_started:
-                    expressions.append(expr.strip())
+                if isMath:
+                    mathPolish = ' '.join(reversePolishConversion(math.strip()))
+                    answer = reversePolishNotation(mathPolish.split())
+                    print("Значение выражения " + math + " равно " + str(answer))
+                    mathInText = True
 
-                for expr in expressions:
-                    try:
-                        line = line.replace(expr, exec_expr(expr))
-                    except (
-                        OverflowError, ZeroDivisionError, ValueError, IndexError
-                    ):
-                        incorrect_expressions.append(expr)
-                print(line)
-            if incorrect_expressions:
-                import sys
+            if not mathInText:
+                print("В тексте нет математических выражений")
+            print()
 
-                print("\033[91mНайдены некорректные выражения:",
-                    *incorrect_expressions,
-                    sep="\n", file=sys.stderr)
-                print('\033[0m')
+        # elif userChoice == '6':
+        #     incorrect_expressions = []
+        #     _text = []
+        #     for line in text:
+        #         line = line.replace("= ", "=").replace(" =", "=")
+        #         eq_index = line.find("=")
+        #         while eq_index != -1:
+        #             if eq_index == 0:
+        #                 continue
+        #             elif eq_index == len(line) - 1:
+        #                 break
+        #             try:
+        #                 to_left = line[:eq_index].strip().split()
+        #                 to_right = line[eq_index + 1:].strip().split()
+        #                 if not to_left or not to_right:
+        #                     left_hand_side = ""
+        #                     right_hand_side = ""
+        #                 else:
+        #                     left_hand_side = to_left[-1]
+        #                     right_hand_side = to_right[0]
+        #                 declaration = [left_hand_side, right_hand_side]
+        #                 declaration_s = "{}={}".format(*declaration)
+        #                 line = line.replace(
+        #                     declaration_s, "")
+        #                 variables[declaration[0]] = float(declaration[1])
+        #                 if variables[declaration[0]].is_integer():
+        #                     variables[declaration[0]] = int(declaration[1])
+        #             except ValueError:
+        #                 incorrect_expressions.append(declaration_s)
+        #             eq_index = line.find("=")
+        #         _text.append(line)
+
+        #     for line in _text:
+        #         expressions = []
+        #         expr_started = False
+        #         expr = ""
+        #         prev_sym = None
+        #         for v in variables:
+        #             line = line.replace(v, str(variables[v]))
+        #         for sym in line:
+        #             if sym.isdigit() or \
+        #                     sym in ["*", "+", "-", "/", "(", "%", "√"] or \
+        #                     expr_started and sym in [" ", ".", ")"] and \
+        #                     prev_sym not in [" ", "."]:
+        #                 if expr_started:
+        #                     expr += sym
+        #                 else:
+        #                     expr = sym
+        #                     expr_started = True
+        #             elif expr_started:
+        #                 expressions.append(expr.strip())
+        #                 expr_started = False
+        #             prev_sym = sym
+        #         if expr_started:
+        #             expressions.append(expr.strip())
+
+        #         for expr in expressions:
+        #             try:
+        #                 line = line.replace(expr, exec_expr(expr))
+        #             except (
+        #                 OverflowError, ZeroDivisionError, ValueError, IndexError
+        #             ):
+        #                 incorrect_expressions.append(expr)
+        #         print(line)
+        #     if incorrect_expressions:
+        #         import sys
+
+        #         print("\033[91mНайдены некорректные выражения:",
+        #             *incorrect_expressions,
+        #             sep="\n", file=sys.stderr)
+        #         print('\033[0m')
 
         elif userChoice == '7':
             maxLenWords = 0
