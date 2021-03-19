@@ -129,30 +129,6 @@ def main():
                 print("В тексте нет математических выражений")
             print()
 
-        #     for line in _text:
-        #         expressions = []
-        #         expr_started = False
-        #         expr = ""
-        #         prev_sym = None
-        #         for v in variables:
-        #             line = line.replace(v, str(variables[v]))
-        #         for sym in line:
-        #             if sym.isdigit() or \
-        #                     sym in ["*", "+", "-", "/", "(", "%", "√"] or \
-        #                     expr_started and sym in [" ", ".", ")"] and \
-        #                     prev_sym not in [" ", "."]:
-        #                 if expr_started:
-        #                     expr += sym
-        #                 else:
-        #                     expr = sym
-        #                     expr_started = True
-        #             elif expr_started:
-        #                 expressions.append(expr.strip())
-        #                 expr_started = False
-        #             prev_sym = sym
-        #         if expr_started:
-        #             expressions.append(expr.strip())
-
         #         for expr in expressions:
         #             try:
         #                 line = line.replace(expr, exec_expr(expr))
