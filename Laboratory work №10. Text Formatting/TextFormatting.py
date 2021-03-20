@@ -129,17 +129,6 @@ def main():
                 print("В тексте нет математических выражений")
             print()
 
-        #         for expr in expressions:
-        #             try:
-        #                 line = line.replace(expr, exec_expr(expr))
-        #             except (
-        #                 OverflowError, ZeroDivisionError, ValueError, IndexError
-        #             ):
-        #                 incorrect_expressions.append(expr)
-        #         print(line)
-        #     if incorrect_expressions:
-        #         import sys
-
         #         print("\033[91mНайдены некорректные выражения:",
         #             *incorrect_expressions,
         #             sep="\n", file=sys.stderr)
