@@ -129,14 +129,8 @@ def main():
                 print("В тексте нет математических выражений")
             print()
 
-        #         print("\033[91mНайдены некорректные выражения:",
-        #             *incorrect_expressions,
-        #             sep="\n", file=sys.stderr)
-        #         print('\033[0m')
-
         elif userChoice == '7':
             maxLenWords = 0
-            # maxWords = 
             for string in text:
                 words = string.split()
                 lenWords = len(words)
