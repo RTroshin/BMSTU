@@ -139,14 +139,21 @@ def main():
                     maxWords = words
                     maxString = string
 
-            shortestWord = maxWords[0]
-            shortestLenWord = len(shortestWord)
-            for word in maxWords:
-                lenWord = len(word)
-                if shortestLenWord > lenWord:
-                    shortestLenWord = lenWord
-                    shortestWord = word
-            
+            # shortestWord = maxWords[0]
+            # shortestLenWord = len(shortestWord)
+            # for word in maxWords:
+            #     lenWord = len(word)
+            #     if shortestLenWord > lenWord:
+            #         shortestLenWord = lenWord
+            #         shortestWord = word
+
+            # shortestLenWord = 0
+            # for word in maxWords:
+            #     lenWord = len(word)
+            #     if shortestLenWord < lenWord:
+            #         shortestLenWord = lenWord
+            # print(shortestLenWord)
+
             print('Самое длинное по числу слов предложение: ', maxString)
             print('Самое короткое слово: ', shortestWord)
             print()
