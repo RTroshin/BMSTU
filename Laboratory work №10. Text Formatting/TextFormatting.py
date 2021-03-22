@@ -151,6 +151,10 @@ def main():
             #     lenWords.append(len(word))
             # shortestLenWord = max(lenWords)
 
+            lenWords = []
+            [lenWords.append(len(word)) for word in maxWords]
+            shortestLenWord = max(lenWords)
+
             print('Самое длинное по числу слов предложение: ', maxString)
             print('Самое короткое слово: ', shortestWord)
             print()
