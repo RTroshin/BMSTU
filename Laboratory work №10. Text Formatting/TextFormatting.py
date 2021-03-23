@@ -161,6 +161,11 @@ def main():
                     shortestLenWord = lenWord
                     shortestWord = word
 
+            shortestWords = []
+            for word in maxWords:
+                if len(shortestWord) == len(word) and word not in pointing:
+                    shortestWords.append(word)
+
             print('Самое длинное по числу слов предложение: ', maxString)
             print('Самое короткое слово: ', shortestWord)
             print()
