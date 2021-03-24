@@ -170,8 +170,12 @@ def main():
             print('Самое короткое слово: ', end = '')
             [print(word, end = ' ') for word in shortestWords]
             print()
-            deleteWord = ''
-            text = [string.replace(shortestWord + ' ', deleteWord) if string == maxString else string for string in text]
+            newString = ''
+            for word in maxWords:
+                if word not in shortestWords: 
+                    newString += ''.join(' ' + word)
+            text = [newString if string == maxString else string for string in text]
+            print()
             [print(string) for string in text]
 
         # Выход из программы
