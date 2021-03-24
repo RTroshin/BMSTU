@@ -199,6 +199,14 @@ def menu():
     print()
     return userChoice
 
+def reversePolishConversion(st):
+    string = ''
+    lenSt = len(st)
+    for i in range(lenSt):
+        if st[i] in operations:
+            string += ' ' + st[i] + ' '
+        else:
+            string += st[i]
 
 def is_number(string):
     """
