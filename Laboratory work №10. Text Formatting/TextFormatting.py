@@ -167,9 +167,9 @@ def main():
                     shortestWords.append(word)
 
             print('Самое длинное по числу слов предложение: ', maxString)
-            print('Самое короткое слово: ', shortestWord)
+            print('Самое короткое слово: ', end = '')
+            [print(word, end = ' ') for word in shortestWords]
             print()
-
             deleteWord = ''
             text = [string.replace(shortestWord + ' ', deleteWord) if string == maxString else string for string in text]
             [print(string) for string in text]
