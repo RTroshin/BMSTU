@@ -238,6 +238,10 @@ def reversePolishConversion(st):
                 while n != '(':
                     A.append(n)
                     n = st.pop()
+    while len(st) > 1:
+        n = st.pop()
+        A.append(n)
+    return A
 
 def is_number(string):
     """
