@@ -208,6 +208,29 @@ def reversePolishConversion(st):
         else:
             string += st[i]
 
+    s = string.split()
+    A = []
+    st = []
+    st.append(0)
+    n = ''
+    lenS = len(s)
+    for i in range(lenS):
+        if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/' and s[i] != '(' and s[i] != ')'):
+            A.append(s[i])
+        else:
+            if (s[i] == '+' or s[i] == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                while (s[i] == '+' or s[i] == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                    n = st.pop()
+                    A.append(n)
+                st.append(s[i])
+                continue
+            elif (s[i] == '*' or s[i] == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                while (s[i] == '*' or s[i] == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                    n = st.pop()
+                    A.append(n)
+                st.append(s[i])
+                continue
+
 def is_number(string):
     """
     Является ли строка int или float?
