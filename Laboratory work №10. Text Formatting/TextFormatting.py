@@ -231,6 +231,14 @@ def reversePolishConversion(st):
                 st.append(s[i])
                 continue
 
+            if s[i] != ')':
+                st.append(s[i])
+            else:
+                n = st.pop()
+                while n != '(':
+                    A.append(n)
+                    n = st.pop()
+
 def is_number(string):
     """
     Является ли строка int или float?
