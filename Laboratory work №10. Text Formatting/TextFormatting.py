@@ -244,11 +244,6 @@ def reversePolishConversion(st):
     return A
 
 def is_number(string):
-    """
-    Является ли строка int или float?
-    :param string: Строка, которую надо проверить
-    :return: True/False, в зависимости от того, пройдена ли проверка
-    """
     try:
         float(string)
         return True
