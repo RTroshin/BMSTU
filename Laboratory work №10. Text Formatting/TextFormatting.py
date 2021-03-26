@@ -243,14 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-def is_number(string):
-    try:
-        float(string)
-        return True
-    except ValueError:
-        return False
-
-
 def exec_op(op_type, first_arg, second_arg=""):
     """
     Вычисление значения операции.
