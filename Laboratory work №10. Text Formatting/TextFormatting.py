@@ -244,15 +244,6 @@ def reversePolishConversion(st):
     return A
 
 def exec_op(op_type, first_arg, second_arg=""):
-    """
-    Вычисление значения операции.
-    :param op_type: Тип операции, строка как в исходном выражении.
-    Поддерживаются: + - * % // /
-    :param first_arg: Первый аргумент
-    :param second_arg: Второй аргумент (необязателен, например, в корне)
-    :return: Вычисленное значение в виде int или float
-    """
-
     if op_type == "/":
         return float(first_arg) / float(second_arg)
     use_float = False
