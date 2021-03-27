@@ -243,33 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-def exec_op(op_type, first_arg, second_arg=""):
-    if op_type == "/":
-        return float(first_arg) / float(second_arg)
-    use_float = False
-    if "." in first_arg or "." in second_arg:
-        use_float = True
-    if op_type == "+":
-        if use_float:
-            return float(first_arg) + float(second_arg)
-        return int(first_arg) + int(second_arg)
-    if op_type == "-":
-        if use_float:
-            return float(first_arg) - float(second_arg)
-        return int(first_arg) - int(second_arg)
-    if op_type == "//":
-        if use_float:
-            return float(first_arg) // float(second_arg)
-        return int(first_arg) // int(second_arg)
-    if op_type == "%":
-        if use_float:
-            return float(first_arg) % float(second_arg)
-        return int(first_arg) % int(second_arg)
-    if use_float:
-        return float(first_arg) * float(second_arg)
-    return int(first_arg) * int(second_arg)
-
-
 def exec_expr(expression, stage=0):
     """
     Вычисление арифметического выражения
