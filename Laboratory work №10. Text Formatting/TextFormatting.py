@@ -247,9 +247,6 @@ def exec_expr(expression, stage=0):
     if not expression:
         raise ValueError(expression)
 
-    # Удаление пробелов. Замена двойных минусов
-    expression = expression.strip().replace(' ', '').replace('--', '+')
-
     # Вычисление выражений в скобках
     if expression.find("(") != -1:
         bracket_expr = []
