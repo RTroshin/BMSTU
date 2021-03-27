@@ -244,13 +244,6 @@ def reversePolishConversion(st):
     return A
 
 def exec_expr(expression, stage=0):
-    """
-    Вычисление арифметического выражения
-    :param expression: Выражение, значение которого требуется вычислить
-    :param stage: Этап вычислений
-    :return: Вычисленное значение в виде строки
-    """
-
     if not expression:
         raise ValueError(expression)
 
