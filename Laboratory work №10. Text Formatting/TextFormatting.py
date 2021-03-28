@@ -243,13 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-        if level != 0:
-            raise ValueError(expression)
-
-        for b_expr in bracket_expr:
-            expression = expression.replace("(" + b_expr + ")", exec_expr(b_expr))
-        return expression if is_number(expression) else exec_expr(expression)
-
     # Этап 2.5. Некорректное выражение: открывающей нет, а закрывающая есть!
     elif expression.find(")") != -1:
         raise ValueError(expression)
