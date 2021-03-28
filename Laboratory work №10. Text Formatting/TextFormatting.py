@@ -243,10 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-def exec_expr(expression, stage=0):
-    if not expression:
-        raise ValueError(expression)
-
     # Вычисление выражений в скобках
     if expression.find("(") != -1:
         bracket_expr = []
