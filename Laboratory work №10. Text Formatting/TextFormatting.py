@@ -243,10 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-    # Этап 2.5. Некорректное выражение: открывающей нет, а закрывающая есть!
-    elif expression.find(")") != -1:
-        raise ValueError(expression)
-
     # "Расчленяем" выражение на слагаемые, считаем их отдельно, затем складываем
     elif stage == 0 and (expression.find("+") != -1 or expression.find("-", 1) != -1):
         parts = []
