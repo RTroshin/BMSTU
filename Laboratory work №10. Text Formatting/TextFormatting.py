@@ -243,8 +243,6 @@ def reversePolishConversion(st):
         A.append(n)
     return A
 
-    return expression
-
 
 if __name__ == "__main__":
     main()
