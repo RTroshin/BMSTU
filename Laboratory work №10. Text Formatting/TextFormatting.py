@@ -244,7 +244,10 @@ def reversePolishConversion(st):
     return A
 
 def reversePolishNotation(s):
-    pass
+    A = []
+    lenS = len(s)
+    answer = A[0]
+    return answer
 
 
 if __name__ == "__main__":
