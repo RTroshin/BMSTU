@@ -10,7 +10,7 @@
 #
 # Сортировки:
 # 1) Сортировка перемешиванием (Шейкерная сортировка)
-# 2) Метод sort()
+# 2) Метод sort() (Быстрая сортировка)
 #
 # TODO
 # 1. Сделать массив через numpy
@@ -21,7 +21,8 @@ from CocktailShakerSort import *
 import numpy as np
 from random import sample
 # from time import time
-from timeit import default_timer as timer
+from timeit import default_timer as timer # Данная функция считает время
+# точнее чем функия time()
 
 def main():
     arraySizes = inputArray()
