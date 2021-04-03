@@ -25,7 +25,7 @@ from timeit import default_timer as timer # Данная функция счит
 # точнее чем функия time()
 
 def main():
-    arraySizes = inputArray()
+    arraySizes = inputArray("Пузырьковая сортировка")
     arrayList = arrayCreating(arraySizes)
     timeList = []
     for arr in arrayList:
@@ -37,7 +37,7 @@ def main():
         timeList.append(end - start)
     printData("Пузырьковая сортировка", arraySizes, timeList)
 
-    arraySizes = inputArray()
+    arraySizes = inputArray("Шейкерная сортировка")
     arrayList = arrayCreating(arraySizes)
     timeList = []
     for arr in arrayList:
