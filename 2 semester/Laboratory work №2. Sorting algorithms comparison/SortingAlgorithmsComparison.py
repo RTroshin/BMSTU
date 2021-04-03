@@ -58,8 +58,8 @@ def main():
     printData("Быстрая сортировка (numpy)", arraySizes, timeList)
 
 # Ввод трёх размеров для массивов
-def inputArray():
-    print()
+def inputArray(sortName):
+    print('\n', sortName, sep = '', end='\n')
     while True:
         try:
             arraySizes = list(map(int,\
