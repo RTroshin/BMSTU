@@ -47,15 +47,15 @@ def main():
         timeList.append(end - start)
     printData("Шейкерная сортировка", arraySizes, timeList)
 
-    arraySizes = inputArray()
+    arraySizes = inputArray("Быстрая сортировка (numpy)")
     arrayList = arrayCreating(arraySizes)
     timeList = []
     for arr in arrayList:
         start = timer()
-        np.sort(arr)
+        np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
         end = timer()
         timeList.append(end - start)
-    printData("Метод sort()", arraySizes, timeList)
+    printData("Быстрая сортировка (numpy)", arraySizes, timeList)
 
 # Ввод трёх размеров для массивов
 def inputArray():
