@@ -31,35 +31,27 @@ def main():
     arraySizes = list()
     timeList = list()
 
-    arraySizes.append(inputArray(sortNames[0]))
-    arrayList = arrayCreating(arraySizes[0])
-    timeList = []
-    for arr in arrayList:
-#         start = time()
-        start = timer()
-        bubbleSort(arr)
-#         end = time()
-        end = timer()
-        timeList.append(end - start)
-
-    arraySizes.append(inputArray(sortNames[1]))
-    arrayList = arrayCreating(arraySizes[1])
-    timeList = []
-    for arr in arrayList:
-        start = timer()
-        cocktailShakerSort(arr)
-        end = timer()
-        timeList.append(end - start)
-
-    arraySizes.append(inputArray(sortNames[2]))
-    arrayList = arrayCreating(arraySizes[2])
-    timeList = []
-    for arr in arrayList:
-        start = timer()
-        np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
-        end = timer()
-        timeList.append(end - start)
-    timeList.append()
+    for i in range(len(sortNames)):
+        arraySizes.append(inputArray(sortNames[i]))
+        arrayList = arrayCreating(arraySizes[i])
+        times = []
+        for arr in arrayList:
+            if i == 0:
+        #         start = time()
+                start = timer()
+                bubbleSort(arr)
+        #         end = time()
+                end = timer()
+            elif i == 1:
+                start = timer()
+                cocktailShakerSort(arr)
+                end = timer()
+            elif i == 2:
+                start = timer()
+                np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
+                end = timer()
+            times.append(end - start)
+        timeList.append(times)
 
     for i in range(len(arraySizes)):
         printData(i, sortNames[i], arraySizes[i], timeList[i])
