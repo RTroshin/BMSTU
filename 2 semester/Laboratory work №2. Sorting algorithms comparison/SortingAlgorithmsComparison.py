@@ -28,9 +28,10 @@ def main():
     sortNames = ["Пузырьковая сортировка",\
                  "Шейкерная сортировка",\
                  "Быстрая сортировка (numpy)"]
+    arraySizes = list()
 
-    arraySizes = inputArray("Пузырьковая сортировка")
-    arrayList = arrayCreating(arraySizes)
+    arraySizes.append(inputArray(sortNames[0]))
+    arrayList = arrayCreating(arraySizes[0])
     timeList = []
     for arr in arrayList:
 #         start = time()
@@ -40,8 +41,8 @@ def main():
         end = timer()
         timeList.append(end - start)
 
-    arraySizes = inputArray("Шейкерная сортировка")
-    arrayList = arrayCreating(arraySizes)
+    arraySizes.append(inputArray(sortNames[1]))
+    arrayList = arrayCreating(arraySizes[1])
     timeList = []
     for arr in arrayList:
         start = timer()
@@ -49,8 +50,8 @@ def main():
         end = timer()
         timeList.append(end - start)
 
-    arraySizes = inputArray("Быстрая сортировка (numpy)")
-    arrayList = arrayCreating(arraySizes)
+    arraySizes.append(inputArray(sortNames[2]))
+    arrayList = arrayCreating(arraySizes[2])
     timeList = []
     for arr in arrayList:
         start = timer()
