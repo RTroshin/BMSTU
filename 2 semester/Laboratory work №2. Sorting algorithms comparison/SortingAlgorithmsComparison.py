@@ -35,7 +35,6 @@ def main():
 #         end = time()
         end = timer()
         timeList.append(end - start)
-    printData("Пузырьковая сортировка", arraySizes, timeList)
 
     arraySizes = inputArray("Шейкерная сортировка")
     arrayList = arrayCreating(arraySizes)
@@ -45,7 +44,6 @@ def main():
         cocktailShakerSort(arr)
         end = timer()
         timeList.append(end - start)
-    printData("Шейкерная сортировка", arraySizes, timeList)
 
     arraySizes = inputArray("Быстрая сортировка (numpy)")
     arrayList = arrayCreating(arraySizes)
@@ -55,7 +53,9 @@ def main():
         np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
         end = timer()
         timeList.append(end - start)
-    printData("Быстрая сортировка (numpy)", arraySizes, timeList)
+
+    for i in range(len(arraySizes)):
+        printData(sortNames[i], arraySizes[i], timeList)
 
 # Ввод трёх размеров для массивов
 def inputArray(sortName):
