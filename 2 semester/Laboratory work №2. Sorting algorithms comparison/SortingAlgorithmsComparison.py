@@ -29,6 +29,7 @@ def main():
                  "Шейкерная сортировка",\
                  "Быстрая сортировка (numpy)"]
     arraySizes = list()
+    timeList = list()
 
     arraySizes.append(inputArray(sortNames[0]))
     arrayList = arrayCreating(arraySizes[0])
@@ -58,9 +59,10 @@ def main():
         np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
         end = timer()
         timeList.append(end - start)
+    timeList.append()
 
     for i in range(len(arraySizes)):
-        printData(sortNames[i], arraySizes[i], timeList)
+        printData(i, sortNames[i], arraySizes[i], timeList[i])
 
 # Ввод трёх размеров для массивов
 def inputArray(sortName):
