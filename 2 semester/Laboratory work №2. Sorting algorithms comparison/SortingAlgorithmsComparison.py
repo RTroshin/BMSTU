@@ -25,6 +25,10 @@ from timeit import default_timer as timer # Данная функция счит
 # точнее чем функия time()
 
 def main():
+    sortNames = ["Пузырьковая сортировка",\
+                 "Шейкерная сортировка",\
+                 "Быстрая сортировка (numpy)"]
+
     arraySizes = inputArray("Пузырьковая сортировка")
     arrayList = arrayCreating(arraySizes)
     timeList = []
