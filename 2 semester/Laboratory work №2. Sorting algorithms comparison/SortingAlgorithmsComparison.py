@@ -104,12 +104,12 @@ def printData(i, sortName, arraySizes, timeList):
         print('├', '─' * 28, '┼', '─' * 16, '┼', '─' * 19, '┼', '─' * 19,\
             '┼', '─' * 19, '┤', sep = '', end='\n')
     n = 0
-    for i in range(len(arraySizes)):
-        if i == 1:
+    for j in range(len(arraySizes)):
+        if j == 1:
             print('│ {:^26} │ {:14d} │ {:17.6f} │ {:17.6f} │ {:17.6f} │'\
-            .format(sortName, arraySizes[i], timeList[n],\
+            .format(sortName, arraySizes[j], timeList[n],\
                     timeList[n + 1], timeList[n + 2]))
-            if i != len(arraySizes) - 1:
+            if j != len(arraySizes) - 1:
                 print('│', ' ' * 28, '├', '─' * 16, '┼', '─' * 19,\
                       '┼', '─' * 19, '┼', '─' * 19, '┤', sep = '', end='\n')
             else:
@@ -117,11 +117,16 @@ def printData(i, sortName, arraySizes, timeList):
                       '┴', '─' * 19, '┴', '─' * 19, '┘', sep = '', end='\n')
         else:
             print('│ {:^26} │ {:14d} │ {:17.6f} │ {:17.6f} │ {:17.6f} │'\
-            .format('', arraySizes[i], timeList[n],\
+            .format('', arraySizes[j], timeList[n],\
                     timeList[n + 1], timeList[n + 2]))
-            if i != len(arraySizes) - 1:
+            if j != len(arraySizes) - 1:
                 print('│', ' ' * 28, '├', '─' * 16, '┼', '─' * 19,\
                       '┼', '─' * 19, '┼', '─' * 19, '┤', sep = '', end='\n')
+            elif i != len(arraySizes) - 1:
+                print('├', '─' * 28, '┴', '─' * 16, '┴', '─' * 19,\
+                      '┴', '─' * 19, '┴', '─' * 19, '┤', sep = '', end='\n')
+                print('├', '─' * 28, '┬', '─' * 16, '┬', '─' * 19,\
+                      '┬', '─' * 19, '┬', '─' * 19, '┤', sep = '', end='\n')
             else:
                 print('└', '─' * 28, '┴', '─' * 16, '┴', '─' * 19,\
                       '┴', '─' * 19, '┴', '─' * 19, '┘', sep = '', end='\n')
