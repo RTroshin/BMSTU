@@ -87,7 +87,7 @@ def arrayCreating(arraySizes):
     return arrList
 
 # Вывод таблицы значений на экран
-def printData(sortName, arraySizes, timeList):
+def printData(i, sortName, arraySizes, timeList):
     print('┌', '─' * 28, '┬', '─' * 16, '┬', '─' * 59, '┐', sep = '')
     print('│', ' ' * 28, '│', ' ' * 16, '│', ' ' * 22,\
           'Время выполнения', ' ' * 21, '│', sep = '', end='\n')
