@@ -27,11 +27,13 @@ from timeit import default_timer as timer # Данная функция счит
 def main():
     sortNames = ["Пузырьковая сортировка",\
                  "Шейкерная сортировка",\
-                 "Быстрая сортировка (numpy)"]
+                 "Быстрая сортировка (numpy)",\
+                 "Cортировка слиянием (numpy)"]
+    lenSortNames = len(sortNames)
     arraySizes = list()
     timeList = list()
 
-    for i in range(len(sortNames)):
+    for i in range(lenSortNames):
         arraySizes.append(inputArray(sortNames[i]))
         arrayList = arrayCreating(arraySizes[i])
         times = []
