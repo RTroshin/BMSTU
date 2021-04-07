@@ -52,6 +52,10 @@ def main():
                 start = timer()
                 np.sort(arr) # Быстрая сортировка (quicksort) по-умолчанию
                 end = timer()
+            elif i == 3:
+                start = timer()
+                np.sort(arr, kind="mergesort")
+                end = timer()
             times.append(end - start)
         timeList.append(times)
 
