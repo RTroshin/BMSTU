@@ -69,7 +69,10 @@ def inputArray(sortName):
         try:
             arraySizes = list(map(int,\
             input('Введите три размера для массива: ').split()))
-            break
+            if len(arraySizes) != 3:
+                print('Некорректный ввод!\nПопробуйте ещё раз')
+            else:
+                break
         except ValueError:
             print('Некорректный ввод!\nПопробуйте ещё раз')
     return arraySizes
