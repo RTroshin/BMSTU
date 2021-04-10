@@ -28,7 +28,8 @@ def main():
     sortNames = ["Пузырьковая сортировка",\
                  "Шейкерная сортировка",\
                  "Быстрая сортировка (numpy)",\
-                 "Cортировка слиянием (numpy)"]
+                 "Cортировка слиянием (numpy)",\
+                 "Сортировка кучей (numpy)"]
     lenSortNames = len(sortNames)
     arraySizes = list()
     timeList = list()
