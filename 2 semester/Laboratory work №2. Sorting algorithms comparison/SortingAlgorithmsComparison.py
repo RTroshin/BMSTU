@@ -57,6 +57,10 @@ def main():
                 start = timer()
                 np.sort(arr, kind="mergesort")
                 end = timer()
+            elif i == 4:
+                start = timer()
+                np.sort(arr, kind="heapsort")
+                end = timer()
             times.append(end - start)
         timeList.append(times)
 
