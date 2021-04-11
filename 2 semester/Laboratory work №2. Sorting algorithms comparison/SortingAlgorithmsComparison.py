@@ -65,7 +65,7 @@ def main():
         timeList.append(times)
 
     for i in range(lenSortNames):
-        printData(i, lenSortNames, sortNames[i], arraySizes[i], timeList[i])
+        printData(i, sortNames, arraySizes[i], timeList[i])
 
 # Ввод трёх размеров для массивов
 def inputArray(sortName):
