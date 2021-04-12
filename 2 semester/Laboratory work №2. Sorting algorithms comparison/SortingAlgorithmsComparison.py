@@ -121,7 +121,7 @@ def printData(i, sortNames, arraySizes, timeList):
     for j in range(len(arraySizes)):
         if j == 1:
             print('│ {:^27} │ {:14d} │ {:17.6f} │ {:17.6f} │ {:17.6f} │'\
-            .format(sortName, arraySizes[j], timeList[n],\
+            .format(sortNames[i], arraySizes[j], timeList[n],\
                     timeList[n + 1], timeList[n + 2]))
             if j != len(arraySizes) - 1:
                 print('│', ' ' * 29, '├', '─' * 16, '┼', '─' * 19,\
