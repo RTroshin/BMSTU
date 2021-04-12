@@ -133,7 +133,7 @@ def printData(i, sortNames, arraySizes, timeList):
             if j != len(arraySizes) - 1:
                 print('│', ' ' * 29, '├', '─' * 16, '┼', '─' * 19,\
                       '┼', '─' * 19, '┼', '─' * 19, '┤', sep = '', end='\n')
-            elif i == lenSortNames - 1:
+            elif i == len(sortNames) - 1:
                 print('└', '─' * 29, '┴', '─' * 16, '┴', '─' * 19,\
                       '┴', '─' * 19, '┴', '─' * 19, '┘', sep = '', end='\n')
             elif j == len(arraySizes) - 1:
