@@ -21,9 +21,6 @@ from string import *
 
 pointing = ['', '.', ',', '!', '?', '—']
 operations = ['+', '-', '*', '/', '(', ')']
-number = '01234567890'
-abc_eng = 'abcdefghijklmnopqrstuvwxyz'
-abc_rus = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 # Главная функция
 def main():
