@@ -98,24 +98,24 @@ def main():
                 text[i] = text[i].replace(word, newWord)
             [print(string) for string in text]
 
-        elif userChoice == '6':
-            mathInText = False
-            lenText = len(text)
-            for i in range(lenText):
-                math = ''
-                isMath = False
-                for j in operations:
-                    if j in text[i]:
-                        lenText_i = len(text[i])
-                        for k in range(lenText_i):
-                            if text[i][k] in number or text[i][k] in operations:
-                                try:
-                                    if text[i][k + 1] != ' ' and text[i][k+1].lower() not in abc_eng and text[i][k+1].lower() not in abc_rus and text[i][k+1].lower() not in pointing:
-                                        isMath = True
-                                        math += text[i][k]
-                                except IndexError:
-                                    math += text[i][k]
-                        break
+        # elif userChoice == '6':
+        #     mathFormulInText = False
+        #     lenText = len(text)
+        #     for i in range(lenText):
+        #         mathFormul = ''
+        #         isMathFormul = False
+        #         for j in operations:
+        #             if j in text[i]:
+        #                 lenText_i = len(text[i])
+        #                 for k in range(lenText_i):
+        #                     if text[i][k] in number or text[i][k] in operations:
+        #                         try:
+        #                             if text[i][k + 1] != ' ' and text[i][k+1].lower() not in abcEng and text[i][k+1].lower() not in abcRus and text[i][k+1].lower() not in pointing:
+        #                                 isMathFormul = True
+        #                                 mathFormul += text[i][k]
+        #                         except IndexError:
+        #                             mathFormul += text[i][k]
+        #                 break
 
                 if isMath:
                     mathPolish = ' '.join(reversePolishConversion(math.strip()))
