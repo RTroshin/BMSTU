@@ -117,6 +117,12 @@ def main():
         #                             mathFormul += text[i][k]
         #                 break
 
+        elif userChoice == '6':
+            mathFormulInText = False
+            for string in text:
+                mathFormul = ''
+                isMathFormul = False
+
                 if isMath:
                     mathPolish = ' '.join(reversePolishConversion(math.strip()))
                     answer = reversePolishNotation(mathPolish.split())
