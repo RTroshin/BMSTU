@@ -123,12 +123,6 @@ def main():
                 mathFormul = ''
                 isMathFormul = False
 
-                if isMath:
-                    mathPolish = ' '.join(reversePolishConversion(math.strip()))
-                    answer = reversePolishNotation(mathPolish.split())
-                    print("Значение выражения " + math + " равно " + str(answer))
-                    mathInText = True
-
             if not mathInText:
                 print("В тексте нет математических выражений")
             print()
