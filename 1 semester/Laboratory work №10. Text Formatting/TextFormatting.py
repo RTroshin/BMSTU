@@ -123,10 +123,6 @@ def main():
                 mathFormul = ''
                 isMathFormul = False
 
-            if not mathInText:
-                print("В тексте нет математических выражений")
-            print()
-
         elif userChoice == '7':
             maxLenWords = 0
             for string in text:
