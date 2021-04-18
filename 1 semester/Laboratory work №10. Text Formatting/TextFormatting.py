@@ -123,6 +123,9 @@ def main():
                 mathFormul = ''
                 isMathFormul = False
 
+                # Удаление пробелов
+                string = string.strip().replace(' ', '')
+
         elif userChoice == '7':
             maxLenWords = 0
             for string in text:
