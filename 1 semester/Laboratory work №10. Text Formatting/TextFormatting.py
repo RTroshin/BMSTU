@@ -126,6 +126,19 @@ def main():
                 # Удаление пробелов
                 string = string.strip().replace(' ', '')
 
+                for sym in string:
+                    if sym.isdigit() or sym in operations:
+                        isMathFormul = True
+                        mathFormul += sym
+                if isMathFormul:
+                    mathFormulPolish = ' '.join(reversePolishConversion(mathFormul.strip()))
+                    answer = reversePolishNotation(mathFormulPolish.split())
+                    print("Значение выражения " + mathFormul + " равно " + str(answer))
+                    mathFormulInText = True
+            if not mathFormulInText:
+                print("В тексте нет математических выражений")
+            print()
+
         elif userChoice == '7':
             maxLenWords = 0
             for string in text:
