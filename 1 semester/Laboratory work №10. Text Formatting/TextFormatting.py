@@ -149,13 +149,6 @@ def main():
                     maxWords = words
                     maxString = string
 
-            # shortestLenWord = 0
-            # for word in maxWords:
-            #     lenWord = len(word)
-            #     if shortestLenWord < lenWord:
-            #         shortestLenWord = lenWord
-            # print(shortestLenWord)
-
             # lenWords = []
             # for word in maxWords:
             #     lenWords.append(len(word))
