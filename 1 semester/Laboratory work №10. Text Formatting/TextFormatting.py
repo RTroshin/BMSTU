@@ -199,12 +199,11 @@ def menu():
 
 def reversePolishConversion(st):
     string = ''
-    lenSt = len(st)
-    for i in range(lenSt):
-        if st[i] in operations:
-            string += ' ' + st[i] + ' '
+    for s in st:
+        if s in operations:
+            string += ' ' + s + ' '
         else:
-            string += st[i]
+            string += s
 
     s = string.split()
     A = []
