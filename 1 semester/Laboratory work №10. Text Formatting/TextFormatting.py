@@ -205,27 +205,26 @@ def reversePolishConversion(st):
         else:
             string += s
 
-    s = string.split()
+    string = string.split()
     A = []
     st = []
     st.append(0)
     n = ''
-    lenS = len(s)
-    for i in range(lenS):
-        if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/' and s[i] != '(' and s[i] != ')'):
-            A.append(s[i])
+    for s in string:
+        if (s != '+' and s != '-' and s != '*' and s != '/' and s != '(' and s != ')'):
+            A.append(s)
         else:
-            if (s[i] == '+' or s[i] == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
-                while (s[i] == '+' or s[i] == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+            if (s == '+' or s == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                while (s == '+' or s == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
                     n = st.pop()
                     A.append(n)
-                st.append(s[i])
+                st.append(s)
                 continue
-            elif (s[i] == '*' or s[i] == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
-                while (s[i] == '*' or s[i] == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+            elif (s == '*' or s == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
+                while (s == '*' or s == '/') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
                     n = st.pop()
                     A.append(n)
-                st.append(s[i])
+                st.append(s)
                 continue
 
             if s[i] != ')':
