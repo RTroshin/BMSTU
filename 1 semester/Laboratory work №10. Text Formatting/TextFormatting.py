@@ -227,8 +227,8 @@ def reversePolishConversion(st):
                 st.append(s)
                 continue
 
-            if s[i] != ')':
-                st.append(s[i])
+            if s != ')':
+                st.append(s)
             else:
                 n = st.pop()
                 while n != '(':
