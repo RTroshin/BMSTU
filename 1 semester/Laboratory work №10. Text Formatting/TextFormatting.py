@@ -240,6 +240,8 @@ def reversePolishConversion(st):
     return A
 
 def reversePolishNotation(s):
+    print(s)
+    s = ['4', '-', '5', '2', '-', '1', '+', '-']
     A = []
     lenS = len(s)
     for i in range(lenS):
