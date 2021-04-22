@@ -248,16 +248,22 @@ def reversePolishNotation(s):
         if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/'):
             A.append(s[i])
         else:
-            a = int(A.pop())
-            b = int(A.pop())
-            if (s[i] == '+'):
-                A.append(b + a)
-            elif (s[i] == '-'):
-                A.append(b - a)
-            elif (s[i] == '*'):
-                A.append(b * a)
-            elif (s[i] == '/'):
-                A.append(b / a)
+            try:
+                a = int(A.pop())
+                b = int(A.pop())
+                if (s[i] == '+'):
+                    A.append(b + a)
+                elif (s[i] == '-'):
+                    A.append(b - a)
+                elif (s[i] == '*'):
+                    A.append(b * a)
+                elif (s[i] == '/'):
+                    A.append(b / a)
+            except IndexError:
+                if (s[i] == '+'):
+                    A.append(a)
+                elif (s[i] == '-'):
+                    A.append(-a)
     answer = A[0]
     return answer
 
