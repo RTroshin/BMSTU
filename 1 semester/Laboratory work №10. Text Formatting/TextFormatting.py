@@ -65,8 +65,11 @@ def main():
                 if lenWords < 2 or lenString == longestLenString:
                     print(string)
                 else:
-                    # Вычисление необходимого количества пробелов для выравнивания по ширине
-                    spaces = (longestLenString - lenString + lenWords) // lenWords
+
+                    # Вычисление необходимого количества пробелов
+                    # для выравнивания по ширине
+                    spaces = (longestLenString - lenString\
+                              + lenWords) // lenWords
 
                     # Заполнение пробелами для выравнивания по ширине
                     currentLength = 0
@@ -75,8 +78,8 @@ def main():
                             print(words[i] + ' ' * spaces, end = '')
                             currentLength += len(words[i]) + 1 * spaces
                         else:
-                            print(words[i].rjust(longestLenString - currentLength))
-
+                            print(words[i].rjust(longestLenString\
+                                                 - currentLength))
         elif userChoice == '4':
             word = input('Введите слово, которое хотите удалить: ')
             deleteWord = ''
