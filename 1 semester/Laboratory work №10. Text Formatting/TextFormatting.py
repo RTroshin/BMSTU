@@ -54,11 +54,9 @@ def main():
         if userChoice == '1':
             for string in text:
                 print(string.ljust(longestLenString))
-
         elif userChoice == '2':
             for string in text:
                 print(string.rjust(longestLenString))
-
         elif userChoice == '3':
             for string in text:
                 lenString = len(string)
