@@ -89,7 +89,8 @@ def main():
 
             lenText = len(text) - 1
             for i in range(lenText):
-                text[i] = text[i].replace(word, newWord)
+                text[i] = text[i].replace(' ' + word, ' ' + newWord)
+            print()
             [print(string) for string in text]
 
         # elif userChoice == '6':
