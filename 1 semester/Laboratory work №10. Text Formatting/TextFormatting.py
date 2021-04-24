@@ -82,7 +82,7 @@ def main():
                                                  - currentLength))
         elif userChoice == '4':
             word = input('Введите слово, которое хотите удалить: ')
-            deleteWord = ''
+            deleteWord(word, text)
             
             lenText = len(text) - 1
             for i in range(lenText):
