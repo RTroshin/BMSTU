@@ -83,12 +83,6 @@ def main():
         elif userChoice == '4':
             word = input('Введите слово, которое хотите удалить: ')
             deleteWord(word, text)
-            
-            lenText = len(text) - 1
-            for i in range(lenText):
-                text[i] = text[i].replace(' ' + word, deleteWord)
-            [print(string) for string in text]
-
         elif userChoice == '5':
             word = input('Введите слово, которое хотите заменить: ')
             newWord = input('Введите слово, на которое хотите заменить: ')
