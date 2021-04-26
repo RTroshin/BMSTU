@@ -93,17 +93,6 @@ def main():
             print()
             [print(string) for string in text]
 
-        #                 lenText_i = len(text[i])
-        #                 for k in range(lenText_i):
-        #                     if text[i][k] in number or text[i][k] in operations:
-        #                         try:
-        #                             if text[i][k + 1] != ' ' and text[i][k+1].lower() not in abcEng and text[i][k+1].lower() not in abcRus and text[i][k+1].lower() not in pointing:
-        #                                 isMathFormul = True
-        #                                 mathFormul += text[i][k]
-        #                         except IndexError:
-        #                             mathFormul += text[i][k]
-        #                 break
-
         elif userChoice == '6':
             mathFormulInText = False
             for string in text:
