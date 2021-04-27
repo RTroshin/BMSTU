@@ -107,9 +107,11 @@ def main():
                         isMathFormul = True
                         mathFormul += sym
                 if isMathFormul:
-                    mathFormulPolish = ' '.join(reversePolishConversion(mathFormul.strip()))
+                    mathFormulPolish =\
+                    ' '.join(reversePolishConversion(mathFormul.strip()))
                     answer = reversePolishNotation(mathFormulPolish.split())
-                    print("Значение выражения " + mathFormul + " равно " + str(answer))
+                    print("Значение выражения " + mathFormul
+                           + " равно " + str(answer))
                     mathFormulInText = True
             if not mathFormulInText:
                 print("В тексте нет математических выражений")
