@@ -140,17 +140,19 @@ def main():
             shortestWords = []
             for word in maxWords:
                 if len(shortestWord) == len(word) and word not in pointing:
-                    shortestWords.append(word)
+                    shortestWords.append(word)        
 
-            print('Самое длинное по числу слов предложение: ', maxString)
-            print('Самое короткое слово: ', end = '')
+            print('Самое длинное по числу слов' +
+                  'предложение/предложения: ', maxString)
+            print('Самое короткое слово/слова: ', end = '')
             [print(word, end = ' ') for word in shortestWords]
             print()
             newString = ''
             for word in maxWords:
                 if word not in shortestWords: 
                     newString += ''.join(' ' + word)
-            text = [newString if string == maxString else string for string in text]
+            text = [newString if string == maxString\
+                              else string for string in text]
             print()
             [print(string) for string in text]
 
