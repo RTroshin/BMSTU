@@ -200,8 +200,8 @@ def reversePolishConversion(st):
 
     string = string.split()
     A = []
-    st = []
-    st.append(0)
+    stack = []
+    stack.append(0)
     n = ''
     for s in string:
         if (s != '+' and s != '-' and s != '*' and s != '/' and s != '(' and s != ')'):
