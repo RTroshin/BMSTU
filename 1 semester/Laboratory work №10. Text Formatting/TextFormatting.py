@@ -191,11 +191,12 @@ def deleteWord(word, text):
 
 def reversePolishConversion(st):
     string = ''
-    for s in st:
-        if s in operations:
-            string += ' ' + s + ' '
+    lenSt = len(st)
+    for i in range(lenSt):
+        if st[i] in operations:
+            string += ' ' + st[i] + ' '
         else:
-            string += s
+            string += st[i]
 
     string = string.split()
     A = []
