@@ -178,6 +178,17 @@ def menu():
     print()
     return userChoice
 
+# 4. Удаление заданного слова
+def deleteWord(word, text):
+    deleteWord = ''
+    lenText = len(text) - 1
+
+    for i in range(lenText):
+        text[i] = text[i].replace(' ' + word, deleteWord)
+
+    print()
+    [print(string) for string in text]
+
 def reversePolishConversion(st):
     string = ''
     for s in st:
