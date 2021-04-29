@@ -204,7 +204,7 @@ def reversePolishConversion(st):
     stack.append(0)
     n = ''
     for s in string:
-        if (s != '+' and s != '-' and s != '*' and s != '/' and s != '(' and s != ')'):
+        if s.isdigit():
             A.append(s)
         else:
             if (s == '+' or s == '-') and (st[len(st) - 1] == '*' or st[len(st) - 1] == '/'):
