@@ -227,6 +227,16 @@ def reversePolishConversion(st):
                     A.append(n)
                 stack.append(s)
                 continue
+            elif (s == '*' or s == '/') and\
+                 (stack[len(stack) - 1] == '*' or\
+                 stack[len(stack) - 1] == '/'):
+                while (s == '*' or s == '/') and\
+                      (stack[len(stack) - 1] == '*' or\
+                      stack[len(stack) - 1] == '/'):
+                    n = stack.pop()
+                    A.append(n)
+                stack.append(s)
+                continue
 
             if s != ')':
                 st.append(s)
