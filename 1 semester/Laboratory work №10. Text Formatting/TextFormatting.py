@@ -239,14 +239,14 @@ def reversePolishConversion(st):
                 continue
 
             if s != ')':
-                st.append(s)
+                stack.append(s)
             else:
-                n = st.pop()
+                n = stack.pop()
                 while n != '(':
                     A.append(n)
-                    n = st.pop()
-    while len(st) > 1:
-        n = st.pop()
+                    n = stack.pop()
+    while len(stack) > 1:
+        n = stack.pop()
         A.append(n)
     return A
 
