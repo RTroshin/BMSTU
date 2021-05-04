@@ -54,6 +54,7 @@ def main():
         if userChoice == '1':
             for string in text:
                 print(string.ljust(longestLenString))
+
         elif userChoice == '2':
             for string in text:
                 print(string.rjust(longestLenString))
