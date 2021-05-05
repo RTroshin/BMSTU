@@ -82,12 +82,15 @@ def main():
                         else:
                             print(words[i].rjust(longestLenString\
                                                  - currentLength))
+
         elif userChoice == '4':
             word = input('Введите слово, которое хотите удалить: ')
             deleteWord(word, text)
+
         elif userChoice == '5':
             word = input('Введите слово, которое хотите заменить: ')
             newWord = input('Введите слово, на которое хотите заменить: ')
+            replaceWord(word, newWord, text)
 
             lenText = len(text) - 1
             for i in range(lenText):
