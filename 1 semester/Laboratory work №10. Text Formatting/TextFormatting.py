@@ -92,12 +92,6 @@ def main():
             newWord = input('Введите слово, на которое хотите заменить: ')
             replaceWord(word, newWord, text)
 
-            lenText = len(text) - 1
-            for i in range(lenText):
-                text[i] = text[i].replace(' ' + word, ' ' + newWord)
-            print()
-            [print(string) for string in text]
-
         elif userChoice == '6':
             mathFormulInText = False
             for string in text:
