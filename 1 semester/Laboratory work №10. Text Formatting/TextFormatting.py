@@ -117,14 +117,7 @@ def main():
             print()
 
         elif userChoice == '7':
-            maxLenWords = 0
-            for string in text:
-                words = string.split()
-                lenWords = len(words)
-                if maxLenWords < lenWords:
-                    maxLenWords = lenWords
-                    maxWords = words
-                    maxString = string
+            individualTask(text)
 
             lenWords = []
             [lenWords.append(len(word)) for word in maxWords]
