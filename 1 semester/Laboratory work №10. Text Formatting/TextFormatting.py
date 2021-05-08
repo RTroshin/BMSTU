@@ -119,10 +119,6 @@ def main():
         elif userChoice == '7':
             individualTask(text)
 
-            lenWords = []
-            [lenWords.append(len(word)) for word in maxWords]
-            shortestLenWord = max(lenWords)
-
             for word in maxWords:
                 lenWord = len(word)
                 if shortestLenWord > lenWord:
