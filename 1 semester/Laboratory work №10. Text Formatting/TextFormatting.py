@@ -119,11 +119,6 @@ def main():
         elif userChoice == '7':
             individualTask(text)
 
-            print()
-            newString = ''
-            for word in maxWords:
-                if word not in shortestWords: 
-                    newString += ''.join(' ' + word)
             text = [newString if string == maxString\
                               else string for string in text]
             print()
