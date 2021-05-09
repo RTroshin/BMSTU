@@ -119,12 +119,6 @@ def main():
         elif userChoice == '7':
             individualTask(text)
 
-            for word in maxWords:
-                lenWord = len(word)
-                if shortestLenWord > lenWord:
-                    shortestLenWord = lenWord
-                    shortestWord = word
-
             shortestWords = []
             for word in maxWords:
                 if len(shortestWord) == len(word) and word not in pointing:
