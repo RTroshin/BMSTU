@@ -119,8 +119,6 @@ def main():
         elif userChoice == '7':
             individualTask(text)
 
-            text = [newString if string == maxString\
-                              else string for string in text]
             print()
             [print(string) for string in text]
 
