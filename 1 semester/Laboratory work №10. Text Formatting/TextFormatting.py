@@ -119,9 +119,6 @@ def main():
         elif userChoice == '7':
             individualTask(text)
 
-            print()
-            [print(string) for string in text]
-
         # Выход из программы
         elif userChoice.lower() == 'выход':
             exit()
