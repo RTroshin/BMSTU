@@ -117,12 +117,8 @@ def main():
             print()
 
         elif userChoice == '7':
-            individualTask(text)     
+            individualTask(text)
 
-            print('Самое длинное по числу слов' +
-                  'предложение/предложения: ', maxString)
-            print('Самое короткое слово/слова: ', end = '')
-            [print(word, end = ' ') for word in shortestWords]
             print()
             newString = ''
             for word in maxWords:
