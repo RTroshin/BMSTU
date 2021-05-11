@@ -152,15 +152,6 @@ def deleteWord(word, text):
     print()
     [print(string) for string in text]
 
-def reversePolishConversion(st):
-    string = ''
-    lenSt = len(st)
-    for i in range(lenSt):
-        if st[i] in operations:
-            string += ' ' + st[i] + ' '
-        else:
-            string += st[i]
-
     string = string.split()
     A = []
     stack = []
