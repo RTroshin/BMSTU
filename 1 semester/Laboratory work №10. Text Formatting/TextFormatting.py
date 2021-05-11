@@ -152,6 +152,22 @@ def deleteWord(word, text):
     print()
     [print(string) for string in text]
 
+# Алгоритм сортировочной станции
+# Преобразование математического выражения из инфиксной в постфиксную форму
+# записи (обратная польская запись)
+def reversePolishConversion(st):
+    string = ''
+    lenSt = len(st)
+    for i in range(lenSt):
+        if st[i] in operations:
+            string += ' ' + st[i] + ' '
+        else:
+            string += st[i]
+
+    string = string.split()
+    A = []
+    stack = []
+    stack.append(0)
     n = ''
     for s in string:
         if s.isdigit():
@@ -199,6 +215,33 @@ def deleteWord(word, text):
         n = stack.pop()
         A.append(n)
     return A
+
+# Вычисление постфиксного выражения
+def reversePolishNotation(s):
+    A = []
+    lenS = len(s)
+    for i in range(lenS):
+        if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/'):
+            A.append(s[i])
+        else:
+            try:
+                a = int(A.pop())
+                b = int(A.pop())
+                if (s[i] == '+'):
+                    A.append(b + a)
+                elif (s[i] == '-'):
+                    A.append(b - a)
+                elif (s[i] == '*'):
+                    A.append(b * a)
+                elif (s[i] == '/'):
+                    A.append(b / a)
+            except IndexError:
+                if (s[i] == '+'):
+                    A.append(a)
+                elif (s[i] == '-'):
+                    A.append(-a)
+    answer = A[0]
+    return answer
 
 def reversePolishNotation(s):
     A = []
