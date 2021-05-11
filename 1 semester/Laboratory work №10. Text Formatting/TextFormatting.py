@@ -152,10 +152,6 @@ def deleteWord(word, text):
     print()
     [print(string) for string in text]
 
-    string = string.split()
-    A = []
-    stack = []
-    stack.append(0)
     n = ''
     for s in string:
         if s.isdigit():
