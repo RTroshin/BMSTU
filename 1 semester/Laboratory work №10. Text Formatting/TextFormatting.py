@@ -152,6 +152,16 @@ def deleteWord(word, text):
     print()
     [print(string) for string in text]
 
+# 5. Замена одного слова другим во всём тексте
+def replaceWord(word, newWord, text):
+    lenText = len(text) - 1
+
+    for i in range(lenText):
+        text[i] = text[i].replace(' ' + word, ' ' + newWord)
+
+    print()
+    [print(string) for string in text]
+
 # Алгоритм сортировочной станции
 # Преобразование математического выражения из инфиксной в постфиксную форму
 # записи (обратная польская запись)
