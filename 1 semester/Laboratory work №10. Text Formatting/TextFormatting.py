@@ -253,6 +253,17 @@ def reversePolishNotation(s):
     answer = A[0]
     return answer
 
+# 7. Удалить самое короткое слово в самом длинном по числу слов предложении
+def individualTask(text):
+    maxLenWords = 0
+    for string in text:
+        words = string.split()
+        lenWords = len(words)
+        if maxLenWords < lenWords:
+            maxLenWords = lenWords
+            maxWords = words
+            maxString = string
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
