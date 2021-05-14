@@ -268,6 +268,12 @@ def individualTask(text):
     [lenWords.append(len(word)) for word in maxWords]
     shortestLenWord = max(lenWords)
 
+    for word in maxWords:
+        lenWord = len(word)
+        if shortestLenWord > lenWord:
+            shortestLenWord = lenWord
+            shortestWord = word
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
