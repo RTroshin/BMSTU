@@ -274,6 +274,11 @@ def individualTask(text):
             shortestLenWord = lenWord
             shortestWord = word
 
+    shortestWords = []
+    for word in maxWords:
+        if len(shortestWord) == len(word) and word not in pointing:
+            shortestWords.append(word)
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
