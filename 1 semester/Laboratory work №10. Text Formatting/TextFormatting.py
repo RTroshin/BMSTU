@@ -279,6 +279,10 @@ def individualTask(text):
         if len(shortestWord) == len(word) and word not in pointing:
             shortestWords.append(word)
 
+    print('Самое длинное по числу слов' +
+            'предложение/предложения: ', maxString)
+    print('Самое короткое слово/слова: ', end = '')
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
