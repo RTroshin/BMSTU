@@ -283,6 +283,9 @@ def individualTask(text):
             'предложение/предложения: ', maxString)
     print('Самое короткое слово/слова: ', end = '')
 
+    [print(word, end = ' ') for word in shortestWords]
+    print()
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
