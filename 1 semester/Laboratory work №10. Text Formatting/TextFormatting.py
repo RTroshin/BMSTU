@@ -286,6 +286,11 @@ def individualTask(text):
     [print(word, end = ' ') for word in shortestWords]
     print()
 
+    newString = ''
+    for word in maxWords:
+        if word not in shortestWords: 
+            newString += ''.join(' ' + word)
+
 def reversePolishNotation(s):
     A = []
     lenS = len(s)
