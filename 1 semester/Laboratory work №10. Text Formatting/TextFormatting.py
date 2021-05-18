@@ -290,6 +290,10 @@ def individualTask(text):
     for word in maxWords:
         if word not in shortestWords: 
             newString += ''.join(' ' + word)
+    text = [newString if string == maxString\
+                        else string for string in text]
+    print()
+    [print(string) for string in text]
 
 def reversePolishNotation(s):
     A = []
