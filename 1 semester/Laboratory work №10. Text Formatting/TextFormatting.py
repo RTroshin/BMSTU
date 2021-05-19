@@ -301,15 +301,6 @@ def reversePolishNotation(s):
     for i in range(lenS):
         if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/'):
             A.append(s[i])
-        else:
-            try:
-                a = int(A.pop())
-                b = int(A.pop())
-                if (s[i] == '+'):
-                    A.append(b + a)
-            except IndexError:
-                if (s[i] == '+'):
-                    A.append(a)
     answer = A[0]
     return answer
 
