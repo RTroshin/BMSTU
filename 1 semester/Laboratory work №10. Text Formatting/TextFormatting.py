@@ -295,11 +295,6 @@ def individualTask(text):
     print()
     [print(string) for string in text]
 
-def reversePolishNotation(s):
-    A = []
-    answer = A[0]
-    return answer
-
 
 if __name__ == "__main__":
     main()
