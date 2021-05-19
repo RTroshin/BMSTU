@@ -297,10 +297,6 @@ def individualTask(text):
 
 def reversePolishNotation(s):
     A = []
-    lenS = len(s)
-    for i in range(lenS):
-        if (s[i] != '+' and s[i] != '-' and s[i] != '*' and s[i] != '/'):
-            A.append(s[i])
     answer = A[0]
     return answer
 
