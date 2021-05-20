@@ -55,6 +55,12 @@ def makeOperationButton(calc, operation):
                   command=lambda : addOperation(calc, operation))
 
 
+# Создание кнопок для взаимодействия с полем ввода
+def makeCalculateButton(calc, operation):
+    return Button(text=operation, font=('Roboto', 14),
+                  command=lambda : calculate(calc))
+
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
