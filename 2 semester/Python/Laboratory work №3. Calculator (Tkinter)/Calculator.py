@@ -36,9 +36,11 @@
 # 15. 
 
 
-from tkinter import Tk, PhotoImage, Entry, Label, Button, RIGHT, END
+from tkinter import Tk, PhotoImage, Entry, Button
+from tkinter import messagebox
+from tkinter.constants import RIGHT, END, NORMAL, DISABLED
+
 from os.path import dirname, join
-from tkinter.constants import RIGHT
 
 
 def addDigit(calculate, digit):
