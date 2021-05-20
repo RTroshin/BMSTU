@@ -43,6 +43,12 @@ from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 from os.path import dirname, join
 
 
+# Создание кнопок с 0 пл 9
+def makeDigitButton(calc, digit):
+    return Button(text=digit, font=('Roboto', 14),
+                  command=lambda : addDigit(calc, digit))
+
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
