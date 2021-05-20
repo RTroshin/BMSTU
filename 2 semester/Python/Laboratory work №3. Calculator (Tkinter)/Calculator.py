@@ -61,6 +61,12 @@ def makeCalculateButton(calc, operation):
                   command=lambda : calculate(calc))
 
 
+# Создание кнопки очистки поля ввода
+def makeClearButton(calc, operation):
+    return Button(text=operation, font=('Roboto', 14),
+                  command=lambda : clear(calc))
+
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
