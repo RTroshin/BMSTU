@@ -49,6 +49,12 @@ def makeDigitButton(calc, digit):
                   command=lambda : addDigit(calc, digit))
 
 
+# Создание кнопок с операциями
+def makeOperationButton(calc, operation):
+    return Button(text=operation, font=('Roboto', 14),
+                  command=lambda : addOperation(calc, operation))
+
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
