@@ -67,6 +67,11 @@ def makeClearButton(calc, operation):
                   command=lambda : clear(calc))
 
 
+# Добавление цифры в поле ввода
+def addDigit(calc, digit):
+    value =calc.get()
+
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
