@@ -71,6 +71,10 @@ def makeClearButton(calc, operation):
 def addDigit(calc, digit):
     value =calc.get()
 
+    # Условие для того, чтобы по-умолчанию в меню ввода появлялся ноль
+    if value[0] == '0' and len(value) == 1:
+        value = value[1:]
+
 
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
