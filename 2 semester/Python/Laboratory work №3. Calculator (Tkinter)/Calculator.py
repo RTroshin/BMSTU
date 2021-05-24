@@ -80,6 +80,11 @@ def addDigit(calc, digit):
     calc.insert(0, value + digit)
     calc['state'] = DISABLED
 
+
+# Добавление знака операции в поле ввода
+def addOperation(calc, operation):
+    value =calc.get()
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
