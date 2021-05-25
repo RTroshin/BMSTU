@@ -85,6 +85,10 @@ def addDigit(calc, digit):
 def addOperation(calc, operation):
     value =calc.get()
 
+    # Условие для того, чтобы операции отображались как в калькуляторе Windows
+    if value[-1] in '-+/*':
+        value = value[:-1]
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
