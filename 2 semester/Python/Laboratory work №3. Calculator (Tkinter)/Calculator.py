@@ -93,6 +93,11 @@ def addOperation(calc, operation):
         calculate(calc)
         value = calc.get()
 
+    calc['state'] = NORMAL
+    calc.delete(0, END)
+    calc.insert(0, value + operation)
+    calc['state'] = DISABLED
+
 def addDigit(calculate, digit):
     value =calculate.get() + str(digit)
     calculate.delete(0, END)
