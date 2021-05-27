@@ -107,6 +107,9 @@ def calculate(calc):
     if value[-1] in '+-/*':
         value = value + value[:-1]
 
+    calc['state'] = NORMAL
+    calc.delete(0, END)
+
 
 def main():
 
