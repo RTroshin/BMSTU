@@ -103,6 +103,10 @@ def addOperation(calc, operation):
 def calculate(calc):
     value =calc.get()
 
+    # Если последним знаком стоит операция, то она выполняется 
+    if value[-1] in '+-/*':
+        value = value + value[:-1]
+
 
 def main():
 
