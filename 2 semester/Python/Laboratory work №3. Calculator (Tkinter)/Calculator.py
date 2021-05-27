@@ -99,6 +99,11 @@ def addOperation(calc, operation):
     calc['state'] = DISABLED
 
 
+# Вычисление выражения в поле ввода
+def calculate(calc):
+    value =calc.get()
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
