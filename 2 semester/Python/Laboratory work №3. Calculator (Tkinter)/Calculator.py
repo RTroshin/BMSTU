@@ -110,6 +110,12 @@ def calculate(calc):
     calc['state'] = NORMAL
     calc.delete(0, END)
 
+    try:
+        calc.insert(0, eval(value))
+    except (NameError, SyntaxError):
+        messagebox.showinfo('Внимание!', 'Нужно вводить только цифры! Вы ввели другие символы!')
+        calc.insert(0, 0)
+
 
 def main():
 
