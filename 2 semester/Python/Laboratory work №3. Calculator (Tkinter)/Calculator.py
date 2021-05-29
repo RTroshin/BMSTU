@@ -115,6 +115,11 @@ def calculate(calc):
     except (NameError, SyntaxError):
         messagebox.showinfo('Внимание!', 'Нужно вводить только цифры! Вы ввели другие символы!')
         calc.insert(0, 0)
+    except ZeroDivisionError:
+        messagebox.showinfo('Внимание!', 'Деление на ноль недопустимо!')
+        calc.insert(0, 0)
+
+    calc['state'] = DISABLED
 
 
 def main():
