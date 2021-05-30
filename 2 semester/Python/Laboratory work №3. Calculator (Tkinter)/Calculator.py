@@ -122,6 +122,14 @@ def calculate(calc):
     calc['state'] = DISABLED
 
 
+# Очистка поля ввода
+def clear(calc):
+    calc['state'] = NORMAL
+    calc.delete(0, END)
+    calc.insert(0, 0)
+    calc['state'] = DISABLED
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
