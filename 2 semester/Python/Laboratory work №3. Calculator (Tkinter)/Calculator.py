@@ -130,6 +130,17 @@ def clear(calc):
     calc['state'] = DISABLED
 
 
+# Ограничение ввода с клавиатуры. Только цифры и знаки операций
+def pressKey(calc, event):
+
+    if event.char.isdigit():
+        addDigit(calc, event.char)
+    elif event.char in '+-/*':
+        addOperation(calc, event.char)
+    elif event.char == '\r':
+        calculate(calc)
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
