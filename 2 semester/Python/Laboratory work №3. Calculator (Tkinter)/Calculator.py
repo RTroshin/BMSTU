@@ -162,12 +162,14 @@ def main():
     root.resizable(False, False) # Блокировка возможности изменения размеров окна
 
     # Создание окна ввода
-    # calculate = Entry(root, justify=RIGHT, font=('Arial', 32))
-    calculate = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
-    # calculate = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
-    # calculate = Entry(root, justify=RIGHT, font=('Monserat ExtraBold', 32), width=15)
-    # calculate = Entry(root, justify=RIGHT, font=('Play', 32))
-    calculate.grid(row=0, column=0, columnspan=4, stick='we')
+    # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
+    calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
+    # calc = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
+    # calc = Entry(root, justify=RIGHT, font=('Monserat ExtraBold', 32), width=15)
+    # calc = Entry(root, justify=RIGHT, font=('Play', 32))
+    calc.insert(0, 0)
+    calc['state'] = DISABLED
+    calc.grid(row=0, column=0, columnspan=4, stick='we')
 
     # Создание кнопок
     Button(text='1', font=('Roboto', 14), command=lambda : addDigit(calculate, 1)).grid(row=2, column=0, stick='wens', padx=1, pady=1)
