@@ -186,10 +186,6 @@ def main():
     makeDigitButton(calc, '9').grid(row=4, column=2, stick='wens', padx=1, pady=1)
     makeDigitButton(calc, '0').grid(row=5, column=0, stick='wens', padx=1, pady=1, columnspan=2)
 
-    # Button(text='CE', command= ).grid(row=1, column=0, stick='wens', padx=1, pady=1)
-    # Button(text='C', command= ).grid(row=1, column=1, stick='wens', padx=1, pady=1)
-    # Button(text='<=', command= ).grid(row=1, column=2, stick='wens', padx=1, pady=1)
-
     # Button(text=',', command= ).grid(row=5, column=2, stick='wens', padx=1, pady=1)
     # Button(text='/', command= ).grid(row=1, column=3, stick='wens', padx=1, pady=1)
     # Button(text='X', command= ).grid(row=2, column=3, stick='wens', padx=1, pady=1)
