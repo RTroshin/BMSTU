@@ -171,6 +171,9 @@ def main():
     calc['state'] = DISABLED
     calc.grid(row=0, column=0, columnspan=4, stick='we')
 
+    # Обработка событий
+    root.bind('<Key>', lambda event : pressKey(calc, event))
+
     # Создание кнопок
     Button(text='1', font=('Roboto', 14), command=lambda : addDigit(calculate, 1)).grid(row=2, column=0, stick='wens', padx=1, pady=1)
     Button(text='2', font=('Roboto', 14), command=lambda : addDigit(calculate, 2)).grid(row=2, column=1, stick='wens', padx=1, pady=1)
