@@ -186,6 +186,12 @@ def main():
     makeDigitButton(calc, '9').grid(row=4, column=2, stick='wens', padx=1, pady=1)
     makeDigitButton(calc, '0').grid(row=5, column=0, stick='wens', padx=1, pady=1, columnspan=2)
 
+    makeOperationButton(calc, ',').grid(row=5, column=2, stick='wens', padx=1, pady=1)
+    makeOperationButton(calc, '/').grid(row=1, column=3, stick='wens', padx=1, pady=1)
+    makeOperationButton(calc, '*').grid(row=2, column=3, stick='wens', padx=1, pady=1)
+    makeOperationButton(calc, '-').grid(row=3, column=3, stick='wens', padx=1, pady=1)
+    makeOperationButton(calc, '+').grid(row=4, column=3, stick='wens', padx=1, pady=1)
+
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=100)
     root.grid_columnconfigure(1, minsize=100)
