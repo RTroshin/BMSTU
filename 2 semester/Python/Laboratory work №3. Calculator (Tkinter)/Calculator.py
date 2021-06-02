@@ -192,6 +192,8 @@ def main():
     makeOperationButton(calc, '-').grid(row=3, column=3, stick='wens', padx=1, pady=1)
     makeOperationButton(calc, '+').grid(row=4, column=3, stick='wens', padx=1, pady=1)
 
+    makeCalculateButton(calc, '=').grid(row=5, column=3, stick='wens', padx=1, pady=1)
+
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=100)
     root.grid_columnconfigure(1, minsize=100)
