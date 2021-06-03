@@ -56,7 +56,12 @@ def makeDigitButton(calc, digit):
 
 # Создание кнопок с операциями
 def makeOperationButton(calc, operation):
-    return Button(text=operation, font=('Roboto', 14),
+    return Button(bg='#666666',
+                  text=operation,
+                  font=('Roboto', 14),
+                  fg='#EEEEEE',
+                  activebackground='#777777',
+                  activeforeground='#EEEEEE',
                   command=lambda : addOperation(calc, operation))
 
 
