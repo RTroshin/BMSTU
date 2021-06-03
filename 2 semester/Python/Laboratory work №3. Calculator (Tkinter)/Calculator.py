@@ -36,7 +36,7 @@
 # 15. 
 
 
-from tkinter import Tk, PhotoImage, Entry, Button
+from tkinter import Tk, Menu, PhotoImage, Entry, Button
 from tkinter import messagebox
 from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 
@@ -45,7 +45,12 @@ from os.path import dirname, join
 
 # Создание кнопок с 0 пл 9
 def makeDigitButton(calc, digit):
-    return Button(text=digit, font=('Roboto', 14),
+    return Button(bg='#111111',
+                  text=digit,
+                  font=('Roboto', 14),
+                  fg='#EEEEEE',
+                  activebackground='#222222',
+                  activeforeground="#EEEEEE",
                   command=lambda : addDigit(calc, digit))
 
 
