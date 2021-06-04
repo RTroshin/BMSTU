@@ -78,7 +78,12 @@ def makeCalculateButton(calc, operation):
 
 # Создание кнопки очистки поля ввода
 def makeClearButton(calc, operation):
-    return Button(text=operation, font=('Roboto', 14),
+    return Button(bg='#666666',
+                  text=operation,
+                  font=('Roboto', 14),
+                  fg='#EEEEEE',
+                  activebackground='#777777',
+                  activeforeground='#EEEEEE',
                   command=lambda : clear(calc))
 
 
