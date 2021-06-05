@@ -161,6 +161,11 @@ def pressKey(calc, event):
         calculate(calc)
 
 
+# Выход из приложения
+def exitApp(root):
+    root.destroy()
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
