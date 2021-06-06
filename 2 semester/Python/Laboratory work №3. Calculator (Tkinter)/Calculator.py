@@ -186,6 +186,10 @@ def main():
     root.geometry(f"{width}x{height}+100+200") # Установка размеров окна приложения
     root.resizable(False, False) # Блокировка возможности изменения размеров окна
 
+    # Создание меню
+    mainMenu = Menu(root)
+    root.config(menu=mainMenu)
+
     # Создание окна ввода
     # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
