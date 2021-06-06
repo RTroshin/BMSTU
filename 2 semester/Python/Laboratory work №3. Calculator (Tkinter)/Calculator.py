@@ -190,6 +190,12 @@ def main():
     mainMenu = Menu(root)
     root.config(menu=mainMenu)
 
+    firstItem = Menu(mainMenu,
+                     tearoff=0,
+                     bg='#222222',
+                     fg='#EEEEEE',
+                     activebackground='#444444')
+
     # Создание окна ввода
     # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
