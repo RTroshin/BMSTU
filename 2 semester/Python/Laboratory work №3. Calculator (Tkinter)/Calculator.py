@@ -196,6 +196,9 @@ def main():
                      fg='#EEEEEE',
                      activebackground='#444444')
 
+    mainMenu.add_cascade(label='Вид',
+                         menu=firstItem)
+
     # Создание окна ввода
     # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
