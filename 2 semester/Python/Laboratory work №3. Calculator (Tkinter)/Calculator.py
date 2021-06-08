@@ -213,7 +213,12 @@ def main():
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
 
+
     # Создание окна ввода
+    calc = Entry(root,
+                 justify=RIGHT,
+                 font=('Roboto', 32),
+                 width=15)
     # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
