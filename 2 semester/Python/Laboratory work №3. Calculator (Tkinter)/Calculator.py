@@ -219,6 +219,12 @@ def main():
                  justify=RIGHT,
                  font=('Roboto', 32),
                  width=15)
+
+    calc.grid(row=1,
+              column=0,
+              columnspan=4,
+              stick='we',
+              padx=1)
     # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
