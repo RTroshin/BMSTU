@@ -234,7 +234,6 @@ def main():
                  font=('Roboto', 32),
                  width=15)
 
-    calc = Entry(root, justify=RIGHT, font=('Roboto', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Monserat ExtraBold', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Play', 32))
