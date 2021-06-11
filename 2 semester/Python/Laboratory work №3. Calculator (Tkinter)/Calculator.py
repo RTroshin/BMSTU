@@ -238,6 +238,12 @@ def main():
     # calc = Entry(root, justify=RIGHT, font=('Monserat ExtraBold', 32), width=15)
     # calc = Entry(root, justify=RIGHT, font=('Play', 32))
     calc.insert(0, 0)
+    calc.grid(row=2,
+              column=0,
+              columnspan=4,
+              stick='we',
+              padx=1,
+              pady=1)
     calc['state'] = DISABLED
     calc.grid(row=0, column=0, columnspan=4, stick='we')
 
