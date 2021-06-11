@@ -244,6 +244,7 @@ def main():
               stick='we',
               padx=1,
               pady=1)
+
     calc['state'] = DISABLED
     calc.grid(row=0, column=0, columnspan=4, stick='we')
 
