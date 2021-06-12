@@ -263,7 +263,12 @@ def main():
                                     padx=1,
                                     pady=1)
 
-    makeDigitButton(calc, '3').grid(row=2, column=2, stick='wens', padx=1, pady=1)
+    makeDigitButton(calc, '3').grid(row=4,
+                                    column=2,
+                                    stick='wens',
+                                    padx=1,
+                                    pady=1)
+
     makeDigitButton(calc, '4').grid(row=3, column=0, stick='wens', padx=1, pady=1)
     makeDigitButton(calc, '5').grid(row=3, column=1, stick='wens', padx=1, pady=1)
     makeDigitButton(calc, '6').grid(row=3, column=2, stick='wens', padx=1, pady=1)
