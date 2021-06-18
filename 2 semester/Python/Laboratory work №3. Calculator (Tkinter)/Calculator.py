@@ -317,7 +317,12 @@ def main():
                                         padx=1,
                                         pady=1)
 
-    makeOperationButton(calc, '/').grid(row=1, column=3, stick='wens', padx=1, pady=1)
+    makeOperationButton(calc, '/').grid(row=3,
+                                        column=3,
+                                        stick='wens',
+                                        padx=1,
+                                        pady=1)
+    
     makeOperationButton(calc, '*').grid(row=2, column=3, stick='wens', padx=1, pady=1)
     makeOperationButton(calc, '-').grid(row=3, column=3, stick='wens', padx=1, pady=1)
     makeOperationButton(calc, '+').grid(row=4, column=3, stick='wens', padx=1, pady=1)
