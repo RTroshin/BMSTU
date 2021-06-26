@@ -133,7 +133,8 @@ def calculate(calc):
     try:
         calc.insert(0, eval(value))
     except (NameError, SyntaxError):
-        messagebox.showinfo('Внимание!', 'Нужно вводить только цифры! Вы ввели другие символы!')
+        messagebox.showinfo('Внимание!',
+                            'Нужно вводить только цифры! Вы ввели другие символы!')
         calc.insert(0, 0)
     except ZeroDivisionError:
         messagebox.showinfo('Внимание!', 'Деление на ноль недопустимо!')
@@ -174,7 +175,7 @@ def main():
 
     root = Tk() # Объявление переменной Tk (окно в котором будем работать)
 
-    width = 450
+    width = 400
     height = 600
 
     # Установка иконки приложения
