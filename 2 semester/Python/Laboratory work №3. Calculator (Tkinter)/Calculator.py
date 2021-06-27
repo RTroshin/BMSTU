@@ -43,24 +43,24 @@ from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 from os.path import dirname, join
 
 
-# Создание кнопок с 0 пл 9
+# Создание кнопок с 0 по 9
 def makeDigitButton(calc, digit):
-    return Button(bg='#111111',
+    return Button(bg='#000000',
                   text=digit,
                   font=('Roboto', 14),
                   fg='#EEEEEE',
-                  activebackground='#222222',
+                  activebackground='#111111',
                   activeforeground="#EEEEEE",
                   command=lambda : addDigit(calc, digit))
 
 
 # Создание кнопок с операциями
 def makeOperationButton(calc, operation):
-    return Button(bg='#666666',
+    return Button(bg='#222222',
                   text=operation,
                   font=('Roboto', 14),
                   fg='#EEEEEE',
-                  activebackground='#777777',
+                  activebackground='#333333',
                   activeforeground='#EEEEEE',
                   command=lambda : addOperation(calc, operation))
 
