@@ -67,11 +67,11 @@ def makeOperationButton(calc, operation):
 
 # Создание кнопок для взаимодействия с полем ввода
 def makeCalculateButton(calc, operation):
-    return Button(bg='#666666',
+    return Button(bg='#04346C',
                   text=operation,
                   font=('Roboto', 14),
                   fg='#EEEEEE',
-                  activebackground='#777777',
+                  activebackground='#0C4487',
                   activeforeground='#EEEEEE',
                   command=lambda : calculate(calc))
 
