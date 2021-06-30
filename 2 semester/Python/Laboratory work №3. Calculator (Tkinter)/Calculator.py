@@ -176,7 +176,7 @@ def main():
     root = Tk() # Объявление переменной Tk (окно в котором будем работать)
 
     width = 400
-    height = 600
+    height = 590
 
     # Установка иконки приложения
     photo = PhotoImage(file=filePath)
