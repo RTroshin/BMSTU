@@ -187,6 +187,9 @@ def main():
     root.geometry(f"{width}x{height}+100+200") # Установка размеров окна приложения
     root.resizable(False, False) # Блокировка возможности изменения размеров окна
 
+    root.wait_visibility(root)
+    root.attributes("-alpha", 0.97) # Делает фон прозрачным
+
     # Создание меню
     mainMenu = Menu(root)
     root.config(menu=mainMenu)
