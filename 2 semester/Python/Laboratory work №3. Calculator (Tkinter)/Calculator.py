@@ -190,6 +190,9 @@ def main():
     root.wait_visibility(root)
     root.attributes("-alpha", 0.97) # Делает фон прозрачным
 
+    # root.overrideredirect(True) # Убирает верхнее меню
+    # root.attributes("-transparentcolor", "black") # Делает фон совсем прозрачным
+
     # Создание меню
     mainMenu = Menu(root)
     root.config(menu=mainMenu)
