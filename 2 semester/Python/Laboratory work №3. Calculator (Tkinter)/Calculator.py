@@ -238,17 +238,14 @@ def main():
 
     calc['state'] = DISABLED
 
-    # calc = Entry(root, justify=RIGHT, font=('Arial', 32))
     calc = Entry(root,
-                 disabledbackground='#666666',
+                #  bd = 0,
+                 disabledbackground='#222222',
                  disabledforeground='#EEEEEE',
                  justify=RIGHT,
-                 font=('Roboto', 32),
+                 font=('Roboto', 32), # Arial, Roboto Black, Monserat ExtraBold, Play
                  width=15)
 
-    # calc = Entry(root, justify=RIGHT, font=('Roboto Black', 32), width=15)
-    # calc = Entry(root, justify=RIGHT, font=('Monserat ExtraBold', 32), width=15)
-    # calc = Entry(root, justify=RIGHT, font=('Play', 32))
     calc.insert(0, 0)
     calc.grid(row=2,
               column=0,
