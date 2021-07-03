@@ -223,7 +223,8 @@ def main():
 
     # Создание окна ввода
     calc = Entry(root,
-                 disabledbackground='#666666',
+                #  bd = 0,
+                 disabledbackground='#222222',
                  disabledforeground='#EEEEEE',
                  justify=RIGHT,
                  font=('Roboto', 32),
