@@ -215,7 +215,7 @@ def main():
                       tearoff=0,
                       bg='#222222',
                       fg='#EEEEEE',
-                      activebackground='#444444')
+                      activebackground='#333333')
 
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
