@@ -315,10 +315,10 @@ def main():
                                     pady=1)
 
     makeDigitButton(calc, '0').grid(row=7,
-                                    column=0,
+                                    column=1,
                                     stick='wens',
                                     padx=1,
-                                    pady=1, columnspan=2)
+                                    pady=1)
 
     makeOperationButton(calc, ',').grid(row=7,
                                         column=2,
