@@ -356,6 +356,12 @@ def main():
                                         padx=1,
                                         pady=1)
 
+    makeCalculateButton(calc, '=').grid(row=7,
+                                        column=3,
+                                        stick='wens',
+                                        padx=1,
+                                        pady=1)
+
     makeClearButton(calc, 'CE').grid(row=3,
                                      column=0,
                                      stick='wens',
@@ -367,12 +373,6 @@ def main():
                                     stick='wens',
                                     padx=1,
                                     pady=1)
-
-    makeClearButton(calc, '<=').grid(row=3,
-                                     column=2,
-                                     stick='wens',
-                                     padx=1,
-                                     pady=1)
 
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=100)
