@@ -30,13 +30,13 @@
 # 8. Учесть ввод букв латиница и кирилицы
 # 9. Релизовать ввод с клавиатуры 
 # 11. Реализовать ввод числа в степени e
-# 12. 
+# 12. Учесть невлезающие символы после запятой и если число слишком большое
 # 13. 
 # 14. 
 # 15. 
 
 
-from tkinter import Tk, Toplevel, Menu, PhotoImage, Entry, Button
+from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Button
 from tkinter import messagebox
 from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 
