@@ -43,11 +43,14 @@ from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 from os.path import dirname, join
 
 
+block = False # Глобальная переменная
+
+
 # Создание кнопок с 0 по 9
 def makeDigitButton(calc, digit):
     return Button(bg='#000000',
                   text=digit,
-                  font=('Roboto', 14),
+                  font=('Roboto', 16),
                   fg='#EEEEEE',
                   activebackground='#111111',
                   activeforeground="#EEEEEE",
