@@ -69,14 +69,14 @@ def makeOperationButton(calc, calcHistory, operation):
 
 
 # Создание кнопок для взаимодействия с полем ввода
-def makeCalculateButton(calc, operation):
+def makeCalculateButton(calc, calcHistory, operation):
     return Button(bg='#04346C',
                   text=operation,
-                  font=('Roboto', 14),
+                  font=('Roboto', 16),
                   fg='#EEEEEE',
                   activebackground='#0C4487',
                   activeforeground='#EEEEEE',
-                  command=lambda : calculate(calc))
+                  command=lambda : calculate(calc, calcHistory))
 
 
 # Создание кнопки очистки поля ввода
