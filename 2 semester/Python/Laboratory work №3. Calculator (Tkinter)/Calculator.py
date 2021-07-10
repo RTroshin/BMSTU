@@ -104,9 +104,11 @@ def addDigit(calc, digit):
     calc['state'] = DISABLED
 
 
-# Добавление знака операции в поле ввода
-def addOperation(calc, operation):
-    value =calc.get()
+# Добавление цифры в поле ввода
+def addDigit(calc, digit):
+    global block
+    if (block != True):
+        value = calc.get()
 
     # Условие для того, чтобы операции отображались как в калькуляторе Windows
     if value[-1] in '-+/*':
