@@ -92,7 +92,9 @@ def makeClearButton(calc, calcHistory, operation):
 
 # Добавление цифры в поле ввода
 def addDigit(calc, digit):
-    value =calc.get()
+    global block
+    if (block != True):
+        value = calc.get()
 
     # Условие для того, чтобы по-умолчанию в меню ввода появлялся ноль
     if value[0] == '0' and len(value) == 1:
@@ -104,11 +106,12 @@ def addDigit(calc, digit):
     calc['state'] = DISABLED
 
 
-# Добавление цифры в поле ввода
-def addDigit(calc, digit):
+# Добавление знака операции в поле ввода
+def addOperation(calc, calcHistory, operation):
     global block
     if (block != True):
         value = calc.get()
+        value = replaceSymbol(value)
 
     # Условие для того, чтобы операции отображались как в калькуляторе Windows
     if value[-1] in '-+/*':
