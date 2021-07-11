@@ -113,18 +113,18 @@ def addOperation(calc, calcHistory, operation):
         value = calc.get()
         value = replaceSymbol(value)
 
-    # Условие для того, чтобы операции отображались как в калькуляторе Windows
-    if value[-1] in '-+/*':
-        value = value[:-1]
-    # Условие для того, чтобы выполнялось предварительное вычисление
-    elif '+' in value or '-' in value or '/' in value or '*' in value:
-        calculate(calc)
-        value = calc.get()
+        # Условие для того, чтобы операции отображались как в калькуляторе Windows
+        if value[-1] in '-+/*':
+            value = value[:-1]
+        # Условие для того, чтобы выполнялось предварительное вычисление
+        elif '+' in value or '-' in value or '/' in value or '*' in value:
+            calculate(calc, calcHistory)
+            value = calc.get()
 
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, value + operation)
-    calc['state'] = DISABLED
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, value + operation)
+        calc['state'] = DISABLED
 
 
 # Вычисление выражения в поле ввода
