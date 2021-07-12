@@ -128,8 +128,12 @@ def addOperation(calc, calcHistory, operation):
 
 
 # Вычисление выражения в поле ввода
-def calculate(calc):
-    value =calc.get()
+def calculate(calc, calcHistory):
+    global block
+    if (block != True):
+        valueHistory = calcHistory.get()
+        value = calc.get()
+        value = replaceSymbol(value)
 
     # Если последним знаком стоит операция, то она выполняется 
     if value[-1] in '+-/*':
