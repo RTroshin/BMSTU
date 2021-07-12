@@ -135,9 +135,9 @@ def calculate(calc, calcHistory):
         value = calc.get()
         value = replaceSymbol(value)
 
-    # Если последним знаком стоит операция, то она выполняется 
-    if value[-1] in '+-/*':
-        value = value + value[:-1]
+        # Если последним знаком стоит операция, то она выполняется 
+        if value[-1] in '+-/*':
+            value = value + value[:-1]
 
     calc['state'] = NORMAL
     calc.delete(0, END)
