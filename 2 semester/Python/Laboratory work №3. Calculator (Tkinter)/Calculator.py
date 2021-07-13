@@ -144,8 +144,10 @@ def calculate(calc, calcHistory):
         calc['state'] = NORMAL
         calc.delete(0, END)
 
-    try:
-        calc.insert(0, eval(value))
+        try:
+            calc.insert(0, eval(value))
+            valueHistory += value
+            calcHistory.insert(0, valueHistory)
     except (NameError, SyntaxError):
         messagebox.showinfo('Внимание!',
                             'Нужно вводить только цифры! Вы ввели другие символы!')
