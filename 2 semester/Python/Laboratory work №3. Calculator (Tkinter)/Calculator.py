@@ -139,8 +139,10 @@ def calculate(calc, calcHistory):
         if value[-1] in '+-/*':
             value = value + value[:-1]
 
-    calc['state'] = NORMAL
-    calc.delete(0, END)
+        calcHistory['state'] = NORMAL
+        calcHistory.delete(0, END)
+        calc['state'] = NORMAL
+        calc.delete(0, END)
 
     try:
         calc.insert(0, eval(value))
