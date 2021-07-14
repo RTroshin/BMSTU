@@ -166,6 +166,7 @@ def calculate(calc, calcHistory):
             calc.insert(0, 'Деление на ноль невозможно')
             block = True
 
+    calcHistory['state'] = DISABLED
     calc['state'] = DISABLED
 
 
