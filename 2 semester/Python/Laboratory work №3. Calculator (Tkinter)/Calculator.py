@@ -181,6 +181,12 @@ def replaceSymbol(value):
     return value
 
 
+# Очистка поля ввода
+def clear(calc, calcHistory):
+    global block
+    block= False
+
+
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, event):
 
