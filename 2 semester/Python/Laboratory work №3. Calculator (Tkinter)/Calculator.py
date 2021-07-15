@@ -170,12 +170,15 @@ def calculate(calc, calcHistory):
     calc['state'] = DISABLED
 
 
-# Очистка поля ввода
-def clear(calc):
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, 0)
-    calc['state'] = DISABLED
+# Замена декоративных знаков в строке
+def replaceSymbol(value):
+    if '–' in value:
+        value = value.replace('–', '-')
+    elif '×' in value:
+        value = value.replace('×', '*')
+    elif '÷' in value:
+        value = value.replace('÷', '/')
+    return value
 
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
