@@ -186,6 +186,12 @@ def clear(calc, calcHistory):
     global block
     block= False
 
+    setDefaultSettings(calc)
+    calcHistory['state'] = NORMAL
+    calcHistory.delete(0, END)
+    calcHistory.insert(0, '')
+    calcHistory['state'] = DISABLED
+
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, event):
