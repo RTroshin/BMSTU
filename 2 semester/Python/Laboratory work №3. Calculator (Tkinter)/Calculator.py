@@ -192,6 +192,11 @@ def clear(calc, calcHistory):
     calcHistory.insert(0, '')
     calcHistory['state'] = DISABLED
 
+    calc['state'] = NORMAL
+    calc.delete(0, END)
+    calc.insert(0, 0)
+    calc['state'] = DISABLED
+
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, event):
