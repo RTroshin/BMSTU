@@ -215,6 +215,11 @@ def setDefaultSettings(calc):
     calc['width'] = 15
 
 
+# Выход из приложения
+def exitApp(root):
+    root.destroy()
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
