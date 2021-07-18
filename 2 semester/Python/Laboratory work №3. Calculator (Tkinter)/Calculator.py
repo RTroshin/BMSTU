@@ -208,10 +208,11 @@ def pressKey(calc, event):
     elif event.char == '\r':
         calculate(calc)
 
-
-# Выход из приложения
-def exitApp(root):
-    root.destroy()
+# Установка настроек по-умолчанию
+# Необходима после вывода сообщений об ошибках
+def setDefaultSettings(calc):
+    calc['font'] = ('Roboto', 32)
+    calc['width'] = 15
 
 
 def main():
