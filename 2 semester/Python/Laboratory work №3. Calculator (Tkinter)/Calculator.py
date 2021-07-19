@@ -248,6 +248,7 @@ def main():
 
     # Создание меню
     mainMenu = Menu(root)
+
     root.config(menu=mainMenu)
 
     firstItem = Menu(mainMenu,
@@ -273,6 +274,13 @@ def main():
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
 
+    # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
+    # w.config(bg = "#222222", bd=0)
+    # w["menu"].config(bg="#222222", bd=0)
+    # w.grid(row=0,
+    #        column=0,
+    #        columnspan=4,
+    #        stick='wens')
 
     # Создание окна ввода
     calc = Entry(root,
