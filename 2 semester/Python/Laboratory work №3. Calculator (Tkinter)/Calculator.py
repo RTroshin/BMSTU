@@ -283,12 +283,12 @@ def main():
     #        stick='wens')
 
     # Создание окна ввода
-    calc = Entry(root,
-                #  bd = 0,
+    calcHistory = Entry(root,
+                 bd = 0,
                  disabledbackground='#222222',
                  disabledforeground='#EEEEEE',
                  justify=RIGHT,
-                 font=('Roboto', 32),
+                 font=('Roboto', 14),
                  width=15)
 
     calc.grid(row=1,
