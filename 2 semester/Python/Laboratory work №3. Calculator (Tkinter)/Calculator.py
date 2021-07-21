@@ -297,10 +297,10 @@ def main():
               stick='wens',
               padx=1)
 
-    calc['state'] = DISABLED
+    calcHistory['state'] = DISABLED
 
     calc = Entry(root,
-                #  bd = 0,
+                 bd = 0,
                  disabledbackground='#222222',
                  disabledforeground='#EEEEEE',
                  justify=RIGHT,
@@ -311,9 +311,9 @@ def main():
     calc.grid(row=2,
               column=0,
               columnspan=4,
-              stick='we',
-              padx=1,
-              pady=1)
+              stick='wens',
+              padx=1)
+
 
     calc['state'] = DISABLED
 
