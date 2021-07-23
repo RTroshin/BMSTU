@@ -381,11 +381,11 @@ def main():
                                     padx=1,
                                     pady=1)
 
-    makeOperationButton(calc, '+/-').grid(row=7,
-                                        column=0,
-                                        stick='wens',
-                                        padx=1,
-                                        pady=1)
+    makeOperationButton(calc, calcHistory, '±').grid(row=7,
+                                                     column=0,
+                                                     stick='wens',
+                                                     padx=1,
+                                                     pady=1)
 
     makeOperationButton(calc, ',').grid(row=7,
                                         column=2,
