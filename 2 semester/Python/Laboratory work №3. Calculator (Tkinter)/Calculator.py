@@ -429,11 +429,11 @@ def main():
                                                   padx=1,
                                                   pady=1)
 
-    makeClearButton(calc, 'C').grid(row=3,
-                                    column=1,
-                                    stick='wens',
-                                    padx=1,
-                                    pady=1)
+    makeClearButton(calc, calcHistory, 'C').grid(row=3,
+                                                 column=1,
+                                                 stick='wens',
+                                                 padx=1,
+                                                 pady=1)
 
     makeClearButton(calc, '<=').grid(row=3,
                                      column=2,
