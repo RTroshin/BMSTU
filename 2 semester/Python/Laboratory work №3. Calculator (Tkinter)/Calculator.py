@@ -442,8 +442,8 @@ def main():
                                                    pady=1)
 
     # Установка минимальных размеров кнопок
-    root.grid_columnconfigure(0, minsize=100)
-    root.grid_columnconfigure(1, minsize=100)
+    root.grid_columnconfigure(0, minsize=50)
+    root.grid_columnconfigure(1, minsize=50)
     root.grid_columnconfigure(2, minsize=100)
     root.grid_columnconfigure(3, minsize=100)
 
