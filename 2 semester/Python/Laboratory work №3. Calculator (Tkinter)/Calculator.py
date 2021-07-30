@@ -451,10 +451,10 @@ def main():
     root.grid_rowconfigure(1, minsize=60)
     root.grid_rowconfigure(2, minsize=60)
     root.grid_rowconfigure(3, minsize=60)
-    root.grid_rowconfigure(4, minsize=80)
-    root.grid_rowconfigure(5, minsize=80)
-    root.grid_rowconfigure(6, minsize=80)
-    root.grid_rowconfigure(7, minsize=80)
+    root.grid_rowconfigure(4, minsize=60)
+    root.grid_rowconfigure(5, minsize=60)
+    root.grid_rowconfigure(6, minsize=60)
+    root.grid_rowconfigure(7, minsize=60)
 
     root.mainloop()
 
