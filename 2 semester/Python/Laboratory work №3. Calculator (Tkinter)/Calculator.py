@@ -63,13 +63,14 @@ block = False # Глобальная переменная
 
 # Создание кнопок с 0 по 9
 def makeDigitButton(calc, digit):
-    return Button(bg='#000000',
-                  text=digit,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#111111',
-                  activeforeground="#EEEEEE",
-                  command=lambda : addDigit(calc, digit))
+    button = Button(bg='#000000',
+                      text=digit,
+                      font=('Roboto', 16),
+                      fg='#EEEEEE',
+                      activebackground='#222222',
+                      activeforeground="#EEEEEE",
+                      command=lambda : addDigit(calc, digit))
+    return button
 
 
 # Создание кнопок с операциями
