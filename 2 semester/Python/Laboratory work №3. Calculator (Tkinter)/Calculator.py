@@ -75,13 +75,14 @@ def makeDigitButton(calc, digit):
 
 # Создание кнопок с операциями
 def makeOperationButton(calc, calcHistory, operation):
-    return Button(bg='#222222',
+    button =  Button(bg='#222222',
                   text=operation,
                   font=('Roboto', 16),
                   fg='#EEEEEE',
-                  activebackground='#333333',
+                  activebackground='#444444',
                   activeforeground='#EEEEEE',
                   command=lambda : addOperation(calc, calcHistory, operation))
+    return button
 
 
 # Создание кнопок для взаимодействия с полем ввода
