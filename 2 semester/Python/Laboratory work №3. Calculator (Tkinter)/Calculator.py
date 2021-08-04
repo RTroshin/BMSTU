@@ -98,13 +98,14 @@ def makeCalculateButton(calc, calcHistory, operation):
 
 # Создание кнопки очистки поля ввода
 def makeClearButton(calc, calcHistory, operation):
-    return Button(bg='#222222',
+    button =  Button(bg='#222222',
                   text=operation,
                   font=('Roboto', 16),
                   fg='#EEEEEE',
                   activebackground='#333333',
                   activeforeground='#EEEEEE',
                   command=lambda : clear(calc, calcHistory))
+    return button
 
 
 # Добавление цифры в поле ввода
