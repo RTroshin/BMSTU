@@ -91,7 +91,7 @@ def makeCalculateButton(calc, calcHistory, operation):
                   text=operation,
                   font=('Roboto', 16),
                   fg='#EEEEEE',
-                  activebackground='#0C4487',
+                  activebackground='#1A5090',
                   activeforeground='#EEEEEE',
                   command=lambda : calculate(calc, calcHistory))
 
