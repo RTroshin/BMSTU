@@ -164,7 +164,8 @@ def calculate(calc, calcHistory):
 
         try:
             calc.insert(0, eval(value))
-            valueHistory += value
+            valueHistory += value + ', '
+            valueHistory = replaceSymbolReturn(valueHistory)
             calcHistory.insert(0, valueHistory)
         except (NameError, SyntaxError):
             # messagebox.showinfo('Внимание!',
@@ -196,6 +197,17 @@ def replaceSymbol(value):
         value = value.replace('×', '*')
     elif '÷' in value:
         value = value.replace('÷', '/')
+    return value
+
+
+# Замена обычных знаков в строке на декоративные
+def replaceSymbolReturn(value):
+    if '-' in value:
+        value = value.replace('-', '–')
+    elif '*' in value:
+        value = value.replace('*', '×')
+    elif '/' in value:
+        value = value.replace('/', '÷')
     return value
 
 
