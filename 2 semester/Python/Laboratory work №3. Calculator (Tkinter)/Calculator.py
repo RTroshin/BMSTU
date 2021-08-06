@@ -254,6 +254,10 @@ def exitApp(root):
 def on_enter_digit(button, event):
     button['background'] = '#111111'
 
+# Возвращает цвет кнопки на цвет по-умолчанию
+def on_leave_digit(button, event):
+    button['background'] = '#000000'
+
 
 def main():
 
