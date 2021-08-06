@@ -259,6 +259,12 @@ def on_leave_digit(button, event):
     button['background'] = '#000000'
 
 
+# Для кнопок с операциями
+# Подсвечивает кнопку цветом при наведении мыши
+def on_enter_operation(button, event):
+    button['background'] = '#333333'
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
