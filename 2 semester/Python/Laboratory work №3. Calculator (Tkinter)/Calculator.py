@@ -269,6 +269,12 @@ def on_leave_operation(button, event):
     button['background'] = '#222222'
 
 
+# Для кнопки calculate
+# Подсвечивает кнопку цветом при наведении мыши
+def on_enter_calculate(button, event):
+    button['background'] = '#0C4487'
+
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
