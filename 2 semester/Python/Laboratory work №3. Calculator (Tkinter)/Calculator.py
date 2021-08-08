@@ -274,6 +274,10 @@ def on_leave_operation(button, event):
 def on_enter_calculate(button, event):
     button['background'] = '#0C4487'
 
+# Возвращает цвет кнопки на цвет по-умолчанию
+def on_leave_calculate(button, event):
+    button['background'] = '#04346C'
+
 
 def main():
 
