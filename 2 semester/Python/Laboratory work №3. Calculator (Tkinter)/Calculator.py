@@ -425,11 +425,14 @@ def main():
     button5.bind("<Enter>", lambda event : on_enter_digit(button5, event))
     button5.bind("<Leave>", lambda event : on_leave_digit(button5, event))
 
-    makeDigitButton(calc, '6').grid(row=5,
-                                    column=2,
-                                    stick='wens',
-                                    padx=1,
-                                    pady=1)
+    button6 = makeDigitButton(calc, '6')
+    button6.grid(row=6,
+                 column=2,
+                 stick='wens',
+                 padx=1,
+                 pady=1)
+    button6.bind("<Enter>", lambda event : on_enter_digit(button6, event))
+    button6.bind("<Leave>", lambda event : on_leave_digit(button6, event))
 
     makeDigitButton(calc, '7').grid(row=4,
                                     column=0,
