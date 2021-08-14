@@ -470,11 +470,14 @@ def main():
     button0.bind("<Enter>", lambda event : on_enter_digit(button0, event))
     button0.bind("<Leave>", lambda event : on_leave_digit(button0, event))
 
-    makeOperationButton(calc, calcHistory, '±').grid(row=7,
-                                                     column=0,
-                                                     stick='wens',
-                                                     padx=1,
-                                                     pady=1)
+    opButton = makeOperationButton(calc, calcHistory, '±')
+    opButton.grid(row=8,
+                  column=0,
+                  stick='wens',
+                  padx=1,
+                  pady=1)
+    opButton.bind("<Enter>", lambda event : on_enter_operation(opButton, event))
+    opButton.bind("<Leave>", lambda event : on_leave_operation(opButton, event))
 
     makeOperationButton(calc, calcHistory, ',').grid(row=7,
                                                      column=2,
