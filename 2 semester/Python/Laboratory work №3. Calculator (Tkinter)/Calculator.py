@@ -551,11 +551,14 @@ def main():
     opButton6.bind("<Enter>", lambda event : on_enter_operation(opButton6, event))
     opButton6.bind("<Leave>", lambda event : on_leave_operation(opButton6, event))
 
-    makeClearButton(calc, calcHistory, 'Del').grid(row=3,
-                                                   column=2,
-                                                   stick='wens',
-                                                   padx=1,
-                                                   pady=1)
+    opButton7 = makeClearButton(calc, calcHistory, 'Del')
+    opButton7.grid(row=4,
+                   column=2,
+                   stick='wens',
+                   padx=1,
+                   pady=1)
+    opButton7.bind("<Enter>", lambda event : on_enter_operation(opButton7, event))
+    opButton7.bind("<Leave>", lambda event : on_leave_operation(opButton7, event))
 
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=50)
