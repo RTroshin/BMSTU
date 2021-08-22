@@ -104,7 +104,19 @@ def makeClearButton(calc, calcHistory, operation):
                   fg='#EEEEEE',
                   activebackground='#333333',
                   activeforeground='#EEEEEE',
-                  command=lambda : clear(calc, calcHistory))
+                  command=lambda : clearC(calc, calcHistory))
+    return button
+
+
+# Создание кнопки очистки поля ввода CE
+def makeClearButtonCE(calc, operation):
+    button =  Button(bg='#222222',
+                  text=operation,
+                  font=('Roboto', 16),
+                  fg='#EEEEEE',
+                  activebackground='#333333',
+                  activeforeground='#EEEEEE',
+                  command=lambda : clearCE(calc))
     return button
 
 
