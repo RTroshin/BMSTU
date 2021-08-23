@@ -153,6 +153,10 @@ def addDigit(calc, digit):
         # Условие для того, чтобы по-умолчанию в меню ввода появлялся ноль
         if value[0] == '0' and len(value) == 1:
             value = value[1:]
+        # Условие для того, чтобы в меню ввода нельзя было поставить несколько нолей перед числом
+        elif len(value) > 1:
+            if value[-2] in '–+÷×' and value[-1] in '0':
+                value = value[:-1]
 
         calc['state'] = NORMAL
         calc.delete(0, END)
