@@ -175,11 +175,8 @@ def addOperation(calc, calcHistory, operation):
         if value[-1] in '-+/*':
             value = value[:-1]
 
-        # Условие для того, чтобы операции отображались как в калькуляторе Windows
-        if value[-1] in '-+/*':
-            value = value[:-1]
         # Условие для того, чтобы выполнялось предварительное вычисление
-        elif '+' in value or '-' in value or '/' in value or '*' in value:
+        if '+' in value or '-' in value or '/' in value or '*' in value:
             calculate(calc, calcHistory)
             value = calc.get()
 
