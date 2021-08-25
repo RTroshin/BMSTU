@@ -205,7 +205,7 @@ def calculate(calc, calcHistory):
 
         try:
             calc.insert(0, eval(value))
-            valueHistory += value + ', '
+            valueHistory +=  '  ' + value + '=' + str (eval(value))
             valueHistory = replaceSymbolReturn(valueHistory)
             calcHistory.insert(0, valueHistory)
         except (NameError, SyntaxError):
