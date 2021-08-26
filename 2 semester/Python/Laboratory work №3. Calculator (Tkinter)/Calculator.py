@@ -241,7 +241,7 @@ def replaceSymbol(value):
     return value
 
 
-# Замена обычных знаков в строке на декоративные
+# Замена обычных знаков в строке на декоративных
 def replaceSymbolReturn(value):
     if '-' in value:
         value = value.replace('-', '–')
@@ -252,21 +252,31 @@ def replaceSymbolReturn(value):
     return value
 
 
-# Очистка поля ввода
-def clear(calc, calcHistory):
+# Очистка поля ввода по кнопке CE
+def clearCE(calc):
     global block
-    block= False
+    if (block != True):
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, 0)
+        calc['state'] = DISABLED
 
-    setDefaultSettings(calc)
-    calcHistory['state'] = NORMAL
-    calcHistory.delete(0, END)
-    calcHistory.insert(0, '')
-    calcHistory['state'] = DISABLED
 
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, 0)
-    calc['state'] = DISABLED
+# # Очистка поля ввода
+# def clear(calc, calcHistory):
+#     global block
+#     block= False
+
+#     setDefaultSettings(calc)
+#     calcHistory['state'] = NORMAL
+#     calcHistory.delete(0, END)
+#     calcHistory.insert(0, '')
+#     calcHistory['state'] = DISABLED
+
+#     calc['state'] = NORMAL
+#     calc.delete(0, END)
+#     calc.insert(0, 0)
+#     calc['state'] = DISABLED
 
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
