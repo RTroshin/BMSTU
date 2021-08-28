@@ -294,14 +294,17 @@ def clearDel(calc):
 
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
-def pressKey(calc, event):
+def pressKey(calc, calcHistory, event):
 
+    print(event.char)
     if event.char.isdigit():
         addDigit(calc, event.char)
     elif event.char in '+-/*':
-        addOperation(calc, event.char)
+        addOperation(calc, calcHistory, event.char)
     elif event.char == '\r':
-        calculate(calc)
+        calculate(calc, calcHistory)
+    elif event.char == '\b':
+        clearDel(calc)
 
 # Установка настроек по-умолчанию
 # Необходима после вывода сообщений об ошибках
