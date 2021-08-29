@@ -602,7 +602,7 @@ def main():
     opButton12.bind("<Enter>", lambda event : on_enter_calculate(opButton12, event))
     opButton12.bind("<Leave>", lambda event : on_leave_calculate(opButton12, event))
 
-    opButton5 = makeClearButton(calc, calcHistory, 'CE')
+    opButton5 = makeClearButtonCE(calc, 'CE')
     opButton5.grid(row=4,
                    column=0,
                    stick='wens',
