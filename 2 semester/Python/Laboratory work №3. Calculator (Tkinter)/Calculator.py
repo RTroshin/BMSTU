@@ -306,6 +306,7 @@ def pressKey(calc, calcHistory, event):
     elif event.char == '\b':
         clearDel(calc)
 
+
 # Установка настроек по-умолчанию
 # Необходима после вывода сообщений об ошибках
 def setDefaultSettings(calc):
@@ -445,7 +446,7 @@ def main():
     calc['state'] = DISABLED
 
     # Обработка событий
-    root.bind('<Key>', lambda event : pressKey(calc, event))
+    root.bind('<Key>', lambda event : pressKey(calc, calcHistory, event))
 
     # Создание кнопок
     button1 = makeDigitButton(calc, '1')
@@ -547,7 +548,7 @@ def main():
     opButton.bind("<Enter>", lambda event : on_enter_operation(opButton, event))
     opButton.bind("<Leave>", lambda event : on_leave_operation(opButton, event))
 
-    opButton0 = makeOperationButton(calc, calcHistory, ',')
+    opButton0 = makeOperationButton(calc, calcHistory, '.')
     opButton0.grid(row=8,
                    column=2,
                    stick='wens',
