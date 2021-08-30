@@ -85,15 +85,15 @@ def makeNumSystemBinButton(calc, operation):
     return button
 
 
-# Создание кнопок с операциями
-def makeOperationButton(calc, calcHistory, operation):
+# Создание кнопок с операциями по переводу системам счисления
+def makeNumSystemOctButton(calc, operation):
     button =  Button(bg='#222222',
                   text=operation,
                   font=('Roboto', 16),
                   fg='#EEEEEE',
                   activebackground='#444444',
                   activeforeground='#EEEEEE',
-                  command=lambda : addOperation(calc, calcHistory, operation))
+                  command=lambda : decToOct(calc))
     return button
 
 
