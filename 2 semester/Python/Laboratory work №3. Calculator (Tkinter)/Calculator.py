@@ -620,7 +620,7 @@ def main():
     opButton6.bind("<Enter>", lambda event : on_enter_operation(opButton6, event))
     opButton6.bind("<Leave>", lambda event : on_leave_operation(opButton6, event))
 
-    opButton7 = makeClearButton(calc, calcHistory, 'Del')
+    opButton7 = makeClearButtonDel(calc, 'Del')
     opButton7.grid(row=4,
                    column=2,
                    stick='wens',
