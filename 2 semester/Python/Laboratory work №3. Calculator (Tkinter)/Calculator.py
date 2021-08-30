@@ -73,6 +73,18 @@ def makeDigitButton(calc, digit):
     return button
 
 
+# Создание кнопки с операцией перевода в двоичную систему счисления
+def makeNumSystemBinButton(calc, operation):
+    button =  Button(bg='#222222',
+                  text=operation,
+                  font=('Roboto', 16),
+                  fg='#EEEEEE',
+                  activebackground='#444444',
+                  activeforeground='#EEEEEE',
+                  command=lambda : decToBin(calc))
+    return button
+
+
 # Создание кнопок с операциями
 def makeOperationButton(calc, calcHistory, operation):
     button =  Button(bg='#222222',
