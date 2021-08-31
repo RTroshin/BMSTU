@@ -109,15 +109,16 @@ def makeNumSystemDecButton(calc, operation):
     return button
 
 
-# Создание кнопок для взаимодействия с полем ввода
-def makeCalculateButton(calc, calcHistory, operation):
-    return Button(bg='#04346C',
+# Создание кнопок с операциями по переводу системам счисления
+def makeNumSystemHexButton(calc, operation):
+    button =  Button(bg='#222222',
                   text=operation,
                   font=('Roboto', 16),
                   fg='#EEEEEE',
-                  activebackground='#1A5090',
+                  activebackground='#444444',
                   activeforeground='#EEEEEE',
-                  command=lambda : calculate(calc, calcHistory))
+                  command=lambda : decToHex(calc))
+    return button
 
 
 # Создание кнопки очистки поля ввода
