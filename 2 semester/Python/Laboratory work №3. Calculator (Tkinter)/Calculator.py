@@ -97,6 +97,18 @@ def makeNumSystemOctButton(calc, operation):
     return button
 
 
+# Создание кнопок с операциями по переводу системам счисления
+def makeNumSystemDecButton(calc, operation):
+    button =  Button(bg='#222222',
+                  text=operation,
+                  font=('Roboto', 16),
+                  fg='#EEEEEE',
+                  activebackground='#444444',
+                  activeforeground='#EEEEEE',
+                  command=lambda : decToDec(calc))
+    return button
+
+
 # Создание кнопок для взаимодействия с полем ввода
 def makeCalculateButton(calc, calcHistory, operation):
     return Button(bg='#04346C',
