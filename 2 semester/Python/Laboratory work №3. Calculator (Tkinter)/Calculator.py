@@ -121,6 +121,18 @@ def makeNumSystemHexButton(calc, operation):
     return button
 
 
+# Создание кнопок с операциями
+def makeOperationButton(calc, calcHistory, operation):
+    button =  Button(bg='#222222',
+                  text=operation,
+                  font=('Roboto', 16),
+                  fg='#EEEEEE',
+                  activebackground='#444444',
+                  activeforeground='#EEEEEE',
+                  command=lambda : addOperation(calc, calcHistory, operation))
+    return button
+
+
 # Создание кнопки очистки поля ввода
 def makeClearButton(calc, calcHistory, operation):
     button =  Button(bg='#222222',
