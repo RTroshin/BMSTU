@@ -144,18 +144,6 @@ def makeCalculateButton(calc, calcHistory, operation):
                   command=lambda : calculate(calc, calcHistory))
 
 
-# Создание кнопки очистки поля ввода
-def makeClearButton(calc, calcHistory, operation):
-    button =  Button(bg='#222222',
-                  text=operation,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#333333',
-                  activeforeground='#EEEEEE',
-                  command=lambda : clearC(calc, calcHistory))
-    return button
-
-
 # Создание кнопки очистки поля ввода CE
 def makeClearButtonCE(calc, operation):
     button =  Button(bg='#222222',
