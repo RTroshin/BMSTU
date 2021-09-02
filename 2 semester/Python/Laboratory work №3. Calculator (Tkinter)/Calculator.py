@@ -343,6 +343,36 @@ def pressKey(calc, calcHistory, event):
         clearDel(calc)
 
 
+# Перевод из десятичной в двоичную систему счисления
+def decToBin(calc):
+    value = float(calc.get())
+    valueInt = int(value)
+    valueFloat = value - int(value)
+
+    if valueInt == 0:
+        return '0'
+
+    result = ''
+    while valueInt > 0:
+        result = str(valueInt % 2) + result
+        valueInt //= 2
+
+    result += '.'
+
+    iter = 0
+    while valueFloat > 1e-5 and iter < 5:
+        valueFloat = valueFloat * 2
+        number = (int)(valueFloat)
+        result += str(number)
+        valueFloat -= int(valueFloat)
+        iter += 1
+
+    calc['state'] = NORMAL
+    calc.delete(0, END)
+    calc.insert(0, result)
+    calc['state'] = DISABLED
+
+
 # Установка настроек по-умолчанию
 # Необходима после вывода сообщений об ошибках
 def setDefaultSettings(calc):
