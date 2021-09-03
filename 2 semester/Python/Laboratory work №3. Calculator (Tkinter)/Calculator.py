@@ -373,8 +373,8 @@ def decToBin(calc):
     calc['state'] = DISABLED
 
 
-# Перевод из десятичной в десятичную систему счисления
-def decToDec(calc):
+# Перевод из десятичной в шестнадцатиричную систему счисления
+def decToHex(calc):
     value = int(calc.get())
 
     if value == 0:
@@ -382,8 +382,8 @@ def decToDec(calc):
 
     result = ''
     while value > 0:
-        result = str(value % 2) + result
-        value //= 2
+        result = str(value % 16) + result
+        value //= 16
 
     calc['state'] = NORMAL
     calc.delete(0, END)
