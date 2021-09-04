@@ -722,7 +722,7 @@ def main():
     opButton1.bind("<Enter>", lambda event : on_enter_operation(opButton1, event))
     opButton1.bind("<Leave>", lambda event : on_leave_operation(opButton1, event))
 
-    opButton2 = makeClearButton(calc, calcHistory, 'Oct')
+    opButton2 = makeNumSystemOctButton(calc, 'Oct')
     opButton2.grid(row=3,
                    column=1,
                    stick='wens',
