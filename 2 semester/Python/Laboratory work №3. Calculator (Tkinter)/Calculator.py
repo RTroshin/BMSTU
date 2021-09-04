@@ -713,7 +713,7 @@ def main():
     opButton7.bind("<Enter>", lambda event : on_enter_operation(opButton7, event))
     opButton7.bind("<Leave>", lambda event : on_leave_operation(opButton7, event))
 
-    opButton1 = makeClearButton(calc, calcHistory, 'Bin')
+    opButton1 = makeNumSystemBinButton(calc, 'Bin')
     opButton1.grid(row=3,
                    column=0,
                    stick='wens',
