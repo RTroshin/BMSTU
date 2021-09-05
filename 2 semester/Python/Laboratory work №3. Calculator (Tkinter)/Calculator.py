@@ -731,7 +731,7 @@ def main():
     opButton2.bind("<Enter>", lambda event : on_enter_operation(opButton2, event))
     opButton2.bind("<Leave>", lambda event : on_leave_operation(opButton2, event))
 
-    opButton3 = makeClearButton(calc, calcHistory, 'Dec')
+    opButton3 = makeNumSystemDecButton(calc, 'Dec')
     opButton3.grid(row=3,
                    column=2,
                    stick='wens',
