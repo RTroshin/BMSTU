@@ -354,8 +354,8 @@ def decToBin(calc):
 
     result = ''
     while valueInt > 0:
-        result = str(valueInt % 8) + result
-        valueInt //= 8
+        result = str(valueInt % 2) + result
+        valueInt //= 2
 
     result += '.'
 
