@@ -361,7 +361,7 @@ def decToBin(calc):
 
     iter = 0
     while valueFloat > 1e-5 and iter < 5:
-        valueFloat = valueFloat * 8
+        valueFloat = valueFloat * 2
         number = (int)(valueFloat)
         result += str(number)
         valueFloat -= int(valueFloat)
