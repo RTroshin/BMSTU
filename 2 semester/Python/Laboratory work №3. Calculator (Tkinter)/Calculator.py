@@ -373,6 +373,13 @@ def decToBin(calc):
     calc['state'] = DISABLED
 
 
+# Перевод из десятичной в восьмеричную систему счисления
+def decToOct(calc):
+    value = float(calc.get())
+    valueInt = int(value)
+    valueFloat = value - int(value)
+
+
 # Перевод из десятичной в десятичную систему счисления
 def decToDec(calc):
     value = int(calc.get())
