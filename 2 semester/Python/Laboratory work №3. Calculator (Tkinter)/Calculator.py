@@ -389,6 +389,14 @@ def decToOct(calc):
 
     result += '.'
 
+    iter = 0
+    while valueFloat > 1e-5 and iter < 5:
+        valueFloat = valueFloat * 8
+        number = (int)(valueFloat)
+        result += str(number)
+        valueFloat -= int(valueFloat)
+        iter += 1
+
 
 # Перевод из десятичной в десятичную систему счисления
 def decToDec(calc):
