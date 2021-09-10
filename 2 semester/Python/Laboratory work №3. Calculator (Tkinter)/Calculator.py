@@ -390,7 +390,10 @@ def decToOct(calc):
         result = str(valueInt % 8) + result
         valueInt //= 8
 
-    result += '.'
+    if valueFloat:
+        result += '.'
+    else:
+        result += ''
 
     iter = 0
     while valueFloat > 1e-5 and iter < 5:
