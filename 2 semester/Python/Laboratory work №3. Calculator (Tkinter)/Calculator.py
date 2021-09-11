@@ -437,9 +437,9 @@ def decToHex(calc):
         return '0'
 
     result = ''
-    while value > 0:
-        result = str(value % 16) + result
-        value //= 16
+    while valueInt > 0:
+        result = str(digit(valueInt % 16)) + result
+        valueInt //= 16
 
     calc['state'] = NORMAL
     calc.delete(0, END)
