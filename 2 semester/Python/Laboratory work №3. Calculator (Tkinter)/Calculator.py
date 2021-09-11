@@ -429,9 +429,11 @@ def decToDec(calc):
 
 # Перевод из десятичной в шестнадцатиричную систему счисления
 def decToHex(calc):
-    value = int(calc.get())
+    value = float(calc.get())
+    valueInt = int(value)
+    valueFloat = value - int(value)
 
-    if value == 0:
+    if valueInt == 0:
         return '0'
 
     result = ''
