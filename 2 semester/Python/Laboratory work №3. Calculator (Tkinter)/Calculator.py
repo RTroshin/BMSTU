@@ -441,6 +441,11 @@ def decToHex(calc):
         result = str(digit(valueInt % 16)) + result
         valueInt //= 16
 
+    if valueFloat:
+        result += '.'
+    else:
+        result += ''
+
     calc['state'] = NORMAL
     calc.delete(0, END)
     calc.insert(0, result)
