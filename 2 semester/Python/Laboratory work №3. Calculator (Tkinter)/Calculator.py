@@ -63,7 +63,7 @@
 # 8. Поработать над дизайном
 
 
-from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Button
+from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry
 from tkinter import messagebox
 from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 
