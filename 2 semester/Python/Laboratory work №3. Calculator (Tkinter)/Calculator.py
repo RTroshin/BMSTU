@@ -69,6 +69,10 @@ from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 
 from os.path import dirname, join
 
+from Buttons import *
+from Functions import *
+from NumericalSystemFunctions import *
+
 
 block = False # Глобальная переменная
 
