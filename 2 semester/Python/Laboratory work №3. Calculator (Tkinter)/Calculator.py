@@ -598,6 +598,7 @@ def main():
     width = 364
     height = 496
 
+
     # Установка иконки приложения
     photo = PhotoImage(file=filePath)
     root.iconphoto(False, photo)
@@ -613,6 +614,7 @@ def main():
     # root.overrideredirect(True) # Убирает верхнее меню
     # root.attributes("-transparentcolor", "black") # Делает фон совсем прозрачным
 
+
     # Создание меню
     mainMenu = Menu(root)
 
@@ -620,9 +622,10 @@ def main():
 
     firstItem = Menu(mainMenu,
                      tearoff=0,
-                     bg='#222222',
-                     fg='#EEEEEE',
-                     activebackground='#333333')
+                    #  bg='#222222',
+                    #  fg='#EEEEEE',
+                    #  activebackground='#333333')
+                    )
 
     mainMenu.add_cascade(label='Вид',
                          menu=firstItem)
