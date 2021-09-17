@@ -637,9 +637,10 @@ def main():
 
     secondItem = Menu(mainMenu,
                       tearoff=0,
-                      bg='#222222',
-                      fg='#EEEEEE',
-                      activebackground='#333333')
+                    #   bg='#222222',
+                    #   fg='#EEEEEE',
+                    #   activebackground='#333333')
+                    )
 
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
