@@ -730,7 +730,7 @@ def main():
     button4.bind("<Enter>", lambda event : on_enter_digit(button4, event))
     button4.bind("<Leave>", lambda event : on_leave_digit(button4, event))
 
-    button5 = makeDigitButton(calc, '5')
+    button5 = makeDigitButton(calc, calcHistory, '5')
     button5.grid(row=6,
                  column=1,
                  stick='wens',
