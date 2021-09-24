@@ -784,7 +784,7 @@ def main():
     button0.bind("<Enter>", lambda event : on_enter_digit(button0, event))
     button0.bind("<Leave>", lambda event : on_leave_digit(button0, event))
 
-    opButton = makeOperationButton(calc, calcHistory, '±')
+    opButton = makeOperationButton(calc, '±')
     opButton.grid(row=8,
                   column=0,
                   stick='wens',
@@ -793,7 +793,7 @@ def main():
     opButton.bind("<Enter>", lambda event : on_enter_operation(opButton, event))
     opButton.bind("<Leave>", lambda event : on_leave_operation(opButton, event))
 
-    opButton0 = makeOperationButton(calc, calcHistory, '.')
+    opButton0 = makePointButton(calc, '.')
     opButton0.grid(row=8,
                    column=2,
                    stick='wens',
