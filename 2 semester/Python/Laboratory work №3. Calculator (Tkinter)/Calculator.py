@@ -910,6 +910,7 @@ def main():
     opButton4.bind("<Enter>", lambda event : on_enter_operation(opButton4, event))
     opButton4.bind("<Leave>", lambda event : on_leave_operation(opButton4, event))
 
+
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=50)
     root.grid_columnconfigure(1, minsize=50)
