@@ -820,7 +820,7 @@ def main():
     opButton9.bind("<Enter>", lambda event : on_enter_operation(opButton9, event))
     opButton9.bind("<Leave>", lambda event : on_leave_operation(opButton9, event))
 
-    opButton10 = makeOperationButton(calc, calcHistory, '–')
+    opButton10 = makeOperationButton(calc, '–')
     opButton10.grid(row=6,
                     column=3,
                     stick='wens',
@@ -829,7 +829,7 @@ def main():
     opButton10.bind("<Enter>", lambda event : on_enter_operation(opButton10, event))
     opButton10.bind("<Leave>", lambda event : on_leave_operation(opButton10, event))
 
-    opButton11 = makeOperationButton(calc, calcHistory, '+')
+    opButton11 = makeOperationButton(calc, '+')
     opButton11.grid(row=7,
                     column=3,
                     stick='wens',
