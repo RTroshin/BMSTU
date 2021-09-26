@@ -77,18 +77,6 @@ from NumericalSystemFunctions import *
 block = False # Глобальная переменная
 
 
-# Создание кнопок с 0 по 9
-def makeDigitButton(calc, digit):
-    button = Button(bg='#000000',
-                      text=digit,
-                      font=('Roboto', 16),
-                      fg='#EEEEEE',
-                      activebackground='#222222',
-                      activeforeground="#EEEEEE",
-                      command=lambda : addDigit(calc, digit))
-    return button
-
-
 # Создание кнопки с операцией перевода в двоичную систему счисления
 def makeNumSystemBinButton(calc, operation):
     button =  Button(bg='#222222',
