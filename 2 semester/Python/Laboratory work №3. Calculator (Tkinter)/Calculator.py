@@ -77,30 +77,6 @@ from NumericalSystemFunctions import *
 block = False # Глобальная переменная
 
 
-# Создание кнопки с операцией перевода в двоичную систему счисления
-def makeNumSystemBinButton(calc, operation):
-    button =  Button(bg='#222222',
-                  text=operation,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#444444',
-                  activeforeground='#EEEEEE',
-                  command=lambda : decToBin(calc))
-    return button
-
-
-# Создание кнопок с операциями по переводу системам счисления
-def makeNumSystemOctButton(calc, operation):
-    button =  Button(bg='#222222',
-                  text=operation,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#444444',
-                  activeforeground='#EEEEEE',
-                  command=lambda : decToOct(calc))
-    return button
-
-
 # Создание кнопок с операциями по переводу системам счисления
 def makeNumSystemDecButton(calc, operation):
     button =  Button(bg='#222222',
