@@ -77,29 +77,6 @@ from NumericalSystemFunctions import *
 block = False # Глобальная переменная
 
 
-# Создание кнопок с операциями
-def makeOperationButton(calc, calcHistory, operation):
-    button =  Button(bg='#222222',
-                  text=operation,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#444444',
-                  activeforeground='#EEEEEE',
-                  command=lambda : addOperation(calc, calcHistory, operation))
-    return button
-
-
-# Создание кнопок для взаимодействия с полем ввода
-def makeCalculateButton(calc, calcHistory, operation):
-    return Button(bg='#04346C',
-                  text=operation,
-                  font=('Roboto', 16),
-                  fg='#EEEEEE',
-                  activebackground='#1A5090',
-                  activeforeground='#EEEEEE',
-                  command=lambda : calculate(calc, calcHistory))
-
-
 # Создание кнопки очистки поля ввода CE
 def makeClearButtonCE(calc, operation):
     button =  Button(bg='#222222',
