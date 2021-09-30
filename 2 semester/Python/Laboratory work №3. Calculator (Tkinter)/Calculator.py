@@ -438,10 +438,6 @@ def setDefaultSettings(calc):
 def exitApp(root):
     root.destroy()
 
-# Для кнопок с цифрами
-# Подсвечивает кнопку цветом при наведении мыши
-def on_enter_digit(button, event):
-    button['background'] = '#111111'
 
 # Возвращает цвет кнопки на цвет по-умолчанию
 def on_leave_digit(button, event):
