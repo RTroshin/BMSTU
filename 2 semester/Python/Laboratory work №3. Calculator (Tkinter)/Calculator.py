@@ -439,11 +439,6 @@ def exitApp(root):
     root.destroy()
 
 
-# Для кнопок с операциями
-# Подсвечивает кнопку цветом при наведении мыши
-def on_enter_operation(button, event):
-    button['background'] = '#333333'
-
 # Возвращает цвет кнопки на цвет по-умолчанию
 def on_leave_operation(button, event):
     button['background'] = '#222222'
