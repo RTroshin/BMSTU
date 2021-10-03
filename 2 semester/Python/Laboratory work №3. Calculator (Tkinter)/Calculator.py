@@ -439,11 +439,6 @@ def exitApp(root):
     root.destroy()
 
 
-# Возвращает цвет кнопки на цвет по-умолчанию
-def on_leave_calculate(button, event):
-    button['background'] = '#04346C'
-
-
 def main():
 
     # Создание переменной, содержащей полный путь до файла
