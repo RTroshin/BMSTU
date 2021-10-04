@@ -77,26 +77,6 @@ from NumericalSystemFunctions import *
 block = False # Глобальная переменная
 
 
-# Добавление цифры в поле ввода
-def addDigit(calc, digit):
-    global block
-    if (block != True):
-        value = calc.get()
-
-        # Условие для того, чтобы по-умолчанию в меню ввода появлялся ноль
-        if value[0] == '0' and len(value) == 1:
-            value = value[1:]
-        # Условие для того, чтобы в меню ввода нельзя было поставить несколько нолей перед числом
-        elif len(value) > 1:
-            if value[-2] in '–+÷×' and value[-1] in '0':
-                value = value[:-1]
-
-        calc['state'] = NORMAL
-        calc.delete(0, END)
-        calc.insert(0, value + digit)
-        calc['state'] = DISABLED
-
-
 # Добавление знака операции в поле ввода
 def addOperation(calc, calcHistory, operation):
     global block
