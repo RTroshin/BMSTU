@@ -74,9 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-block = False # Глобальная переменная
-
-
 # Добавление знака операции в поле ввода
 def addOperation(calc, calcHistory, operation):
     global block
