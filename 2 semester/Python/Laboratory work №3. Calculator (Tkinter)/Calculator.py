@@ -91,29 +91,6 @@ def calculate(calc, calcHistory):
         calc['state'] = NORMAL
         calc.delete(0, END)
 
-        # try:
-        #     calc.insert(0, eval(value))
-        #     valueHistory +=  '  ' + value + '=' + str(eval(value))
-        #     valueHistory = replaceSymbolReturn(valueHistory)
-        #     calcHistory.insert(0, valueHistory)
-        # except (NameError, SyntaxError):
-        #     # messagebox.showinfo('Внимание!',
-        #     #                     'Нужно вводить только цифры! Вы ввели другие символы!')
-        #     valueHistory += value
-        #     calcHistory.insert(0, valueHistory)
-        #     calc['font'] = ('Roboto', 16)
-        #     calc['width'] = 30
-        #     calc.insert(0, 'Нужно вводить только цифры')
-        #     block = True
-        # except ZeroDivisionError:
-        #     # messagebox.showinfo('Внимание!', 'Деление на ноль невозможно!') # Выводить в самом окне
-        #     valueHistory += value
-        #     calcHistory.insert(0, valueHistory)
-        #     calc['font'] = ('Roboto', 16)
-        #     calc['width'] = 30
-        #     calc.insert(0, 'Деление на ноль невозможно')
-        #     block = True
-
     calcHistory['state'] = DISABLED
     calc['state'] = DISABLED
 
