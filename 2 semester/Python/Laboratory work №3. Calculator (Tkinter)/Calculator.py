@@ -74,28 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Добавление знака операции в поле ввода
-def addOperation(calc, calcHistory, operation):
-    global block
-    if (block != True):
-        value = calc.get()
-        value = replaceSymbol(value)
-
-        # Условие для того, чтобы операции отображались как в калькуляторе Windows
-        if value[-1] in '-+/*':
-            value = value[:-1]
-
-        # Условие для того, чтобы выполнялось предварительное вычисление
-        if '+' in value or '-' in value or '/' in value or '*' in value:
-            calculate(calc, calcHistory)
-            value = calc.get()
-
-        calc['state'] = NORMAL
-        calc.delete(0, END)
-        calc.insert(0, value + operation)
-        calc['state'] = DISABLED
-
-
 # Вычисление выражения в поле ввода
 def calculate(calc, calcHistory):
     global block
