@@ -74,27 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Вычисление выражения в поле ввода
-def calculate(calc, calcHistory):
-    global block
-    if (block != True):
-        valueHistory = calcHistory.get()
-        value = calc.get()
-        value = replaceSymbol(value)
-
-        # Если последним знаком стоит операция, то она выполняется 
-        if value[-1] in '+-/*':
-            value = value + value[:-1]
-
-        calcHistory['state'] = NORMAL
-        calcHistory.delete(0, END)
-        calc['state'] = NORMAL
-        calc.delete(0, END)
-
-    calcHistory['state'] = DISABLED
-    calc['state'] = DISABLED
-
-
 # Замена декоративных знаков в строке
 def replaceSymbol(value):
     if '–' in value:
