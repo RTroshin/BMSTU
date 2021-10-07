@@ -74,17 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Замена декоративных знаков в строке
-def replaceSymbol(value):
-    if '–' in value:
-        value = value.replace('–', '-')
-    elif '×' in value:
-        value = value.replace('×', '*')
-    elif '÷' in value:
-        value = value.replace('÷', '/')
-    return value
-
-
 # Замена обычных знаков в строке на декоративных
 def replaceSymbolReturn(value):
     if '-' in value:
