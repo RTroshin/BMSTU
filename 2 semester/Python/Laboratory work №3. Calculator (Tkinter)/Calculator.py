@@ -74,16 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Очистка поля ввода по кнопке CE
-def clearCE(calc):
-    global block
-    if (block != True):
-        calc['state'] = NORMAL
-        calc.delete(0, END)
-        calc.insert(0, 0)
-        calc['state'] = DISABLED
-
-
 # Очистка поля ввода по кнопке C
 def clearC(calc, calcHistory):
     global block
