@@ -74,20 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Очистка поля ввода по кнопке Del
-def clearDel(calc):
-    global block
-    if (block != True):
-        value = calc.get()
-        calc['state'] = NORMAL
-
-        calc.delete(len(value) - 1, END)
-        if not len(value) - 1:
-            calc.insert(0, 0)
-
-        calc['state'] = DISABLED
-
-
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, calcHistory, event):
 
