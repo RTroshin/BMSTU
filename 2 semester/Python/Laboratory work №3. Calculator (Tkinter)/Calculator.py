@@ -74,20 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Ограничение ввода с клавиатуры. Только цифры и знаки операций
-def pressKey(calc, calcHistory, event):
-
-    print(event.char)
-    if event.char.isdigit():
-        addDigit(calc, event.char)
-    elif event.char in '+-/*':
-        addOperation(calc, calcHistory, event.char)
-    elif event.char == '\r':
-        calculate(calc, calcHistory)
-    elif event.char == '\b':
-        clearDel(calc)
-
-
 # Перевод из десятичной в двоичную систему счисления
 def decToBin(calc):
     value = float(calc.get())
