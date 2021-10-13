@@ -74,26 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Перевод из десятичной в двоичную систему счисления
-def decToBin(calc):
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
-
-    if valueInt == 0:
-        return '0'
-
-    result = ''
-    while valueInt > 0:
-        result = str(valueInt % 2) + result
-        valueInt //= 2
-
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
-
-
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
     value = float(calc.get())
