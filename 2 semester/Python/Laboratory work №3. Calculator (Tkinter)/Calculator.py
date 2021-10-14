@@ -74,26 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Перевод из десятичной в восьмеричную систему счисления
-def decToOct(calc):
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
-
-    if valueInt == 0:
-        return '0'
-
-    result = ''
-    while valueInt > 0:
-        result = str(valueInt % 8) + result
-        valueInt //= 8
-
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
-
-
 # Перевод из десятичной в десятичную систему счисления
 def decToDec(calc):
     value = int(calc.get())
