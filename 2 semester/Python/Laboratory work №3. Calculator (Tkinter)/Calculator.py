@@ -83,24 +83,6 @@ def decToHex(calc):
     if valueInt == 0:
         return '0'
 
-    result = ''
-    while valueInt > 0:
-        result = str(digit(valueInt % 16)) + result
-        valueInt //= 16
-
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
-
-    iter = 0
-    while valueFloat > 1e-5 and iter < 5:
-        valueFloat = valueFloat * 16
-        number = (int)(valueFloat)
-        result += str(digit(number))
-        valueFloat -= int(valueFloat)
-        iter += 1
-
 
 def digit(num):
     if num == 0:
