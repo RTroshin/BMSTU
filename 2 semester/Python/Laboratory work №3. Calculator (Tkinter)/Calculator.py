@@ -74,16 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-# Перевод из десятичной в шестнадцатиричную систему счисления
-def decToHex(calc):
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
-
-    if valueInt == 0:
-        return '0'
-
-
 def digit(num):
     if num == 0:
         return '0'
