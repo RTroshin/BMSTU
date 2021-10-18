@@ -74,29 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-def digit(num):
-    if num == 0:
-        return '0'
-    elif num == 1:
-        return '1'
-    elif num == 2:
-        return '2'
-    elif num == 3:
-        return '3'
-    elif num == 4:
-        return '4'
-    elif num == 5:
-        return '5'
-    elif num == 6:
-        return '6'
-    elif num == 7:
-        return '7'
-    elif num == 8:
-        return '8'
-    elif num == 9:
-        return '9'
-
-
 def digitReturn(num):
     if num == '0':
         return '0'
