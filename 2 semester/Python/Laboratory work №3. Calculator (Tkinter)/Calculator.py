@@ -95,18 +95,6 @@ def digit(num):
         return '8'
     elif num == 9:
         return '9'
-    elif num == 10:
-        return 'A'
-    elif num == 11:
-        return 'B'
-    elif num == 12:
-        return 'C'
-    elif num == 13:
-        return 'D'
-    elif num == 14:
-        return 'E'
-    elif num == 15:
-        return 'F'
 
 
 def digitReturn(num):
