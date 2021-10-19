@@ -87,26 +87,6 @@ def digitReturn(num):
         return '4'
     elif num == '5':
         return '5'
-    elif num == '6':
-        return '6'
-    elif num == '7':
-        return '7'
-    elif num == '8':
-        return '8'
-    elif num == '9':
-        return '9'
-    elif num == 'A':
-        return '10'
-    elif num == 'B':
-        return '11'
-    elif num == 'C':
-        return '12'
-    elif num == 'D':
-        return '13'
-    elif num == 'E':
-        return '14'
-    elif num == 'F':
-        return '15'
 
 
 def main():
