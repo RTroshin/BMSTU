@@ -74,21 +74,6 @@ from Functions import *
 from NumericalSystemFunctions import *
 
 
-def digitReturn(num):
-    if num == '0':
-        return '0'
-    elif num == '1':
-        return '1'
-    elif num == '2':
-        return '2'
-    elif num == '3':
-        return '3'
-    elif num == '4':
-        return '4'
-    elif num == '5':
-        return '5'
-
-
 def main():
 
     # Создание переменной, содержащей полный путь до файла
