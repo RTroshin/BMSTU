@@ -107,6 +107,16 @@ def main():
     # root.attributes("-transparentcolor", "black") # Делает фон совсем прозрачным
 
 
+    # Создание окна ввода
+    calcHistory = Entry(root,
+                 bd = 0,
+                 disabledbackground='#222222',
+                 disabledforeground='#EEEEEE',
+                 justify=RIGHT,
+                 font=('Roboto', 14),
+                 width=15)
+
+
     # Создание меню
     mainMenu = Menu(root)
 
