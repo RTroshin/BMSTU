@@ -15,6 +15,10 @@
 # 1. Добавить файл readme.md.
 # 2.
 
+# TODO
+# СДЕЛАТЬ EXE ФАЙЛ
+
+
 # TODO Calculator
 # 1. Если знак операции последний, то при нажатии на кнопку другой операции,
 #    она заменяют собой нынешнюю
@@ -63,9 +67,10 @@
 # 8. Поработать над дизайном
 
 
-from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry
+from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Toplevel
 from tkinter import messagebox
 from tkinter.constants import RIGHT, END, NORMAL, DISABLED
+# from tkinter.ttk import * # Улучшенный tkinter
 
 from os.path import dirname, join
 
