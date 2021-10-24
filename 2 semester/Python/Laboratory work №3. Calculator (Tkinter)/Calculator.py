@@ -116,6 +116,12 @@ def main():
                  font=('Roboto', 14),
                  width=15)
 
+    calcHistory.grid(row=1,
+              column=0,
+              columnspan=4,
+              stick='wens',
+              padx=1)
+
 
     # Создание меню
     mainMenu = Menu(root)
