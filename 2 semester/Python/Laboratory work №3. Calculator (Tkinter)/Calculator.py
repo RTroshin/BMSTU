@@ -122,6 +122,8 @@ def main():
               stick='wens',
               padx=1)
 
+    calcHistory['state'] = DISABLED
+
 
     # Создание меню
     mainMenu = Menu(root)
