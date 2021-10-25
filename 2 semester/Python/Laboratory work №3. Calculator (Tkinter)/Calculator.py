@@ -124,6 +124,14 @@ def main():
 
     calcHistory['state'] = DISABLED
 
+    calc = Entry(root,
+                 bd = 0,
+                 disabledbackground='#222222',
+                 disabledforeground='#EEEEEE',
+                 justify=RIGHT,
+                 font=('Roboto', 32), # Arial, Roboto Black, Monserat ExtraBold, Play
+                 width=15)
+
 
     # Создание меню
     mainMenu = Menu(root)
