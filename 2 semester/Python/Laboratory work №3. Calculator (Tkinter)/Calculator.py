@@ -132,6 +132,13 @@ def main():
                  font=('Roboto', 32), # Arial, Roboto Black, Monserat ExtraBold, Play
                  width=15)
 
+    calc.insert(0, 0)
+    calc.grid(row=2,
+              column=0,
+              columnspan=4,
+              stick='wens',
+              padx=1)
+
 
     # Создание меню
     mainMenu = Menu(root)
