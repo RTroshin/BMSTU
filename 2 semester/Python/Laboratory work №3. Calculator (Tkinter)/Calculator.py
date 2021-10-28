@@ -140,6 +140,9 @@ def main():
               padx=1)
 
 
+    calc['state'] = DISABLED
+
+
     # Создание меню
     mainMenu = Menu(root)
 
