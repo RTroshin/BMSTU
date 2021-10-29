@@ -168,7 +168,11 @@ def main():
                     #   bg='#222222',
                     #   fg='#EEEEEE',
                     #   activebackground='#333333')
-                    )
+                     )
+
+    thirdItem = Menu(secondItem,
+                      tearoff=0,
+                     )
 
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
