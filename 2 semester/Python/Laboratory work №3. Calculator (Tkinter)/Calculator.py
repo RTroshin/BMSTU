@@ -158,8 +158,8 @@ def main():
     mainMenu.add_cascade(label='Вид',
                          menu=firstItem)
 
-    firstItem.add_command(label='Обычный') # command
-    firstItem.add_command(label='Программист')
+    # firstItem.add_command(label='Обычный') # command
+    # firstItem.add_command(label='Программист')
     firstItem.add_command(label='Выход',
                           command=lambda : exitApp(root))
 
