@@ -174,6 +174,10 @@ def main():
                       tearoff=0,
                      )
 
+    fourthItem = Menu(secondItem,
+                      tearoff=0,
+                     )
+
     mainMenu.add_cascade(label='Справка', menu=secondItem)
     secondItem.add_command(label='О программе')
 
