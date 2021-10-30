@@ -178,8 +178,10 @@ def main():
                       tearoff=0,
                      )
 
-    mainMenu.add_cascade(label='Справка', menu=secondItem)
-    secondItem.add_command(label='О программе')
+
+    mainMenu.add_cascade(label='Правка', menu=fourthItem)
+    fourthItem.add_command(label='Очистить',
+                             command=lambda : clearC(calc, calcHistory))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
