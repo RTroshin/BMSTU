@@ -185,6 +185,8 @@ def main():
 
 
     mainMenu.add_cascade(label='Выполнить', menu=secondItem)
+    secondItem.add_command(label='Вычислить',
+                             command=lambda : calculate(calc, calcHistory))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
