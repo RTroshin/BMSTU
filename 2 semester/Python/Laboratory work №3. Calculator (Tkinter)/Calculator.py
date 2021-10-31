@@ -187,6 +187,9 @@ def main():
     mainMenu.add_cascade(label='Выполнить', menu=secondItem)
     secondItem.add_command(label='Вычислить',
                              command=lambda : calculate(calc, calcHistory))
+    secondItem.add_separator()
+    secondItem.add_command(label='Перевести в 2-ю систему счисления',
+                             command=lambda : decToBin(calc))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
