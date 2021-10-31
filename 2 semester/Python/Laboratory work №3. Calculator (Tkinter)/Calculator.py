@@ -190,6 +190,8 @@ def main():
     secondItem.add_separator()
     secondItem.add_command(label='Перевести в 2-ю систему счисления',
                              command=lambda : decToBin(calc))
+    secondItem.add_command(label='Перевести в 3-ю систему счисления',
+                               command=lambda : decToThird(calc))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
