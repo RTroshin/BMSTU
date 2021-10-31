@@ -183,6 +183,9 @@ def main():
     fourthItem.add_command(label='Очистить',
                              command=lambda : clearC(calc, calcHistory))
 
+
+    mainMenu.add_cascade(label='Выполнить', menu=secondItem)
+
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
     # w["menu"].config(bg="#222222", bd=0)
