@@ -194,6 +194,8 @@ def main():
                                command=lambda : decToThird(calc))
     secondItem.add_command(label='Перевести в 4-ю систему счисления',
                               command=lambda : decToFour(calc))
+    secondItem.add_command(label='Перевести в 5-ю систему счисления',
+                               command=lambda : decToFifth(calc))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
