@@ -206,6 +206,8 @@ def main():
                               command=lambda : decToNine(calc))
     secondItem.add_command(label='Перевести в 10-ю систему счисления',
                                 command=lambda : returnToDec(calc))
+    secondItem.add_command(label='Перевести в 16-ю систему счисления',
+                             command=lambda : decToHex(calc))
 
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
