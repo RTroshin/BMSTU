@@ -209,6 +209,14 @@ def main():
     secondItem.add_command(label='Перевести в 16-ю систему счисления',
                              command=lambda : decToHex(calc))
 
+
+
+
+    mainMenu.add_cascade(label='Справка', menu=thirdItem)
+    thirdItem.add_command(label='О программе')
+
+
+
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
     # w["menu"].config(bg="#222222", bd=0)
@@ -216,6 +224,11 @@ def main():
     #        column=0,
     #        columnspan=4,
     #        stick='wens')
+
+
+    # Обработка событий
+    root.bind('<Key>', lambda event : pressKey(calc, calcHistory, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
