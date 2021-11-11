@@ -294,6 +294,15 @@ def main():
     button7.bind("<Enter>", lambda event : on_enter_digit(button7, event))
     button7.bind("<Leave>", lambda event : on_leave_digit(button7, event))
 
+    button8 = makeDigitButton(calc, calcHistory, '8')
+    button8.grid(row=5,
+                 column=1,
+                 stick='wens',
+                 padx=1,
+                 pady=1)
+    button8.bind("<Enter>", lambda event : on_enter_digit(button8, event))
+    button8.bind("<Leave>", lambda event : on_leave_digit(button8, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
