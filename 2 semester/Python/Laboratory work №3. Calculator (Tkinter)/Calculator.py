@@ -339,6 +339,15 @@ def main():
     opButton0.bind("<Enter>", lambda event : on_enter_operation(opButton0, event))
     opButton0.bind("<Leave>", lambda event : on_leave_operation(opButton0, event))
 
+    opButton8 = makeOperationButton(calc, '÷')
+    opButton8.grid(row=4,
+                   column=3,
+                   stick='wens',
+                   padx=1,
+                   pady=1)
+    opButton8.bind("<Enter>", lambda event : on_enter_operation(opButton8, event))
+    opButton8.bind("<Leave>", lambda event : on_leave_operation(opButton8, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
