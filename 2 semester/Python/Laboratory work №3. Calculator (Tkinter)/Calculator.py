@@ -411,6 +411,15 @@ def main():
     opButton7.bind("<Enter>", lambda event : on_enter_operation(opButton7, event))
     opButton7.bind("<Leave>", lambda event : on_leave_operation(opButton7, event))
 
+    opButton1 = makeNumSystemBinButton(calc, 'Bin')
+    opButton1.grid(row=3,
+                   column=0,
+                   stick='wens',
+                   padx=1,
+                   pady=1)
+    opButton1.bind("<Enter>", lambda event : on_enter_operation(opButton1, event))
+    opButton1.bind("<Leave>", lambda event : on_leave_operation(opButton1, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
