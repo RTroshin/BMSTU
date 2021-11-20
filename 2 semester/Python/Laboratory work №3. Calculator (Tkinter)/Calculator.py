@@ -402,6 +402,15 @@ def main():
     opButton6.bind("<Enter>", lambda event : on_enter_operation(opButton6, event))
     opButton6.bind("<Leave>", lambda event : on_leave_operation(opButton6, event))
 
+    opButton7 = makeClearButtonDel(calc, 'Del')
+    opButton7.grid(row=4,
+                   column=2,
+                   stick='wens',
+                   padx=1,
+                   pady=1)
+    opButton7.bind("<Enter>", lambda event : on_enter_operation(opButton7, event))
+    opButton7.bind("<Leave>", lambda event : on_leave_operation(opButton7, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
