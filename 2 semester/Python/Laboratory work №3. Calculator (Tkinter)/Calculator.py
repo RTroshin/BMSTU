@@ -438,6 +438,15 @@ def main():
     opButton3.bind("<Enter>", lambda event : on_enter_operation(opButton3, event))
     opButton3.bind("<Leave>", lambda event : on_leave_operation(opButton3, event))
 
+    opButton4 = makeNumSystemHexButton(calc, 'Hex')
+    opButton4.grid(row=3,
+                   column=3,
+                   stick='wens',
+                   padx=1,
+                   pady=1)
+    opButton4.bind("<Enter>", lambda event : on_enter_operation(opButton4, event))
+    opButton4.bind("<Leave>", lambda event : on_leave_operation(opButton4, event))
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
