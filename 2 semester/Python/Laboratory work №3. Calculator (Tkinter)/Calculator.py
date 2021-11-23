@@ -448,6 +448,13 @@ def main():
     opButton4.bind("<Leave>", lambda event : on_leave_operation(opButton4, event))
 
 
+    # Установка минимальных размеров кнопок
+    root.grid_columnconfigure(0, minsize=50)
+    root.grid_columnconfigure(1, minsize=50)
+    root.grid_columnconfigure(2, minsize=50)
+    root.grid_columnconfigure(3, minsize=50)
+
+
     # Создание окна ввода
     calcHistory = Entry(root,
                  bd = 0,
