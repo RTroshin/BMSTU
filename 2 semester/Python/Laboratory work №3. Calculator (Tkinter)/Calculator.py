@@ -454,6 +454,11 @@ def main():
     root.grid_columnconfigure(2, minsize=50)
     root.grid_columnconfigure(3, minsize=50)
 
+    root.grid_rowconfigure(0, minsize=10)
+    root.grid_rowconfigure(1, minsize=60)
+    root.grid_rowconfigure(2, minsize=60)
+    root.grid_rowconfigure(3, minsize=40)
+
 
     # Создание окна ввода
     calcHistory = Entry(root,
