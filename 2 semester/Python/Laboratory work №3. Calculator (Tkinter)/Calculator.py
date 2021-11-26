@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    # Создание окна ввода
-    calcHistory = Entry(root,
-                 bd = 0,
-                 disabledbackground='#222222',
-                 disabledforeground='#EEEEEE',
-                 justify=RIGHT,
-                 font=('Roboto', 14),
-                 width=15)
-
     calcHistory.grid(row=1,
               column=0,
               columnspan=4,
