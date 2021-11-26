@@ -467,14 +467,6 @@ def main():
     root.mainloop()
 
 
-    calcHistory.grid(row=1,
-              column=0,
-              columnspan=4,
-              stick='wens',
-              padx=1)
-
-    calcHistory['state'] = DISABLED
-
     calc = Entry(root,
                  bd = 0,
                  disabledbackground='#222222',
