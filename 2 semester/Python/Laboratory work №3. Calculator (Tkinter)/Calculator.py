@@ -467,14 +467,6 @@ def main():
     root.mainloop()
 
 
-    calc = Entry(root,
-                 bd = 0,
-                 disabledbackground='#222222',
-                 disabledforeground='#EEEEEE',
-                 justify=RIGHT,
-                 font=('Roboto', 32), # Arial, Roboto Black, Monserat ExtraBold, Play
-                 width=15)
-
     calc.insert(0, 0)
     calc.grid(row=2,
               column=0,
