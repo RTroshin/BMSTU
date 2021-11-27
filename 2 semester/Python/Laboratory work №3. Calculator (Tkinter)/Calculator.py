@@ -467,17 +467,6 @@ def main():
     root.mainloop()
 
 
-    calc.insert(0, 0)
-    calc.grid(row=2,
-              column=0,
-              columnspan=4,
-              stick='wens',
-              padx=1)
-
-
-    calc['state'] = DISABLED
-
-
     # Обработка событий
     root.bind('<Key>', lambda event : pressKey(calc, calcHistory, event))
 
