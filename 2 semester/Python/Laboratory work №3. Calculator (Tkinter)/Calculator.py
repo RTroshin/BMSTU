@@ -467,10 +467,6 @@ def main():
     root.mainloop()
 
 
-    # Обработка событий
-    root.bind('<Key>', lambda event : pressKey(calc, calcHistory, event))
-
-
     # Создание кнопок
     button1 = makeDigitButton(calc, calcHistory, '1')
     button1.grid(row=7,
