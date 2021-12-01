@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    button9 = makeDigitButton(calc, calcHistory, '9')
-    button9.grid(row=5,
-                 column=2,
-                 stick='wens',
-                 padx=1,
-                 pady=1)
-    button9.bind("<Enter>", lambda event : on_enter_digit(button9, event))
-    button9.bind("<Leave>", lambda event : on_leave_digit(button9, event))
-
     button0 = makeDigitButton(calc, calcHistory, '0')
     button0.grid(row=8,
                  column=1,
