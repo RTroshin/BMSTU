@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    opButton = makeOperationButton(calc, '±')
-    opButton.grid(row=8,
-                  column=0,
-                  stick='wens',
-                  padx=1,
-                  pady=1)
-    opButton.bind("<Enter>", lambda event : on_enter_operation(opButton, event))
-    opButton.bind("<Leave>", lambda event : on_leave_operation(opButton, event))
-
     opButton0 = makePointButton(calc, '.')
     opButton0.grid(row=8,
                    column=2,
