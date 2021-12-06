@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    opButton5 = makeClearButtonCE(calc, 'CE')
-    opButton5.grid(row=4,
-                   column=0,
-                   stick='wens',
-                   padx=1,
-                   pady=1)
-    opButton5.bind("<Enter>", lambda event : on_enter_operation(opButton5, event))
-    opButton5.bind("<Leave>", lambda event : on_leave_operation(opButton5, event))
-
     opButton6 = makeClearButtonC(calc, calcHistory, 'C')
     opButton6.grid(row=4,
                    column=1,
