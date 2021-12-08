@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    opButton1 = makeNumSystemBinButton(calc, 'Bin')
-    opButton1.grid(row=3,
-                   column=0,
-                   stick='wens',
-                   padx=1,
-                   pady=1)
-    opButton1.bind("<Enter>", lambda event : on_enter_operation(opButton1, event))
-    opButton1.bind("<Leave>", lambda event : on_leave_operation(opButton1, event))
-
     opButton2 = makeNumSystemOctButton(calc, 'Oct')
     opButton2.grid(row=3,
                    column=1,
