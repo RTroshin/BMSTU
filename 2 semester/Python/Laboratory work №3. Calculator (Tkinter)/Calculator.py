@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    opButton3 = makeNumSystemDecButton(calc, 'Dec')
-    opButton3.grid(row=3,
-                   column=2,
-                   stick='wens',
-                   padx=1,
-                   pady=1)
-    opButton3.bind("<Enter>", lambda event : on_enter_operation(opButton3, event))
-    opButton3.bind("<Leave>", lambda event : on_leave_operation(opButton3, event))
-
     opButton4 = makeNumSystemHexButton(calc, 'Hex')
     opButton4.grid(row=3,
                    column=3,
