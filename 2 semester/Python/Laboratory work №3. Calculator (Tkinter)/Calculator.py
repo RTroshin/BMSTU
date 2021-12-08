@@ -467,15 +467,6 @@ def main():
     root.mainloop()
 
 
-    opButton2 = makeNumSystemOctButton(calc, 'Oct')
-    opButton2.grid(row=3,
-                   column=1,
-                   stick='wens',
-                   padx=1,
-                   pady=1)
-    opButton2.bind("<Enter>", lambda event : on_enter_operation(opButton2, event))
-    opButton2.bind("<Leave>", lambda event : on_leave_operation(opButton2, event))
-
     opButton3 = makeNumSystemDecButton(calc, 'Dec')
     opButton3.grid(row=3,
                    column=2,
