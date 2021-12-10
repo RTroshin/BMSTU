@@ -467,10 +467,6 @@ def main():
     root.mainloop()
 
 
-    root.grid_rowconfigure(0, minsize=10)
-    root.grid_rowconfigure(1, minsize=60)
-    root.grid_rowconfigure(2, minsize=60)
-    root.grid_rowconfigure(3, minsize=40)
     root.grid_rowconfigure(4, minsize=60)
     root.grid_rowconfigure(5, minsize=60)
     root.grid_rowconfigure(6, minsize=60)
