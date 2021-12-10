@@ -467,12 +467,6 @@ def main():
     root.mainloop()
 
 
-    # Установка минимальных размеров кнопок
-    root.grid_columnconfigure(0, minsize=50)
-    root.grid_columnconfigure(1, minsize=50)
-    root.grid_columnconfigure(2, minsize=50)
-    root.grid_columnconfigure(3, minsize=50)
-
     root.grid_rowconfigure(0, minsize=10)
     root.grid_rowconfigure(1, minsize=60)
     root.grid_rowconfigure(2, minsize=60)
