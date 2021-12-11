@@ -467,11 +467,5 @@ def main():
     root.mainloop()
 
 
-    root.grid_rowconfigure(7, minsize=60)
-    root.grid_rowconfigure(8, minsize=60)
-
-    root.mainloop()
-
-
 if __name__ == "__main__":
     main()
