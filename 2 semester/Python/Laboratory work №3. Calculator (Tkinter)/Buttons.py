@@ -75,6 +75,18 @@ def makeOperationButton(calc, operation):
     return button
 
 
+# Создание кнопки с операцией смены знака
+def makeSignButton(calc, operation):
+    button =  Button(bg='#222222',
+                  text=operation,
+                  font=('Roboto', 16),
+                  fg='#EEEEEE',
+                  activebackground='#444444',
+                  activeforeground='#EEEEEE',
+                  command=lambda : changeSign(calc))
+    return button
+
+
 # Создание кнопок с операциями
 def makePointButton(calc, operation):
     button =  Button(bg='#222222',
