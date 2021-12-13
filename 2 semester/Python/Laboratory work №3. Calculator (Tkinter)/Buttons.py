@@ -27,7 +27,7 @@ def makeNumSystemBinButton(calc, operation):
     return button
 
 
-# Создание кнопок с операциями по переводу системам счисления
+# Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemOctButton(calc, operation):
     button =  Button(bg='#222222',
                   text=operation,
@@ -39,7 +39,7 @@ def makeNumSystemOctButton(calc, operation):
     return button
 
 
-# Создание кнопок с операциями по переводу системам счисления
+# Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemDecButton(calc, operation):
     button =  Button(bg='#222222',
                   text=operation,
@@ -51,7 +51,7 @@ def makeNumSystemDecButton(calc, operation):
     return button
 
 
-# Создание кнопок с операциями по переводу системам счисления
+# Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemHexButton(calc, operation):
     button =  Button(bg='#222222',
                   text=operation,
@@ -87,7 +87,7 @@ def makeSignButton(calc, operation):
     return button
 
 
-# Создание кнопок с операциями
+# Создание кнопки с операцией добавления точки
 def makePointButton(calc, operation):
     button =  Button(bg='#222222',
                   text=operation,
