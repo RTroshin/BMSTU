@@ -3,6 +3,9 @@ from tkinter.constants import RIGHT, END, NORMAL, DISABLED
 
 from Calculator import *
 from Buttons import *
+import Buttons
+from NumericalSystemFunctions import *
+import NumericalSystemFunctions
 
 
 block = False # Глобальная переменная
