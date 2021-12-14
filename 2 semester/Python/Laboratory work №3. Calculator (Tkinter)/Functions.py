@@ -13,7 +13,26 @@ BUTTON_FLAG_1 = False
 BUTTON_FLAG_2 = True
 
 # Добавление цифры в поле ввода
+BLOCK = False # Глобальная переменная
+BUTTON_FLAG_1 = False
+BUTTON_FLAG_2 = True
+
+# Добавление цифры в поле ввода
 def addDigit(calc, calcHistory, digit):
+    global BUTTON_FLAG_1, BUTTON_FLAG_2
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        if BUTTON_FLAG_1 == False:
+            BUTTON_FLAG_1 = True
+            BUTTON_FLAG_2 = False
+            button = Buttons.makeNumSystemDecButton(calc, 'Dec')
+            button['bg'] = '#04346C'
+            button.grid(row=3,
+                        column=2,
+                        stick='wens',
+                        padx=1,
+                        pady=1)
+        return '0'
+
     global block
     if (block != True):
         value = calc.get()
