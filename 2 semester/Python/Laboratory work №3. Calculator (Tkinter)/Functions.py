@@ -8,8 +8,9 @@ from NumericalSystemFunctions import *
 import NumericalSystemFunctions
 
 
-block = False # Глобальная переменная
-
+BLOCK = False # Глобальная переменная
+BUTTON_FLAG_1 = False
+BUTTON_FLAG_2 = True
 
 # Добавление цифры в поле ввода
 def addDigit(calc, calcHistory, digit):
