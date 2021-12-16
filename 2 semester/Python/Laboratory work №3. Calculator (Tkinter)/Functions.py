@@ -32,6 +32,17 @@ def addDigit(calc, calcHistory, digit):
                         padx=1,
                         pady=1)
         return '0'
+    elif NumericalSystemFunctions.returnNumericalSystemNumber() == 10:
+        if BUTTON_FLAG_2 == False:
+            BUTTON_FLAG_2 = True
+            BUTTON_FLAG_1 = False
+            button = Buttons.makeNumSystemDecButton(calc, 'Dec')
+            button['bg'] = '#222222'
+            button.grid(row=3,
+                        column=2,
+                        stick='wens',
+                        padx=1,
+                        pady=1)
 
     global block
     if (block != True):
