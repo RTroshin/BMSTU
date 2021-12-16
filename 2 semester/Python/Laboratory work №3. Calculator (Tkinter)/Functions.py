@@ -44,8 +44,8 @@ def addDigit(calc, calcHistory, digit):
                         padx=1,
                         pady=1)
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         value = calc.get()
 
         # Условие для того, чтобы по-умолчанию в меню ввода появлялся ноль
