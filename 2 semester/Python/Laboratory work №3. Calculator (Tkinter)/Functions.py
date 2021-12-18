@@ -71,6 +71,9 @@ def addDigit(calc, calcHistory, digit):
 
 # Добавление знака операции в поле ввода
 def addOperation(calc, operation):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
     global block
     if (block != True):
         value = calc.get()
