@@ -74,8 +74,8 @@ def addOperation(calc, operation):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
         return '0'
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         value = calc.get()
         value = replaceSymbol(value)
 
@@ -83,7 +83,7 @@ def addOperation(calc, operation):
         if value[-1] in '-+/*':
             value = value[:-1]
 
-        # Условия для того, чтобы после точки ставился ноль, если перед ней знак стоит операции
+        # Условия для того, чтобы после точки ставился ноль, если перед ней стоит знак операции
         if value[-1] == '.':
             value = value[:-1]
 
