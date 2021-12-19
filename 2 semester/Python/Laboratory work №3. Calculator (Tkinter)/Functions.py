@@ -93,7 +93,13 @@ def addOperation(calc, operation):
         calc['state'] = DISABLED
 
 
-# Отделение дробной части точкой!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Изменение знака у числа
+def changeSign(calc):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
+
+# Отделение дробной части точкой
 def addPoint(calc, operation):
     global block
     if (block != True):
@@ -103,7 +109,7 @@ def addPoint(calc, operation):
         if value[-1] == '.':
             value = value[:-1]
 
-        # Условия для того, чтобы в одном числе было не более одной точки!!!!!!!!!!!!!!!!!!!!!!!!
+        # Условия для того, чтобы в одном числе было не более одной точки
         if '.' in value:
             operation = ''
 
