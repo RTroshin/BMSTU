@@ -108,6 +108,11 @@ def changeSign(calc):
         else:
             value = '-' + value
 
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, value)
+        calc['state'] = DISABLED
+
 
 # Отделение дробной части точкой
 def addPoint(calc, operation):
