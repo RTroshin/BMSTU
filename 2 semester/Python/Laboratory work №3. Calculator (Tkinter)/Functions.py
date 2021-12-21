@@ -102,6 +102,12 @@ def changeSign(calc):
     if (BLOCK != True):
         value = calc.get()
 
+        # Условия для проверки текущего знака числа
+        if value[0] == '-' :
+            value = value[1:]
+        else:
+            value = '-' + value
+
 
 # Отделение дробной части точкой
 def addPoint(calc, operation):
