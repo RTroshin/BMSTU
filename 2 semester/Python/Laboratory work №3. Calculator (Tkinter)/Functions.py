@@ -116,6 +116,9 @@ def changeSign(calc):
 
 # Отделение дробной части точкой
 def addPoint(calc, operation):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
     global block
     if (block != True):
         value = calc.get()
