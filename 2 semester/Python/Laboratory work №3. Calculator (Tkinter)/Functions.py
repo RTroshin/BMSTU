@@ -119,8 +119,8 @@ def addPoint(calc, operation):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
         return '0'
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         value = calc.get()
 
         # Условия для того, чтобы нельзя было ввести несколько точек
