@@ -131,6 +131,9 @@ def addPoint(calc, operation):
         if '.' in value:
             operation = ''
 
+        if value[-1] in '–+÷×':
+            operation = ''
+
         calc['state'] = NORMAL
         calc.delete(0, END)
         calc.insert(0, value + operation)
