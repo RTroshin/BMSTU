@@ -155,6 +155,9 @@ def addHistory(value, calcHistory):
 
 # Вычисление выражения в поле ввода
 def calculate(calc, calcHistory):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
     global block
     if (block != True):
         valueHistory = calcHistory.get()
