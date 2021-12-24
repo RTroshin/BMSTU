@@ -158,8 +158,8 @@ def calculate(calc, calcHistory):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
         return '0'
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         valueHistory = calcHistory.get()
         value = calc.get()
 
