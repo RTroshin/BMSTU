@@ -13,11 +13,6 @@ BUTTON_FLAG_1 = False
 BUTTON_FLAG_2 = True
 
 # Добавление цифры в поле ввода
-BLOCK = False # Глобальная переменная
-BUTTON_FLAG_1 = False
-BUTTON_FLAG_2 = True
-
-# Добавление цифры в поле ввода
 def addDigit(calc, calcHistory, digit):
     global BUTTON_FLAG_1, BUTTON_FLAG_2
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
