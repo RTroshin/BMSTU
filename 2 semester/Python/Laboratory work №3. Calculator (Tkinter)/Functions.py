@@ -195,7 +195,7 @@ def calculate(calc, calcHistory):
             calc['font'] = ('Roboto', 16)
             calc['width'] = 30
             calc.insert(0, 'Нужно вводить только цифры')
-            block = True
+            BLOCK = True
         except ZeroDivisionError:
             # messagebox.showinfo('Внимание!', 'Деление на ноль невозможно!') # Выводить в самом окне
             valueHistory = replaceSymbolReturn(valueHistory)
@@ -205,7 +205,7 @@ def calculate(calc, calcHistory):
             calc['font'] = ('Roboto', 16)
             calc['width'] = 30
             calc.insert(0, 'Деление на ноль невозможно')
-            block = True
+            BLOCK = True
 
     calcHistory['state'] = DISABLED
     calc['state'] = DISABLED
