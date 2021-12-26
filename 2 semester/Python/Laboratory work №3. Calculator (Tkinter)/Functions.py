@@ -230,6 +230,9 @@ def replaceSymbolReturn(value):
 
 # Очистка поля ввода по кнопке CE
 def clearCE(calc):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
     global block
     if (block != True):
         calc['state'] = NORMAL
