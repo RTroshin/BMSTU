@@ -233,8 +233,8 @@ def clearCE(calc):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
         return '0'
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         calc['state'] = NORMAL
         calc.delete(0, END)
         calc.insert(0, 0)
