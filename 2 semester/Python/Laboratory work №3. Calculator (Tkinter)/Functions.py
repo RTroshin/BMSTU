@@ -243,6 +243,9 @@ def clearCE(calc):
 
 # Очистка поля ввода по кнопке C
 def clearC(calc, calcHistory):
+    if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
+        return '0'
+
     global block
     block = False
 
