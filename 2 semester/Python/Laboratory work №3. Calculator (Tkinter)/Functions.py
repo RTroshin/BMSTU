@@ -266,8 +266,8 @@ def clearDel(calc):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
         return '0'
 
-    global block
-    if (block != True):
+    global BLOCK
+    if (BLOCK != True):
         value = calc.get()
         calc['state'] = NORMAL
 
