@@ -272,7 +272,9 @@ def clearDel(calc):
         calc['state'] = NORMAL
 
         calc.delete(len(value) - 1, END)
-        if not len(value) - 1:
+
+        if not len(value) - 1 or  (len(value) - 1 == 1 and '-' in value):
+            calc.delete(0, END)
             calc.insert(0, 0)
 
         calc['state'] = DISABLED
