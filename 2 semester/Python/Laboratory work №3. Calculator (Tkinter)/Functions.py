@@ -283,9 +283,9 @@ def clearDel(calc):
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, calcHistory, event):
 
-    print(event.char)
+    # print(event.char)
     if event.char.isdigit():
-        addDigit(calc, event.char)
+        addDigit(calc, calcHistory, event.char)
     elif event.char in '+-/*':
         addOperation(calc, calcHistory, event.char)
     elif event.char == '\r':
