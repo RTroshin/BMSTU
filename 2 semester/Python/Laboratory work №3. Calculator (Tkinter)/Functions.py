@@ -287,7 +287,8 @@ def pressKey(calc, calcHistory, event):
     if event.char.isdigit():
         addDigit(calc, calcHistory, event.char)
     elif event.char in '+-/*':
-        addOperation(calc, calcHistory, event.char)
+        event.char = replaceSymbolReturn(event.char)
+        addOperation(calc, event.char)
     elif event.char == '\r':
         calculate(calc, calcHistory)
     elif event.char == '\b':
