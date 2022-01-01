@@ -5,7 +5,8 @@ from Functions import *
 from Buttons import *
 
 
-block = False # Глобальная переменная
+BLOCK = False # Глобальная переменная
+SYSNUMBER = 10
 
 
 # Перевод из десятичной в двоичную систему счисления
