@@ -11,6 +11,9 @@ SYSNUMBER = 10
 
 # Перевод из десятичной в двоичную систему счисления
 def decToBin(calc):
+    global BLOCK
+    global SYSNUMBER
+
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
