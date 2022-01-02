@@ -13,6 +13,9 @@ SYSNUMBER = 10
 def decToBin(calc):
     global BLOCK
     global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 2
 
     value = float(calc.get())
     valueInt = int(value)
