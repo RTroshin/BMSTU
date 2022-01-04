@@ -23,6 +23,8 @@ def decToBin(calc):
             value = float(calc.get())
         except ValueError:
             return '0'
+        valueInt = int(value)
+        valueFloat = value - int(value)
 
     value = float(calc.get())
     valueInt = int(value)
