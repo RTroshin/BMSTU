@@ -34,6 +34,9 @@ def decToBin(calc):
             result = str(valueInt % SYSNUMBER) + result
             valueInt //= SYSNUMBER
 
+        if valueFloat:
+            result += '.'
+
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
