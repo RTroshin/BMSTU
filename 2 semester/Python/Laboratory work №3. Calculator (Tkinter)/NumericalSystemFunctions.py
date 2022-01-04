@@ -29,6 +29,11 @@ def decToBin(calc):
         if valueInt == 0:
             return '0'
 
+        result = ''
+        while valueInt > 0:
+            result = str(valueInt % SYSNUMBER) + result
+            valueInt //= SYSNUMBER
+
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
