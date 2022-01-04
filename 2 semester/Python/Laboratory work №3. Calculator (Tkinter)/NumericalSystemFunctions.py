@@ -19,6 +19,10 @@ def decToBin(calc):
         else:
             returnToDec(calc)
             SYSNUMBER = 2
+        try:
+            value = float(calc.get())
+        except ValueError:
+            return '0'
 
     value = float(calc.get())
     valueInt = int(value)
