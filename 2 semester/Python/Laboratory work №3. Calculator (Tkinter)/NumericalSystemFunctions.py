@@ -36,6 +36,8 @@ def decToBin(calc):
 
         if valueFloat:
             result += '.'
+        else:
+            result += ''
 
     value = float(calc.get())
     valueInt = int(value)
