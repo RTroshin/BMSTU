@@ -47,6 +47,12 @@ def decToBin(calc):
             valueFloat -= int(valueFloat)
             iter += 1
 
+        SYSNUMBER = 2
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, result)
+        calc['state'] = DISABLED
+
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
@@ -71,11 +77,6 @@ def decToBin(calc):
         result += str(number)
         valueFloat -= int(valueFloat)
         iter += 1
-
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, result)
-    calc['state'] = DISABLED
 
 
 # Перевод из десятичной в восьмеричную систему счисления
