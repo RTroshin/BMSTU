@@ -70,14 +70,6 @@ def decToBin(calc):
     else:
         result += ''
 
-    iter = 0
-    while valueFloat > 1e-5 and iter < 5:
-        valueFloat = valueFloat * 2
-        number = (int)(valueFloat)
-        result += str(number)
-        valueFloat -= int(valueFloat)
-        iter += 1
-
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
