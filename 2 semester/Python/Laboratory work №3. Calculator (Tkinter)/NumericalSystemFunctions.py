@@ -65,11 +65,6 @@ def decToBin(calc):
         result = str(valueInt % 2) + result
         valueInt //= 2
 
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
-
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
