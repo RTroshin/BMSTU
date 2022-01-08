@@ -53,10 +53,6 @@ def decToBin(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
-
     if valueInt == 0:
         return '0'
 
