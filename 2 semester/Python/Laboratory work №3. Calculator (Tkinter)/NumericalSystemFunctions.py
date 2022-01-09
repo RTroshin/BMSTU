@@ -53,9 +53,6 @@ def decToBin(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-    if valueInt == 0:
-        return '0'
-
     result = ''
     while valueInt > 0:
         result = str(valueInt % 2) + result
