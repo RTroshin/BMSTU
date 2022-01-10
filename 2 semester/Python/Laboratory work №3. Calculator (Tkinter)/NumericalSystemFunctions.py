@@ -53,11 +53,6 @@ def decToBin(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-    result = ''
-    while valueInt > 0:
-        result = str(valueInt % 2) + result
-        valueInt //= 2
-
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
