@@ -54,6 +54,15 @@ def decToBin(calc):
         calc['state'] = DISABLED
 
 
+# Перевод из десятичной в троичную систему счисления
+def decToThird(calc):
+    global BLOCK
+    global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 3
+
+
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
     value = float(calc.get())
