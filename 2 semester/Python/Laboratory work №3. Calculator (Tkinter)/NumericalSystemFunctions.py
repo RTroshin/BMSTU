@@ -61,6 +61,9 @@ def decToThird(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 3
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 3
 
 
 # Перевод из десятичной в восьмеричную систему счисления
