@@ -64,6 +64,10 @@ def decToThird(calc):
         else:
             returnToDec(calc)
             SYSNUMBER = 3
+        try:
+            value = float(calc.get())
+        except ValueError:
+            return '0'
 
 
 # Перевод из десятичной в восьмеричную систему счисления
