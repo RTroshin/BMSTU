@@ -106,6 +106,9 @@ def decToFour(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 4
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 4
 
 
 # Перевод из десятичной в восьмеричную систему счисления
