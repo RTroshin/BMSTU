@@ -129,6 +129,12 @@ def decToFour(calc):
         else:
             result += ''
 
+        SYSNUMBER = 4
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, result)
+        calc['state'] = DISABLED
+
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
