@@ -151,6 +151,9 @@ def decToFifth(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 5
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 5
 
 
 # Перевод из десятичной в восьмеричную систему счисления
