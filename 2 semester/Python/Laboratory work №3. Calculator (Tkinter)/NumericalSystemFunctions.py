@@ -189,6 +189,15 @@ def decToFifth(calc):
         calc['state'] = DISABLED
 
 
+# Перевод из десятичной в шестеричную систему счисления
+def decToSix(calc):
+    global BLOCK
+    global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 6
+
+
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
     value = float(calc.get())
