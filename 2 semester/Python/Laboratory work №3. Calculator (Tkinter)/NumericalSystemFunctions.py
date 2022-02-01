@@ -196,6 +196,13 @@ def decToSix(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 6
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 6
+        try:
+            value = float(calc.get())
+        except ValueError:
+            return '0'
 
 
 # Перевод из десятичной в восьмеричную систему счисления
