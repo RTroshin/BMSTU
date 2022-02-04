@@ -241,6 +241,9 @@ def decToSeven(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 7
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 7
 
 
 # Перевод из десятичной в восьмеричную систему счисления
