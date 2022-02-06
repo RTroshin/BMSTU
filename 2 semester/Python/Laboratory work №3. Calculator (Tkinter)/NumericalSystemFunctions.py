@@ -251,6 +251,9 @@ def decToSeven(calc):
         valueInt = int(value)
         valueFloat = value - int(value)
 
+        if valueInt == 0:
+            return '0'
+
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
