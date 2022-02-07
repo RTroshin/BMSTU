@@ -254,6 +254,11 @@ def decToSeven(calc):
         if valueInt == 0:
             return '0'
 
+        result = ''
+        while valueInt > 0:
+            result = str(valueInt % SYSNUMBER) + result
+            valueInt //= SYSNUMBER
+
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
