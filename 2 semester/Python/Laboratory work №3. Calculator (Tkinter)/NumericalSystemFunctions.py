@@ -272,6 +272,8 @@ def decToSeven(calc):
             valueFloat -= int(valueFloat)
             iter += 1
 
+        SYSNUMBER = 7
+
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
