@@ -273,6 +273,8 @@ def decToSeven(calc):
             iter += 1
 
         SYSNUMBER = 7
+        calc['state'] = NORMAL
+        calc.delete(0, END)
 
 
 # Перевод из десятичной в восьмеричную систему счисления
