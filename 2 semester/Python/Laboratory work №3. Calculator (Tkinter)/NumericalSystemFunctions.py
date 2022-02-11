@@ -283,6 +283,10 @@ def decToSeven(calc):
 def decToOct(calc):
     global BLOCK
     global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 8
+
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
