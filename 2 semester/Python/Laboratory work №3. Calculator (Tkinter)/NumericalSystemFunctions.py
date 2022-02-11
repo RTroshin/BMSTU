@@ -281,6 +281,8 @@ def decToSeven(calc):
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
+    global BLOCK
+    global SYSNUMBER
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
