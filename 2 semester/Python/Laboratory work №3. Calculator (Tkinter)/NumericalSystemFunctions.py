@@ -293,10 +293,8 @@ def decToOct(calc):
             value = float(calc.get())
         except ValueError:
             return '0'
-
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
+        valueInt = int(value)
+        valueFloat = value - int(value)
 
     if valueInt == 0:
         return '0'
