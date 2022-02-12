@@ -286,6 +286,9 @@ def decToOct(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 8
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 8
 
     value = float(calc.get())
     valueInt = int(value)
