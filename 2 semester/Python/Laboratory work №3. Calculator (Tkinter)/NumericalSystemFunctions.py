@@ -296,13 +296,13 @@ def decToOct(calc):
         valueInt = int(value)
         valueFloat = value - int(value)
 
-    if valueInt == 0:
-        return '0'
+        if valueInt == 0:
+            return '0'
 
-    result = ''
-    while valueInt > 0:
-        result = str(valueInt % 8) + result
-        valueInt //= 8
+        result = ''
+        while valueInt > 0:
+            result = str(valueInt % SYSNUMBER) + result
+            valueInt //= SYSNUMBER
 
     if valueFloat:
         result += '.'
