@@ -304,10 +304,10 @@ def decToOct(calc):
             result = str(valueInt % SYSNUMBER) + result
             valueInt //= SYSNUMBER
 
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
+        if valueFloat:
+            result += '.'
+        else:
+            result += ''
 
     iter = 0
     while valueFloat > 1e-5 and iter < 5:
