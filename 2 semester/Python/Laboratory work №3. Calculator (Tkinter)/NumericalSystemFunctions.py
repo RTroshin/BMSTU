@@ -315,12 +315,13 @@ def decToOct(calc):
         number = (int)(valueFloat)
         result += str(number)
         valueFloat -= int(valueFloat)
-        iter += 1
+            iter += 1
 
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, result)
-    calc['state'] = DISABLED
+        SYSNUMBER = 8
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, result)
+        calc['state'] = DISABLED
 
 
 # Перевод из десятичной в десятичную систему счисления
