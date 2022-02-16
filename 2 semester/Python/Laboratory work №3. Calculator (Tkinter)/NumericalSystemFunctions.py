@@ -309,9 +309,9 @@ def decToOct(calc):
         else:
             result += ''
 
-    iter = 0
-    while valueFloat > 1e-5 and iter < 5:
-        valueFloat = valueFloat * 8
+        iter = 0
+        while valueFloat > 1e-5 and iter < 5:
+            valueFloat = valueFloat * SYSNUMBER
             number = (int)(valueFloat)
             result += str(number)
             valueFloat -= int(valueFloat)
