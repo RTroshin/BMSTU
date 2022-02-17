@@ -324,6 +324,15 @@ def decToOct(calc):
         calc['state'] = DISABLED
 
 
+# Перевод из десятичной в девятеричную систему счисления
+def decToNine(calc):
+    global BLOCK
+    global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 9
+
+
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
     value = float(calc.get())
