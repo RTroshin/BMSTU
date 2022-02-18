@@ -331,6 +331,9 @@ def decToNine(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             SYSNUMBER = 9
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 9
 
 
 # Перевод из десятичной в десятичную систему счисления
