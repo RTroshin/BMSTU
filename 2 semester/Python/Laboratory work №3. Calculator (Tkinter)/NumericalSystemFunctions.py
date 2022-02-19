@@ -334,6 +334,10 @@ def decToNine(calc):
         else:
             returnToDec(calc)
             SYSNUMBER = 9
+        try:
+            value = float(calc.get())
+        except ValueError:
+            return '0'
 
 
 # Перевод из десятичной в десятичную систему счисления
