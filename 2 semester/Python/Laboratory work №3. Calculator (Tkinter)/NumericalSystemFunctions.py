@@ -338,6 +338,8 @@ def decToNine(calc):
             value = float(calc.get())
         except ValueError:
             return '0'
+        valueInt = int(value)
+        valueFloat = value - int(value)
 
 
 # Перевод из десятичной в десятичную систему счисления
