@@ -341,6 +341,9 @@ def decToNine(calc):
         valueInt = int(value)
         valueFloat = value - int(value)
 
+        if valueInt == 0:
+            return '0'
+
 
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
