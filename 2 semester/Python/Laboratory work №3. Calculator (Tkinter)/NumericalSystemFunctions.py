@@ -349,6 +349,11 @@ def decToNine(calc):
             result = str(valueInt % SYSNUMBER) + result
             valueInt //= SYSNUMBER
 
+        if valueFloat:
+            result += '.'
+        else:
+            result += ''
+
 
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
