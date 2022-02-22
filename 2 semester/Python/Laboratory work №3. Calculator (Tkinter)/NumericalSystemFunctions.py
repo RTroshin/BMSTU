@@ -354,6 +354,11 @@ def decToNine(calc):
         else:
             result += ''
 
+        iter = 0
+        while valueFloat > 1e-5 and iter < 5:
+            valueFloat = valueFloat * SYSNUMBER
+            number = (int)(valueFloat)
+
         SYSNUMBER = 9
         calc['state'] = NORMAL
         calc.delete(0, END)
