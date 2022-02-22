@@ -354,6 +354,12 @@ def decToNine(calc):
         else:
             result += ''
 
+        SYSNUMBER = 9
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, result)
+        calc['state'] = DISABLED
+
 
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
