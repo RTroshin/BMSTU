@@ -371,6 +371,8 @@ def decToNine(calc):
 
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
+    global BLOCK
+    global SYSNUMBER
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
