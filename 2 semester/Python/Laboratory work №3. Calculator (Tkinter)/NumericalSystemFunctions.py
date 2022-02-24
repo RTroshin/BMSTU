@@ -373,6 +373,9 @@ def decToNine(calc):
 def returnToDec(calc):
     global BLOCK
     global SYSNUMBER
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            return '0'
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
