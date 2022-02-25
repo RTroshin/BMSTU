@@ -376,9 +376,9 @@ def returnToDec(calc):
     if (BLOCK != True):
         if SYSNUMBER == 10:
             return '0'
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
+        value = calc.get()
+        if value == 'Деление на ноль невозможно':
+            return '0'
 
     if valueInt == 0:
         return '0'
