@@ -380,8 +380,11 @@ def returnToDec(calc):
         if value == 'Деление на ноль невозможно':
             return '0'
 
-    if valueInt == 0:
-        return '0'
+        if value == '0':
+            return '0'
+
+        if '.' in value:
+            valueInt, valueFloat = map(str, value.split('.'))
 
     resultInt = 0
     i = 0
