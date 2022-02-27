@@ -385,9 +385,13 @@ def returnToDec(calc):
 
         if '.' in value:
             valueInt, valueFloat = map(str, value.split('.'))
+        else:
+            valueInt = value
+            valueFloat = '0'
 
-    resultInt = 0
-    i = 0
+        resultInt = 0
+        iter = len(valueInt) - 1
+
     while valueInt > 0:
         resultInt += pow(2 * valueInt % 10, i)
         valueInt = int(valueInt / 10)
