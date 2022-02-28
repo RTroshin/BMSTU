@@ -395,6 +395,13 @@ def returnToDec(calc):
             resultInt += int(digitReturn(digit)) * pow(SYSNUMBER, iter)
             iter -= 1
 
+        resultFloat = 0
+        iter = 1
+        for digit in valueFloat:
+            if digit != '0':
+                resultFloat += int(digitReturn(digit)) * pow(SYSNUMBER, -iter)
+            iter += 1
+
     while valueInt > 0:
         resultInt += pow(2 * valueInt % 10, i)
         valueInt = int(valueInt / 10)
