@@ -405,6 +405,8 @@ def returnToDec(calc):
         SYSNUMBER = 10
         calc['state'] = NORMAL
         calc.delete(0, END)
+        if resultFloat:
+            calc.insert(0, str(float(resultInt) + resultFloat))
 
     while valueInt > 0:
         resultInt += pow(2 * valueInt % 10, i)
