@@ -402,6 +402,10 @@ def returnToDec(calc):
                 resultFloat += int(digitReturn(digit)) * pow(SYSNUMBER, -iter)
             iter += 1
 
+        SYSNUMBER = 10
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+
     while valueInt > 0:
         resultInt += pow(2 * valueInt % 10, i)
         valueInt = int(valueInt / 10)
