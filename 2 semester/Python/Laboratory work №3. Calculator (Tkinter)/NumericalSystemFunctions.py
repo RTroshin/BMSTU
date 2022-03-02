@@ -407,6 +407,9 @@ def returnToDec(calc):
         calc.delete(0, END)
         if resultFloat:
             calc.insert(0, str(float(resultInt) + resultFloat))
+        else:
+            calc.insert(0, str(resultInt))
+        calc['state'] = DISABLED
 
     while valueInt > 0:
         resultInt += pow(2 * valueInt % 10, i)
