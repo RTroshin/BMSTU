@@ -411,10 +411,6 @@ def returnToDec(calc):
             calc.insert(0, str(resultInt))
         calc['state'] = DISABLED
 
-    while valueInt > 0:
-        resultInt += pow(2 * valueInt % 10, i)
-        valueInt = int(valueInt / 10)
-        i += 1
 
     resultInt = str(resultInt)
     if valueFloat:
