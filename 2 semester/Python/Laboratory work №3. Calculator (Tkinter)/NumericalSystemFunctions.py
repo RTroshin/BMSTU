@@ -412,12 +412,6 @@ def returnToDec(calc):
         calc['state'] = DISABLED
 
 
-    resultInt = str(resultInt)
-    if valueFloat:
-        resultInt += '.'
-    # else:
-    #     result += ''
-
     # resultFloat = 0
     # valueFloat = str(valueFloat)
     # print("valueFloat = ", valueFloat)
