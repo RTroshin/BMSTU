@@ -412,10 +412,6 @@ def returnToDec(calc):
         calc['state'] = DISABLED
 
 
-    # resultFloat = 0
-    # valueFloat = str(valueFloat)
-    # print("valueFloat = ", valueFloat)
-    # j = 1
     # for i in range(len(valueFloat)):
     #     print("valueFloat[i] = ", valueFloat[i])
     #     if i > 1:
