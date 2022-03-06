@@ -411,14 +411,6 @@ def returnToDec(calc):
             calc.insert(0, str(resultInt))
         calc['state'] = DISABLED
 
-
-    # for i in range(len(valueFloat)):
-    #     print("valueFloat[i] = ", valueFloat[i])
-    #     if i > 1:
-    #         resultFloat +=  int(valueFloat[i]) * pow(2, -j)
-    #         print("resultFloat = ", resultFloat)
-    #         print("j = ", j)
-    #         j += 1
         
     # resultFloat = float('0.' + str(resultFloat))
 
