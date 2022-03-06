@@ -414,12 +414,6 @@ def returnToDec(calc):
         
     # resultFloat = float('0.' + str(resultFloat))
 
-    # resultFloat = 0
-    # print(valueFloat)
-    # valueFloat *= 1e+5
-    # valueFloat = int(valueFloat)
-    # print(valueFloat)
-    # i = len(str(valueFloat))
     # while valueFloat > 0:
     #     resultFloat += pow(2 * valueFloat % 10, -i)
     #     valueFloat = int(valueFloat / 10)
