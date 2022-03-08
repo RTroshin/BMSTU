@@ -411,11 +411,9 @@ def returnToDec(calc):
             calc.insert(0, str(resultInt))
         calc['state'] = DISABLED
 
-    # print(resultFloat)
 
     calc['state'] = NORMAL
     calc.delete(0, END)
-    # calc.insert(0, str(float(resultInt) + resultFloat))
     calc.insert(0, str(resultInt))
     calc['state'] = DISABLED
 
