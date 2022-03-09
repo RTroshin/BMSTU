@@ -412,10 +412,6 @@ def returnToDec(calc):
         calc['state'] = DISABLED
 
 
-    calc.insert(0, str(resultInt))
-    calc['state'] = DISABLED
-
-
 # Перевод из десятичной в шестнадцатиричную систему счисления
 def decToHex(calc):
     value = float(calc.get())
