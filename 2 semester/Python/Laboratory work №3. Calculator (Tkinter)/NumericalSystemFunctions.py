@@ -414,6 +414,8 @@ def returnToDec(calc):
 
 # Перевод из десятичной в шестнадцатиричную систему счисления
 def decToHex(calc):
+    global BLOCK
+    global SYSNUMBER
     value = float(calc.get())
     valueInt = int(value)
     valueFloat = value - int(value)
