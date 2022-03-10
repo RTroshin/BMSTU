@@ -416,9 +416,12 @@ def returnToDec(calc):
 def decToHex(calc):
     global BLOCK
     global SYSNUMBER
-    value = float(calc.get())
-    valueInt = int(value)
-    valueFloat = value - int(value)
+    if (BLOCK != True):
+        if SYSNUMBER == 10:
+            SYSNUMBER = 16
+        else:
+            returnToDec(calc)
+            SYSNUMBER = 16
 
     if valueInt == 0:
         return '0'
