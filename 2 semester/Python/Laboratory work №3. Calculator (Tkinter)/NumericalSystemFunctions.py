@@ -426,6 +426,8 @@ def decToHex(calc):
             value = float(calc.get())
         except ValueError:
             return '0'
+        valueInt = int(value)
+        valueFloat = value - int(value)
 
     if valueInt == 0:
         return '0'
