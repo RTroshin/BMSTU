@@ -422,6 +422,10 @@ def decToHex(calc):
         else:
             returnToDec(calc)
             SYSNUMBER = 16
+        try:
+            value = float(calc.get())
+        except ValueError:
+            return '0'
 
     if valueInt == 0:
         return '0'
