@@ -437,12 +437,12 @@ def decToHex(calc):
             result = str(digit(valueInt % SYSNUMBER)) + result
             valueInt //= SYSNUMBER
 
-    if valueFloat:
-        result += '.'
-    else:
-        result += ''
+        if valueFloat:
+            result += '.'
+        else:
+            result += ''
 
-    iter = 0
+        iter = 0
     while valueFloat > 1e-5 and iter < 5:
         valueFloat = valueFloat * 16
         number = (int)(valueFloat)
