@@ -450,10 +450,11 @@ def decToHex(calc):
             valueFloat -= int(valueFloat)
             iter += 1
 
-    calc['state'] = NORMAL
-    calc.delete(0, END)
-    calc.insert(0, result)
-    calc['state'] = DISABLED
+        SYSNUMBER = 16
+        calc['state'] = NORMAL
+        calc.delete(0, END)
+        calc.insert(0, result)
+        calc['state'] = DISABLED
 
 
 # Преобразование десятичных чисел в шестнадцатиричные
