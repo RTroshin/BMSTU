@@ -443,12 +443,12 @@ def decToHex(calc):
             result += ''
 
         iter = 0
-    while valueFloat > 1e-5 and iter < 5:
-        valueFloat = valueFloat * 16
-        number = (int)(valueFloat)
-        result += str(digit(number))
-        valueFloat -= int(valueFloat)
-        iter += 1
+        while valueFloat > 1e-5 and iter < 5:
+            valueFloat = valueFloat * SYSNUMBER
+            number = (int)(valueFloat)
+            result += str(digit(number))
+            valueFloat -= int(valueFloat)
+            iter += 1
 
     calc['state'] = NORMAL
     calc.delete(0, END)
