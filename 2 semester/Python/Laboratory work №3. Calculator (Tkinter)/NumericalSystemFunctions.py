@@ -457,6 +457,12 @@ def decToHex(calc):
         calc['state'] = DISABLED
 
 
+# Возвращает в переменную номер системы счисления
+def returnNumericalSystemNumber():
+    if SYSNUMBER == 2:
+        return 2
+
+
 # Преобразование десятичных чисел в шестнадцатиричные
 def digit(num):
     if num == 0:
