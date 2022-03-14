@@ -461,6 +461,22 @@ def decToHex(calc):
 def returnNumericalSystemNumber():
     if SYSNUMBER == 2:
         return 2
+    elif SYSNUMBER == 3:
+        return 3
+    elif SYSNUMBER == 4:
+        return 5
+    elif SYSNUMBER == 5:
+        return 5
+    elif SYSNUMBER == 6:
+        return 6
+    elif SYSNUMBER == 7:
+        return 7
+    elif SYSNUMBER == 8:
+        return 8
+    elif SYSNUMBER == 9:
+        return 9
+    elif SYSNUMBER == 10:
+        return 10
 
 
 # Преобразование десятичных чисел в шестнадцатиричные
