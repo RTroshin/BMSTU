@@ -477,6 +477,18 @@ def returnNumericalSystemNumber():
         return 9
     elif SYSNUMBER == 10:
         return 10
+    elif SYSNUMBER == 11:
+        return 11
+    elif SYSNUMBER == 12:
+        return 12
+    elif SYSNUMBER == 13:
+        return 13
+    elif SYSNUMBER == 14:
+        return 14
+    elif SYSNUMBER == 15:
+        return 15
+    elif SYSNUMBER == 16:
+        return 16
 
 
 # Преобразование десятичных чисел в шестнадцатиричные
