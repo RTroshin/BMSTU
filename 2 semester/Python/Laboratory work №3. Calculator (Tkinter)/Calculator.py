@@ -56,8 +56,8 @@
 # 31. Если число отрицательно, то можно с помощью Del оставить один МИНУС и будет ошибка
 
 # ОСТАЛОСЬ СДЕЛАТЬ
-# 1. Меню (ДОбавить дублирующие кнопки для операций и переводов в системы счисления)
-# 2. Выездающий справа журнал/история операций
+# 1. Меню (Добавить дублирующие кнопки для операций и переводов в системы счисления)
+# 2. Выезжающий справа журнал/история операций
 # 3. Кнопка +/-
 # 4. Перевод дробной части числа обратно в десятичную
 # 5. Сложение чисел в разных системах счисления
@@ -66,9 +66,9 @@
 # 8. Поработать над дизайном
 
 
-from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Toplevel
+from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Toplevel, Label, Frame, Button
 from tkinter import messagebox
-from tkinter.constants import RIGHT, END, NORMAL, DISABLED
+from tkinter.constants import LEFT, RIGHT, END, NORMAL, DISABLED
 # from tkinter.ttk import * # Улучшенный tkinter
 
 from os.path import dirname, join
