@@ -83,6 +83,10 @@ def aboutProgramm():
     window = Toplevel()
     window.geometry()
 
+    window.title("О программе")
+    window.config(bg='#222222')
+    window.geometry(f"{410}x{410}+100+200")
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
