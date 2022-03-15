@@ -69,7 +69,8 @@
 from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Toplevel, Label, Frame, Button
 from tkinter import messagebox
 from tkinter.constants import LEFT, RIGHT, END, NORMAL, DISABLED
-# from tkinter.ttk import * # Улучшенный tkinter
+# from tkinter.ttk import Button # Улучшенный tkinter
+# import tkinter.ttk
 
 from os.path import dirname, join
 
@@ -77,6 +78,10 @@ from Buttons import *
 from Functions import *
 from NumericalSystemFunctions import *
 
+
+def aboutProgramm():
+    window = Toplevel()
+    window.geometry()
 
 def main():
 
