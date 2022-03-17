@@ -86,6 +86,8 @@ def aboutProgramm():
     window.title("О программе")
     window.config(bg='#222222')
     window.geometry(f"{410}x{410}+100+200")
+    window.resizable(False, False)
+    window.attributes("-alpha", 0.97) # Делает фон прозрачным
 
 def main():
 
