@@ -89,6 +89,9 @@ def aboutProgramm():
     window.resizable(False, False)
     window.attributes("-alpha", 0.97) # Делает фон прозрачным
 
+    currentDir = dirname(__file__)
+    filePath = join(currentDir, "./Pictures/Calculator icon 8.png")
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
