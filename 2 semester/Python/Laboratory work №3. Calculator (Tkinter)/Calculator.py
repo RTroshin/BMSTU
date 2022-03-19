@@ -91,6 +91,8 @@ def aboutProgramm():
 
     currentDir = dirname(__file__)
     filePath = join(currentDir, "./Pictures/Calculator icon 8.png")
+    photo = PhotoImage(file=filePath)
+    window.iconphoto(False, photo)
 
 def main():
 
