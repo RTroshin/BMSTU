@@ -94,6 +94,18 @@ def aboutProgramm():
     photo = PhotoImage(file=filePath)
     window.iconphoto(False, photo)
 
+    # Создать виджет label
+    label1 = Label(window, text='Программа Calculator', # Можно переносить строку через запятую
+                        bg='#222222',                   # Цвет фона label
+                        fg='white',                     # Цвет текста
+                        font=('Roboto', 18, 'bold'),    # Кортеж, стиль текста, размер и жирность
+                        padx=20,                        # Отступ по оси x
+                        pady=20,                        # Отступ по оси y
+                        width=40,                       # Ширина label (количество знаков)
+                        anchor="sw",                    # Расположение текста в label (n - north, s - south, w - west, e - east), по умолчанию 'center'
+                        justify=LEFT
+                        )
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
