@@ -105,6 +105,15 @@ def aboutProgramm():
                         anchor="sw",                    # Расположение текста в label (n - north, s - south, w - west, e - east), по умолчанию 'center'
                         justify=LEFT
                         )
+    label2 = Label(window, text='Version 2.2 (Build over999: Service Pack 1)',
+                        bg='#222222',
+                        fg='white',
+                        font=('Roboto', 14, 'bold'),
+                        padx=20,
+                        width=40,
+                        anchor="sw",
+                        justify=LEFT
+                        )
 
 def main():
 
