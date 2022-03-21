@@ -114,6 +114,15 @@ def aboutProgramm():
                         anchor="sw",
                         justify=LEFT
                         )
+    label3 = Label(window, text='Copyright © 2021 Roman Troshin',
+                        bg='#222222',
+                        fg='white',
+                        font=('Roboto', 14, 'bold'),
+                        padx=20,
+                        width=40,
+                        anchor="sw",
+                        justify=LEFT
+                        )
 
 def main():
 
