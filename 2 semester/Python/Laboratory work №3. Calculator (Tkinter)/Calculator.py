@@ -123,6 +123,19 @@ def aboutProgramm():
                         anchor="sw",
                         justify=LEFT
                         )
+    label4 = Label(window, text='''
+Данный калькулятор предназначен для
+подсчета простых выражений, а также
+для перевода чисел в различные
+системы счисления''',
+                        bg='#222222',
+                        fg='white',
+                        font=('Roboto', 12, 'bold'),
+                        padx=20,
+                        width=100,
+                        anchor="sw",
+                        justify=LEFT
+                        )
 
 def main():
 
