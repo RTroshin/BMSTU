@@ -147,6 +147,18 @@ def aboutProgramm():
                         justify=LEFT
                         )
 
+    f_button = Frame(window)
+    button = Button(f_button,
+                    bg='#000000',
+                    text='ОК',
+                    font=('Roboto', 16),
+                    fg='#EEEEEE',
+                    padx=25,
+                    pady=30,
+                    activebackground='#222222',
+                    activeforeground="#EEEEEE",
+                    command=lambda : exitApp(window))
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
