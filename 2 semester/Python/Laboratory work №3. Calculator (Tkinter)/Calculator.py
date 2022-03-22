@@ -136,6 +136,16 @@ def aboutProgramm():
                         anchor="sw",
                         justify=LEFT
                         )
+    label5 = Label(window, text='Автор: Роман Трошин',
+                        bg='#222222',
+                        fg='white',
+                        font=('Roboto', 14, 'bold'),
+                        padx=20,
+                        pady=20,
+                        width=40,
+                        anchor="sw",
+                        justify=LEFT
+                        )
 
 def main():
 
