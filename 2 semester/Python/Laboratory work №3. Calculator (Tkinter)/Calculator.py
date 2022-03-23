@@ -159,6 +159,9 @@ def aboutProgramm():
                     activeforeground="#EEEEEE",
                     command=lambda : exitApp(window))
 
+    label1.pack() # Разместить label в окне
+    label2.pack()
+
 def main():
 
     # Создание переменной, содержащей полный путь до файла
