@@ -161,6 +161,9 @@ def aboutProgramm():
 
     label1.pack() # Разместить label в окне
     label2.pack()
+    label3.pack()
+    label4.pack()
+    label5.pack()
 
 def main():
 
