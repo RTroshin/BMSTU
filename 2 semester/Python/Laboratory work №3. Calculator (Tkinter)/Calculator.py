@@ -164,6 +164,9 @@ def aboutProgramm():
     label3.pack()
     label4.pack()
     label5.pack()
+    f_button.pack(padx=30,
+                  pady=30,
+                  anchor='se')
 
 def main():
 
