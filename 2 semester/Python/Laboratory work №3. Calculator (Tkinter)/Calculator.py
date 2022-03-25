@@ -167,6 +167,7 @@ def aboutProgramm():
     f_button.pack(padx=30,
                   pady=30,
                   anchor='se')
+    button.pack()
 
 def main():
 
