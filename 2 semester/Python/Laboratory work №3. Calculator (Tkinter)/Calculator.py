@@ -168,6 +168,9 @@ def aboutProgramm():
                   pady=30,
                   anchor='se')
     button.pack()
+    button.bind("<Enter>", lambda event : on_enter_digit(button, event))
+    button.bind("<Leave>", lambda event : on_leave_digit(button, event))
+
 
 def main():
 
