@@ -241,20 +241,20 @@ def main():
 
     root.config(menu=mainMenu)
 
-    firstItem = Menu(mainMenu,
-                     tearoff=0,
-                    #  bg='#222222',
-                    #  fg='#EEEEEE',
-                    #  activebackground='#333333')
-                    )
+    # firstItem = Menu(mainMenu,
+    #                  tearoff=0,
+    #                 #  bg='#222222',
+    #                 #  fg='#EEEEEE',
+    #                 #  activebackground='#333333')
+    #                 )
 
-    mainMenu.add_cascade(label='Вид',
-                         menu=firstItem)
+    # mainMenu.add_cascade(label='Вид',
+    #                      menu=firstItem)
 
     # firstItem.add_command(label='Обычный') # command
     # firstItem.add_command(label='Программист')
-    firstItem.add_command(label='Выход',
-                          command=lambda : exitApp(root))
+    # firstItem.add_command(label='Выход',
+    #                       command=lambda : exitApp(root))
 
     secondItem = Menu(mainMenu,
                       tearoff=0,
@@ -301,6 +301,7 @@ def main():
                                 command=lambda : returnToDec(calc))
     secondItem.add_command(label='Перевести в 16-ю систему счисления',
                              command=lambda : decToHex(calc))
+    secondItem.add_separator()
 
 
 
