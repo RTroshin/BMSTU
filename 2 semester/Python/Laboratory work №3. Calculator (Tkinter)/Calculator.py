@@ -302,6 +302,8 @@ def main():
     secondItem.add_command(label='Перевести в 16-ю систему счисления',
                              command=lambda : decToHex(calc))
     secondItem.add_separator()
+    secondItem.add_command(label='Выход',
+                          command=lambda : exitApp(root))
 
 
 
