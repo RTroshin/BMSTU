@@ -309,10 +309,12 @@ def main():
 
 
     mainMenu.add_cascade(label='Справка', menu=thirdItem)
-    thirdItem.add_command(label='О программе')
+    thirdItem.add_command(label='О программе',
+                          command=aboutProgramm)
 
 
 
+    # Свое собственное меню
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
     # w.config(bg = "#222222", bd=0)
     # w["menu"].config(bg="#222222", bd=0)
