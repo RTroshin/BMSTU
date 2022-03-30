@@ -1,19 +1,16 @@
 from tkinter import Button
+# from tkinter.ttk import Button # Улучшенный tkinter
 
 from Calculator import *
 
-
-# Создание кнопок с 0 по 9
-def makeDigitButton(calc, calcHistory, digit):
-    button = Button(bg='#000000',
-                      text=digit,
-                      font=('Roboto', 16),
-                      fg='#EEEEEE',
-                      activebackground='#222222',
-                      activeforeground="#EEEEEE",
-                      command=lambda : addDigit(calc, calcHistory, digit))
-    return button
-
+# def makeDigitButton(calc, calcHistory, digit):
+#     return Button(bg='#000000',
+#                       text=digit,
+#                       font=('Roboto', 16),
+#                       fg='#EEEEEE',
+#                       activebackground='#222222',
+#                       activeforeground="#EEEEEE",
+#                       command=lambda : addDigit(calc, calcHistory, digit))
 
 # Создание кнопки с операцией перевода в двоичную систему счисления
 def makeNumSystemBinButton(calc, operation):
