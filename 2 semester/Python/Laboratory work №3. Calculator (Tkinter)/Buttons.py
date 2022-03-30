@@ -12,6 +12,18 @@ from Calculator import *
 #                       activeforeground="#EEEEEE",
 #                       command=lambda : addDigit(calc, calcHistory, digit))
 
+# Создание кнопок с 0 по 9
+def makeDigitButton(calc, calcHistory, digit):
+    button = Button(bg='#000000',
+                      text=digit,
+                      font=('Roboto', 16),
+                      fg='#EEEEEE',
+                      activebackground='#222222',
+                      activeforeground="#EEEEEE",
+                      command=lambda : addDigit(calc, calcHistory, digit))
+    return button
+
+
 # Создание кнопки с операцией перевода в двоичную систему счисления
 def makeNumSystemBinButton(calc, operation):
     button =  Button(bg='#222222',
