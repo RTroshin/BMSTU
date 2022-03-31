@@ -176,7 +176,7 @@ def main():
 
     # Создание переменной, содержащей полный путь до файла
     currentDir = dirname(__file__)
-    filePath = join(currentDir, "./Pictures/Calculator icon 9.png")
+    filePath = join(currentDir, "./Pictures/Calculator icon 8.png")
 
     root = Tk() # Объявление переменной Tk (окно в котором будем работать)
 
