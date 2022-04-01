@@ -18,7 +18,6 @@
 # TODO
 # СДЕЛАТЬ EXE ФАЙЛ
 
-
 # TODO Calculator
 # 1. Если знак операции последний, то при нажатии на кнопку другой операции,
 #    она заменяют собой нынешнюю
@@ -65,7 +64,6 @@
 # 7. Ограничить окна Entry 32 символами
 # 8. Поработать над дизайном
 
-
 from tkinter import Tk, Menu, OptionMenu, PhotoImage, Entry, Toplevel, Label, Frame, Button
 from tkinter import messagebox
 from tkinter.constants import LEFT, RIGHT, END, NORMAL, DISABLED
@@ -77,7 +75,6 @@ from os.path import dirname, join
 from Buttons import *
 from Functions import *
 from NumericalSystemFunctions import *
-
 
 def aboutProgramm():
     window = Toplevel()
@@ -171,7 +168,6 @@ def aboutProgramm():
     button.bind("<Enter>", lambda event : on_enter_digit(button, event))
     button.bind("<Leave>", lambda event : on_leave_digit(button, event))
 
-
 def main():
 
     # Создание переменной, содержащей полный путь до файла
@@ -182,7 +178,6 @@ def main():
 
     width = 364
     height = 496
-
 
     # Установка иконки приложения
     photo = PhotoImage(file=filePath)
@@ -198,7 +193,6 @@ def main():
 
     # root.overrideredirect(True) # Убирает верхнее меню
     # root.attributes("-transparentcolor", "black") # Делает фон совсем прозрачным
-
 
     # Создание окна ввода
     calcHistory = Entry(root,
@@ -235,7 +229,6 @@ def main():
 
     calc['state'] = DISABLED
 
-
     # Создание меню
     mainMenu = Menu(root)
 
@@ -271,11 +264,9 @@ def main():
                       tearoff=0,
                      )
 
-
     mainMenu.add_cascade(label='Правка', menu=fourthItem)
     fourthItem.add_command(label='Очистить',
                              command=lambda : clearC(calc, calcHistory))
-
 
     mainMenu.add_cascade(label='Выполнить', menu=secondItem)
     secondItem.add_command(label='Вычислить',
@@ -305,14 +296,9 @@ def main():
     secondItem.add_command(label='Выход',
                           command=lambda : exitApp(root))
 
-
-
-
     mainMenu.add_cascade(label='Справка', menu=thirdItem)
     thirdItem.add_command(label='О программе',
                           command=aboutProgramm)
-
-
 
     # Свое собственное меню
     # w = OptionMenu(root, mainMenu, "Обычный", "Программист", "Выход")
@@ -323,10 +309,8 @@ def main():
     #        columnspan=4,
     #        stick='wens')
 
-
     # Обработка событий
     root.bind('<Key>', lambda event : pressKey(calc, calcHistory, event))
-
 
     # Создание кнопок
     button1 = makeDigitButton(calc, calcHistory, '1')
@@ -545,7 +529,6 @@ def main():
     opButton4.bind("<Enter>", lambda event : on_enter_operation(opButton4, event))
     opButton4.bind("<Leave>", lambda event : on_leave_operation(opButton4, event))
 
-
     # Установка минимальных размеров кнопок
     root.grid_columnconfigure(0, minsize=50)
     root.grid_columnconfigure(1, minsize=50)
@@ -563,7 +546,6 @@ def main():
     root.grid_rowconfigure(8, minsize=60)
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
