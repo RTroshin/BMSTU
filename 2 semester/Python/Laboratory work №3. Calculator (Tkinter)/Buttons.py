@@ -23,7 +23,6 @@ def makeDigitButton(calc, calcHistory, digit):
                       command=lambda : addDigit(calc, calcHistory, digit))
     return button
 
-
 # Создание кнопки с операцией перевода в двоичную систему счисления
 def makeNumSystemBinButton(calc, operation):
     button =  Button(bg='#222222',
@@ -34,7 +33,6 @@ def makeNumSystemBinButton(calc, operation):
                   activeforeground='#EEEEEE',
                   command=lambda : decToBin(calc))
     return button
-
 
 # Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemOctButton(calc, operation):
@@ -47,7 +45,6 @@ def makeNumSystemOctButton(calc, operation):
                   command=lambda : decToOct(calc))
     return button
 
-
 # Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemDecButton(calc, operation):
     button =  Button(bg='#222222',
@@ -58,7 +55,6 @@ def makeNumSystemDecButton(calc, operation):
                   activeforeground='#EEEEEE',
                   command=lambda : returnToDec(calc))
     return button
-
 
 # Создание кнопок с операциями по переводу систем счисления
 def makeNumSystemHexButton(calc, operation):
@@ -71,7 +67,6 @@ def makeNumSystemHexButton(calc, operation):
                   command=lambda : decToHex(calc))
     return button
 
-
 # Создание кнопок с операциями
 def makeOperationButton(calc, operation):
     button =  Button(bg='#222222',
@@ -82,7 +77,6 @@ def makeOperationButton(calc, operation):
                   activeforeground='#EEEEEE',
                   command=lambda : addOperation(calc, operation))
     return button
-
 
 # Создание кнопки с операцией смены знака
 def makeSignButton(calc, operation):
@@ -95,7 +89,6 @@ def makeSignButton(calc, operation):
                   command=lambda : changeSign(calc))
     return button
 
-
 # Создание кнопки с операцией добавления точки
 def makePointButton(calc, operation):
     button =  Button(bg='#222222',
@@ -107,7 +100,6 @@ def makePointButton(calc, operation):
                   command=lambda : addPoint(calc, operation))
     return button
 
-
 # Создание кнопок для взаимодействия с полем ввода
 def makeCalculateButton(calc, calcHistory, operation):
     return Button(bg='#04346C',
@@ -117,7 +109,6 @@ def makeCalculateButton(calc, calcHistory, operation):
                   activebackground='#1A5090',
                   activeforeground='#EEEEEE',
                   command=lambda : calculate(calc, calcHistory))
-
 
 # Создание кнопки очистки поля ввода CE
 def makeClearButtonCE(calc, operation):
@@ -130,7 +121,6 @@ def makeClearButtonCE(calc, operation):
                   command=lambda : clearCE(calc))
     return button
 
-
 # Создание кнопки очистки поля ввода C
 def makeClearButtonC(calc, calcHistory, operation):
     button =  Button(bg='#222222',
@@ -141,7 +131,6 @@ def makeClearButtonC(calc, calcHistory, operation):
                   activeforeground='#EEEEEE',
                   command=lambda : clearC(calc, calcHistory))
     return button
-
 
 # Создание кнопки очистки поля ввода Del
 def makeClearButtonDel(calc, operation):
@@ -154,7 +143,6 @@ def makeClearButtonDel(calc, operation):
                   command=lambda : clearDel(calc))
     return button
 
-
 # Для кнопок с цифрами
 # Подсвечивает кнопку цветом при наведении мыши
 def on_enter_digit(button, event):
@@ -164,7 +152,6 @@ def on_enter_digit(button, event):
 def on_leave_digit(button, event):
     button['background'] = '#000000'
 
-
 # Для кнопок с операциями
 # Подсвечивает кнопку цветом при наведении мыши
 def on_enter_operation(button, event):
@@ -173,7 +160,6 @@ def on_enter_operation(button, event):
 # Возвращает цвет кнопки на цвет по-умолчанию
 def on_leave_operation(button, event):
     button['background'] = '#222222'
-
 
 # Для кнопки calculate
 # Подсвечивает кнопку цветом при наведении мыши
