@@ -7,7 +7,6 @@ import Buttons
 from NumericalSystemFunctions import *
 import NumericalSystemFunctions
 
-
 BLOCK = False # Глобальная переменная
 BUTTON_FLAG_1 = False
 BUTTON_FLAG_2 = True
@@ -63,7 +62,6 @@ def addDigit(calc, calcHistory, digit):
         calc.insert(0, value + digit)
         calc['state'] = DISABLED
 
-
 # Добавление знака операции в поле ввода
 def addOperation(calc, operation):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
@@ -87,7 +85,6 @@ def addOperation(calc, operation):
         calc.insert(0, value + operation)
         calc['state'] = DISABLED
 
-
 # Изменение знака у числа
 def changeSign(calc):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
@@ -107,7 +104,6 @@ def changeSign(calc):
         calc.delete(0, END)
         calc.insert(0, value)
         calc['state'] = DISABLED
-
 
 # Отделение дробной части точкой
 def addPoint(calc, operation):
@@ -133,7 +129,6 @@ def addPoint(calc, operation):
         calc.delete(0, END)
         calc.insert(0, value + operation)
         calc['state'] = DISABLED
-
 
 # Добавление значения в историю
 def addHistory(value, calcHistory):
@@ -205,7 +200,6 @@ def calculate(calc, calcHistory):
     calcHistory['state'] = DISABLED
     calc['state'] = DISABLED
 
-
 # Замена декоративных знаков в строке
 def replaceSymbol(value):
     if '–' in value:
@@ -216,7 +210,6 @@ def replaceSymbol(value):
         value = value.replace('÷', '/')
     return value
 
-
 # Замена обычных знаков в строке на декоративных
 def replaceSymbolReturn(value):
     if '-' in value:
@@ -226,7 +219,6 @@ def replaceSymbolReturn(value):
     if '/' in value:
         value = value.replace('/', '÷')
     return value
-
 
 # Очистка поля ввода по кнопке CE
 def clearCE(calc):
@@ -239,7 +231,6 @@ def clearCE(calc):
         calc.delete(0, END)
         calc.insert(0, 0)
         calc['state'] = DISABLED
-
 
 # Очистка поля ввода по кнопке C
 def clearC(calc, calcHistory):
@@ -260,7 +251,6 @@ def clearC(calc, calcHistory):
     calc.insert(0, 0)
     calc['state'] = DISABLED
 
-
 # Очистка поля ввода по кнопке Del
 def clearDel(calc):
     if NumericalSystemFunctions.returnNumericalSystemNumber() != 10:
@@ -279,7 +269,6 @@ def clearDel(calc):
 
         calc['state'] = DISABLED
 
-
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressKey(calc, calcHistory, event):
 
@@ -296,13 +285,11 @@ def pressKey(calc, calcHistory, event):
     elif event.char == '\b':
         clearDel(calc)
 
-
 # Установка настроек по-умолчанию
 # Необходима после вывода сообщений об ошибках
 def setDefaultSettings(calc):
     calc['font'] = ('Roboto', 32)
     calc['width'] = 15
-
 
 # Выход из приложения
 def exitApp(root):
