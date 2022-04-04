@@ -7,7 +7,8 @@ import Buttons
 from NumericalSystemFunctions import *
 import NumericalSystemFunctions
 
-BLOCK = False # Глобальная переменная
+# Глобальные переменные
+BLOCK = False
 BUTTON_FLAG_1 = False
 BUTTON_FLAG_2 = True
 
@@ -200,7 +201,7 @@ def calculate(calc, calcHistory):
     calcHistory['state'] = DISABLED
     calc['state'] = DISABLED
 
-# Замена декоративных знаков в строке
+# Замена декоративных знаков в строке на обычные
 def replaceSymbol(value):
     if '–' in value:
         value = value.replace('–', '-')
@@ -210,7 +211,7 @@ def replaceSymbol(value):
         value = value.replace('÷', '/')
     return value
 
-# Замена обычных знаков в строке на декоративных
+# Замена обычных знаков в строке на декоративные
 def replaceSymbolReturn(value):
     if '-' in value:
         value = value.replace('-', '–')
