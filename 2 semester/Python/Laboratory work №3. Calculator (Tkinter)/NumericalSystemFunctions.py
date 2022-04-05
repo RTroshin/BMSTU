@@ -4,10 +4,9 @@ from Calculator import *
 from Functions import *
 from Buttons import *
 
-
-BLOCK = False # Глобальная переменная
+# Глобальные переменные
+BLOCK = False
 SYSNUMBER = 10
-
 
 # Перевод из десятичной в двоичную систему счисления
 def decToBin(calc):
@@ -52,7 +51,6 @@ def decToBin(calc):
         calc.delete(0, END)
         calc.insert(0, result)
         calc['state'] = DISABLED
-
 
 # Перевод из десятичной в троичную систему счисления
 def decToThird(calc):
