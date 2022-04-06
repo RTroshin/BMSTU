@@ -316,7 +316,6 @@ def decToOct(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Перевод из десятичной в девятеричную систему счисления
 def decToNine(calc):
     global BLOCK
@@ -361,7 +360,6 @@ def decToNine(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Перевод из десятичной в десятичную систему счисления
 def returnToDec(calc):
     global BLOCK
@@ -403,7 +401,6 @@ def returnToDec(calc):
         else:
             calc.insert(0, str(resultInt))
         calc['state'] = DISABLED
-
 
 # Перевод из десятичной в шестнадцатиричную систему счисления
 def decToHex(calc):
@@ -449,7 +446,6 @@ def decToHex(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Возвращает в переменную номер системы счисления
 def returnNumericalSystemNumber():
     if SYSNUMBER == 2:
@@ -482,7 +478,6 @@ def returnNumericalSystemNumber():
         return 15
     elif SYSNUMBER == 16:
         return 16
-
 
 # Преобразование десятичных чисел в шестнадцатиричные
 def digit(num):
@@ -518,7 +513,6 @@ def digit(num):
         return 'E'
     elif num == 15:
         return 'F'
-
 
 # Преобразование шестнадцатиричных чисел в десятичные
 def digitReturn(num):
