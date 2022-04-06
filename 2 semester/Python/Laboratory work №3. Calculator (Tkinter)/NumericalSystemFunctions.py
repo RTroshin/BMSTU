@@ -96,7 +96,6 @@ def decToThird(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Перевод из десятичной в четверичную систему счисления
 def decToFour(calc):
     global BLOCK
@@ -140,7 +139,6 @@ def decToFour(calc):
         calc.delete(0, END)
         calc.insert(0, result)
         calc['state'] = DISABLED
-
 
 # Перевод из десятичной в пятеричную систему счисления
 def decToFifth(calc):
@@ -186,7 +184,6 @@ def decToFifth(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Перевод из десятичной в шестеричную систему счисления
 def decToSix(calc):
     global BLOCK
@@ -231,7 +228,6 @@ def decToSix(calc):
         calc.insert(0, result)
         calc['state'] = DISABLED
 
-
 # Перевод из десятичной в семеричную систему счисления
 def decToSeven(calc):
     global BLOCK
@@ -275,7 +271,6 @@ def decToSeven(calc):
         calc.delete(0, END)
         calc.insert(0, result)
         calc['state'] = DISABLED
-
 
 # Перевод из десятичной в восьмеричную систему счисления
 def decToOct(calc):
