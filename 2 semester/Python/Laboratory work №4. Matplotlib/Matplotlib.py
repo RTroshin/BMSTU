@@ -3,7 +3,6 @@ import numpy as np
 # from scipy.optimize import bisect
 from math import pi, sin, cos, exp, sqrt
 
-
 def f1(t):
     # return exp(-0.5 * t) * cos(2 * pi * t)
     return -2 * pi * exp(-0.5 * t) * sin(2 *  pi * t) - 0.5 * exp(-0.5 * t) * cos(2 * pi * t)
@@ -20,11 +19,8 @@ def f3(x):
 def secondDerivative_f3(x):
     return -sqrt(x**2) * cos(x) - 2 * sqrt(x**2) * sin(x) / x
 
-
 def secondDerivative_f1(x):
     return abs(2 * x) * (-3 * sqrt(33) / 112 + 1 /16) + ((3 - x) / sqrt(abs(1 - (abs(x) - 3))**2)) + 1 / 2
-
-
 
 figure = plt.gcf()
 figure.canvas.set_window_title('Исследование графиков функций')
@@ -45,7 +41,6 @@ figure.canvas.set_window_title('Исследование графиков фун
 # plt.xlabel('x')
 # plt.ylabel('y')
 # plt.show()
-
 
 # Гармоническая
 
@@ -102,8 +97,6 @@ plt.scatter(data_t, data_x,
 plt.legend(loc='upper right', fontsize=10)
 plt.grid()
 
-
-
 # Периодическая функция
 
 x = np.linspace(-10, 10, 100000) # Равномерное распределение точек на промежутке
@@ -151,7 +144,6 @@ plt.scatter(data_x, data_y,
 plt.legend(loc='upper right', fontsize=10)
 plt.grid()
 
-
 # Непериодическая функция
 
 # x = np.linspace(0, 15.707963, 100000) # Равномерное распределение точек на промежутке
@@ -176,7 +168,6 @@ plt.grid()
 
 # plt.legend(loc='upper right', fontsize=10)
 # plt.grid()
-
 
 # Полином
 
@@ -219,7 +210,6 @@ plt.scatter(data_x, data_y,
 plt.legend(loc='lower left', fontsize=10)
 plt.grid()
 
-
 # Спираль
 
 # t = np.linspace(0, 15.707963, 100000) # Равномерное распределение точек на промежутке
@@ -256,7 +246,6 @@ plt.grid()
 # plt.legend(loc='upper right', fontsize=10)
 # plt.grid()
 
-
 # Функция Бэтмена
 
 x = np.linspace(-10, 10, 100000) # Равномерное распределение точек на промежутке
@@ -289,7 +278,6 @@ plt.scatter(data_x, data_y,
 # plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y5 = sin(5/2cos(x)$', linewidth=3)
 # plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y6 = sin(5/2cos(x)$', linewidth=3)
 
-
 # data_x = data_y = np.array([])
 # for value in x:
 #     xt = f2(value)
@@ -303,7 +291,6 @@ plt.scatter(data_x, data_y,
 
 # plt.legend(loc='lower left', fontsize=10)
 plt.grid()
-
 
 plt.tight_layout() # Подгонка полей поля под края графиков
 plt.show()
