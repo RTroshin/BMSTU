@@ -34,6 +34,15 @@ c.create_arc((195, 70), (280, 170),
 c.create_oval(255, 75, 280, 95, 
               fill='#222222',
               outline='black')
+c.create_arc((263, 55), (303, 185), 
+             start=0,
+             extent=70, 
+             style=ARC,
+             outline='#000000',
+             width=33)
+c.create_oval(272, 41, 303, 72, 
+              fill='#222222',
+              outline='black')
 
 # ТУЛОВИЩЕ
 ##############################################################################
