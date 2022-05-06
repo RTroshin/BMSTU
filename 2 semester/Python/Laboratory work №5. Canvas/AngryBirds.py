@@ -84,50 +84,34 @@ c.create_arc((230, 110), (370, 190),
              outline='black',
              width=10)
 
-# Черное пятно на нижней части яйца
-# c.create_arc(327, 360, 473, 485, 
-#              start=0, extent=180, 
-#              style=CHORD, fill='black',
-#              outline='black')
-
-# c.create_arc(320, 340, 480, 465, 
-#              start=180, extent=180, 
-#              style=CHORD, fill='lightblue',
-#              outline='lightblue')
-
-# c.create_arc(331, 380, 469, 425, 
-#              start=180, extent=180, 
-#              style=CHORD, fill='black',
-#              outline='black')
-
 # Волосы на макушке
-c.create_arc((195, 60), (280, 160), 
-             start=0,
-             extent=40, 
-             style=ARC,
-             outline='black',
-             width=23)
-c.create_oval(255, 65, 280, 85, 
-              fill='black',
-              outline='black')
-c.create_arc((263, 45), (303, 175), 
-             start=0,
-             extent=70, 
-             style=ARC,
-             outline='black',
-             width=33)
-c.create_oval(272, 31, 303, 62, 
-              fill='black',
-              outline='black')
-c.create_arc((320, 55), (420, 165), 
-             start=180,
-             extent=-60, 
-             style=ARC,
-             outline='black',
-             width=36)
-c.create_oval(324, 45, 362, 79, 
-              fill='black',
-              outline='black')
+# c.create_arc((195, 60), (280, 160), 
+#              start=0,
+#              extent=40, 
+#              style=ARC,
+#              outline='black',
+#              width=23)
+# c.create_oval(255, 65, 280, 85, 
+#               fill='black',
+#               outline='black')
+# c.create_arc((263, 45), (303, 175), 
+#              start=0,
+#              extent=70, 
+#              style=ARC,
+#              outline='black',
+#              width=33)
+# c.create_oval(272, 31, 303, 62, 
+#               fill='black',
+#               outline='black')
+# c.create_arc((320, 55), (420, 165), 
+#              start=180,
+#              extent=-60, 
+#              style=ARC,
+#              outline='black',
+#              width=36)
+# c.create_oval(324, 45, 362, 79, 
+#               fill='black',
+#               outline='black')
 
 # КЛЮВ
 ##############################################################################
