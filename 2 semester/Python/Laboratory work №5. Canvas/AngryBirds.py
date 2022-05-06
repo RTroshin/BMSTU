@@ -57,7 +57,7 @@ c.create_oval(324, 55, 362, 89,
 ##############################################################################
 
 # Верхний овал туловища
-c.create_oval(170, 100, 430, 500,
+c.create_oval(170, 110, 430, 500,
               fill='white',
               outline='white')
 c.create_rectangle(150, 300, 450, 500,
@@ -75,6 +75,14 @@ c.create_oval(300, 200, 430, 400,
 c.create_oval(190, 325, 410, 410,
               fill='white',
               outline='white')
+
+# Ещё немного волос на макушке
+c.create_arc((230, 110), (370, 190), 
+             start=56,
+             extent=60, 
+             style=ARC,
+             outline='black',
+             width=10)
 
 # Черное пятно на нижней части яйца
 # c.create_arc(327, 360, 473, 485, 
