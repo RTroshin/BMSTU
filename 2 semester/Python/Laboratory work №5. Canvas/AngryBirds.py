@@ -88,13 +88,13 @@ c.create_arc((230, 110), (370, 190),
 ##############################################################################
 
 # Верхняя часть ключа
-c.create_arc(240, 200, 360, 560, 
+c.create_arc(243, 200, 357, 560, 
              start=0,
              extent=180, 
              style=CHORD,
-             fill='orange',
-             outline='orange')
-c.create_rectangle(240, 315, 360, 400,
+             fill='#ebbb00',
+             outline='#ebbb00')
+c.create_rectangle(240, 324, 360, 400,
                    fill='white',
                    outline='white')
 
