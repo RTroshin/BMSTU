@@ -99,12 +99,12 @@ c.create_rectangle(240, 324, 360, 400,
                    outline='white')
 
 # Нижняя часть ключа
-c.create_arc(245, 290, 355, 345, 
+c.create_arc(247, 295, 353, 355, 
              start=0,
              extent=-180, 
              style=CHORD,
-             fill='orange',
-             outline='orange')
+             fill='#ebbb00',
+             outline='#ebbb00')
 
 # Блин на клюве
 # Верхняя часть блика
