@@ -120,10 +120,10 @@ c.create_arc(247, 295, 353, 355,
 #              outline='white')
 
 # Рот
-# c.create_line(360, 300, 400, 308,
-#               fill='black')
-# c.create_line(400, 308, 440, 300,
-#               fill='black')
+c.create_line(247, 305, 300, 321,
+              fill='black')
+c.create_line(300, 321, 354, 305,
+              fill='black')
 
 # ЩЕКИ
 ##############################################################################
