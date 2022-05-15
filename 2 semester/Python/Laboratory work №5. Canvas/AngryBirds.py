@@ -167,9 +167,12 @@ c.create_oval(185, 270, 230, 315,
              outline='#eae265')
 
 # Правая щека
-c.create_oval(410, 190, 350, 250, 
-             fill='yellow',
-             outline='black')
+c.create_arc((418, 200), (308, 445),
+             start=90,
+             extent=-75, 
+             style=CHORD,
+             fill='#eae265',
+             outline='#eae265')
 
 c.create_oval(415, 270, 370, 315, 
              fill='yellow',
