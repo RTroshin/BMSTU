@@ -158,9 +158,13 @@ c.create_arc((150, 70), (262, 315),
              fill='#eae265',
              outline='#eae265')
 
+c.create_oval(210, 200, 260, 250, 
+             fill='#eae265',
+             outline='#eae265')
+
 c.create_oval(185, 270, 230, 315, 
-             fill='yellow',
-             outline='black')
+             fill='#eae265',
+             outline='#eae265')
 
 # Правая щека
 c.create_oval(410, 190, 350, 250, 
