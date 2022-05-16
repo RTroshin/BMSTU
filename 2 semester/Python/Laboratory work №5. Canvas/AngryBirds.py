@@ -174,6 +174,13 @@ c.create_arc((418, 200), (308, 445),
              fill='#eae265',
              outline='#eae265')
 
+c.create_arc((450, 70), (338, 315),
+             start=180,
+             extent=100, 
+             style=CHORD,
+             fill='#eae265',
+             outline='#eae265')
+
 c.create_oval(415, 270, 370, 315, 
              fill='yellow',
              outline='black')
