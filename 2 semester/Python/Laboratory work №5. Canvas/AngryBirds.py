@@ -193,12 +193,12 @@ c.create_oval(415, 270, 370, 315,
 ##############################################################################
 
 # Левый глаз
-c.create_oval(210, 200, 240, 230, 
+c.create_oval((210, 200), (240, 230), 
               fill='white',
-              outline='black')
-c.create_oval(230, 205, 260, 235, 
+              outline='white')
+c.create_oval((230, 205), (260, 235), 
               fill='white',
-              outline='black')
+              outline='white')
 c.create_polygon((210, 215), (217, 195), (270, 205), (260, 225), 
                   fill='white',
                   outline='black')
