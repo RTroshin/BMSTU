@@ -223,6 +223,12 @@ c.create_arc((210, 200), (240, 230),
              style=ARC,
              outline='black',
              width=4)
+c.create_arc((230, 205), (260, 235), 
+             start=-20,
+             extent=-70, 
+             style=ARC,
+             outline='black',
+             width=3)
 
 # Правый глаз
 c.create_oval(390, 200, 360, 230, 
