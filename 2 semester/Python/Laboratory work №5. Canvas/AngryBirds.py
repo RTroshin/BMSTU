@@ -217,6 +217,12 @@ c.create_oval(245, 216, 246, 217,
               outline='#ffffff')
 
 # Обводка левого глаза
+c.create_arc((210, 200), (240, 230), 
+             start=180,
+             extent=90, 
+             style=ARC,
+             outline='black',
+             width=4)
 
 # Правый глаз
 c.create_oval(390, 200, 360, 230, 
