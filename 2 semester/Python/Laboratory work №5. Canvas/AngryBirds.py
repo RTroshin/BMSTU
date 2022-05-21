@@ -235,6 +235,9 @@ c.create_line((210, 215), (217, 195),
 c.create_line((225, 230), (245, 235),
               fill='black',
               width=3)
+c.create_line((270, 203), (258, 228),
+              fill='black',
+              width=3)
 
 # Правый глаз
 c.create_oval(390, 200, 360, 230, 
