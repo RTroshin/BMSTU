@@ -270,6 +270,12 @@ c.create_arc((390, 200), (360, 230),
              style=ARC,
              outline='black',
              width=4)
+c.create_arc((370, 205), (340, 235), 
+             start=200,
+             extent=70, 
+             style=ARC,
+             outline='black',
+             width=3)
 
 # БРОВИ
 ##############################################################################
