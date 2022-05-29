@@ -106,12 +106,16 @@ c.create_arc(247, 295, 353, 355,
              fill='#ebbb00',
              outline='#ebbb00')
 
-# Блин на клюве
+# БЛИК НА КЛЮВЕ
+##############################################################################
+
 # Верхняя часть блика
-# c.create_arc(390, 243, 410, 393, 
-#              start=0, extent=180, 
-#              style=CHORD, fill='white',
-#              outline='white')
+c.create_arc((280, 243), (320, 393), 
+             start=0,
+             extent=180, 
+             style=CHORD,
+             fill='#eebf00',
+             outline='#eebf00')
 
 # Нижняя часть блика
 # c.create_arc(390, 300, 410, 325, 
