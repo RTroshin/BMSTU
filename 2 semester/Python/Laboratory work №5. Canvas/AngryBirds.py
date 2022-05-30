@@ -118,10 +118,12 @@ c.create_arc((280, 243), (320, 393),
              outline='#eebf00')
 
 # Нижняя часть блика
-# c.create_arc(390, 300, 410, 325, 
-#              start=180, extent=180, 
-#              style=CHORD, fill='white',
-#              outline='white')
+c.create_arc((280, 290), (320, 345), 
+             start=180,
+             extent=180, 
+             style=CHORD,
+             fill='#eebf00',
+             outline='#eebf00')
 
 # Рот
 c.create_line(247, 305, 300, 321,
