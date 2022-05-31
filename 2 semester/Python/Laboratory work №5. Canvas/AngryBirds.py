@@ -133,6 +133,14 @@ c.create_arc((292, 250), (308, 393),
              fill='#f6c801',
              outline='#f6c801')
 
+# Нижняя часть блика (светлая)
+c.create_arc((292, 290), (308, 340), 
+             start=180,
+             extent=180, 
+             style=CHORD,
+             fill='#f6c801',
+             outline='#f6c801')
+
 # Рот
 c.create_line(247, 305, 300, 321,
               fill='black')
