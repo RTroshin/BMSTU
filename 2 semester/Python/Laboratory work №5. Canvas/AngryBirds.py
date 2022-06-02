@@ -158,8 +158,9 @@ c.create_arc((297, 290), (303, 335),
              outline='#fad00c')
 
 # Рот
-c.create_line(247, 305, 300, 321,
-              fill='black')
+c.create_line(248, 305, 300, 321,
+              fill='#c28b00',
+              width=4)
 c.create_line(300, 321, 354, 305,
               fill='black')
 
