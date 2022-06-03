@@ -164,6 +164,9 @@ c.create_line(248, 305, 300, 321,
 c.create_line(300, 321, 353, 305,
               fill='#c28b00',
               width=4)
+c.create_line(248, 307, 300, 323,
+              fill='#fad00c',
+              width=4)
 
 # Пятно на нижней части яйца
 c.create_arc(190, 326, 410, 411, 
