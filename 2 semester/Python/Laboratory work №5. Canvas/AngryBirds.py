@@ -217,6 +217,11 @@ c.create_oval(190, 230, 235, 300,
              fill='#eae265',
              outline='#eae265')
 
+# Блик щеки
+c.create_oval(195, 235, 245, 285, 
+             fill='#eee56e',
+             outline='#eee56e')
+
 # Правая щека
 c.create_arc((418, 200), (308, 445),
              start=90,
