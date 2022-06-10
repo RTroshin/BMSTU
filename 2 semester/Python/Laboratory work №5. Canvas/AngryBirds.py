@@ -14,6 +14,9 @@ YELLOW = (255, 255, 0)
 PURPLE = (255, 0, 255)
 WHITE = (255, 255, 255)
 
+def moveEyebrows():
+    c.move(Eyebrow, 1, 0)
+
 root = Tk()
 
 root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
