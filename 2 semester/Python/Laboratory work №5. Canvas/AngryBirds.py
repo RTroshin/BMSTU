@@ -17,6 +17,10 @@ WHITE = (255, 255, 255)
 def moveEyebrows():
     c.move(Eyebrow, 1, 0)
 
+# Создание переменной, содержащей полный путь до файла
+currentDir = dirname(__file__)
+filePath = join(currentDir, "./Pictures/Red.png")
+
 root = Tk()
 
 root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
