@@ -23,6 +23,10 @@ filePath = join(currentDir, "./Pictures/Red.png")
 
 root = Tk()
 
+# Установка иконки приложения
+photo = PhotoImage(file=filePath)
+root.iconphoto(False, photo)
+
 root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
 root.resizable(False, False)
 # root.config(bg='#2DFF00')
