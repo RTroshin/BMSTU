@@ -27,6 +27,8 @@ root = Tk()
 photo = PhotoImage(file=filePath)
 root.iconphoto(False, photo)
 
+root.title("Angry Birds") # Изменение заголовка приложения
+
 root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
 root.resizable(False, False)
 # root.config(bg='#2DFF00')
