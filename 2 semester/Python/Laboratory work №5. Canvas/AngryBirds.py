@@ -48,22 +48,22 @@ c.create_arc((195, 70), (280, 170),
 c.create_oval((255, 75), (280, 95),
               fill='#222222',
               outline='black')
-c.create_arc((263, 55), (303, 185), 
+c.create_arc((263, 55), (303, 185),
              start=0,
-             extent=70, 
+             extent=70,
              style=ARC,
              outline='#000000',
              width=33)
-c.create_oval(272, 41, 303, 72, 
+c.create_oval((272, 41), (303, 72),
               fill='#222222',
               outline='black')
-c.create_arc((320, 65), (420, 175), 
+c.create_arc((320, 65), (420, 175),
              start=180,
-             extent=-60, 
+             extent=-60,
              style=ARC,
              outline='#111111',
              width=36)
-c.create_oval(324, 55, 362, 89, 
+c.create_oval((324, 55), (362, 89),
               fill='#222222',
               outline='black')
 
