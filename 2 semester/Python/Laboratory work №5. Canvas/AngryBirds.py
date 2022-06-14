@@ -33,19 +33,19 @@ root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
 root.resizable(False, False)
 # root.config(bg='#2DFF00')
 
-c = Canvas(root, width=800, height=800, bg='lightblue')
+c = Canvas(root, width=WIDTH, height=HEIGHT, bg='lightblue')
 c.pack()
 
-# ВОЛОСЫ НА МАКУШКЕ
+# ПЕРЬЯ НА МАКУШКЕ
 ##############################################################################
 
-c.create_arc((195, 70), (280, 170), 
+c.create_arc((195, 70), (280, 170),
              start=0,
-             extent=40, 
+             extent=40,
              style=ARC,
              outline='#111111',
              width=23)
-c.create_oval(255, 75, 280, 95, 
+c.create_oval((255, 75), (280, 95),
               fill='#222222',
               outline='black')
 c.create_arc((263, 55), (303, 185), 
