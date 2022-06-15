@@ -71,20 +71,23 @@ c.create_oval((324, 55), (362, 89),
 ##############################################################################
 
 # Верхний овал туловища
-c.create_oval(170, 110, 430, 500,
+c.create_oval((170, 110), (430, 500),
               fill='white',
               outline='white')
-c.create_rectangle(150, 300, 450, 500,
+c.create_rectangle((150, 300), (450, 500),
                    fill='lightblue',
                    outline='lightblue')
+
 # Левый овал туловища
 c.create_oval(170, 200, 300, 400,
               fill='white',
               outline='white')
+
 # Правый овал туловища
 c.create_oval(300, 200, 430, 400,
               fill='white',
               outline='white')
+
 # Нижний овал туловища
 c.create_oval(190, 325, 410, 410,
               fill='white',
