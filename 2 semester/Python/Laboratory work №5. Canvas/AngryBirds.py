@@ -120,14 +120,14 @@ c.create_oval((300, 200), (430, 400),
               outline='white')
 
 # Нижний овал туловища
-c.create_oval(190, 325, 410, 410,
+c.create_oval((190, 325), (410, 410),
               fill='white',
               outline='white')
 
 # Ещё немного волос на макушке
-c.create_arc((230, 110), (370, 190), 
+c.create_arc((230, 110), (370, 190),
              start=56,
-             extent=60, 
+             extent=60,
              style=ARC,
              outline='black',
              width=10)
