@@ -124,7 +124,7 @@ c.create_oval((190, 325), (410, 410),
               fill='white',
               outline='white')
 
-# Ещё немного волос на макушке
+# Ещё немного перьев на макушке
 c.create_arc((230, 110), (370, 190),
              start=56,
              extent=60,
@@ -136,20 +136,21 @@ c.create_arc((230, 110), (370, 190),
 ##############################################################################
 
 # Верхняя часть ключа
-c.create_arc(243, 200, 357, 560, 
+c.create_arc((243, 200), (357, 560),
              start=0,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#ebbb00',
              outline='#ebbb00')
+
 c.create_rectangle(240, 324, 360, 400,
                    fill='white',
                    outline='white')
 
 # Нижняя часть ключа
-c.create_arc(247, 295, 353, 355, 
+c.create_arc((247, 295), (353, 355),
              start=0,
-             extent=-180, 
+             extent=-180,
              style=CHORD,
              fill='#ebbb00',
              outline='#ebbb00')
