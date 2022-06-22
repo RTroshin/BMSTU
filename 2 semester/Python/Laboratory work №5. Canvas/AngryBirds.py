@@ -207,16 +207,16 @@ c.create_arc((297, 290), (303, 335),
              outline='#fad00c')
 
 # Рот
-c.create_line(248, 305, 300, 321,
+c.create_line((248, 305), (300, 321),
               fill='#c28b00',
               width=4)
-c.create_line(300, 321, 353, 305,
+c.create_line((300, 321), (353, 305),
               fill='#c28b00',
               width=4)
-c.create_line(248, 307, 300, 323,
+c.create_line((248, 307), (300, 323),
               fill='#fad00c',
               width=4)
-c.create_line(300, 323, 353, 307,
+c.create_line((300, 323), (353, 307),
               fill='#fad00c',
               width=4)
 
