@@ -221,16 +221,16 @@ c.create_line((300, 323), (353, 307),
               width=4)
 
 # Пятно на нижней части яйца
-c.create_arc(190, 326, 410, 411, 
+c.create_arc((190, 326), (410, 411),
              start=220,
-             extent=100, 
+             extent=100,
              style=CHORD,
              fill='#716f56',
              outline='#716f56')
 
-c.create_arc(240, 388, 360, 410, 
+c.create_arc((240, 388), (360, 410),
              start=0,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#716f56',
              outline='#716f56')
