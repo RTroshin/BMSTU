@@ -279,23 +279,23 @@ c.create_oval((205, 245), (235, 275),
 # Правая щека
 c.create_arc((418, 200), (308, 445),
              start=90,
-             extent=-75, 
+             extent=-75,
              style=CHORD,
              fill='#eae265',
              outline='#eae265')
 
 c.create_arc((450, 70), (338, 315),
              start=180,
-             extent=100, 
+             extent=100,
              style=CHORD,
              fill='#eae265',
              outline='#eae265')
 
-c.create_oval(390, 200, 340, 250, 
+c.create_oval((390, 200), (340, 250),
              fill='#eae265',
              outline='#eae265')
 
-c.create_oval(415, 270, 370, 315, 
+c.create_oval((415, 270), (370, 315),
              fill='#eae265',
              outline='#eae265')
 
