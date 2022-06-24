@@ -262,17 +262,17 @@ c.create_oval((185, 270), (230, 315),
              outline='#eae265')
 
 # Заполнение щеки
-c.create_oval(190, 230, 235, 300, 
+c.create_oval((190, 230), (235, 300),
              fill='#eae265',
              outline='#eae265')
 
 # Блик щеки
-c.create_oval(195, 235, 245, 285, 
+c.create_oval((195, 235), (245, 285),
              fill='#eee56e',
              outline='#eee56e')
 
 # Блик щеки (светлая часть)
-c.create_oval(205, 245, 235, 275, 
+c.create_oval((205, 245), (235, 275),
              fill='#f2eb79',
              outline='#f2eb79')
 
