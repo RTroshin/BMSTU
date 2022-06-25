@@ -300,7 +300,7 @@ c.create_oval((415, 270), (370, 315),
              outline='#eae265')
 
 # Заполнение щеки
-c.create_oval(410, 230, 365, 300, 
+c.create_oval((410, 230), (365, 300),
              fill='#eae265',
              outline='#eae265')
 
