@@ -305,7 +305,7 @@ c.create_oval((410, 230), (365, 300),
              outline='#eae265')
 
 # Блик щеки
-c.create_oval(405, 235, 355, 285, 
+c.create_oval((405, 235), (355, 285),
              fill='#eee56e',
              outline='#eee56e')
 
