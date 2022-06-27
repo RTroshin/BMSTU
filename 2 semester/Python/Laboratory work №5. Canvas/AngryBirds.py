@@ -332,12 +332,12 @@ c.create_polygon((225, 230), (225, 215), (245, 220), (245, 235),
                   outline='white')
 
 # Зрачок левого глаза
-c.create_oval(240, 210, 250, 220, 
+c.create_oval((240, 210), (250, 220),
               fill='black',
               outline='black')
 
 # Блик зрачка правого глаза
-c.create_oval(245, 216, 246, 217, 
+c.create_oval((245, 216), (246, 217),
               fill='#ffffff',
               outline='#ffffff')
 
