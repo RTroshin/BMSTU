@@ -365,10 +365,10 @@ c.create_line((270, 203), (258, 228),
               width=3)
 
 # Правый глаз
-c.create_oval(390, 200, 360, 230, 
+c.create_oval((390, 200), (360, 230),
               fill='white',
               outline='white')
-c.create_oval(370, 205, 340, 235, 
+c.create_oval((370, 205), (340, 235),
               fill='white',
               outline='white')
 c.create_polygon((390, 215), (383, 195), (330, 205), (340, 225), 
