@@ -389,15 +389,15 @@ c.create_oval(355, 216, 354, 217,
               outline='#ffffff')
 
 # Обводка правого глаза
-c.create_arc((390, 200), (360, 230), 
+c.create_arc((390, 200), (360, 230),
              start=0,
-             extent=-90, 
+             extent=-90,
              style=ARC,
              outline='black',
              width=4)
-c.create_arc((370, 205), (340, 235), 
+c.create_arc((370, 205), (340, 235),
              start=200,
-             extent=70, 
+             extent=70,
              style=ARC,
              outline='black',
              width=3)
@@ -415,9 +415,9 @@ c.create_line((330, 203), (342, 228),
 ##############################################################################
 
 # Левая бровь
-c.create_polygon((207, 195), (205, 175), (288, 185), (275, 205), 
-                   fill='black',
-                   outline='black')
+eyebrow = c.create_polygon((207, 195), (205, 175), (288, 185), (275, 205),
+                           fill='black',
+                           outline='black')
 
 # Правая бровь
 c.create_polygon((312, 185), (325, 205), (393, 195), (395, 175), 
