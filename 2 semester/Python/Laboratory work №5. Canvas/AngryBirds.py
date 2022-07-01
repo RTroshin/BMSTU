@@ -445,5 +445,19 @@ if (c.bind('<Button-1>')):
 #5d3830
 #573529
 
+# c.create_oval((250, 450), (550, 550),
+#               fill='#ffffff',
+#               outline='black')
+
+# # c.create_line((230, 500), (350, 440),
+# #               fill='grey',
+# #               width=10)
+# # c.create_line((330, 450), (500, 450),
+# #               fill='grey',
+# #               width=10)
+# # c.create_line((470, 450), (550, 490),
+# #               fill='grey',
+# #               width=10)
+
 
 root.mainloop()
