@@ -470,6 +470,14 @@ if (c.bind('<Button-1>')):
 # c.create_line((350, 540), (250, 520),
 #               fill='grey',
 #               width=10)
-
+# c.create_line((250, 530), (230, 460),
+#               fill='grey',
+#               width=10)
+# c.create_line((230, 500), (400, 480),
+#               fill='grey',
+#               width=10)
+# c.create_line((400, 480), (560, 420),
+#               fill='grey',
+#               width=10)
 
 root.mainloop()
