@@ -159,49 +159,49 @@ c.create_arc((247, 295), (353, 355),
 ##############################################################################
 
 # Верхняя часть блика
-c.create_arc((280, 243), (320, 393), 
+c.create_arc((280, 243), (320, 393),
              start=0,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#eebf00',
              outline='#eebf00')
 
 # Нижняя часть блика
-c.create_arc((280, 290), (320, 345), 
+c.create_arc((280, 290), (320, 345),
              start=180,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#eebf00',
              outline='#eebf00')
 
 # Верхняя часть блика (светлая)
-c.create_arc((292, 250), (308, 393), 
+c.create_arc((292, 250), (308, 393),
              start=0,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#f6c801',
              outline='#f6c801')
 
 # Нижняя часть блика (светлая)
-c.create_arc((292, 290), (308, 340), 
+c.create_arc((292, 290), (308, 340),
              start=180,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#f6c801',
              outline='#f6c801')
 
 # Верхняя часть блика (самая светлая)
-c.create_arc((297, 255), (303, 393), 
+c.create_arc((297, 255), (303, 393),
              start=0,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#fad00c',
              outline='#fad00c')
 
 # Нижняя часть блика (самая светлая)
-c.create_arc((297, 290), (303, 335), 
+c.create_arc((297, 290), (303, 335),
              start=180,
-             extent=180, 
+             extent=180,
              style=CHORD,
              fill='#fad00c',
              outline='#fad00c')
