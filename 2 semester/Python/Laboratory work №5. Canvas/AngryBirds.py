@@ -143,7 +143,7 @@ c.create_arc((243, 200), (357, 560),
              fill='#ebbb00',
              outline='#ebbb00')
 
-c.create_rectangle(240, 324, 360, 400,
+c.create_rectangle((240, 324), (360, 400),
                    fill='white',
                    outline='white')
 
