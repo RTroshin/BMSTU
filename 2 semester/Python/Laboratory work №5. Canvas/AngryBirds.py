@@ -321,13 +321,13 @@ c.create_oval((395, 245), (365, 275),
 c.create_oval((210, 200), (240, 230),
               fill='white',
               outline='white')
-c.create_oval((230, 205), (260, 235), 
+c.create_oval((230, 205), (260, 235),
               fill='white',
               outline='white')
-c.create_polygon((210, 215), (217, 195), (270, 205), (260, 225), 
+c.create_polygon((210, 215), (217, 195), (270, 205), (260, 225),
                   fill='white',
                   outline='white')
-c.create_polygon((225, 230), (225, 215), (245, 220), (245, 235), 
+c.create_polygon((225, 230), (225, 215), (245, 220), (245, 235),
                   fill='white',
                   outline='white')
 
@@ -342,15 +342,15 @@ c.create_oval((245, 216), (246, 217),
               outline='#ffffff')
 
 # Обводка левого глаза
-c.create_arc((210, 200), (240, 230), 
+c.create_arc((210, 200), (240, 230),
              start=180,
-             extent=90, 
+             extent=90,
              style=ARC,
              outline='black',
              width=4)
-c.create_arc((230, 205), (260, 235), 
+c.create_arc((230, 205), (260, 235),
              start=-20,
-             extent=-70, 
+             extent=-70,
              style=ARC,
              outline='black',
              width=3)
