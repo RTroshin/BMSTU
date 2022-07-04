@@ -336,7 +336,7 @@ c.create_oval((240, 210), (250, 220),
               fill='black',
               outline='black')
 
-# Блик зрачка правого глаза
+# Блик зрачка левого глаза
 c.create_oval((245, 216), (246, 217),
               fill='#ffffff',
               outline='#ffffff')
@@ -384,7 +384,7 @@ c.create_oval((360, 210), (350, 220),
               outline='#000000')
 
 # Блик зрачка правого глаза
-c.create_oval(355, 216, 354, 217, 
+c.create_oval((355, 216), (354, 217),
               fill='#ffffff',
               outline='#ffffff')
 
