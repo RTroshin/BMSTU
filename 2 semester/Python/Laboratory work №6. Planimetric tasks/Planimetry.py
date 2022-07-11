@@ -15,7 +15,6 @@
 #
 # * -- изображение создается с использованием виджета Canvas tkinter.
 
-
 # Функционал
 # 1. Кнопка "Очистить"
 # 2. Кнопка "Отменить последнее действие"
@@ -28,7 +27,6 @@
 # 9. Подсказки (сделать приложение так, чтобы было понятно, что в нем нужно делать)
 
 from tkinter import *
-
 
 # Параметры поля
 WIDTH = 1000
@@ -46,7 +44,6 @@ YELLOW = (255, 255, 0)
 PURPLE = (255, 0, 255)
 WHITE = (255, 255, 255)
 
-
 # Создание кнопки для первого множества
 def makeBlackButton(cnvs, entryX, entryY, name, blackSet):
     button = Button(bg='#000000',
@@ -57,7 +54,6 @@ def makeBlackButton(cnvs, entryX, entryY, name, blackSet):
                       activeforeground="#EEEEEE",
                       command=lambda : addBlackPoint(cnvs, entryX, entryY, blackSet))
     return button
-
 
 # Создание кнопки для второго множества
 def makeRedButton(cnvs, entryX, entryY, name, redSet):
@@ -70,7 +66,6 @@ def makeRedButton(cnvs, entryX, entryY, name, redSet):
                       command=lambda : addRedPoint(cnvs, entryX, entryY, redSet))
     return button
 
-
 # Добавление точки в множество через клик мыши
 def addBlackPoint(x, y, cnvs, blackSet):
     blackSet.append([x, y])
@@ -82,7 +77,6 @@ def addBlackPoint(x, y, cnvs, blackSet):
                      fill='#000000',
                      outline='#000000')
 
-
 # Добавление точки в множество через клик мыши
 def addRedPoint(x, y, cnvs, redSet):
     redSet.append([x, y])
@@ -93,7 +87,6 @@ def addRedPoint(x, y, cnvs, redSet):
                      (int(redSet[i][0]) + 5, int(redSet[i][1]) + 5),
                      fill='#ff0800',
                      outline='#ff0800')
-
 
 # Ограничение ввода с клавиатуры. Только цифры и знаки операций
 def pressLeftKey(event, cnvs, blackSet):
@@ -117,7 +110,6 @@ def pressLeftKey(event, cnvs, blackSet):
     # elif event.char == '\b':
     #     clearDel(calc)
 
-
 # Нажатие на правую кнопку мыши
 def pressRightKey(event, cnvs, redSet):
     x = event.x
@@ -126,7 +118,6 @@ def pressRightKey(event, cnvs, redSet):
     # Если в множестве уже есть данная точка, то повторно не добавлять
     if [x, y] not in redSet:
         addRedPoint(x, y, cnvs, redSet)
-
 
 def main():
 
