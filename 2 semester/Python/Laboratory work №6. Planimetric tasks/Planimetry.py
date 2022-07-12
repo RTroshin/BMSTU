@@ -136,7 +136,6 @@ def main():
 
     root.attributes("-alpha", 0.97) # Делает фон прозрачным
 
-
     label1 = Label(root, text='Введите координаты точки в первое множество',
                 bg='#222222',
                 fg='white',
@@ -234,7 +233,6 @@ def main():
                     font=('Roboto', 14),
                     width=15)
 
-
 # РАЗМЕЩЕНИЕ
 
     label1.grid(row=0,
@@ -290,9 +288,6 @@ def main():
                 stick='wens',
                 padx=1)
 
-
-
-
     cnvs = Canvas(root, width=WIDTH_CANVAS, height=HEIGHT_CANVAS, bg='#ffffff')
 
     cnvs.grid(row=0,
@@ -330,7 +325,6 @@ def main():
     # button2.bind("<Enter>", lambda event : on_enter_digit(button2, event))
     # button2.bind("<Leave>", lambda event : on_leave_digit(button2, event))
 
-
     cnvs.bind('<Button-1>', lambda event : pressLeftKey(event, cnvs, blackSet))
     cnvs.bind('<Button-3>', lambda event : pressRightKey(event, cnvs, redSet))
 
@@ -352,7 +346,6 @@ def main():
     root.grid_rowconfigure(5, minsize=10)
 
     root.mainloop()
-
 
 if __name__ == '__main__':
     main()
