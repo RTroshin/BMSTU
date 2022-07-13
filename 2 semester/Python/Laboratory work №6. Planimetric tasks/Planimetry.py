@@ -23,7 +23,7 @@
 # 5. Добавление точек во множества с помощью нажатий на клавиши мыши
 # 6. Меню
 # 7. "О программе" в меню
-# 8. Нарисовать шкалу с пикселями (как в Gimp)на полотне
+# 8. Нарисовать шкалу с пикселями (как в Gimp) на полотне
 # 9. Подсказки (сделать приложение так, чтобы было понятно, что в нем нужно делать)
 
 from tkinter import *
@@ -82,13 +82,13 @@ def addRedPoint(x, y, cnvs, redSet):
     redSet.append([x, y])
     # print(redSet)
     i = len(redSet) - 1
-    # entry.insert(0, value + digit) # ПРИ ВВОДЕ С МЫШИ ДУБЛИРОВАТЬ КООРДИНАТЫ В ОКНА ВВОДА
+    # entry.insert(0, value + digit) # TO DO При вводе с помощью мышки, дублировать координаты в окна ввода
     cnvs.create_oval((int(redSet[i][0]), int(redSet[i][1])),
                      (int(redSet[i][0]) + 5, int(redSet[i][1]) + 5),
                      fill='#ff0800',
                      outline='#ff0800')
 
-# Ограничение ввода с клавиатуры. Только цифры и знаки операций
+# Ограничение ввода с клавиатуры (только цифры и знаки операций)
 def pressLeftKey(event, cnvs, blackSet):
     # print(event.x)
     # print(event.y)
@@ -121,13 +121,13 @@ def pressRightKey(event, cnvs, redSet):
 
 def main():
 
-    # Множество точек
+    # Множества точек
     blackSet = []
     redSet = []
 
     root = Tk()
 
-    # ИЗМЕНИТЬ ЗНАЧОК ПРИЛОЖЕНИЯ
+    # TO DO Изменить значок приложения
 
     root.title("Планиметрия")
     root.config(bg='#222222') # Установить фон
@@ -233,7 +233,7 @@ def main():
                     font=('Roboto', 14),
                     width=15)
 
-# РАЗМЕЩЕНИЕ
+# Размещение элементов
 
     label1.grid(row=0,
                 column=0,
