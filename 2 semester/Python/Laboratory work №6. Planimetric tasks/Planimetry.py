@@ -105,10 +105,6 @@ def pressLeftKey(event, cnvs, blackSet):
     #     addOperation(calc, event.char)
     # elif event.char in '.':
     #     addPoint(calc, event.char)
-    # elif event.char == '\r':
-    #     calculate(calc, calcHistory)
-    # elif event.char == '\b':
-    #     clearDel(calc)
 
 # Нажатие на правую кнопку мыши
 def pressRightKey(event, cnvs, redSet):
