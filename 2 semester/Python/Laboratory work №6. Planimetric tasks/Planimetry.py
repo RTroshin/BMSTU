@@ -100,11 +100,6 @@ def pressLeftKey(event, cnvs, blackSet):
         addBlackPoint(x, y, cnvs, blackSet)
     # if event.char.isdigit():
     #     addDigit(calc, calcHistory, event.char)
-    # elif event.char in '+-/*':
-    #     event.char = replaceSymbolReturn(event.char)
-    #     addOperation(calc, event.char)
-    # elif event.char in '.':
-    #     addPoint(calc, event.char)
 
 # Нажатие на правую кнопку мыши
 def pressRightKey(event, cnvs, redSet):
