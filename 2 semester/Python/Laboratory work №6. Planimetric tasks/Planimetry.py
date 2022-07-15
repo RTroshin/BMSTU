@@ -98,8 +98,6 @@ def pressLeftKey(event, cnvs, blackSet):
     # Если в множестве уже есть данная точка, то повторно не добавлять
     if [x, y] not in blackSet:
         addBlackPoint(x, y, cnvs, blackSet)
-    # if event.char.isdigit():
-    #     addDigit(calc, calcHistory, event.char)
 
 # Нажатие на правую кнопку мыши
 def pressRightKey(event, cnvs, redSet):
