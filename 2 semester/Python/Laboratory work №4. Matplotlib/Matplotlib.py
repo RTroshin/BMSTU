@@ -25,7 +25,7 @@ def secondDerivative_f1(x):
 figure = plt.gcf()
 figure.canvas.set_window_title('Исследование графиков функций')
 
-# Изменяем цвет графика
+# Изменить цвет графика
 # plt.plot(x, y, 'red')
 # plt.plot(x, y, 'r')
 # plt.show()
@@ -42,7 +42,7 @@ figure.canvas.set_window_title('Исследование графиков фун
 # plt.ylabel('y')
 # plt.show()
 
-# Гармоническая
+# Гармоническая функция
 
 t = np.linspace(0, 5, 100000) # Равномерное распределение точек на промежутке
 
@@ -246,7 +246,8 @@ plt.grid()
 # plt.legend(loc='upper right', fontsize=10)
 # plt.grid()
 
-# Функция Бэтмена
+# Функция Бэтмена (бэтфункция)
+# TODO Оформить код правильно
 
 x = np.linspace(-10, 10, 100000) # Равномерное распределение точек на промежутке
 f = np.linspace(-10, 10, 100000)
