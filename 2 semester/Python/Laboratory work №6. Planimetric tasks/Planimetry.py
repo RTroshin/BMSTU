@@ -71,7 +71,7 @@ def addBlackPoint(x, y, cnvs, blackSet):
     blackSet.append([x, y])
     # print(blackSet)
     i = len(blackSet) - 1
-    # entry.insert(0, value + digit)
+    # entry.insert(0, value + digit) # TO DO При вводе с помощью мышки, дублировать координаты в окна ввода
     cnvs.create_oval((int(blackSet[i][0]), int(blackSet[i][1])),
                      (int(blackSet[i][0]) + 5, int(blackSet[i][1]) + 5),
                      fill='#000000',
@@ -101,6 +101,8 @@ def pressLeftKey(event, cnvs, blackSet):
 
 # Нажатие на правую кнопку мыши
 def pressRightKey(event, cnvs, redSet):
+    # print(event.x)
+    # print(event.y)
     x = event.x
     y = event.y
 
