@@ -257,7 +257,11 @@ plt.title('Функция Бэтмена', fontsize=12)
 plt.xlabel('x')
 plt.ylabel('y')
 
-plt.plot(x, np.abs(x / 2) - ((3 * np.sqrt(33) - 7) / 112) * x**2 - 3 + np.sqrt(1 - (np.abs(np.abs(x) - 2) - 1)**2), color='black', label=r'$y1 = sin(5/2cos(x)$', linewidth=3)
+plt.plot(x,
+         np.abs(x / 2) - ((3 * np.sqrt(33) - 7) / 112) * x**2 - 3 + np.sqrt(1 - (np.abs(np.abs(x) - 2) - 1)**2),
+         color='black',
+         label=r'$y1 = sin(5/2cos(x)$',
+         linewidth=3)
 plt.plot(x, 9 * np.sqrt(np.abs((np.abs(x) - 1) * (np.abs(x) - 0.75)) / ((1 - np.abs(x)) * (np.abs(x) - 0.75))) - 8 * np.abs(x), color='black', label=r'$y2 = sin(5/2cos(x)$', linewidth=3)
 plt.plot(x, 2.25 * np.sqrt(np.abs((x - 0.5) * (x + 0.5)) / ((0.5 - x) * (0.5 + x))), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
 plt.plot(x, 3 * np.abs(x) + 0.75 * np.sqrt(np.abs((np.abs(x) - 0.75) * (np.abs(x) - 0.5)) / ((0.75 - np.abs(x)) * (np.abs(x) - 0.5))), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
@@ -293,7 +297,7 @@ plt.scatter(data_x, data_y,
 # plt.legend(loc='lower left', fontsize=10)
 plt.grid()
 
-plt.tight_layout() # Подгонка полей поля под края графиков
+plt.tight_layout() # Подгонка полей под края графиков
 plt.show()
 
 # x = np.linspace(-10, 10, 25)
