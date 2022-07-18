@@ -272,7 +272,11 @@ plt.plot(x,
          color='black',
          label=r'$y3 = sin(5/2cos(x)$',
          linewidth=3)
-plt.plot(x, 3 * np.abs(x) + 0.75 * np.sqrt(np.abs((np.abs(x) - 0.75) * (np.abs(x) - 0.5)) / ((0.75 - np.abs(x)) * (np.abs(x) - 0.5))), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
+plt.plot(x,
+         3 * np.abs(x) + 0.75 * np.sqrt(np.abs((np.abs(x) - 0.75) * (np.abs(x) - 0.5)) / ((0.75 - np.abs(x)) * (np.abs(x) - 0.5))),
+         color='black',
+         abel=r'$y3 = sin(5/2cos(x)$',
+         linewidth=3)
 plt.plot(x, 6 * np.sqrt(10) / 7 + (1.5 - 0.5 * np.abs(x)) * np.sqrt(np.abs(np.abs(x) - 1) / (np.abs(x) - 1)) - 6 * np.sqrt(10) / 14 *np.sqrt(4 - (np.abs(x) - 1)**2), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
 plt.plot(7 * np.sin(f) * np.sqrt(np.abs(np.abs(7 * np.sin(f)) - 3) / (np.abs(7 * np.sin(f)) - 3)), 3 * np.cos(f) * np.sqrt(np.abs(3 * np.cos(f) + 3 * np.sqrt(33) / 7) / (3 * np.cos(f) + 3 * np.sqrt(33) / 7)), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
 
