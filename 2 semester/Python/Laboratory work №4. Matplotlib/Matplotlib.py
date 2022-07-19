@@ -282,7 +282,11 @@ plt.plot(x,
          color='black',
          label=r'$y3 = sin(5/2cos(x)$',
          linewidth=3)
-plt.plot(7 * np.sin(f) * np.sqrt(np.abs(np.abs(7 * np.sin(f)) - 3) / (np.abs(7 * np.sin(f)) - 3)), 3 * np.cos(f) * np.sqrt(np.abs(3 * np.cos(f) + 3 * np.sqrt(33) / 7) / (3 * np.cos(f) + 3 * np.sqrt(33) / 7)), color='black', label=r'$y3 = sin(5/2cos(x)$', linewidth=3)
+plt.plot(7 * np.sin(f) * np.sqrt(np.abs(np.abs(7 * np.sin(f)) - 3) / (np.abs(7 * np.sin(f)) - 3)),
+         3 * np.cos(f) * np.sqrt(np.abs(3 * np.cos(f) + 3 * np.sqrt(33) / 7) / (3 * np.cos(f) + 3 * np.sqrt(33) / 7)),
+         color='black',
+         label=r'$y3 = sin(5/2cos(x)$',
+         linewidth=3)
 
 data_x = data_y = np.array([])
 for value in x:
