@@ -51,8 +51,17 @@ plt.title('Уравнение свободных затухающий колеб
 plt.xlabel('t')
 plt.ylabel('x')
 
-# graph = plt.plot(t, np.exp(-0.5 * t) * np.cos(2 * pi * t), 'r', label=r'$x$', linewidth=3)
-# plt.plot(t, np.exp(-0.5 * t), '--', 'b', label=r'$x$', linewidth=2)
+# graph = plt.plot(t,
+#                  np.exp(-0.5 * t) * np.cos(2 * pi * t),
+#                  'r',
+#                  label=r'$x$',
+#                  linewidth=3)
+# plt.plot(t,
+#          np.exp(-0.5 * t),
+#          '--',
+#          'b',
+#          label=r'$x$',
+#          linewidth=2)
 # plt.plot(t, -np.exp(-0.5 * t), '--', 'b', label=r'$A0e^bt$', linewidth=2)
 
 plt.plot(t, np.exp(-0.5 * t) * np.cos(2 * pi * t),
