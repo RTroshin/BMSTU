@@ -299,9 +299,12 @@ plt.scatter(data_x, data_y,
             color='black',
             marker='>', label='Экстремумы функции y')
 
-# plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y4 = sin(5/2cos(x)$', linewidth=3)
-# plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y5 = sin(5/2cos(x)$', linewidth=3)
-# plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y6 = sin(5/2cos(x)$', linewidth=3)
+# plt.plot(x,
+#          np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y4 = sin(5/2cos(x)$', linewidth=3)
+# plt.plot(x,
+#          np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y5 = sin(5/2cos(x)$', linewidth=3)
+# plt.plot(x,
+#          np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y6 = sin(5/2cos(x)$', linewidth=3)
 
 # data_x = data_y = np.array([])
 # for value in x:
