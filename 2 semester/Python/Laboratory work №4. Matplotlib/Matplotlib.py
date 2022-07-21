@@ -62,7 +62,12 @@ plt.ylabel('x')
 #          'b',
 #          label=r'$x$',
 #          linewidth=2)
-# plt.plot(t, -np.exp(-0.5 * t), '--', 'b', label=r'$A0e^bt$', linewidth=2)
+# plt.plot(t,
+#          -np.exp(-0.5 * t),
+#          '--',
+#          'b',
+#          label=r'$A0e^bt$',
+#          linewidth=2)
 
 plt.plot(t, np.exp(-0.5 * t) * np.cos(2 * pi * t),
          'r',
