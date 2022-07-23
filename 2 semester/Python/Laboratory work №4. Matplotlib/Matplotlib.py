@@ -326,7 +326,10 @@ plt.scatter(data_x, data_y,
 #          label=r'$y5 = sin(5/2cos(x)$',
 #          linewidth=3)
 # plt.plot(x,
-#          np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y6 = sin(5/2cos(x)$', linewidth=3)
+#          np.sin((5 / 2) * np.cos(x)),
+#          'g',
+#          label=r'$y6 = sin(5/2cos(x)$',
+#          linewidth=3)
 
 # data_x = data_y = np.array([])
 # for value in x:
@@ -337,7 +340,8 @@ plt.scatter(data_x, data_y,
 
 # plt.scatter(data_x, data_y,
 #             color='g',
-#             marker='D', label='Экстремумы функции y')
+#             marker='D',
+#             label='Экстремумы функции y')
 
 # plt.legend(loc='lower left', fontsize=10)
 plt.grid()
