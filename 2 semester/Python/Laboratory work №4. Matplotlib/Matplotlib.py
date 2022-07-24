@@ -192,8 +192,13 @@ plt.title('Полином второй степени', fontsize=12)
 plt.xlabel('x')
 plt.ylabel('y')
 
-plt.plot(x, np.sqrt(x**2) * np.cos(x), 'm', label=r'$y = \sqrt{x^2} * cos(x)$', linewidth=3)
-plt.plot(x, x - x,
+plt.plot(x,
+         np.sqrt(x**2) * np.cos(x),
+         'm',
+         label=r'$y = \sqrt{x^2} * cos(x)$',
+         linewidth=3)
+plt.plot(x,
+         x - x,
          '--',
          color='b',
          label = r'$y_1 = 0$',
@@ -263,7 +268,6 @@ plt.grid()
 # plt.grid()
 
 # Функция Бэтмена (бэтфункция)
-# TODO Оформить код правильно
 
 x = np.linspace(-10, 10, 100000) # Равномерное распределение точек на промежутке
 f = np.linspace(-10, 10, 100000)
