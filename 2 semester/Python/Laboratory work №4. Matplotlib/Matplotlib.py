@@ -121,14 +121,20 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.axis([-10, 10, -2, 2])
 
-plt.plot(x, np.sin((5 / 2) * np.cos(x)), 'g', label=r'$y = sin(5/2cos(x)$', linewidth=3)
-plt.plot(x, x - x + 1,
+plt.plot(x,
+         np.sin((5 / 2) * np.cos(x)),
+         'g',
+         label=r'$y = sin(5/2cos(x)$',
+         linewidth=3)
+plt.plot(x,
+         x - x + 1,
          '--',
          color='b',
          label = r'$y_{1,2} = ±1$',
          linewidth=2)
 plt.gca().set_prop_cycle(None)
-plt.plot(x, x - x - 1,
+plt.plot(x,
+         x - x - 1,
          '--',
          color='b',
          linewidth=2)
