@@ -146,9 +146,11 @@ for value in x:
         data_x = np.append(data_x, value)
         data_y = np.append(data_y, sin((5 / 2) * cos(value)))
 
-plt.scatter(data_x, data_y,
+plt.scatter(data_x,
+            data_y,
             color='g',
-            marker='o', label='Экстремумы функции y')
+            marker='o',
+            label='Экстремумы функции y')
 
 data_x = data_y = np.array([])
 for value in x:
