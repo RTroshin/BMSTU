@@ -159,9 +159,11 @@ for value in x:
         data_x = np.append(data_x, value)
         data_y = np.append(data_y, sin((5 / 2) * cos(value)))
 
-plt.scatter(data_x, data_y,
+plt.scatter(data_x,
+            data_y,
             color='g',
-            marker='s', label='Точки перегиба функции y')
+            marker='s',
+            label='Точки перегиба функции y')
 
 plt.legend(loc='upper right', fontsize=10)
 plt.grid()
