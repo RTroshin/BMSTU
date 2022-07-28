@@ -100,9 +100,11 @@ for value in t:
         data_t = np.append(data_t, value)
         data_x = np.append(data_x, exp(-0.5 * value) * cos(2 * pi * value))
 
-plt.scatter(data_t, data_x,
+plt.scatter(data_t,
+            data_x,
             color='r',
-            marker='D', label='Экстремумы функции x')
+            marker='D',
+            label='Экстремумы функции x')
 
 # lab1 = r'$x = A_0e^{-βt}cos(ω_0t)$' # Использование стиля LaTeX для оформления математических записей
 # lab2 = r'$x = A_0e^{-βt}$'
