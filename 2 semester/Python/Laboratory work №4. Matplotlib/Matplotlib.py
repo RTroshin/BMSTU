@@ -69,7 +69,8 @@ plt.ylabel('x')
 #          label=r'$A0e^bt$',
 #          linewidth=2)
 
-plt.plot(t, np.exp(-0.5 * t) * np.cos(2 * pi * t),
+plt.plot(t,
+         np.exp(-0.5 * t) * np.cos(2 * pi * t),
          'r',
          label = r'$x = A_0e^{-βt}cos(ω_0t)$',
          linewidth=3)
@@ -223,7 +224,8 @@ for value in x:
         data_x = np.append(data_x, value)
         data_y = np.append(data_y, sqrt(value**2) * cos(value))
 
-plt.scatter(data_x, data_y,
+plt.scatter(data_x,
+            data_y,
             color='m',
             marker='>', label='Экстремумы функции y')
 
