@@ -74,7 +74,8 @@ plt.plot(t,
          'r',
          label = r'$x = A_0e^{-βt}cos(ω_0t)$',
          linewidth=3)
-plt.plot(t, np.exp(-0.5 * t),
+plt.plot(t,
+         np.exp(-0.5 * t),
          '--',
          color='b',
          label = r'$y = A_0e^{-βt}$',
@@ -236,9 +237,11 @@ for value in x:
         data_x = np.append(data_x, value)
         data_y = np.append(data_y, sqrt(value**2) * cos(value))
 
-plt.scatter(data_x, data_y,
+plt.scatter(data_x,
+            data_y,
             color='m',
-            marker='s', label='Точки перегиба функции y')
+            marker='s',
+            label='Точки перегиба функции y')
 
 plt.legend(loc='lower left', fontsize=10)
 plt.grid()
