@@ -81,7 +81,8 @@ plt.plot(t,
          label = r'$y = A_0e^{-βt}$',
          linewidth=2)
 plt.gca().set_prop_cycle(None)
-plt.plot(t, -np.exp(-0.5 * t),
+plt.plot(t,
+         -np.exp(-0.5 * t),
          '--',
          color='b',
          linewidth=2)
@@ -359,7 +360,8 @@ plt.scatter(data_x, data_y,
 #         data_x = np.append(data_x, value)
 #         data_y = np.append(data_y, sin((5 / 2) * cos(value)))
 
-# plt.scatter(data_x, data_y,
+# plt.scatter(data_x,
+#             data_y,
 #             color='g',
 #             marker='D',
 #             label='Экстремумы функции y')
