@@ -373,7 +373,10 @@ plt.tight_layout() # Подгонка полей под края графико�
 plt.show()
 
 # x = np.linspace(-10, 10, 25)
-# plt.plot(x, 'r', label=r'$x$', linewidth=3)
+# plt.plot(x,
+#          'r',
+#          label=r'$x$',
+#          linewidth=3)
 # plt.plot(np.sin(x), 'b', label=r'$sinx$', linewidth=3)
 # plt.title('Title', loc='left', fontsize=10)
 # plt.legend(loc='best', fontsize=10)
