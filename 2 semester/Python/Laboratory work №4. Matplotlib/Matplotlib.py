@@ -404,7 +404,9 @@ plt.show()
 #          label='sin(x)')
 # plt.plot(y2,
 #          label='cos(x)')
-# plt.plot(y3, '-.', label='$x1^2 exp(-x2^2)$')
+# plt.plot(y3,
+#          '-.',
+#          label='$x1^2 exp(-x2^2)$')
 # plt.plot(y4, ':', linewidth=5, label='|x|')
 # plt.title('4 graphs')
 # plt.xlabel('X')
