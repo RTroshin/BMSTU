@@ -407,7 +407,10 @@ plt.show()
 # plt.plot(y3,
 #          '-.',
 #          label='$x1^2 exp(-x2^2)$')
-# plt.plot(y4, ':', linewidth=5, label='|x|')
+# plt.plot(y4,
+#          ':',
+#          linewidth=5,
+#          label='|x|')
 # plt.title('4 graphs')
 # plt.xlabel('X')
 # plt.ylabel('Y')
