@@ -182,7 +182,11 @@ plt.grid()
 # plt.xlabel('x')
 # plt.ylabel('y')
 
-# plt.plot(x, x * np.cos(x), 'm', label=r'$y = x * cos(x)$', linewidth=3)
+# plt.plot(x,
+#          x * np.cos(x),
+#          'm',
+#          label=r'$y = x * cos(x)$',
+#          linewidth=3)
 
 # data_x = data_y = np.array([])
 # for value in x:
