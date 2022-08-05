@@ -195,9 +195,11 @@ plt.grid()
 #         data_x = np.append(data_x, value)
 #         data_y = np.append(data_y, value * np.cos(value))
 
-# plt.scatter(data_x, data_y,
+# plt.scatter(data_x,
+#             data_y,
 #             color='m',
-#             marker='D', label='Экстремумы функции y')
+#             marker='D',
+#             label='Экстремумы функции y')
 
 # plt.legend(loc='upper right', fontsize=10)
 # plt.grid()
