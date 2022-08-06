@@ -235,7 +235,8 @@ for value in x:
 plt.scatter(data_x,
             data_y,
             color='m',
-            marker='>', label='Экстремумы функции y')
+            marker='>',
+            label='Экстремумы функции y')
 
 data_x = data_y = np.array([])
 for value in x:
