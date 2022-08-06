@@ -271,9 +271,11 @@ plt.grid()
 #         data_x = np.append(data_x, value)
 #         data_y = np.append(data_y, value * np.sin(value))
 
-# plt.scatter(data_x, data_y,
+# plt.scatter(data_x,
+#             data_y,
 #             color='m',
-#             marker='D', label='Экстремумы функции x')
+#             marker='D',
+#             label='Экстремумы функции x')
 
 # data_x = data_y = np.array([])
 # for value in t:
