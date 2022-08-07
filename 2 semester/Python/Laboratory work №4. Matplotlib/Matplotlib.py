@@ -263,7 +263,11 @@ plt.grid()
 # plt.xlabel('x')
 # plt.ylabel('y')
 
-# plt.plot(t * np.sin(t), t * np.cos(t), 'm', label=r'$y = sin(5/2cos(x)$', linewidth=3)
+# plt.plot(t * np.sin(t),
+#          t * np.cos(t),
+#          'm',
+#          label=r'$y = sin(5/2cos(x)$',
+#          linewidth=3)
 
 # data_x = data_y = np.array([])
 # for value in t:
