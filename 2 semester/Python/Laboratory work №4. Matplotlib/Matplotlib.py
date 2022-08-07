@@ -390,7 +390,9 @@ plt.show()
 #          'b',
 #          label=r'$sinx$',
 #          linewidth=3)
-# plt.title('Title', loc='left', fontsize=10)
+# plt.title('Title',
+#            loc='left',
+#            fontsize=10)
 # plt.legend(loc='best', fontsize=10)
 
 # plt.axis([0, 10, -10, 10])
