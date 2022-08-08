@@ -112,7 +112,9 @@ plt.scatter(data_t,
 # lab1 = r'$x = A_0e^{-βt}cos(ω_0t)$' # Использование стиля LaTeX для оформления математических записей
 # lab2 = r'$x = A_0e^{-βt}$'
 # lab3 = 'Экстремумы функции x'
-# plt.legend((lab1, lab2, lab3), loc='best', fontsize=10)
+# plt.legend((lab1, lab2, lab3),
+#            loc='best',
+#            fontsize=10)
 plt.legend(loc='upper right', fontsize=10)
 plt.grid()
 
