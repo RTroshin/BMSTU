@@ -123,7 +123,8 @@ plt.grid()
 x = np.linspace(-10, 10, 100000) # Равномерное распределение точек на промежутке
 
 plt.subplot(222)
-plt.title('Периодическая функция', fontsize=12)
+plt.title('Периодическая функция',
+          fontsize=12)
 plt.xlabel('x')
 plt.ylabel('y')
 plt.axis([-10, 10, -2, 2])
