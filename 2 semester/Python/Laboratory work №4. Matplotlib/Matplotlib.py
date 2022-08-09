@@ -264,7 +264,8 @@ plt.grid()
 # t = np.linspace(0, 15.707963, 100000) # Равномерное распределение точек на промежутке
 
 # plt.subplot(223)
-# plt.title('Спираль', fontsize=12)
+# plt.title('Спираль',
+#           fontsize=12)
 # plt.xlabel('x')
 # plt.ylabel('y')
 
@@ -309,7 +310,8 @@ x = np.linspace(-10, 10, 100000) # Равномерное распределен
 f = np.linspace(-10, 10, 100000)
 
 plt.subplot(224)
-plt.title('Функция Бэтмена', fontsize=12)
+plt.title('Функция Бэтмена',
+          fontsize=12)
 plt.xlabel('x')
 plt.ylabel('y')
 
