@@ -353,9 +353,11 @@ for value in x:
         data_x = np.append(data_x, value)
         data_y = np.append(data_y, abs(value / 2) - ((3 * sqrt(33) - 7) / 112) * value**2 - 3 + sqrt(1 - (abs(abs(value) - 2) - 1)**2))
 
-plt.scatter(data_x, data_y,
+plt.scatter(data_x,
+            data_y,
             color='black',
-            marker='>', label='Экстремумы функции y')
+            marker='>',
+            label='Экстремумы функции y')
 
 # plt.plot(x,
 #          np.sin((5 / 2) * np.cos(x)),
