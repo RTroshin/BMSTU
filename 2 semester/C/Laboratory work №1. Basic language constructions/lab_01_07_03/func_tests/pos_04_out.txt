@@ -1,0 +1,4 @@
+Value of function s(x): -0.099667
+Approximate value f(x): -0.099669
+Absolute error:         0.000002
+Observational error:    0.000020
