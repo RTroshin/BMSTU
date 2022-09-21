@@ -33,7 +33,10 @@ root.geometry("{:d}x{:d}+200+200".format(WIDTH, HEIGHT))
 root.resizable(False, False)
 # root.config(bg='#2DFF00')
 
-c = Canvas(root, width=WIDTH, height=HEIGHT, bg='lightblue')
+c = Canvas(root,
+           width=WIDTH,
+           height=HEIGHT,
+           bg='lightblue')
 c.pack()
 
 # ПЕРЬЯ НА МАКУШКЕ
