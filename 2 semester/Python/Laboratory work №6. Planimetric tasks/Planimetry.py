@@ -279,31 +279,34 @@ def main():
                 stick='wens',
                 padx=1)
 
-    cnvs = Canvas(root, width=WIDTH_CANVAS, height=HEIGHT_CANVAS, bg='#ffffff')
+    cnvs = Canvas(root,
+                  width=WIDTH_CANVAS,
+                  height=HEIGHT_CANVAS,
+                  bg='#ffffff')
 
     cnvs.grid(row=0,
-            column=4,
-            rowspan=6,
-            stick='wens',
-            padx=1)
+              column=4,
+              rowspan=6,
+              stick='wens',
+              padx=1)
 
     button1 = makeBlackButton(cnvs, entryX1, entryY1, 'Добавить точку', blackSet)
     button1.grid(row=2,
-                column=0,
-                columnspan=4,
-                stick='wens',
-                padx=1,
-                pady=1)
+                 column=0,
+                 columnspan=4,
+                 stick='wens',
+                 padx=1,
+                 pady=1)
     # button1.bind("<Enter>", lambda event : on_enter_digit(button1, event))
     # button1.bind("<Leave>", lambda event : on_leave_digit(button1, event))
 
     button2 = makeBlackButton(cnvs, entryX2, entryY2, 'Добавить точку', blackSet)
     button2.grid(row=5,
-                column=0,
-                columnspan=4,
-                stick='wens',
-                padx=1,
-                pady=1)
+                 column=0,
+                 columnspan=4,
+                 stick='wens',
+                 padx=1,
+                 pady=1)
     # button1.bind("<Enter>", lambda event : on_enter_digit(button1, event))
     # button1.bind("<Leave>", lambda event : on_leave_digit(button1, event))
 
