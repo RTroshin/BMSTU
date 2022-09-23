@@ -47,23 +47,23 @@ WHITE = (255, 255, 255)
 # Создание кнопки для первого множества
 def makeBlackButton(cnvs, entryX, entryY, name, blackSet):
     button = Button(bg='#000000',
-                      text=name,
-                      font=('Roboto', 16),
-                      fg='#EEEEEE',
-                      activebackground='#222222',
-                      activeforeground="#EEEEEE",
-                      command=lambda : addBlackPoint(cnvs, entryX, entryY, blackSet))
+                    text=name,
+                    font=('Roboto', 16),
+                    fg='#EEEEEE',
+                    activebackground='#222222',
+                    activeforeground="#EEEEEE",
+                    command=lambda : addBlackPoint(cnvs, entryX, entryY, blackSet))
     return button
 
 # Создание кнопки для второго множества
 def makeRedButton(cnvs, entryX, entryY, name, redSet):
     button = Button(bg='#000000',
-                      text=name,
-                      font=('Roboto', 16),
-                      fg='#EEEEEE',
-                      activebackground='#222222',
-                      activeforeground="#EEEEEE",
-                      command=lambda : addRedPoint(cnvs, entryX, entryY, redSet))
+                    text=name,
+                    font=('Roboto', 16),
+                    fg='#EEEEEE',
+                    activebackground='#222222',
+                    activeforeground="#EEEEEE",
+                    command=lambda : addRedPoint(cnvs, entryX, entryY, redSet))
     return button
 
 # Добавление точки в множество через клик мыши
@@ -128,15 +128,14 @@ def main():
     root.attributes("-alpha", 0.97) # Делает фон прозрачным
 
     label1 = Label(root, text='Введите координаты точки в первое множество',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+                   bg='#222222',
+                   fg='white',
+                   font=('Roboto', 14, 'bold'),
+                   padx=20,
+                   pady=20,
+                   width=40,
+                   anchor="sw",
+                   justify=LEFT)
 
     label2 = Label(root, text='Введите координаты точки во второе множество',
                 bg='#222222',
