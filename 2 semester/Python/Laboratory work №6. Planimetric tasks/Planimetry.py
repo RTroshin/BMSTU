@@ -127,7 +127,8 @@ def main():
 
     root.attributes("-alpha", 0.97) # Делает фон прозрачным
 
-    label1 = Label(root, text='Введите координаты точки в первое множество',
+    label1 = Label(root,
+                   text='Введите координаты точки в первое множество',
                    bg='#222222',
                    fg='white',
                    font=('Roboto', 14, 'bold'),
@@ -137,27 +138,27 @@ def main():
                    anchor="sw",
                    justify=LEFT)
 
-    label2 = Label(root, text='Введите координаты точки во второе множество',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+    label2 = Label(root,
+                   text='Введите координаты точки во второе множество',
+                   bg='#222222',
+                   fg='white',
+                   font=('Roboto', 14, 'bold'),
+                   padx=20,
+                   pady=20,
+                   width=40,
+                   anchor="sw",
+                   justify=LEFT)
 
-    labelX1 = Label(root, text='X1',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+    labelX1 = Label(root,
+                    text='X1',
+                    bg='#222222',
+                    fg='white',
+                    font=('Roboto', 14, 'bold'),
+                    padx=20,
+                    pady=20,
+                    width=40,
+                    anchor="sw",
+                    justify=LEFT)
 
     labelY1 = Label(root, text='Y1',
                 bg='#222222',
