@@ -181,15 +181,14 @@ def main():
                     justify=LEFT)
 
     labelY2 = Label(root, text='Y2',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+                    bg='#222222',
+                    fg='white',
+                    font=('Roboto', 14, 'bold'),
+                    padx=20,
+                    pady=20,
+                    width=40,
+                    anchor="sw",
+                    justify=LEFT)
 
     # Создание окна ввода
     entryX1 = Entry(root,
@@ -237,24 +236,24 @@ def main():
                 padx=1)
 
     labelX1.grid(row=1,
-                column=0,
-                stick='wens',
-                padx=1)
+                 column=0,
+                 stick='wens',
+                 padx=1)
 
     labelY1.grid(row=1,
-                column=2,
-                stick='wens',
-                padx=1)
+                 column=2,
+                 stick='wens',
+                 padx=1)
 
     labelX2.grid(row=4,
-                column=0,
-                stick='wens',
-                padx=1)
+                 column=0,
+                 stick='wens',
+                 padx=1)
 
     labelY2.grid(row=4,
-                column=2,
-                stick='wens',
-                padx=1)
+                 column=2,
+                 stick='wens',
+                 padx=1)
 
 
     entryX1.grid(row=1,
