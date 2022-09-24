@@ -161,26 +161,24 @@ def main():
                     justify=LEFT)
 
     labelY1 = Label(root, text='Y1',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+                    bg='#222222',
+                    fg='white',
+                    font=('Roboto', 14, 'bold'),
+                    padx=20,
+                    pady=20,
+                    width=40,
+                    anchor="sw",
+                    justify=LEFT)
 
     labelX2 = Label(root, text='X_2',
-                bg='#222222',
-                fg='white',
-                font=('Roboto', 14, 'bold'),
-                padx=20,
-                pady=20,
-                width=40,
-                anchor="sw",
-                justify=LEFT
-                )
+                    bg='#222222',
+                    fg='white',
+                    font=('Roboto', 14, 'bold'),
+                    padx=20,
+                    pady=20,
+                    width=40,
+                    anchor="sw",
+                    justify=LEFT)
 
     labelY2 = Label(root, text='Y2',
                 bg='#222222',
