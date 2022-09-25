@@ -257,24 +257,24 @@ def main():
 
 
     entryX1.grid(row=1,
-                column=1,
-                stick='wens',
-                padx=1)
+                 column=1,
+                 stick='wens',
+                 padx=1)
 
     entryY1.grid(row=1,
-                column=3,
-                stick='wens',
-                padx=1)
+                 column=3,
+                 stick='wens',
+                 padx=1)
 
     entryX2.grid(row=4,
-                column=1,
-                stick='wens',
-                padx=1)
+                 column=1,
+                 stick='wens',
+                 padx=1)
 
     entryY2.grid(row=4,
-                column=3,
-                stick='wens',
-                padx=1)
+                 column=3,
+                 stick='wens',
+                 padx=1)
 
     cnvs = Canvas(root,
                   width=WIDTH_CANVAS,
