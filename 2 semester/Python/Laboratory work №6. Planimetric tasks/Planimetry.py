@@ -294,8 +294,6 @@ def main():
                  stick='wens',
                  padx=1,
                  pady=1)
-    # button1.bind("<Enter>", lambda event : on_enter_digit(button1, event))
-    # button1.bind("<Leave>", lambda event : on_leave_digit(button1, event))
 
     button2 = makeBlackButton(cnvs, entryX2, entryY2, 'Добавить точку', blackSet)
     button2.grid(row=5,
