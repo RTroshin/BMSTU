@@ -309,8 +309,6 @@ def main():
     #              stick='wens',
     #              padx=1,
     #              pady=1)
-    # button2.bind("<Enter>", lambda event : on_enter_digit(button2, event))
-    # button2.bind("<Leave>", lambda event : on_leave_digit(button2, event))
 
     cnvs.bind('<Button-1>', lambda event : pressLeftKey(event, cnvs, blackSet))
     cnvs.bind('<Button-3>', lambda event : pressRightKey(event, cnvs, redSet))
