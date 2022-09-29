@@ -303,13 +303,6 @@ def main():
                  padx=1,
                  pady=1)
 
-    # button2 = makeDigitButton(cnvs, coordinates, 'Найти треугольник')
-    # button2.grid(row=7,
-    #              column=1,
-    #              stick='wens',
-    #              padx=1,
-    #              pady=1)
-
     cnvs.bind('<Button-1>', lambda event : pressLeftKey(event, cnvs, blackSet))
     cnvs.bind('<Button-3>', lambda event : pressRightKey(event, cnvs, redSet))
 
