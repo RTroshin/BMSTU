@@ -1,0 +1,11 @@
+not_number
+Oranges
+99
+Carrots
+50
+Apples
+60
+Potatos
+55
+Bananas
+74

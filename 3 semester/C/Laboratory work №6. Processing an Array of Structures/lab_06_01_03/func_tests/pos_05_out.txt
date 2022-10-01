@@ -1,0 +1,12 @@
+Carrots
+50
+Apples
+60
+Potatos
+55
+Washed_carrots
+55
+Green_apples
+69
+South_American_potatos_US
+52

@@ -1,0 +1,11 @@
+5
+Oranges
+99
+\n	  \n \n		__  \n
+50
+Apples
+60
+Potatos
+55
+Bananas
+74

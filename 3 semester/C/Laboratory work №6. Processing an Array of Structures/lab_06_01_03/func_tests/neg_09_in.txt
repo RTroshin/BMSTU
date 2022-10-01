@@ -1,0 +1,11 @@
+5
+Oranges
+99
+AAAAABBBBBCCCCCDDDDDEEEEEFFFFF
+50
+Apples
+60
+Potatos
+55
+Bananas
+74

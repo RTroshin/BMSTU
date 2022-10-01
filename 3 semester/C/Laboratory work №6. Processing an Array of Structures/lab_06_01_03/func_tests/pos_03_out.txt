@@ -1,0 +1,10 @@
+Carrots
+50
+Apples
+60
+Potatos
+55
+Washed_carrots
+55
+American_potatos
+52
