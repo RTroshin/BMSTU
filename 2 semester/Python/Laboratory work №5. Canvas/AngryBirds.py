@@ -375,11 +375,11 @@ c.create_oval((370, 205), (340, 235),
               fill='white',
               outline='white')
 c.create_polygon((390, 215), (383, 195), (330, 205), (340, 225),
-                  fill='white',
-                  outline='white')
+                 fill='white',
+                 outline='white')
 c.create_polygon((375, 215), (375, 230), (355, 235), (355, 220),
-                  fill='white',
-                  outline='white')
+                 fill='white',
+                 outline='white')
 
 # Зрачок правого глаза
 c.create_oval((360, 210), (350, 220),
