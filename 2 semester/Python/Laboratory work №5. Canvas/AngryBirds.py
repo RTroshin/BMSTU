@@ -304,18 +304,18 @@ c.create_oval((415, 270), (370, 315),
 
 # Заполнение щеки
 c.create_oval((410, 230), (365, 300),
-             fill='#eae265',
-             outline='#eae265')
+              fill='#eae265',
+              outline='#eae265')
 
 # Блик щеки
 c.create_oval((405, 235), (355, 285),
-             fill='#eee56e',
-             outline='#eee56e')
+              fill='#eee56e',
+              outline='#eee56e')
 
 # Блик щеки (светлая часть)
 c.create_oval((395, 245), (365, 275),
-             fill='#f2eb79',
-             outline='#f2eb79')
+              fill='#f2eb79',
+              outline='#f2eb79')
 
 # ГЛАЗА
 ##############################################################################
