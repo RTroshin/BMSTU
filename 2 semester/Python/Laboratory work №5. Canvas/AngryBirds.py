@@ -271,13 +271,13 @@ c.create_oval((190, 230), (235, 300),
 
 # Блик щеки
 c.create_oval((195, 235), (245, 285),
-             fill='#eee56e',
-             outline='#eee56e')
+              fill='#eee56e',
+              outline='#eee56e')
 
 # Блик щеки (светлая часть)
 c.create_oval((205, 245), (235, 275),
-             fill='#f2eb79',
-             outline='#f2eb79')
+              fill='#f2eb79',
+              outline='#f2eb79')
 
 # Правая щека
 c.create_arc((418, 200), (308, 445),
