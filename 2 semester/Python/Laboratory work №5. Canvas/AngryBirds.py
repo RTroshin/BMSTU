@@ -257,12 +257,12 @@ c.create_arc((150, 70), (262, 315),
              outline='#eae265')
 
 c.create_oval((210, 200), (260, 250),
-             fill='#eae265',
-             outline='#eae265')
+              fill='#eae265',
+              outline='#eae265')
 
 c.create_oval((185, 270), (230, 315),
-             fill='#eae265',
-             outline='#eae265')
+              fill='#eae265',
+              outline='#eae265')
 
 # Заполнение щеки
 c.create_oval((190, 230), (235, 300),
