@@ -17,15 +17,15 @@ WHITE = (255, 255, 255)
 def moveEyebrows():
     c.move(Eyebrow, 1, 0)
 
-# Создание переменной, содержащей полный путь до файла
-currentDir = dirname(__file__)
-filePath = join(currentDir, "./Pictures/Red.png")
+# Создание переменной, содержащей полный путь до файла (для Windows)
+# currentDir = dirname(__file__)
+# filePath = join(currentDir, "./Pictures/Red.png")
 
 root = Tk()
 
 # Установка иконки приложения
-photo = PhotoImage(file=filePath)
-root.iconphoto(False, photo)
+# photo = PhotoImage(file=filePath)
+# root.iconphoto(False, photo)
 
 root.title("Angry Birds") # Изменение заголовка приложения
 
