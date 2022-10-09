@@ -1,5 +1,5 @@
 from tkinter import *
-from os.path import dirname, join
+# from os.path import dirname, join
 
 WIDTH = 600
 HEIGHT = 600
